@@ -1,0 +1,114 @@
+{
+    "component": {
+      "button": {
+        "primary": {
+          "padding": {
+            "$value": "{spacing.xs}",
+            "$type": "dimension"
+          },
+          "text": {
+            "size": {
+              "$value": "{text.size.xsmall}",
+              "$type": "dimension"
+            },
+            "font": {
+              "$value": "{text.font.tech}",
+              "$type": "fontFamily"
+            }
+          },
+          "color": {
+            "background": {
+              "$value": "{color.background.surface}",
+              "$type": "color"
+            },
+            "hover": {
+              "$value": "{color.background.hover}",
+              "$type": "color"
+            },
+            "text": {
+              "$value": "{color.text.secondary}",
+              "$type": "color"
+            },
+            "textHover": {
+              "$value": "{color.text.primary}",
+              "$type": "color"
+            }
+          }
+        }
+      },
+      "tab": {
+        "padding": {
+          "$value": "0",
+          "$type": "dimension"
+        },
+        "color": {
+          "text": {
+            "$value": "{color.text.primary}",
+            "$type": "color"
+          },
+          "textHover": {
+            "$value": "{color.text.accent}",
+            "$type": "color"
+          },
+          "textSelected": {
+            "$value": "{color.text.accent}",
+            "$type": "color"
+          }
+        }
+      },
+      "menu": {
+        "padding": {
+          "$value": "{spacing.m}",
+          "$type": "dimension"
+        },
+        "gap": {
+          "$value": "{spacing.xl}",
+          "$type": "dimension"
+        },
+        "text": {
+          "font": {
+            "$value": "{text.font.tech}",
+            "$type": "fontFamily"
+          }
+        },
+        "color": {
+          "text": {
+            "$value": "{color.text.primary}",
+            "$type": "color"
+          },
+          "textHover": {
+            "$value": "{color.text.hover}",
+            "$type": "color"
+          },
+          "textSelected": {
+            "$value": "{color.text.accent}",
+            "$type": "color"
+          },
+          "background": {
+            "$value": "{color.background.surface}",
+            "$type": "color"
+          }
+        }
+      },
+      "logo": {
+        "size": {
+          "small": {
+            "$value": "49",
+            "$type": "dimension"
+          },
+          "large": {
+            "$value": "201",
+            "$type": "dimension"
+          }
+        },
+        "color": {
+          "primary": {
+            "$value": "{color.text.primary}",
+            "$type": "color"
+          }
+        }
+      }
+    }
+  }
+  
+

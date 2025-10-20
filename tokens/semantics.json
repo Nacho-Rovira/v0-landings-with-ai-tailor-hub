@@ -1,0 +1,125 @@
+{
+    "color": {
+      "background": {
+        "default": {
+          "$value": "{color.neutral.00}"
+        },
+        "surface": {
+          "$value": "{color.neutral.100}"
+        },
+        "hover": {
+          "$value": "{color.neutral.200}"
+        }
+      },
+      "text": {
+        "primary": {
+          "$value": "{color.neutral.900}"
+        },
+        "secondary": {
+          "$value": "{color.neutral.600}"
+        },
+        "accent": {
+          "$value": "{color.blue.500}"
+        },
+        "hover": {
+          "$value": "{color.neutral.300}"
+        },
+        "invert": {
+          "$value": "{color.neutral.00}"
+        }
+      },
+      "brand": {
+        "primary": {
+          "$value": "{color.blue.500}"
+        }
+      }
+    },
+    "text": {
+      "header": {
+        "1": {
+          "size": {
+            "$value": "{text.size.xxlarge}"
+          },
+          "line": {
+            "$value": "{text.line.xxlarge}"
+          },
+          "font": {
+            "$value": "{text.font.default}"
+          }
+        },
+        "2": {
+          "size": {
+            "$value": "{text.size.large}"
+          },
+          "line": {
+            "$value": "{text.line.large}"
+          },
+          "font": {
+            "$value": "{text.font.default}"
+          }
+        }
+      },
+      "overheader": {
+        "size": {
+          "$value": "{text.size.xsmall}"
+        },
+        "line": {
+          "$value": "{text.line.xsmall}"
+        },
+        "font": {
+          "$value": "{text.font.tech}"
+        }
+      },
+      "body": {
+        "size": {
+          "$value": "{text.size.small}"
+        },
+        "line": {
+          "$value": "{text.line.small}"
+        },
+        "font": {
+          "$value": "{text.font.default}"
+        }
+      },
+      "insights": {
+        "size": {
+          "$value": "{text.size.4xlarge}"
+        },
+        "line": {
+          "$value": "{text.line.4xlarge}"
+        },
+        "font": {
+          "$value": "{text.font.tech}"
+        }
+      }
+    },
+    "gap": {
+      "overheader_header2": {
+        "$value": "{spacing.m}"
+      },
+      "header2_body": {
+        "$value": "{spacing.xl}"
+      },
+      "paragraph_middle": {
+        "$value": "{spacing.m}"
+      },
+      "section_section": {
+        "$value": "{spacing.8xl}"
+      },
+      "header1": {
+        "$value": "{spacing.4xl}"
+      },
+      "header2": {
+        "$value": "{spacing.xxxl}"
+      }
+    },
+    "padding": {
+      "card": {
+        "$value": "{spacing.m}"
+      }
+    }
+  }
+  
+  
+
+
