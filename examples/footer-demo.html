@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Component Demo - Tailor Hub Design System</title>
+  <style>
+    /* Import design tokens as CSS variables */
+    :root {
+      /* Primitive Colors - Neutral */
+      --color-neutral-00: #FFFFFF;
+      --color-neutral-100: #F5F5F5;
+      --color-neutral-200: #E5E5E5;
+      --color-neutral-300: #D4D4D4;
+      --color-neutral-600: #828086;
+      --color-neutral-900: #362C2C;
+      
+      /* Primitive Colors - Blue */
+      --color-blue-500: #2C54FF;
+      
+      /* Text */
+      --text-size-xsmall: 14px;
+      --text-size-small: 16px;
+      --text-size-large: 40px;
+      --text-line-xsmall: 17px;
+      --text-line-small: 22px;
+      --text-line-large: 48px;
+      --font-default: 'PP Mori', sans-serif;
+      --font-tech: 'PP Neue Montreal Mono', monospace;
+      
+      /* Spacing */
+      --spacing-xs: 8px;
+      --spacing-s: 12px;
+      --spacing-m: 16px;
+      --spacing-l: 24px;
+      --spacing-xl: 32px;
+      --spacing-xxxl: 48px;
+      --spacing-4xl: 56px;
+      --spacing-6xl: 64px;
+      --spacing-8xl: 80px;
+      
+      /* Logo */
+      --logo-size-large: 201px;
+      
+      /* Semantic Colors */
+      --color-text-primary: var(--color-neutral-900);
+      --color-text-secondary: #828086;
+      --color-text-hover: var(--color-neutral-300);
+      --color-text-accent: var(--color-blue-500);
+      --color-background-surface: var(--color-neutral-100);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-default);
+      background-color: var(--color-neutral-00);
+      color: var(--color-neutral-900);
+      line-height: 1.6;
+    }
+
+    /* Footer Component Styles */
+    .footer {
+      width: 100%;
+      max-width: 1304px;
+      margin: 0 auto;
+      transition: all 0.3s ease;
+    }
+
+    .footer__section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-xxxl);
+      width: 100%;
+    }
+
+    .footer__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .footer__section-title {
+      display: flex;
+      align-items: center;
+      gap: 112px;
+      padding-left: 121px;
+      font-family: var(--font-tech);
+      font-size: var(--text-size-xsmall);
+      line-height: normal;
+      color: var(--color-text-primary);
+    }
+
+    .footer__info-title {
+      font-family: var(--font-tech);
+      font-size: var(--text-size-xsmall);
+      line-height: normal;
+      color: var(--color-text-primary);
+      text-align: right;
+      width: 303px;
+    }
+
+    .footer__contact {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-xs);
+      padding-left: 240px;
+      width: 100%;
+      font-family: var(--font-default);
+      font-size: var(--text-size-large);
+      line-height: var(--text-line-large);
+      color: var(--color-text-primary);
+    }
+
+    .footer__contact-line {
+      display: flex;
+      gap: 86px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .footer__address {
+      line-height: var(--text-line-large);
+      white-space: nowrap;
+    }
+
+    .footer__address p {
+      margin: 0;
+    }
+
+    .footer__logo {
+      width: 606px;
+      height: 136px;
+      background: var(--color-background-surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 84px 0;
+    }
+
+    .footer__links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-l);
+      width: 1281px;
+    }
+
+    .footer__link-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .footer__link-group {
+      display: flex;
+      gap: var(--spacing-m);
+      align-items: center;
+    }
+
+    .footer__link {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      width: 225px;
+      font-family: var(--font-tech);
+      font-size: var(--text-size-xsmall);
+      line-height: normal;
+      color: var(--color-text-primary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer__link:hover {
+      color: var(--color-text-hover);
+    }
+
+    /* Demo Styles */
+    .demo-container {
+      padding: var(--spacing-xxxl);
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .demo-section {
+      margin-bottom: var(--spacing-8xl);
+    }
+
+    .demo-label {
+      font-family: var(--font-tech);
+      font-size: var(--text-size-xsmall);
+      color: var(--color-text-primary);
+      margin-bottom: var(--spacing-l);
+      text-transform: uppercase;
+    }
+
+    .demo-box {
+      background: var(--color-neutral-00);
+      border: 1px solid var(--color-neutral-200);
+      border-radius: var(--spacing-s);
+      padding: var(--spacing-xxxl);
+      min-height: 400px;
+    }
+
+    .info-box {
+      background: var(--color-background-surface);
+      border-radius: var(--spacing-s);
+      padding: var(--spacing-l);
+      margin-top: var(--spacing-l);
+      font-size: var(--text-size-xsmall);
+      line-height: 1.5;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1400px) {
+      .footer {
+        max-width: 100%;
+        padding: 0 var(--spacing-l);
+      }
+      
+      .footer__section-title {
+        padding-left: var(--spacing-xxxl);
+        gap: var(--spacing-6xl);
+      }
+      
+      .footer__contact {
+        padding-left: var(--spacing-8xl);
+      }
+      
+      .footer__logo {
+        width: 100%;
+        max-width: 606px;
+      }
+      
+      .footer__links {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .footer__section-title {
+        padding-left: var(--spacing-l);
+        gap: var(--spacing-xl);
+      }
+      
+      .footer__contact {
+        padding-left: var(--spacing-4xl);
+        font-size: var(--text-size-small);
+        line-height: var(--text-line-small);
+      }
+      
+      .footer__contact-line {
+        flex-direction: column;
+        gap: var(--spacing-m);
+        align-items: flex-start;
+      }
+      
+      .footer__link-group {
+        flex-direction: column;
+        gap: var(--spacing-s);
+        align-items: flex-start;
+      }
+      
+      .footer__link {
+        width: auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .footer__header {
+        flex-direction: column;
+        gap: var(--spacing-m);
+        align-items: flex-start;
+      }
+      
+      .footer__section-title {
+        padding-left: 0;
+      }
+      
+      .footer__info-title {
+        width: auto;
+        text-align: left;
+      }
+      
+      .footer__contact {
+        padding-left: 0;
+        font-size: var(--text-size-xsmall);
+        line-height: var(--text-line-xsmall);
+      }
+      
+      .footer__link-row {
+        flex-direction: column;
+        gap: var(--spacing-m);
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <h1 style="font-family: var(--font-tech); font-size: var(--text-size-large); margin-bottom: var(--spacing-xxxl);">
+      Footer Component Demo
+    </h1>
+
+    <!-- Default Footer -->
+    <div class="demo-section">
+      <div class="demo-label">Default Footer</div>
+      <div class="demo-box">
+        <footer class="footer">
+          <!-- Contact Section -->
+          <div class="footer__section">
+            <div class="footer__header">
+              <div class="footer__section-title">
+                <span>/</span>
+                <span>CONTACT</span>
+              </div>
+              <div class="footer__info-title">
+                PROUDLY PART OF MODULOS STUDIO GROUP
+              </div>
+            </div>
+            
+            <div class="footer__contact">
+              <div class="footer__contact-line">
+                <span>SALES@TAILOR-HUB.COM</span>
+                <span>+34 682 270 526</span>
+              </div>
+              <div class="footer__address">
+                <p>CALLE HERMANOS ÁLVAREZ QUINTERO, 2,</p>
+                <p>SEMISÓTANO A, 28004 MADRID</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Logo Section -->
+          <div class="footer__logo">
+            <svg viewBox="0 0 606 135" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: var(--logo-size-large); height: auto;">
+              <path d="M225 201V167.499H174.07C168.749 167.499 162.668 164.522 158.108 159.31L136.064 133.999H225V100.5H162.668L206.757 49.1331L180.152 27.5443L129.223 86.3551V0H95.0166V86.3551L44.8478 27.5443L18.2432 49.1331L62.3308 100.5H0V133.999H88.9355L66.8917 159.31C62.3308 164.522 56.2498 167.499 50.929 167.499H0V201H53.2094C66.8917 201 80.5741 195.788 88.1753 186.854L112.5 158.566L136.824 186.854C144.425 195.044 158.108 201 171.79 201H225Z" fill="currentColor"/>
+              <text x="250" y="80" font-family="var(--font-tech)" font-size="24" fill="currentColor">TAILOR HUB</text>
+            </svg>
+          </div>
+
+          <!-- Social and Legal Sections -->
+          <div class="footer__links">
+            <!-- Social Section -->
+            <div class="footer__link-row">
+              <div class="footer__section-title">
+                <span>/</span>
+                <span>SOCIAL</span>
+              </div>
+              <div class="footer__link-group">
+                <a href="https://linkedin.com/company/tailor-hub" class="footer__link">LINKEDIN</a>
+                <a href="https://spotify.com" class="footer__link">SPOTIFY</a>
+                <a href="https://instagram.com/tailor_hub" class="footer__link">INSTAGRAM</a>
+              </div>
+            </div>
+
+            <!-- Legal Section -->
+            <div class="footer__link-row">
+              <div class="footer__section-title">
+                <span>/</span>
+                <span>LEGAL</span>
+              </div>
+              <div class="footer__link-group">
+                <a href="/legal" class="footer__link">POLICY & LEGAL</a>
+                <a href="/collaboration" class="footer__link">COLLABORATION LINES</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      
+      <div class="info-box">
+        <strong>Design Tokens Used:</strong><br>
+        • Font tech: var(--font-tech)<br>
+        • Font default: var(--font-default)<br>
+        • Text size xsmall: var(--text-size-xsmall, 14px)<br>
+        • Text size large: var(--text-size-large, 40px)<br>
+        • Spacing xxxl: var(--spacing-xxxl, 48px)<br>
+        • Color background surface: var(--color-background-surface)
+      </div>
+    </div>
+  </div>
+</body>
+</html>

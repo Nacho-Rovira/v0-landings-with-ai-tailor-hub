@@ -9,3 +9,6 @@ export type { MenuItemProps } from "./MenuItem/MenuItem"
 
 export { Header } from './Header/Header';
 export type { HeaderProps } from './Header/Header';
+
+export { Footer } from './Footer/Footer';
+export type { FooterProps } from './Footer/Footer';

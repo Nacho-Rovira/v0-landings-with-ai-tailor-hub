@@ -1,0 +1,224 @@
+/* 
+ * Footer Component Styles
+ * Using design tokens from the project
+ */
+
+.footer {
+  /* Layout - matching Figma design */
+  width: 100%;
+  max-width: 1304px;
+  margin: 0 auto;
+  
+  /* Transitions */
+  transition: all 0.3s ease;
+}
+
+.footer__section {
+  /* Contact section container */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxxl, 48px);
+  width: 100%;
+}
+
+.footer__header {
+  /* Header with section title and info */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer__section-title {
+  /* Section title with slash separator */
+  display: flex;
+  align-items: center;
+  gap: 112px;
+  padding-left: 121px;
+  
+  /* Typography - using tech font */
+  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: normal;
+  color: var(--color-text-primary, #362C2C);
+}
+
+.footer__info-title {
+  /* Right-aligned info title */
+  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: normal;
+  color: var(--color-text-primary, #362C2C);
+  text-align: right;
+  width: 303px;
+}
+
+.footer__contact {
+  /* Contact information container */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs, 8px);
+  padding-left: 240px;
+  width: 100%;
+  
+  /* Typography - using default font */
+  font-family: var(--font-default, 'PP Mori', sans-serif);
+  font-size: var(--text-size-large, 40px);
+  line-height: var(--text-line-large, 48px);
+  color: var(--color-text-primary, #362C2C);
+}
+
+.footer__contact-line {
+  /* First line with email and phone */
+  display: flex;
+  gap: 86px;
+  align-items: center;
+  width: 100%;
+}
+
+.footer__address {
+  /* Address lines */
+  line-height: var(--text-line-large, 48px);
+  white-space: nowrap;
+}
+
+.footer__address p {
+  margin: 0;
+}
+
+.footer__logo {
+  /* Logo section */
+  width: 606px;
+  height: 136px;
+  background: var(--color-background-surface, #F5F5F5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__links {
+  /* Social and legal links container */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l, 24px);
+  width: 1281px;
+}
+
+.footer__link-row {
+  /* Individual link row */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer__link-group {
+  /* Group of links */
+  display: flex;
+  gap: var(--spacing-m, 16px);
+  align-items: center;
+}
+
+.footer__link {
+  /* Individual link */
+  display: flex;
+  gap: var(--spacing-xsm, 10px);
+  align-items: center;
+  width: 225px;
+  
+  /* Typography - using tech font */
+  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: normal;
+  color: var(--color-text-primary, #362C2C);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__link:hover {
+  color: var(--color-text-hover, #D4D4D4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+  .footer {
+    max-width: 100%;
+    padding: 0 var(--spacing-l, 24px);
+  }
+  
+  .footer__section-title {
+    padding-left: var(--spacing-xxxl, 48px);
+    gap: var(--spacing-6xl, 64px);
+  }
+  
+  .footer__contact {
+    padding-left: var(--spacing-8xl, 80px);
+  }
+  
+  .footer__logo {
+    width: 100%;
+    max-width: 606px;
+  }
+  
+  .footer__links {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer__section-title {
+    padding-left: var(--spacing-l, 24px);
+    gap: var(--spacing-xl, 32px);
+  }
+  
+  .footer__contact {
+    padding-left: var(--spacing-4xl, 56px);
+    font-size: var(--text-size-small, 16px);
+    line-height: var(--text-line-small, 22px);
+  }
+  
+  .footer__contact-line {
+    flex-direction: column;
+    gap: var(--spacing-m, 16px);
+    align-items: flex-start;
+  }
+  
+  .footer__link-group {
+    flex-direction: column;
+    gap: var(--spacing-s, 12px);
+    align-items: flex-start;
+  }
+  
+  .footer__link {
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__header {
+    flex-direction: column;
+    gap: var(--spacing-m, 16px);
+    align-items: flex-start;
+  }
+  
+  .footer__section-title {
+    padding-left: 0;
+  }
+  
+  .footer__info-title {
+    width: auto;
+    text-align: left;
+  }
+  
+  .footer__contact {
+    padding-left: 0;
+    font-size: var(--text-size-xsmall, 14px);
+    line-height: var(--text-line-xsmall, 17px);
+  }
+  
+  .footer__link-row {
+    flex-direction: column;
+    gap: var(--spacing-m, 16px);
+    align-items: flex-start;
+  }
+}
