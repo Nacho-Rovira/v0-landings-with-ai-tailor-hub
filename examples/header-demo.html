@@ -34,6 +34,7 @@
       
       /* Logo */
       --logo-size-large: 201px;
+      --logo-size-small: 49px;
       
       /* Semantic Colors */
       --color-text-primary: var(--color-neutral-900);
@@ -79,6 +80,7 @@
 
     .header--scrolling .logo-svg {
       width: var(--logo-size-small);
+      height: var(--logo-size-small);
     }
 
     .header__menu {
@@ -120,6 +122,73 @@
     .header__info-item p {
       margin: 0;
       white-space: pre-wrap;
+    }
+
+    /* Mobile variant styles */
+    .header--mobile {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      max-width: 100%;
+      background: var(--color-neutral-00);
+    }
+
+    .header__mobile-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--spacing-l);
+      height: calc(var(--logo-size-small) + var(--spacing-l) * 2);
+    }
+
+    .header__mobile-logo {
+      flex-shrink: 0;
+    }
+
+    .header__mobile-toggle {
+      background: none;
+      border: none;
+      font-family: var(--font-tech);
+      font-size: var(--text-size-xsmall);
+      color: var(--color-text-primary);
+      cursor: pointer;
+      padding: var(--spacing-xs);
+    }
+
+    .header__mobile-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--color-neutral-00);
+      border-top: 1px solid var(--color-neutral-200);
+    }
+
+    .header__mobile-nav {
+      display: flex;
+      flex-direction: column;
+      padding: var(--spacing-l);
+    }
+
+    .header__mobile-link {
+      display: block;
+      padding: var(--spacing-m) 0;
+      font-family: var(--font-tech);
+      font-size: var(--text-size-xsmall);
+      color: var(--color-text-primary);
+      text-decoration: none;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--color-neutral-200);
+    }
+
+    .header__mobile-link:last-child {
+      border-bottom: none;
+    }
+
+    .header__mobile-link--selected {
+      color: var(--color-text-accent);
     }
 
     /* Menu Styles */
@@ -323,6 +392,42 @@
       </div>
     </div>
 
+    <!-- Mobile Variant -->
+    <div class="demo-section">
+      <div class="demo-label">Mobile Variant (Fixed Header with Toggle Menu)</div>
+      <div class="demo-box">
+        <header class="header header--mobile">
+          <div class="header__mobile-bar">
+            <div class="header__mobile-logo">
+              <svg class="logo-svg" viewBox="0 0 225 201" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: var(--logo-size-small); height: var(--logo-size-small);">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M 225 201 V 167.499 H 174.07 C 168.749 167.499 162.668 164.522 158.108 159.31 L 136.064 133.999 H 225 V 100.5 H 162.668 L 206.757 49.1331 L 180.152 27.5443 L 129.223 86.3551 V 0 H 95.0166 V 86.3551 L 44.8478 27.5443 L 18.2432 49.1331 L 62.3308 100.5 H 0 V 133.999 H 88.9355 L 66.8917 159.31 C 62.3308 164.522 56.2498 167.499 50.929 167.499 H 0 V 201 H 53.2094 C 66.8917 201 80.5741 195.788 88.1753 186.854 L 112.5 158.566 L 136.824 186.854 C 144.425 195.044 158.108 201 171.79 201 H 225 Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <button class="header__mobile-toggle" onclick="toggleMobileMenu()">
+              MENU
+            </button>
+          </div>
+          <div class="header__mobile-menu" id="mobileMenu" style="display: none;">
+            <nav class="header__mobile-nav">
+              <a href="/services" class="header__mobile-link">services</a>
+              <a href="/projects" class="header__mobile-link">projects</a>
+              <a href="/about" class="header__mobile-link header__mobile-link--selected">about</a>
+              <a href="https://tally.so/r/wopD8P" class="header__mobile-link">contact</a>
+            </nav>
+          </div>
+        </header>
+      </div>
+      
+      <div class="info-box">
+        <strong>Mobile Variant Features:</strong><br>
+        • Fixed position at top of screen<br>
+        • Small logo (49px)<br>
+        • Toggle menu button<br>
+        • Full-width mobile menu overlay<br>
+        • Touch-friendly navigation
+      </div>
+    </div>
+
     <!-- Interactive Scroll Demo -->
     <div class="demo-section">
       <div class="demo-label">Interactive Scroll Demo</div>
@@ -398,6 +503,20 @@
         demoHeader.classList.remove('header--scrolling');
       }
     });
+
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      const toggleButton = document.querySelector('.header__mobile-toggle');
+      
+      if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+        mobileMenu.style.display = 'block';
+        toggleButton.textContent = 'CLOSE';
+      } else {
+        mobileMenu.style.display = 'none';
+        toggleButton.textContent = 'MENU';
+      }
+    }
   </script>
 </body>
 </html>
