@@ -77,10 +77,9 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 <p>{contactInfo.email}</p>
                 <p>{contactInfo.phone}</p>
               </div>
-              <div className="footer__address">
-                <p>{contactInfo.address.line1}</p>
-                <p>{contactInfo.address.line2}</p>
-              </div>
+              <p className="footer__address">
+                {contactInfo.address.line1} {contactInfo.address.line2}
+              </p>
             </div>
           </div>
 

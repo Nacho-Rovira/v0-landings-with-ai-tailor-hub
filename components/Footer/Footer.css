@@ -142,7 +142,7 @@
 .footer--mobile {
   /* Mobile layout - matching Figma design */
   width: 100%;
-  max-width: 361px;
+  max-width: 334px; /* Figma width */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -176,15 +176,17 @@
   padding-left: 0;
 }
 
-.footer--mobile .footer__info-title {
-  /* Info title - right aligned with specific width */
-  width: 174px;
-  text-align: right;
-  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
-  font-size: var(--text-size-xsmall, 14px);
-  line-height: normal;
-  white-space: pre-wrap;
-}
+    .footer--mobile .footer__info-title {
+      /* Info title - right aligned wrapper with text inside */
+      width: 303px;
+      text-align: right;
+      font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+      font-size: var(--text-size-xsmall, 14px);
+      line-height: normal;
+      white-space: pre-wrap;
+      display: flex;
+      justify-content: flex-end;
+    }
 
 .footer--mobile .footer__contact {
   /* Mobile contact - smaller font and stacked layout */
@@ -203,6 +205,13 @@
   flex-direction: column;
   gap: var(--spacing-xs, 8px);
   align-items: flex-start;
+}
+
+.footer--mobile .footer__address {
+  /* Address - single paragraph with wrapping */
+  white-space: pre-wrap;
+  width: 100%;
+  margin: 0;
 }
 
 .footer--mobile .footer__logo {
@@ -308,7 +317,7 @@
   .footer:not(.footer--mobile) {
     /* Apply mobile-like layout to default variant on small screens */
     gap: 84px;
-    max-width: 361px;
+    max-width: 334px;
     margin: 0 auto;
   }
   
@@ -327,9 +336,11 @@
   }
   
   .footer:not(.footer--mobile) .footer__info-title {
-    width: 174px;
+    width: 303px;
     text-align: right;
     white-space: pre-wrap;
+    display: flex;
+    justify-content: flex-end;
   }
   
   .footer:not(.footer--mobile) .footer__contact {

@@ -182,7 +182,7 @@
     /* Mobile variant styles */
     .footer--mobile {
       width: 100%;
-      max-width: 361px;
+      max-width: 334px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -214,12 +214,14 @@
     }
 
     .footer--mobile .footer__info-title {
-      width: 174px;
+      width: 303px;
       text-align: right;
       font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
       font-size: var(--text-size-xsmall, 14px);
       line-height: normal;
       white-space: pre-wrap;
+      display: flex;
+      justify-content: flex-end;
     }
 
     .footer--mobile .footer__contact {
@@ -237,6 +239,12 @@
       flex-direction: column;
       gap: var(--spacing-xs, 8px);
       align-items: flex-start;
+    }
+
+    .footer--mobile .footer__address {
+      white-space: pre-wrap;
+      width: 100%;
+      margin: 0;
     }
 
     .footer--mobile .footer__logo {
@@ -510,10 +518,7 @@
                 <p>SALES@TAILOR-HUB.COM</p>
                 <p>+34 682 270 526</p>
               </div>
-              <div class="footer__address">
-                <p>CALLE HERMANOS ÁLVAREZ QUINTERO, 2,</p>
-                <p>SEMISÓTANO A, 28004 MADRID</p>
-              </div>
+              <p class="footer__address">CALLE HERMANOS ÁLVAREZ QUINTERO, 2, SEMISÓTANO A, 28004 MADRID</p>
             </div>
           </div>
 
@@ -557,11 +562,13 @@
       
       <div class="info-box">
         <strong>Mobile Variant Features:</strong><br>
-        • Compact layout (361px width)<br>
+        • Compact layout (334px width)<br>
         • Small logo (49px height)<br>
+        • Info title wrapper: 303px with text inside<br>
         • Stacked contact information<br>
-        • Vertical link groups<br>
-        • Reduced font sizes
+        • Address as single line with wrapping<br>
+        • Vertical link groups (225px width, right-aligned)<br>
+        • Typography: PP Neue Montreal Mono at 14px
       </div>
     </div>
   </div>
