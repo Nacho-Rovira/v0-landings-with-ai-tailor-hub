@@ -1,0 +1,39 @@
+/* 
+ * MenuItem Component Styles
+ * Using design tokens from the project
+ */
+
+.menu-item {
+  /* Reset default link styles */
+  text-decoration: none;
+  outline: none;
+  
+  /* Layout */
+  display: inline-block;
+  padding: 0;
+  
+  /* Transitions */
+  transition: color 0.2s ease;
+  
+  /* Typography - using menu component tokens */
+  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: var(--text-line-xsmall, 17px);
+  text-transform: uppercase;
+  
+  /* Default state - using menu.color.text */
+  color: var(--color-text-primary, #362C2C);
+  cursor: pointer;
+}
+
+.menu-item:hover:not(.menu-item--selected) {
+  /* Hover state - using menu.color.textHover */
+  color: var(--color-text-hover, #D4D4D4);
+}
+
+.menu-item--selected {
+  /* Selected/active state - using menu.color.textSelected */
+  color: var(--color-text-accent, #2C54FF);
+  cursor: default;
+}
+

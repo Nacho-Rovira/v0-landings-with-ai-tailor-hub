@@ -1,0 +1,80 @@
+/**
+ * Design Tokens - CSS Custom Properties
+ * Generated from primitives.json, semantics.json, and components.json
+ */
+
+:root {
+  /* Primitive Colors - Neutral */
+  --color-neutral-00: #FFFFFF;
+  --color-neutral-100: #F5F5F5;
+  --color-neutral-200: #E5E5E5;
+  --color-neutral-300: #D4D4D4;
+  --color-neutral-600: #828086;
+  --color-neutral-900: #362C2C;
+  
+  /* Primitive Colors - Blue */
+  --color-blue-500: #2C54FF;
+  
+  /* Text Sizes */
+  --text-size-xsmall: 14px;
+  --text-size-small: 16px;
+  --text-size-large: 40px;
+  --text-size-xxlarge: 66px;
+  --text-size-4xlarge: 90px;
+  
+  /* Line Heights */
+  --text-line-xsmall: 17px;
+  --text-line-small: 22px;
+  --text-line-large: 48px;
+  --text-line-xxlarge: 62px;
+  --text-line-4xlarge: 108px;
+  
+  /* Font Families */
+  --font-default: 'PP Mori', sans-serif;
+  --font-tech: 'PP Neue Montreal Mono', monospace;
+  
+  /* Border Radius */
+  --radius-xs: 8px;
+  --radius-s: 16px;
+  
+  /* Spacing */
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-xsm: 10px;
+  --spacing-s: 12px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 40px;
+  --spacing-xxxl: 48px;
+  --spacing-4xl: 56px;
+  --spacing-5xl: 60px;
+  --spacing-6xl: 64px;
+  --spacing-7xl: 72px;
+  --spacing-8xl: 80px;
+  
+  /* Semantic Colors - Background */
+  --color-background-default: var(--color-neutral-00);
+  --color-background-surface: var(--color-neutral-100);
+  --color-background-hover: var(--color-neutral-200);
+  
+  /* Semantic Colors - Text */
+  --color-text-primary: var(--color-neutral-900);
+  --color-text-secondary: var(--color-neutral-600);
+  --color-text-accent: var(--color-blue-500);
+  --color-text-hover: var(--color-neutral-300);
+  --color-text-invert: var(--color-neutral-00);
+  
+  /* Semantic Colors - Brand */
+  --color-brand-primary: var(--color-blue-500);
+  
+  /* Component - Button Primary */
+  --button-primary-padding: var(--spacing-xs);
+  --button-primary-text-size: var(--text-size-xsmall);
+  --button-primary-font: var(--font-tech);
+  --button-primary-bg: var(--color-background-surface);
+  --button-primary-bg-hover: var(--color-background-hover);
+  --button-primary-text: var(--color-text-secondary);
+  --button-primary-text-hover: var(--color-text-primary);
+}
+

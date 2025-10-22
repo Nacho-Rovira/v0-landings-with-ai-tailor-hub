@@ -1,0 +1,28 @@
+{
+  "name": "@tailorhub/design-system",
+  "version": "0.1.0",
+  "description": "Tailor Hub Design System - Landing pages with AI integration",
+  "main": "components/index.ts",
+  "types": "components/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "design-system",
+    "react",
+    "components",
+    "tailorhub"
+  ],
+  "author": "Tailor Hub",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0"
+  }
+}
+

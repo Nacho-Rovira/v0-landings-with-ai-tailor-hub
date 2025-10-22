@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Component Demo - Tailor Hub Design System</title>
+  <style>
+    /* Import design tokens as CSS variables */
+    :root {
+      /* Primitive Colors - Neutral */
+      --color-neutral-00: #FFFFFF;
+      --color-neutral-100: #F5F5F5;
+      --color-neutral-200: #E5E5E5;
+      --color-neutral-300: #D4D4D4;
+      --color-neutral-600: #828086;
+      --color-neutral-900: #362C2C;
+      
+      /* Primitive Colors - Blue */
+      --color-blue-500: #2C54FF;
+      
+      /* Text */
+      --text-size-xsmall: 14px;
+      --text-line-xsmall: 17px;
+      --font-tech: 'PP Neue Montreal Mono', monospace;
+      
+      /* Spacing */
+      --spacing-m: 16px;
+      --spacing-xl: 32px;
+      
+      /* Border Radius */
+      --radius-s: 16px;
+      
+      /* Semantic Colors */
+      --color-text-primary: var(--color-neutral-900);
+      --color-text-hover: var(--color-neutral-300);
+      --color-text-accent: var(--color-blue-500);
+      --color-background-surface: var(--color-neutral-100);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--color-neutral-00);
+      color: var(--color-neutral-900);
+      line-height: 1.6;
+    }
+
+    .page-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .page-header p {
+      opacity: 0.9;
+    }
+
+    .content-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+
+    .content-section h2 {
+      font-size: 24px;
+      margin-bottom: 40px;
+      font-weight: 500;
+    }
+
+    .demo-container {
+      margin-bottom: 80px;
+    }
+
+    .demo-label {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-neutral-600);
+    }
+
+    .demo-box {
+      background: white;
+      border: 1px solid var(--color-neutral-200);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+
+    /* MenuItem Component Styles */
+    .menu-item {
+      text-decoration: none;
+      outline: none;
+      display: inline-block;
+      padding: 0;
+      transition: color 0.2s ease;
+      font-family: var(--font-tech);
+      font-size: var(--text-size-xsmall);
+      line-height: var(--text-line-xsmall);
+      text-transform: uppercase;
+      color: var(--color-text-primary);
+      cursor: pointer;
+    }
+
+    .menu-item:hover:not(.menu-item--selected) {
+      color: var(--color-text-hover);
+    }
+
+    .menu-item--selected {
+      color: var(--color-text-accent);
+      cursor: default;
+    }
+
+    /* Menu Component Styles */
+    .menu {
+      display: inline-flex;
+      padding: var(--spacing-m);
+      align-items: center;
+      gap: var(--spacing-xl);
+      border-radius: var(--radius-s);
+      transition: background-color 0.3s ease;
+    }
+
+    .menu--starter {
+      background-color: transparent;
+    }
+
+    .menu--scrolling {
+      background-color: var(--color-background-surface);
+    }
+
+    /* Demo specific styles */
+    .states-demo {
+      padding: 40px;
+      background: var(--color-neutral-100);
+    }
+
+    .states-demo .menu-item {
+      margin-right: 40px;
+    }
+
+    .scroll-demo-container {
+      position: relative;
+      height: 400px;
+      overflow-y: scroll;
+      border: 2px solid var(--color-neutral-200);
+      border-radius: 8px;
+    }
+
+    .scroll-demo-menu {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .scroll-demo-content {
+      padding: 40px;
+      height: 1000px;
+    }
+
+    .info-box {
+      background: #EEF2FF;
+      border-left: 3px solid var(--color-blue-500);
+      padding: 16px;
+      margin-top: 16px;
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .token-reference {
+      margin-top: 40px;
+      padding: 24px;
+      background: var(--color-neutral-100);
+      border-radius: 8px;
+    }
+
+    .token-reference h3 {
+      font-size: 16px;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .token-reference ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .token-reference li {
+      padding: 6px 0;
+      font-family: monospace;
+      font-size: 13px;
+    }
+
+    .code-block {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 16px;
+      border-radius: 4px;
+      overflow-x: auto;
+      margin-top: 16px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-header">
+    <h1>Menu & MenuItem Components</h1>
+    <p>Navigation components with multiple states and variants</p>
+  </div>
+
+  <div class="content-section">
+    <!-- MenuItem States Demo -->
+    <div class="demo-container">
+      <h2>MenuItem States</h2>
+      
+      <div class="demo-label">Default, Hover, and Selected States</div>
+      <div class="demo-box states-demo">
+        <a href="#" class="menu-item">DEFAULT</a>
+        <a href="#" class="menu-item" style="color: var(--color-text-hover);">HOVER</a>
+        <a href="#" class="menu-item menu-item--selected">SELECTED</a>
+      </div>
+      
+      <div class="info-box">
+        <strong>States:</strong><br>
+        • Default: Dark text (#362C2C)<br>
+        • Hover: Light gray text (#D4D4D4)<br>
+        • Selected: Blue accent text (#2C54FF)
+      </div>
+    </div>
+
+    <!-- Menu Variants Demo -->
+    <div class="demo-container">
+      <h2>Menu Variants</h2>
+      
+      <div class="demo-label">Starter Variant (Transparent)</div>
+      <div class="demo-box">
+        <nav class="menu menu--starter">
+          <a href="#" class="menu-item">SERVICES</a>
+          <a href="#" class="menu-item">PROJECTS</a>
+          <a href="#" class="menu-item menu-item--selected">ABOUT</a>
+          <a href="#" class="menu-item">CONTACT</a>
+        </nav>
+      </div>
+      
+      <div class="demo-label" style="margin-top: 40px;">Scrolling Variant (With Background)</div>
+      <div class="demo-box">
+        <nav class="menu menu--scrolling">
+          <a href="#" class="menu-item">SERVICES</a>
+          <a href="#" class="menu-item">PROJECTS</a>
+          <a href="#" class="menu-item menu-item--selected">ABOUT</a>
+          <a href="#" class="menu-item">CONTACT</a>
+        </nav>
+      </div>
+      
+      <div class="info-box">
+        <strong>Variants:</strong><br>
+        • Starter: Transparent background, used before scrolling<br>
+        • Scrolling: Surface background (#F5F5F5), shown when page scrolls
+      </div>
+    </div>
+
+    <!-- Interactive Scroll Demo -->
+    <div class="demo-container">
+      <h2>Interactive Scroll Demo</h2>
+      
+      <div class="demo-label">Scroll inside the box to see the menu change</div>
+      <div class="scroll-demo-container" id="scrollContainer">
+        <nav class="menu menu--starter scroll-demo-menu" id="demoMenu">
+          <a href="#" class="menu-item">SERVICES</a>
+          <a href="#" class="menu-item">PROJECTS</a>
+          <a href="#" class="menu-item menu-item--selected">ABOUT</a>
+          <a href="#" class="menu-item">CONTACT</a>
+        </nav>
+        
+        <div class="scroll-demo-content">
+          <h3 style="margin-bottom: 20px;">Scroll down to see the menu transform</h3>
+          <p style="margin-bottom: 20px;">
+            As you scroll, the menu will automatically change from the "starter" variant 
+            (transparent) to the "scrolling" variant (with background and shadow).
+          </p>
+          <p style="margin-bottom: 20px;">
+            This is a common pattern in modern web design where the navigation adapts 
+            based on the scroll position.
+          </p>
+          <p style="margin-top: 200px; color: var(--color-neutral-600);">
+            Keep scrolling to see the effect...
+          </p>
+          <p style="margin-top: 200px; color: var(--color-neutral-600);">
+            Almost there...
+          </p>
+          <p style="margin-top: 200px; font-weight: bold; color: var(--color-blue-500);">
+            Now scroll back up!
+          </p>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        The menu uses CSS transitions for smooth changes between variants. 
+        In a real implementation, you would use JavaScript to detect scroll position 
+        and toggle between variants.
+      </div>
+    </div>
+
+    <!-- Design Tokens Reference -->
+    <div class="demo-container">
+      <h2>Design Tokens Used</h2>
+      
+      <div class="token-reference">
+        <h3>MenuItem Tokens</h3>
+        <ul>
+          <li>text.size.xsmall: 14px</li>
+          <li>text.line.xsmall: 17px</li>
+          <li>text.font.tech: 'PP Neue Montreal Mono', monospace</li>
+          <li>color.text.primary: #362C2C (default state)</li>
+          <li>color.text.hover: #D4D4D4 (hover state)</li>
+          <li>color.text.accent: #2C54FF (selected state)</li>
+        </ul>
+      </div>
+      
+      <div class="token-reference">
+        <h3>Menu Tokens</h3>
+        <ul>
+          <li>spacing.m: 16px (padding)</li>
+          <li>spacing.xl: 32px (gap between items)</li>
+          <li>radius.s: 16px (border radius)</li>
+          <li>color.background.surface: #F5F5F5 (scrolling variant background)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Interactive scroll demo
+    const scrollContainer = document.getElementById('scrollContainer');
+    const demoMenu = document.getElementById('demoMenu');
+    
+    scrollContainer.addEventListener('scroll', function() {
+      if (scrollContainer.scrollTop > 50) {
+        demoMenu.classList.remove('menu--starter');
+        demoMenu.classList.add('menu--scrolling');
+      } else {
+        demoMenu.classList.remove('menu--scrolling');
+        demoMenu.classList.add('menu--starter');
+      }
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,49 @@
+/* 
+ * Button Component Styles
+ * Using design tokens from the project
+ */
+
+.button {
+  /* Reset default button styles */
+  border: none;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  
+  /* Layout - matching Figma specs */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xsm, 10px);
+  
+  /* Transitions */
+  transition: background-color 0.2s ease, color 0.2s ease;
+  
+  /* Base styles - matching Figma specs */
+  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: var(--text-line-xsmall, 17px);
+  padding: var(--spacing-xs, 8px);
+  border-radius: var(--radius-xs, 8px);
+}
+
+.button--primary {
+  /* Primary button using component tokens */
+  background-color: var(--color-neutral-100, #F5F5F5);
+  color: var(--color-neutral-600, #828086);
+}
+
+.button--primary:hover:not(:disabled) {
+  background-color: var(--color-neutral-200, #E5E5E5);
+  color: var(--color-neutral-900, #362C2C);
+}
+
+.button--primary:active:not(:disabled) {
+  background-color: var(--color-neutral-300, #D4D4D4);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
