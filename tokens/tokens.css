@@ -77,8 +77,17 @@
   --button-primary-text: var(--color-text-secondary);
   --button-primary-text-hover: var(--color-text-primary);
 
+  /* Component - Menu */
+  --menu-padding: var(--spacing-m);
+  --menu-gap: var(--spacing-xl);
+  --menu-text-font: var(--font-tech);
+  --menu-color-text: var(--color-text-primary);
+  --menu-color-text-hover: var(--color-text-hover);
+  --menu-color-text-selected: var(--color-text-accent);
+  --menu-color-background: var(--color-background-surface);
+
   /* Component - Logo */
   --logo-size-small: 49px;
   --logo-size-large: 201px;
-  --logo-color-primary: var(--color-text-primary);
+  --logo-color-primary: var(--menu-color-text);
 }

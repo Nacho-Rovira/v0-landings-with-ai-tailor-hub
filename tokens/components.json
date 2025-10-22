@@ -103,7 +103,7 @@
         },
         "color": {
           "primary": {
-            "$value": "{color.text.primary}",
+            "$value": "{component.menu.color.text}",
             "$type": "color"
           }
         }
