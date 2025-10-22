@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/Button/Button"
 import { Menu } from "@/components/Menu/Menu"
 import { MenuItem } from "@/components/MenuItem/MenuItem"
+import { Header } from "@/components/Header/Header"
 import { TailorHubLogo } from "@/components/Logo/TailorHubLogo"
 import { TailorHubLogoWithName } from "@/components/Logo/TailorHubLogoWithName"
 import "@/tokens/tokens.css"
@@ -197,6 +198,85 @@ export default function ShowcasePage() {
                 TailorHubLogoWithName - Large
               </h3>
               <TailorHubLogoWithName size="large" />
+            </div>
+          </div>
+        </section>
+
+        {/* Header Component Section */}
+        <section
+          style={{
+            marginBottom: "var(--spacing-8xl)",
+          }}
+        >
+          <h2
+            className="font-sans"
+            style={{
+              fontSize: "var(--text-size-large)",
+              lineHeight: "var(--text-line-large)",
+              color: "var(--color-text-primary)",
+              marginBottom: "var(--spacing-xl)",
+              fontWeight: 400,
+            }}
+          >
+            Header Component
+          </h2>
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "var(--spacing-xxxl)",
+              padding: "var(--spacing-xl)",
+              backgroundColor: "var(--color-background-surface)",
+              borderRadius: "var(--radius-s)",
+            }}
+          >
+            {/* Header - Starter Variant */}
+            <div>
+              <h3
+                className="font-mono"
+                style={{
+                  fontSize: "var(--text-size-xsmall)",
+                  color: "var(--color-text-secondary)",
+                  marginBottom: "var(--spacing-m)",
+                }}
+              >
+                Header - Starter Variant (Large Logo with Info)
+              </h3>
+              <div
+                style={{
+                  border: "1px solid var(--color-background-hover)",
+                  borderRadius: "var(--radius-s)",
+                  padding: "var(--spacing-l)",
+                  backgroundColor: "var(--color-background-default)",
+                }}
+              >
+                <Header variant="starter" />
+              </div>
+            </div>
+
+            {/* Header - Scrolling Variant */}
+            <div>
+              <h3
+                className="font-mono"
+                style={{
+                  fontSize: "var(--text-size-xsmall)",
+                  color: "var(--color-text-secondary)",
+                  marginBottom: "var(--spacing-m)",
+                }}
+              >
+                Header - Scrolling Variant (Compact with Small Logo)
+              </h3>
+              <div
+                style={{
+                  border: "1px solid var(--color-background-hover)",
+                  borderRadius: "var(--radius-s)",
+                  padding: "var(--spacing-l)",
+                  backgroundColor: "var(--color-background-default)",
+                }}
+              >
+                <Header variant="scrolling" />
+              </div>
             </div>
           </div>
         </section>

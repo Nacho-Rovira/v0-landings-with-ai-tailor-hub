@@ -4,7 +4,7 @@ A comprehensive header component featuring the Tailor Hub logo, navigation menu,
 
 ## Usage
 
-```tsx
+\`\`\`tsx
 import { Header } from './components/Header';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     <Header variant="starter" />
   );
 }
-```
+\`\`\`
 
 ## Props
 
@@ -23,13 +23,13 @@ function App() {
 
 ### MenuItem Type
 
-```tsx
+\`\`\`tsx
 {
   label: string;
   href: string;
   isSelected?: boolean;
 }
-```
+\`\`\`
 
 Default menu items:
 - services → `/services`
@@ -107,17 +107,17 @@ Default menu items:
 ## Examples
 
 ### Basic Header
-```tsx
+\`\`\`tsx
 <Header variant="starter" />
-```
+\`\`\`
 
 ### Header with Scrolling Variant
-```tsx
+\`\`\`tsx
 <Header variant="scrolling" />
-```
+\`\`\`
 
 ### Custom Menu Items
-```tsx
+\`\`\`tsx
 const menuItems = [
   { label: 'HOME', href: '#home', isSelected: true },
   { label: 'ABOUT', href: '#about' },
@@ -126,10 +126,10 @@ const menuItems = [
 ];
 
 <Header variant="starter" menuItems={menuItems} />
-```
+\`\`\`
 
 ### Interactive with Scroll Detection
-```tsx
+\`\`\`tsx
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -147,7 +147,7 @@ function App() {
     </div>
   );
 }
-```
+\`\`\`
 
 ## Responsive Behavior
 
@@ -186,4 +186,3 @@ The Header component integrates:
 - **MenuItem** - For individual navigation links
 
 All components share the same design tokens for consistency.
-
