@@ -384,13 +384,18 @@
     // Interactive scroll demo
     window.addEventListener('scroll', function() {
       const demoMenu = document.getElementById('demoMenu');
+      const demoHeader = document.getElementById('demoHeader');
       
       if (window.scrollY > 200) {
+        // Switch to scrolling variant
         demoMenu.classList.remove('menu--starter');
         demoMenu.classList.add('menu--scrolling');
+        demoHeader.classList.add('header--scrolling');
       } else {
+        // Switch to starter variant
         demoMenu.classList.remove('menu--scrolling');
         demoMenu.classList.add('menu--starter');
+        demoHeader.classList.remove('header--scrolling');
       }
     });
   </script>
