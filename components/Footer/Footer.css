@@ -89,7 +89,7 @@
 .footer__logo {
   /* Logo section - matching the aspect ratio from the image */
   width: 606px;
-  height: 135px;
+  height: 136px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -7,7 +7,7 @@ export interface TailorHubLogoWithNameProps extends React.SVGProps<SVGSVGElement
 
 export const TailorHubLogoWithName = React.forwardRef<SVGSVGElement, TailorHubLogoWithNameProps>(
   ({ size = "small", color, className = "", ...props }, ref) => {
-    const heightStyle = size === "small" ? "var(--logo-size-small)" : "var(--logo-size-large)"
+    const heightStyle = size === "small" ? "var(--logo-size-small)" : "136px"
     const colorValue = color || "var(--logo-color-primary)"
 
     return (
