@@ -9,10 +9,10 @@
   padding: var(--spacing-m, 16px);
   align-items: center;
   gap: var(--spacing-xl, 32px);
-  
+
   /* Border radius */
   border-radius: var(--radius-s, 16px);
-  
+
   /* Transitions for smooth variant changes */
   transition: background-color 0.3s ease;
 }
@@ -25,7 +25,7 @@
 /* Scrolling variant - shown when page is scrolled */
 .menu--scrolling {
   /* Using menu.color.background token */
-  background-color: var(--color-background-surface, #F5F5F5);
+  background-color: var(--color-background-surface, #f5f5f5);
 }
 
 /* Responsive: Stack menu items vertically on small screens */
