@@ -1,4 +1,4 @@
-/* 
+/*
  * Header Component Styles
  * Using design tokens from the project
  */
@@ -9,7 +9,7 @@
   width: 100%;
   max-width: 1432px;
   margin: 0 auto;
-  
+
   /* Transitions */
   transition: all 0.3s ease;
 }
@@ -21,6 +21,85 @@
 
 .header--scrolling .header__content {
   height: 100%;
+}
+
+/* Mobile variant styles */
+.header--mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  max-width: 100%;
+  background: var(--color-background-default);
+}
+
+.header__mobile-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-l, 24px);
+  height: calc(var(--logo-size-small, 49px) + var(--spacing-l, 24px) * 2);
+}
+
+.header__mobile-logo {
+  flex-shrink: 0;
+}
+
+.header__mobile-toggle {
+  /* Button styling using design tokens */
+  background: var(--color-background-surface);
+  color: var(--color-text-secondary);
+  border: none;
+  border-radius: var(--radius-xs, 8px);
+  padding: var(--spacing-s, 12px) var(--spacing-l, 24px);
+  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
+  font-size: var(--text-size-xsmall, 14px);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.header__mobile-toggle:hover {
+  background: var(--color-background-hover);
+  color: var(--color-text-primary);
+}
+
+.header__mobile-menu {
+  /* Full-screen overlay menu */
+  position: fixed;
+  top: calc(var(--logo-size-small, 49px) + var(--spacing-l, 24px) * 2);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-background-surface);
+  padding: var(--spacing-xl, 32px) var(--spacing-l, 24px);
+  overflow-y: auto;
+}
+
+.header__mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl, 32px);
+}
+
+.header__mobile-link {
+  /* Mobile menu link styling */
+  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
+  font-size: var(--text-size-large, 40px);
+  line-height: var(--text-line-large, 48px);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.header__mobile-link:hover {
+  color: var(--color-text-hover);
+}
+
+.header__mobile-link--selected {
+  color: var(--color-text-accent);
 }
 
 .header__menu {
@@ -52,9 +131,9 @@
   flex: 1;
   max-width: calc(100% - var(--logo-size-large, 225px) - 120px); /* Maximum gap of 120px from logo */
   margin-left: auto; /* Push to the right */
-  
+
   /* Typography - using tech font */
-  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
   font-size: var(--text-size-xsmall, 14px);
   line-height: 1.2;
   text-transform: uppercase;
@@ -77,11 +156,11 @@
     max-width: 100%;
     padding-left: var(--spacing-l, 24px);
   }
-  
+
   .header__content {
     gap: var(--spacing-xl, 32px);
   }
-  
+
   .header__info {
     max-width: calc(100% - var(--logo-size-large, 225px) - 60px);
     padding-right: var(--spacing-l, 24px);
@@ -94,20 +173,20 @@
     padding-left: var(--spacing-l, 24px);
     padding-right: var(--spacing-l, 24px);
   }
-  
+
   .header__menu {
     position: static;
     margin-bottom: var(--spacing-l, 24px);
     display: flex;
     justify-content: center;
   }
-  
+
   .header__content {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--spacing-xl, 32px);
   }
-  
+
   .header__info {
     flex-direction: column;
     gap: var(--spacing-l, 24px);
@@ -115,7 +194,7 @@
     justify-content: flex-start;
     padding-right: 0;
   }
-  
+
   .header__info-item {
     width: 100%;
   }
@@ -125,7 +204,7 @@
   .header {
     padding-top: var(--spacing-6xl, 64px);
   }
-  
+
   .header__logo {
     width: 100%;
     display: flex;
