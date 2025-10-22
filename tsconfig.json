@@ -21,6 +21,6 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["components/**/*", "tokens/**/*", "assets/**/*"],
+  "include": ["components/**/*", "tokens/**/*", "assets/**/*", "app/**/*"],
   "exclude": ["node_modules", "dist"]
 }
