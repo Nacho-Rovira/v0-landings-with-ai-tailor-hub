@@ -1,8 +1,7 @@
-import Image from "next/image"
 import { Button } from "@/components/Button/Button"
 import { Menu } from "@/components/Menu/Menu"
 import { MenuItem } from "@/components/MenuItem/MenuItem"
-import TailorHubLogo from "@/assets/logos/tailor-hub-logo.jpg"
+import { TailorHubLogo } from "@/assets/logos"
 
 export default function Page() {
   return (
@@ -12,13 +11,7 @@ export default function Page() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Image
-                src={TailorHubLogo || "/placeholder.svg"}
-                alt="Tailor Hub"
-                width={45}
-                height={40}
-                className="object-contain"
-              />
+              <TailorHubLogo size="small" aria-label="Tailor Hub" />
               <h1 className="text-xl font-semibold">Tailor Hub</h1>
             </div>
 
