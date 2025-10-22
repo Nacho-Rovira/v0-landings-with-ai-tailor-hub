@@ -1,10 +1,10 @@
-'use client'
+"use client"
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react"
 import { Button } from "@/components/Button/Button"
 import { Menu } from "@/components/Menu/Menu"
 import { MenuItem } from "@/components/MenuItem/MenuItem"
-import { TailorHubLogo, TailorHubLogoWithName } from "@/assets/logos"
+import { TailorHubLogo, TailorHubLogoWithName } from "@/components/Logo"
 
 export default function Page() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -13,8 +13,8 @@ export default function Page() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100)
     }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
@@ -25,10 +25,12 @@ export default function Page() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <TailorHubLogo size="small" aria-label="Tailor Hub" />
-              <h1 className="text-xl font-semibold" style={{ fontFamily: 'var(--font-tech)' }}>Tailor Hub</h1>
+              <h1 className="text-xl font-semibold" style={{ fontFamily: "var(--font-tech)" }}>
+                Tailor Hub
+              </h1>
             </div>
 
-            <Menu variant={isScrolled ? 'scrolling' : 'starter'}>
+            <Menu variant={isScrolled ? "scrolling" : "starter"}>
               <MenuItem href="#hero" isSelected>
                 Home
               </MenuItem>
@@ -74,24 +76,30 @@ export default function Page() {
                   <h4 className="text-2xl font-semibold mb-2">Button</h4>
                   <p className="text-muted-foreground">Primary action button with hover and disabled states</p>
                 </div>
-                
+
                 <div className="space-y-4">
                   <div>
-                    <p className="text-sm font-medium mb-3" style={{ fontFamily: 'var(--font-tech)' }}>States:</p>
+                    <p className="text-sm font-medium mb-3" style={{ fontFamily: "var(--font-tech)" }}>
+                      States:
+                    </p>
                     <div className="flex gap-4 flex-wrap items-center">
                       <div className="space-y-2">
                         <Button variant="primary">Default</Button>
                         <p className="text-xs text-muted-foreground">Default state</p>
                       </div>
                       <div className="space-y-2">
-                        <Button variant="primary" disabled>Disabled</Button>
+                        <Button variant="primary" disabled>
+                          Disabled
+                        </Button>
                         <p className="text-xs text-muted-foreground">Disabled state</p>
                       </div>
                     </div>
                   </div>
 
                   <div className="pt-4 border-t border-border">
-                    <p className="text-sm font-medium mb-2" style={{ fontFamily: 'var(--font-tech)' }}>Design Tokens:</p>
+                    <p className="text-sm font-medium mb-2" style={{ fontFamily: "var(--font-tech)" }}>
+                      Design Tokens:
+                    </p>
                     <div className="grid grid-cols-2 gap-2 text-xs">
                       <div className="font-mono">padding: var(--spacing-xs, 8px)</div>
                       <div className="font-mono">gap: var(--spacing-xsm, 10px)</div>
@@ -118,13 +126,17 @@ export default function Page() {
                 <div className="space-y-6">
                   {/* Menu Variants */}
                   <div className="space-y-4">
-                    <p className="text-sm font-medium" style={{ fontFamily: 'var(--font-tech)' }}>Menu Variants:</p>
-                    
+                    <p className="text-sm font-medium" style={{ fontFamily: "var(--font-tech)" }}>
+                      Menu Variants:
+                    </p>
+
                     <div className="space-y-4">
                       <div className="p-4 bg-background rounded">
                         <p className="text-xs mb-3 text-muted-foreground">Starter (Transparent)</p>
                         <Menu variant="starter">
-                          <MenuItem href="#" isSelected>Home</MenuItem>
+                          <MenuItem href="#" isSelected>
+                            Home
+                          </MenuItem>
                           <MenuItem href="#">About</MenuItem>
                           <MenuItem href="#">Contact</MenuItem>
                         </Menu>
@@ -133,7 +145,9 @@ export default function Page() {
                       <div className="p-4 bg-background rounded">
                         <p className="text-xs mb-3 text-muted-foreground">Scrolling (With Background)</p>
                         <Menu variant="scrolling">
-                          <MenuItem href="#" isSelected>Home</MenuItem>
+                          <MenuItem href="#" isSelected>
+                            Home
+                          </MenuItem>
                           <MenuItem href="#">About</MenuItem>
                           <MenuItem href="#">Contact</MenuItem>
                         </Menu>
@@ -143,25 +157,33 @@ export default function Page() {
 
                   {/* MenuItem States */}
                   <div className="space-y-4 pt-4 border-t border-border">
-                    <p className="text-sm font-medium" style={{ fontFamily: 'var(--font-tech)' }}>MenuItem States:</p>
+                    <p className="text-sm font-medium" style={{ fontFamily: "var(--font-tech)" }}>
+                      MenuItem States:
+                    </p>
                     <div className="flex gap-6 flex-wrap">
                       <div className="space-y-2">
                         <MenuItem href="#">Default</MenuItem>
                         <p className="text-xs text-muted-foreground">color: #362C2C</p>
                       </div>
                       <div className="space-y-2">
-                        <MenuItem href="#" style={{ color: 'var(--color-text-hover)' }}>Hover</MenuItem>
+                        <MenuItem href="#" style={{ color: "var(--color-text-hover)" }}>
+                          Hover
+                        </MenuItem>
                         <p className="text-xs text-muted-foreground">color: #D4D4D4</p>
                       </div>
                       <div className="space-y-2">
-                        <MenuItem href="#" isSelected>Selected</MenuItem>
+                        <MenuItem href="#" isSelected>
+                          Selected
+                        </MenuItem>
                         <p className="text-xs text-muted-foreground">color: #2C54FF</p>
                       </div>
                     </div>
                   </div>
 
                   <div className="pt-4 border-t border-border">
-                    <p className="text-sm font-medium mb-2" style={{ fontFamily: 'var(--font-tech)' }}>Design Tokens:</p>
+                    <p className="text-sm font-medium mb-2" style={{ fontFamily: "var(--font-tech)" }}>
+                      Design Tokens:
+                    </p>
                     <div className="grid grid-cols-2 gap-2 text-xs">
                       <div className="font-mono">padding: var(--spacing-m, 16px)</div>
                       <div className="font-mono">gap: var(--spacing-xl, 32px)</div>
@@ -208,12 +230,14 @@ export default function Page() {
                   </div>
 
                   <div>
-                    <p className="text-sm font-medium mb-2" style={{ fontFamily: 'var(--font-tech)' }}>Design Tokens:</p>
+                    <p className="text-sm font-medium mb-2" style={{ fontFamily: "var(--font-tech)" }}>
+                      Design Tokens:
+                    </p>
                     <div className="space-y-1 text-xs">
                       <div className="font-mono">size.small: var(--logo-size-small, 49px)</div>
                       <div className="font-mono">size.large: var(--logo-size-large, 201px)</div>
                       <div className="font-mono">color: var(--logo-color-primary)</div>
-                      <div className="font-mono text-muted-foreground">  → var(--menu-color-text)</div>
+                      <div className="font-mono text-muted-foreground"> → var(--menu-color-text)</div>
                     </div>
                   </div>
                 </div>
@@ -241,7 +265,9 @@ export default function Page() {
                   </div>
 
                   <div>
-                    <p className="text-sm font-medium mb-2" style={{ fontFamily: 'var(--font-tech)' }}>Usage in Menu:</p>
+                    <p className="text-sm font-medium mb-2" style={{ fontFamily: "var(--font-tech)" }}>
+                      Usage in Menu:
+                    </p>
                     <div className="p-4 bg-background rounded">
                       <div className="flex items-center gap-4">
                         <TailorHubLogoWithName size="small" />
