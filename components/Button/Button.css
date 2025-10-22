@@ -25,6 +25,9 @@
   line-height: var(--text-line-xsmall, 17px);
   padding: var(--spacing-xs, 8px);
   border-radius: var(--radius-xs, 8px);
+
+  /* Always display button text in uppercase */
+  text-transform: uppercase;
 }
 
 .button--primary {

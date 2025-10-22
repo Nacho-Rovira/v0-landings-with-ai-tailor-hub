@@ -242,7 +242,7 @@ export default function ShowcasePage() {
               >
                 Primary Button - Default State
               </h3>
-              <Button variant="primary">Click me</Button>
+              <Button variant="primary">CLICK ME</Button>
             </div>
 
             <div>
@@ -257,7 +257,7 @@ export default function ShowcasePage() {
                 Primary Button - Disabled State
               </h3>
               <Button variant="primary" disabled>
-                Disabled Button
+                DISABLED BUTTON
               </Button>
             </div>
           </div>
