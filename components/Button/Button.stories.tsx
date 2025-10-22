@@ -44,4 +44,3 @@ export const MultipleButtons = () => (
     <Button variant="primary">BUTTON 3</Button>
   </div>
 );
-

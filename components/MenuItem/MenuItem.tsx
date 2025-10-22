@@ -27,4 +27,3 @@ export const MenuItem = React.forwardRef<HTMLAnchorElement, MenuItemProps>(
 );
 
 MenuItem.displayName = 'MenuItem';
-

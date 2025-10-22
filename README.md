@@ -4,7 +4,7 @@ Repository to host the V0 landing pages and integration with the AI Tailor Hub, 
 
 ## Project Structure
 
-```
+\`\`\`
 v0-landings-with-ai-tailor-hub/
 ├── tokens/              # Design tokens
 │   ├── primitives.json  # Base values (colors, spacing, typography)
@@ -18,7 +18,7 @@ v0-landings-with-ai-tailor-hub/
 │   └── button-demo.html # Button component demo
 ├── package.json         # Project dependencies
 └── tsconfig.json        # TypeScript configuration
-```
+\`\`\`
 
 ## Design System
 
@@ -66,13 +66,13 @@ All components are built using React + TypeScript and reference the design token
 
 ### Installation
 
-```bash
+\`\`\`bash
 npm install
-```
+\`\`\`
 
 ### Using Components
 
-```tsx
+\`\`\`tsx
 import { Button } from './components';
 import './tokens/tokens.css'; // Import design tokens
 
@@ -83,7 +83,7 @@ function App() {
     </Button>
   );
 }
-```
+\`\`\`
 
 ### Viewing Examples
 

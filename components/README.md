@@ -23,7 +23,7 @@ Navigation menu item component with default, hover, and selected states.
 
 ### With React/TypeScript
 
-```tsx
+\`\`\`tsx
 import { Button } from '@tailorhub/design-system';
 
 function App() {
@@ -33,19 +33,19 @@ function App() {
     </Button>
   );
 }
-```
+\`\`\`
 
 ### Setup
 
 1. Import the CSS tokens in your app:
-```tsx
+\`\`\`tsx
 import '../tokens/tokens.css';
-```
+\`\`\`
 
 2. Import components as needed:
-```tsx
+\`\`\`tsx
 import { Button } from './components';
-```
+\`\`\`
 
 ## Design Token Integration
 
@@ -59,14 +59,14 @@ The tokens are converted to CSS custom properties in `/tokens/tokens.css`.
 ## Component Structure
 
 Each component follows this structure:
-```
+\`\`\`
 ComponentName/
 ├── ComponentName.tsx      # Main component file
 ├── ComponentName.css      # Component styles
 ├── ComponentName.stories.tsx  # Examples/stories
 ├── index.ts              # Exports
 └── README.md             # Documentation
-```
+\`\`\`
 
 ## Development Guidelines
 
@@ -83,4 +83,3 @@ ComponentName/
 3. Use existing tokens or propose new ones in the token files
 4. Export the component in `/components/index.ts`
 5. Add documentation and examples
-

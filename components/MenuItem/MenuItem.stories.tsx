@@ -39,4 +39,3 @@ export const MultipleItems = () => (
     <MenuItem href="#contact">CONTACT</MenuItem>
   </div>
 );
-
