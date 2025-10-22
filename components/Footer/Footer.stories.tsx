@@ -49,3 +49,9 @@ export const CustomLegal: Story = {
     ]
   }
 }
+
+export const Mobile: Story = {
+  args: {
+    variant: "mobile"
+  }
+}

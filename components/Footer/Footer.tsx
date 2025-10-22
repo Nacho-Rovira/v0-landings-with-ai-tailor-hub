@@ -4,7 +4,7 @@ import "./Footer.css"
 
 export interface FooterProps extends React.HTMLAttributes<HTMLElement> {
   /** Footer variant */
-  variant?: "default"
+  variant?: "default" | "mobile"
   /** Custom contact information */
   contactInfo?: {
     email?: string
@@ -55,6 +55,76 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
     className = "", 
     ...props 
   }, ref) => {
+    const isMobile = variant === "mobile"
+    
+    if (isMobile) {
+      return (
+        <footer ref={ref} className={`footer footer--mobile ${className}`} {...props}>
+          {/* Contact Section */}
+          <div className="footer__section">
+            <div className="footer__header">
+              <div className="footer__section-title">
+                <span>/</span>
+                <span>CONTACT</span>
+              </div>
+              <div className="footer__info-title">
+                PROUDLY PART OF MODULOS STUDIO GROUP
+              </div>
+            </div>
+            
+            <div className="footer__contact footer__contact--mobile">
+              <div className="footer__contact-line footer__contact-line--mobile">
+                <p>{contactInfo.email}</p>
+                <p>{contactInfo.phone}</p>
+              </div>
+              <div className="footer__address">
+                <p>{contactInfo.address.line1}</p>
+                <p>{contactInfo.address.line2}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Logo Section - Mobile */}
+          <div className="footer__logo footer__logo--mobile">
+            <TailorHubLogoWithName size="small" />
+          </div>
+
+          {/* Social and Legal Sections - Mobile */}
+          <div className="footer__links footer__links--mobile">
+            {/* Social Section */}
+            <div className="footer__link-row">
+              <div className="footer__section-title">
+                <span>/</span>
+                <span>SOCIAL</span>
+              </div>
+              <div className="footer__link-group footer__link-group--mobile">
+                {socialLinks.map((link, index) => (
+                  <a key={index} href={link.href} className="footer__link">
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Legal Section */}
+            <div className="footer__link-row">
+              <div className="footer__section-title">
+                <span>/</span>
+                <span>LEGAL</span>
+              </div>
+              <div className="footer__link-group footer__link-group--mobile">
+                {legalLinks.map((link, index) => (
+                  <a key={index} href={link.href} className="footer__link">
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </footer>
+      )
+    }
+
     return (
       <footer ref={ref} className={`footer footer--${variant} ${className}`} {...props}>
         {/* Contact Section */}

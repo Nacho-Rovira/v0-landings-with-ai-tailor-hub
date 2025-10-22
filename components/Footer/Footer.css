@@ -138,6 +138,58 @@
   color: var(--color-text-hover, #D4D4D4);
 }
 
+/* Mobile variant styles */
+.footer--mobile {
+  /* Mobile layout - matching Figma design */
+  width: 100%;
+  max-width: 361px;
+  margin: 0 auto;
+}
+
+.footer--mobile .footer__section-title {
+  /* Mobile section title - reduced gap */
+  gap: var(--spacing-l, 24px);
+  padding-left: 0;
+}
+
+.footer--mobile .footer__contact {
+  /* Mobile contact - smaller font and stacked layout */
+  padding-left: 0;
+  font-size: var(--text-size-small, 16px);
+  line-height: var(--text-line-small, 22px);
+}
+
+.footer--mobile .footer__contact-line {
+  /* Mobile contact line - vertical stack */
+  flex-direction: column;
+  gap: var(--spacing-xs, 8px);
+  align-items: flex-start;
+}
+
+.footer--mobile .footer__logo {
+  /* Mobile logo - smaller size */
+  width: 192px;
+  height: 43px;
+}
+
+.footer--mobile .footer__links {
+  /* Mobile links - reduced width */
+  width: 361px;
+}
+
+.footer--mobile .footer__link-group {
+  /* Mobile link group - vertical stack */
+  flex-direction: column;
+  gap: var(--spacing-m, 16px);
+  align-items: flex-start;
+}
+
+.footer--mobile .footer__link {
+  /* Mobile link - full width */
+  width: 225px;
+  justify-content: flex-end;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1400px) {
   .footer {

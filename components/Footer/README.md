@@ -18,7 +18,7 @@ function App() {
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `variant` | `'default'` | `'default'` | Footer variant |
+| `variant` | `'default' \| 'mobile'` | `'default'` | Footer variant |
 | `contactInfo` | `ContactInfo` | Default values | Custom contact information |
 | `socialLinks` | `Array<SocialLink>` | Default links | Custom social media links |
 | `legalLinks` | `Array<LegalLink>` | Default links | Custom legal links |
@@ -73,7 +73,8 @@ The footer is organized into three main sections:
    - Contact details: email, phone, and address
 
 2. **Logo Section**
-   - TailorHub logo with name (large size)
+   - TailorHub logo with name (large size: 136px height)
+   - Mobile variant: small size (49px height)
    - Background surface color
 
 3. **Links Section**
@@ -118,6 +119,11 @@ The footer is organized into three main sections:
 ### Basic Footer
 ```tsx
 <Footer />
+```
+
+### Mobile Variant
+```tsx
+<Footer variant="mobile" />
 ```
 
 ### Custom Contact Information
