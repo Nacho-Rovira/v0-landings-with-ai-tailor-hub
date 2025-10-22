@@ -394,6 +394,32 @@ export default function ShowcasePage() {
                 <Header variant="scrolling" />
               </div>
             </div>
+
+            <div>
+              <h3
+                className="font-mono"
+                style={{
+                  fontSize: "var(--text-size-xsmall)",
+                  color: "var(--color-text-secondary)",
+                  marginBottom: "var(--spacing-m)",
+                }}
+              >
+                Header - Mobile Variant (Responsive Menu)
+              </h3>
+              <div style={{ border: "1px solid var(--color-background-hover)", borderRadius: "var(--radius-xs)" }}>
+                <Header variant="mobile" />
+              </div>
+              <p
+                className="font-mono"
+                style={{
+                  fontSize: "var(--text-size-xsmall)",
+                  color: "var(--color-text-secondary)",
+                  marginTop: "var(--spacing-s)",
+                }}
+              >
+                Click the MENU button to toggle the mobile navigation overlay
+              </p>
+            </div>
           </div>
         </section>
 
