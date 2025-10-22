@@ -19,6 +19,11 @@ Navigation menu item component with default, hover, and selected states.
 
 [View MenuItem Documentation](./MenuItem/README.md)
 
+### Header
+Comprehensive header component featuring logo, navigation menu, and company information.
+
+[View Header Documentation](./Header/README.md)
+
 ## Usage
 
 ### With React/TypeScript

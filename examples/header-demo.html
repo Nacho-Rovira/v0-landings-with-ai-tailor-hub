@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header Component Demo - Tailor Hub Design System</title>
+  <style>
+    /* Import design tokens as CSS variables */
+    :root {
+      /* Primitive Colors - Neutral */
+      --color-neutral-00: #FFFFFF;
+      --color-neutral-100: #F5F5F5;
+      --color-neutral-200: #E5E5E5;
+      --color-neutral-300: #D4D4D4;
+      --color-neutral-600: #828086;
+      --color-neutral-900: #362C2C;
+      
+      /* Primitive Colors - Blue */
+      --color-blue-500: #2C54FF;
+      
+      /* Text */
+      --text-size-xsmall: 14px;
+      --text-line-xsmall: 17px;
+      --font-tech: 'PP Neue Montreal Mono', monospace;
+      
+      /* Spacing */
+      --spacing-m: 16px;
+      --spacing-l: 24px;
+      --spacing-xl: 32px;
+      --spacing-6xl: 64px;
+      
+      /* Border Radius */
+      --radius-s: 16px;
+      
+      /* Logo */
+      --logo-size-large: 201px;
+      
+      /* Semantic Colors */
+      --color-text-primary: var(--color-neutral-900);
+      --color-text-hover: var(--color-neutral-300);
+      --color-text-accent: var(--color-blue-500);
+      --color-background-surface: var(--color-neutral-100);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--color-neutral-00);
+      color: var(--color-neutral-900);
+      line-height: 1.6;
+    }
+
+    /* Header Component Styles */
+    .header {
+      position: relative;
+      width: 100%;
+      max-width: 1432px;
+      margin: 0 auto;
+      transition: all 0.3s ease;
+    }
+
+    /* Scrolling variant - compact header with small logo */
+    .header--scrolling {
+      height: var(--logo-size-small);
+    }
+
+    .header--scrolling .header__content {
+      height: 100%;
+    }
+
+    .header--scrolling .header__info {
+      display: none;
+    }
+
+    .header--scrolling .logo-svg {
+      width: var(--logo-size-small);
+    }
+
+    .header__menu {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+    }
+
+    .header__content {
+      display: flex;
+      align-items: flex-end;
+      width: 100%;
+      gap: 60px; /* Minimum gap between logo and info */
+    }
+
+    .header__logo {
+      flex-shrink: 0;
+    }
+
+    .header__info {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex: 1;
+      max-width: calc(100% - var(--logo-size-large) - 120px); /* Maximum gap of 120px from logo */
+      margin-left: auto; /* Push to the right */
+      font-family: var(--font-tech);
+      font-size: var(--text-size-xsmall);
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .header__info-item {
+      flex-shrink: 0;
+      line-height: normal;
+    }
+
+    .header__info-item p {
+      margin: 0;
+      white-space: pre-wrap;
+    }
+
+    /* Menu Styles */
+    .menu {
+      display: inline-flex;
+      padding: var(--spacing-m);
+      align-items: center;
+      gap: var(--spacing-xl);
+      border-radius: var(--radius-s);
+      transition: background-color 0.3s ease;
+    }
+
+    .menu--starter {
+      background-color: transparent;
+    }
+
+    .menu--scrolling {
+      background-color: var(--color-background-surface);
+    }
+
+    /* MenuItem Styles */
+    .menu-item {
+      text-decoration: none;
+      outline: none;
+      display: inline-block;
+      padding: 0;
+      transition: color 0.2s ease;
+      font-family: var(--font-tech);
+      font-size: var(--text-size-xsmall);
+      line-height: var(--text-line-xsmall);
+      text-transform: uppercase;
+      color: var(--color-text-primary);
+      cursor: pointer;
+    }
+
+    .menu-item:hover:not(.menu-item--selected) {
+      color: var(--color-text-hover);
+    }
+
+    .menu-item--selected {
+      color: var(--color-text-accent);
+      cursor: default;
+    }
+
+    /* Demo Styles */
+    .demo-container {
+      padding: 80px 40px;
+      min-height: 100vh;
+    }
+
+    .demo-section {
+      margin-bottom: 100px;
+    }
+
+    .demo-label {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-neutral-600);
+      text-align: center;
+    }
+
+    .demo-box {
+      background: white;
+      border: 1px solid var(--color-neutral-200);
+      border-radius: 8px;
+      padding: 80px 104px;
+      margin-bottom: 60px;
+      min-height: 400px;
+    }
+
+    .page-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .page-title h1 {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+
+    .page-title p {
+      color: var(--color-neutral-600);
+      font-size: 16px;
+    }
+
+    .scroll-demo {
+      position: relative;
+      min-height: 200vh;
+      padding-top: 40px;
+    }
+
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 10;
+      padding: 40px;
+      border-bottom: 1px solid var(--color-neutral-200);
+    }
+
+    .info-box {
+      background: #EEF2FF;
+      border-left: 3px solid var(--color-blue-500);
+      padding: 20px;
+      margin-top: 24px;
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* Logo SVG placeholder */
+    .logo-svg {
+      width: 225px;
+      height: 201px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <div class="page-title">
+      <h1>Header Component Demo</h1>
+      <p>Comprehensive header with logo, menu, and company info</p>
+    </div>
+
+    <!-- Starter Variant -->
+    <div class="demo-section">
+      <div class="demo-label">Starter Variant (Transparent Menu)</div>
+      <div class="demo-box">
+        <header class="header">
+          <div class="header__menu">
+            <nav class="menu menu--starter">
+              <a href="/services" class="menu-item">services</a>
+              <a href="/projects" class="menu-item">projects</a>
+              <a href="/about" class="menu-item">about</a>
+              <a href="https://tally.so/r/wopD8P" class="menu-item">contact</a>
+            </nav>
+          </div>
+
+          <div class="header__content">
+            <div class="header__logo">
+              <svg class="logo-svg" viewBox="0 0 225 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M 225 201 V 167.499 H 174.07 C 168.749 167.499 162.668 164.522 158.108 159.31 L 136.064 133.999 H 225 V 100.5 H 162.668 L 206.757 49.1331 L 180.152 27.5443 L 129.223 86.3551 V 0 H 95.0166 V 86.3551 L 44.8478 27.5443 L 18.2432 49.1331 L 62.3308 100.5 H 0 V 133.999 H 88.9355 L 66.8917 159.31 C 62.3308 164.522 56.2498 167.499 50.929 167.499 H 0 V 201 H 53.2094 C 66.8917 201 80.5741 195.788 88.1753 186.854 L 112.5 158.566 L 136.824 186.854 C 144.425 195.044 158.108 201 171.79 201 H 225 Z" fill="currentColor"/>
+              </svg>
+            </div>
+            
+            <div class="header__info">
+              <div class="header__info-item">
+                <p>AN ELITE TEAM OF SOFTWARE</p>
+                <p>ENGINEERS</p>
+              </div>
+              <div class="header__info-item">
+                <p>DEVELOPMENT</p>
+                <p>LABS</p>
+              </div>
+              <div class="header__info-item">
+                <p>ARTIFICIAL</p>
+                <p>INTELLIGENCE & DEV</p>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+
+    <!-- Scrolling Variant -->
+    <div class="demo-section">
+      <div class="demo-label">Scrolling Variant (Menu with Background)</div>
+      <div class="demo-box">
+        <header class="header">
+          <div class="header__menu">
+            <nav class="menu menu--scrolling">
+              <a href="/services" class="menu-item">services</a>
+              <a href="/projects" class="menu-item">projects</a>
+              <a href="/about" class="menu-item menu-item--selected">about</a>
+              <a href="https://tally.so/r/wopD8P" class="menu-item">contact</a>
+            </nav>
+          </div>
+
+          <div class="header__content">
+            <div class="header__logo">
+              <svg class="logo-svg" viewBox="0 0 225 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M 225 201 V 167.499 H 174.07 C 168.749 167.499 162.668 164.522 158.108 159.31 L 136.064 133.999 H 225 V 100.5 H 162.668 L 206.757 49.1331 L 180.152 27.5443 L 129.223 86.3551 V 0 H 95.0166 V 86.3551 L 44.8478 27.5443 L 18.2432 49.1331 L 62.3308 100.5 H 0 V 133.999 H 88.9355 L 66.8917 159.31 C 62.3308 164.522 56.2498 167.499 50.929 167.499 H 0 V 201 H 53.2094 C 66.8917 201 80.5741 195.788 88.1753 186.854 L 112.5 158.566 L 136.824 186.854 C 144.425 195.044 158.108 201 171.79 201 H 225 Z" fill="currentColor"/>
+              </svg>
+            </div>
+            
+            <div class="header__info">
+              <div class="header__info-item">
+                <p>AN ELITE TEAM OF SOFTWARE</p>
+                <p>ENGINEERS</p>
+              </div>
+              <div class="header__info-item">
+                <p>DEVELOPMENT</p>
+                <p>LABS</p>
+              </div>
+              <div class="header__info-item">
+                <p>ARTIFICIAL</p>
+                <p>INTELLIGENCE & DEV</p>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      
+      <div class="info-box">
+        <strong>Design Tokens Used:</strong><br>
+        • Logo: var(--logo-size-large, 201px)<br>
+        • Menu padding: var(--spacing-m, 16px)<br>
+        • Menu gap: var(--spacing-xl, 32px)<br>
+        • Menu radius: var(--radius-s, 16px)<br>
+        • Info font: var(--font-tech)<br>
+        • Info size: var(--text-size-xsmall, 14px)
+      </div>
+    </div>
+
+    <!-- Interactive Scroll Demo -->
+    <div class="demo-section">
+      <div class="demo-label">Interactive Scroll Demo</div>
+      <div class="info-box" style="margin-bottom: 24px;">
+        Scroll down to see the header menu change from starter (transparent) to scrolling (with background) variant automatically.
+      </div>
+      
+      <div class="scroll-demo" id="scrollDemo">
+        <div class="sticky-header">
+          <header class="header" id="demoHeader">
+            <div class="header__menu">
+              <nav class="menu menu--starter" id="demoMenu">
+                <a href="/services" class="menu-item">services</a>
+                <a href="/projects" class="menu-item">projects</a>
+                <a href="/about" class="menu-item menu-item--selected">about</a>
+                <a href="https://tally.so/r/wopD8P" class="menu-item">contact</a>
+              </nav>
+            </div>
+
+            <div class="header__content">
+              <div class="header__logo">
+                <svg class="logo-svg" viewBox="0 0 225 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M 225 201 V 167.499 H 174.07 C 168.749 167.499 162.668 164.522 158.108 159.31 L 136.064 133.999 H 225 V 100.5 H 162.668 L 206.757 49.1331 L 180.152 27.5443 L 129.223 86.3551 V 0 H 95.0166 V 86.3551 L 44.8478 27.5443 L 18.2432 49.1331 L 62.3308 100.5 H 0 V 133.999 H 88.9355 L 66.8917 159.31 C 62.3308 164.522 56.2498 167.499 50.929 167.499 H 0 V 201 H 53.2094 C 66.8917 201 80.5741 195.788 88.1753 186.854 L 112.5 158.566 L 136.824 186.854 C 144.425 195.044 158.108 201 171.79 201 H 225 Z" fill="currentColor"/>
+                </svg>
+              </div>
+              
+              <div class="header__info">
+                <div class="header__info-item">
+                  <p>AN ELITE TEAM OF SOFTWARE</p>
+                  <p>ENGINEERS</p>
+                </div>
+                <div class="header__info-item">
+                  <p>DEVELOPMENT</p>
+                  <p>LABS</p>
+                </div>
+                <div class="header__info-item">
+                  <p>ARTIFICIAL</p>
+                  <p>INTELLIGENCE & DEV</p>
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+        
+        <div style="padding: 40px; max-width: 800px; margin: 0 auto;">
+          <h3 style="margin-bottom: 20px;">Scroll to see the effect</h3>
+          <p style="margin-bottom: 20px;">
+            As you scroll down, the menu will automatically switch from the starter variant (transparent) 
+            to the scrolling variant (with background color).
+          </p>
+          <p style="margin-top: 600px; color: var(--color-neutral-600);">Keep scrolling...</p>
+          <p style="margin-top: 600px; font-weight: bold;">Scroll back up to see it change back!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Interactive scroll demo
+    window.addEventListener('scroll', function() {
+      const demoMenu = document.getElementById('demoMenu');
+      
+      if (window.scrollY > 200) {
+        demoMenu.classList.remove('menu--starter');
+        demoMenu.classList.add('menu--scrolling');
+      } else {
+        demoMenu.classList.remove('menu--scrolling');
+        demoMenu.classList.add('menu--starter');
+      }
+    });
+  </script>
+</body>
+</html>
+

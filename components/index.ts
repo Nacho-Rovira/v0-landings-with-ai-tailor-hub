@@ -6,3 +6,6 @@ export type { MenuProps } from './Menu';
 
 export { MenuItem } from './MenuItem';
 export type { MenuItemProps } from './MenuItem';
+
+export { Header } from './Header';
+export type { HeaderProps } from './Header';

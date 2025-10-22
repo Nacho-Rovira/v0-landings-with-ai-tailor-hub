@@ -62,6 +62,10 @@ All components are built using React + TypeScript and reference the design token
   - [View Documentation](./components/MenuItem/README.md)
   - [View Demo](./examples/menu-demo.html)
 
+- **Header** - Comprehensive header with logo, menu, and company info
+  - [View Documentation](./components/Header/README.md)
+  - [View Demo](./examples/header-demo.html)
+
 ## Getting Started
 
 ### Installation
