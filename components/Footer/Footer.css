@@ -144,23 +144,62 @@
   width: 100%;
   max-width: 361px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 84px; /* Main gap between sections from Figma */
+}
+
+.footer--mobile .footer__section {
+  /* Contact section wrapper */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxxl, 48px);
+  width: 100%;
+}
+
+.footer--mobile .footer__header {
+  /* Header section with title and info */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .footer--mobile .footer__section-title {
-  /* Mobile section title - reduced gap */
+  /* Mobile section title - tech font */
+  display: flex;
   gap: var(--spacing-l, 24px);
+  align-items: center;
+  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: normal;
   padding-left: 0;
+}
+
+.footer--mobile .footer__info-title {
+  /* Info title - right aligned with specific width */
+  width: 174px;
+  text-align: right;
+  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: normal;
+  white-space: pre-wrap;
 }
 
 .footer--mobile .footer__contact {
   /* Mobile contact - smaller font and stacked layout */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs, 8px);
   padding-left: 0;
   font-size: var(--text-size-small, 16px);
   line-height: var(--text-line-small, 22px);
+  font-family: var(--font-default, 'PP Mori', sans-serif);
 }
 
 .footer--mobile .footer__contact-line {
   /* Mobile contact line - vertical stack */
+  display: flex;
   flex-direction: column;
   gap: var(--spacing-xs, 8px);
   align-items: flex-start;
@@ -170,24 +209,43 @@
   /* Mobile logo - smaller size */
   width: 192px;
   height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer--mobile .footer__links {
-  /* Mobile links - reduced width */
-  width: 361px;
+  /* Mobile links - full width with internal gap */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l, 24px);
+  width: 100%;
+}
+
+.footer--mobile .footer__link-row {
+  /* Link row - horizontal layout */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .footer--mobile .footer__link-group {
   /* Mobile link group - vertical stack */
+  display: flex;
   flex-direction: column;
   gap: var(--spacing-m, 16px);
   align-items: flex-start;
 }
 
 .footer--mobile .footer__link {
-  /* Mobile link - full width */
+  /* Mobile link - right aligned with specific width */
   width: 225px;
+  text-align: right;
   justify-content: flex-end;
+  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: normal;
 }
 
 /* Responsive adjustments */
@@ -245,31 +303,59 @@
   }
 }
 
+/* Mobile - Apply mobile variant layout to default footer */
 @media (max-width: 768px) {
-  .footer__header {
-    flex-direction: column;
-    gap: var(--spacing-m, 16px);
-    align-items: flex-start;
+  .footer:not(.footer--mobile) {
+    /* Apply mobile-like layout to default variant on small screens */
+    gap: 84px;
+    max-width: 361px;
+    margin: 0 auto;
   }
   
-  .footer__section-title {
+  .footer:not(.footer--mobile) .footer__section {
+    gap: var(--spacing-xxxl, 48px);
+  }
+  
+  .footer:not(.footer--mobile) .footer__header {
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .footer:not(.footer--mobile) .footer__section-title {
+    padding-left: 0;
+    gap: var(--spacing-l, 24px);
+  }
+  
+  .footer:not(.footer--mobile) .footer__info-title {
+    width: 174px;
+    text-align: right;
+    white-space: pre-wrap;
+  }
+  
+  .footer:not(.footer--mobile) .footer__contact {
     padding-left: 0;
   }
   
-  .footer__info-title {
-    width: auto;
-    text-align: left;
+  .footer:not(.footer--mobile) .footer__logo {
+    width: 192px;
+    height: 43px;
   }
   
-  .footer__contact {
-    padding-left: 0;
-    font-size: var(--text-size-xsmall, 14px);
-    line-height: var(--text-line-xsmall, 17px);
+  .footer:not(.footer--mobile) .footer__links {
+    width: 100%;
+    gap: var(--spacing-l, 24px);
   }
   
-  .footer__link-row {
-    flex-direction: column;
+  .footer:not(.footer--mobile) .footer__link-row {
+    justify-content: space-between;
+  }
+  
+  .footer:not(.footer--mobile) .footer__link-group {
     gap: var(--spacing-m, 16px);
-    align-items: flex-start;
+  }
+  
+  .footer:not(.footer--mobile) .footer__link {
+    width: 225px;
+    text-align: right;
   }
 }

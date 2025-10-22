@@ -179,6 +179,110 @@
       color: var(--color-text-hover);
     }
 
+    /* Mobile variant styles */
+    .footer--mobile {
+      width: 100%;
+      max-width: 361px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 84px;
+    }
+
+    .footer--mobile .footer__section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-xxxl, 48px);
+      width: 100%;
+    }
+
+    .footer--mobile .footer__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .footer--mobile .footer__section-title {
+      display: flex;
+      gap: var(--spacing-l, 24px);
+      align-items: center;
+      font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+      font-size: var(--text-size-xsmall, 14px);
+      line-height: normal;
+      padding-left: 0;
+    }
+
+    .footer--mobile .footer__info-title {
+      width: 174px;
+      text-align: right;
+      font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+      font-size: var(--text-size-xsmall, 14px);
+      line-height: normal;
+      white-space: pre-wrap;
+    }
+
+    .footer--mobile .footer__contact {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-xs, 8px);
+      padding-left: 0;
+      font-size: var(--text-size-small, 16px);
+      line-height: var(--text-line-small, 22px);
+      font-family: var(--font-default, 'PP Mori', sans-serif);
+    }
+
+    .footer--mobile .footer__contact-line {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-xs, 8px);
+      align-items: flex-start;
+    }
+
+    .footer--mobile .footer__logo {
+      width: 192px;
+      height: 43px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer--mobile .footer__links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-l, 24px);
+      width: 100%;
+    }
+
+    .footer--mobile .footer__link-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .footer--mobile .footer__link-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-m, 16px);
+      align-items: flex-start;
+    }
+
+    .footer--mobile .footer__link {
+      width: 225px;
+      text-align: right;
+      justify-content: flex-end;
+      font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+      font-size: var(--text-size-xsmall, 14px);
+      line-height: normal;
+      text-decoration: none;
+      color: var(--color-text-primary, #362C2C);
+    }
+
+    .footer--mobile .footer__link:hover {
+      color: var(--color-text-hover, #D4D4D4);
+    }
+
     /* Demo Styles */
     .demo-container {
       padding: var(--spacing-xxxl);
