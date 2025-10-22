@@ -24,12 +24,15 @@
       --font-tech: 'PP Neue Montreal Mono', monospace;
       
       /* Spacing */
+      --spacing-xs: 8px;
+      --spacing-xsm: 10px;
       --spacing-m: 16px;
       --spacing-l: 24px;
       --spacing-xl: 32px;
       --spacing-6xl: 64px;
       
       /* Border Radius */
+      --radius-xs: 8px;
       --radius-s: 16px;
       
       /* Logo */
@@ -38,6 +41,7 @@
       
       /* Semantic Colors */
       --color-text-primary: var(--color-neutral-900);
+      --color-text-secondary: #828086;
       --color-text-hover: var(--color-neutral-300);
       --color-text-accent: var(--color-blue-500);
       --color-background-surface: var(--color-neutral-100);
@@ -153,14 +157,19 @@
       border-radius: var(--radius-xs);
       font-family: var(--font-tech);
       font-size: var(--text-size-xsmall);
-      color: var(--color-text-primary);
+      color: var(--color-text-secondary, #828086);
       cursor: pointer;
-      padding: var(--spacing-xs) var(--spacing-m);
+      padding: var(--spacing-xs);
       transition: background-color 0.2s ease, color 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-xsm, 10px);
     }
 
     .header__mobile-toggle:hover {
       background: var(--color-neutral-200);
+      color: var(--color-text-primary);
     }
 
     .header__mobile-menu {

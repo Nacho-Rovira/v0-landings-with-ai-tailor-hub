@@ -47,17 +47,21 @@
 }
 
 .header__mobile-toggle {
-  /* Button styling using design tokens */
-  background: var(--color-background-surface);
-  color: var(--color-text-secondary);
+  /* Button styling matching Figma design */
+  background: var(--color-background-surface, #F5F5F5);
+  color: var(--color-text-secondary, #828086);
   border: none;
   border-radius: var(--radius-xs, 8px);
-  padding: var(--spacing-s, 12px) var(--spacing-l, 24px);
+  padding: var(--spacing-xs, 8px);
   font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
   font-size: var(--text-size-xsmall, 14px);
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xsm, 10px);
 }
 
 .header__mobile-toggle:hover {
