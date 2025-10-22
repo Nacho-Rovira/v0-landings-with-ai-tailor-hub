@@ -334,6 +334,81 @@ export default function ShowcasePage() {
           </div>
         </section>
 
+        {/* MenuItem Component Section */}
+        <section
+          style={{
+            marginBottom: "var(--spacing-8xl)",
+          }}
+        >
+          <h2
+            className="font-sans"
+            style={{
+              fontSize: "var(--text-size-large)",
+              lineHeight: "var(--text-line-large)",
+              color: "var(--color-text-primary)",
+              marginBottom: "var(--spacing-xl)",
+              fontWeight: 400,
+            }}
+          >
+            MenuItem Component
+          </h2>
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "var(--spacing-l)",
+              padding: "var(--spacing-xl)",
+              backgroundColor: "var(--color-background-surface)",
+              borderRadius: "var(--radius-s)",
+            }}
+          >
+            <div>
+              <h3
+                className="font-mono"
+                style={{
+                  fontSize: "var(--text-size-xsmall)",
+                  color: "var(--color-text-secondary)",
+                  marginBottom: "var(--spacing-m)",
+                }}
+              >
+                MenuItem - Default State
+              </h3>
+              <MenuItem href="#default">Default Item</MenuItem>
+            </div>
+
+            <div>
+              <h3
+                className="font-mono"
+                style={{
+                  fontSize: "var(--text-size-xsmall)",
+                  color: "var(--color-text-secondary)",
+                  marginBottom: "var(--spacing-m)",
+                }}
+              >
+                MenuItem - Selected State
+              </h3>
+              <MenuItem href="#selected" isSelected>
+                Selected Item
+              </MenuItem>
+            </div>
+
+            <div>
+              <h3
+                className="font-mono"
+                style={{
+                  fontSize: "var(--text-size-xsmall)",
+                  color: "var(--color-text-secondary)",
+                  marginBottom: "var(--spacing-m)",
+                }}
+              >
+                MenuItem - Hover State (hover over to see)
+              </h3>
+              <MenuItem href="#hover">Hover Over Me</MenuItem>
+            </div>
+          </div>
+        </section>
+
         {/* Header Component Section */}
         <section
           style={{
