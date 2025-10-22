@@ -9,7 +9,7 @@
   width: 100%;
   max-width: 1432px;
   margin: 0 auto;
-
+  
   /* Transitions */
   transition: all 0.3s ease;
 }
@@ -52,9 +52,9 @@
   flex: 1;
   max-width: calc(100% - var(--logo-size-large, 225px) - 120px); /* Maximum gap of 120px from logo */
   margin-left: auto; /* Push to the right */
-
+  
   /* Typography - using tech font */
-  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
+  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
   font-size: var(--text-size-xsmall, 14px);
   line-height: 1.2;
   text-transform: uppercase;
@@ -77,11 +77,11 @@
     max-width: 100%;
     padding-left: var(--spacing-l, 24px);
   }
-
+  
   .header__content {
     gap: var(--spacing-xl, 32px);
   }
-
+  
   .header__info {
     max-width: calc(100% - var(--logo-size-large, 225px) - 60px);
     padding-right: var(--spacing-l, 24px);
@@ -94,20 +94,20 @@
     padding-left: var(--spacing-l, 24px);
     padding-right: var(--spacing-l, 24px);
   }
-
+  
   .header__menu {
     position: static;
     margin-bottom: var(--spacing-l, 24px);
     display: flex;
     justify-content: center;
   }
-
+  
   .header__content {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--spacing-xl, 32px);
   }
-
+  
   .header__info {
     flex-direction: column;
     gap: var(--spacing-l, 24px);
@@ -115,7 +115,7 @@
     justify-content: flex-start;
     padding-right: 0;
   }
-
+  
   .header__info-item {
     width: 100%;
   }
@@ -125,7 +125,7 @@
   .header {
     padding-top: var(--spacing-6xl, 64px);
   }
-
+  
   .header__logo {
     width: 100%;
     display: flex;
