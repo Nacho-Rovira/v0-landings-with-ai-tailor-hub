@@ -148,13 +148,19 @@
     }
 
     .header__mobile-toggle {
-      background: none;
+      background: var(--color-background-surface);
       border: none;
+      border-radius: var(--radius-xs);
       font-family: var(--font-tech);
       font-size: var(--text-size-xsmall);
       color: var(--color-text-primary);
       cursor: pointer;
-      padding: var(--spacing-xs);
+      padding: var(--spacing-xs) var(--spacing-m);
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .header__mobile-toggle:hover {
+      background: var(--color-neutral-200);
     }
 
     .header__mobile-menu {
