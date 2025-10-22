@@ -1,2 +1,2 @@
-export { MenuItem } from "./MenuItem.tsx"
-export type { MenuItemProps } from "./MenuItem.tsx"
+export { MenuItem } from "./MenuItem"
+export type { MenuItemProps } from "./MenuItem"

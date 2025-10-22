@@ -1,10 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { Button } from "@/components/Button"
-import { Menu } from "@/components/Menu"
-import { MenuItem } from "@/components/MenuItem"
-import { TailorHubLogo, TailorHubLogoWithName } from "@/components/Logo"
+import { Button } from "@/components/Button/Button"
+import { Menu } from "@/components/Menu/Menu"
+import { MenuItem } from "@/components/MenuItem/MenuItem"
+import { TailorHubLogo } from "@/components/Logo/TailorHubLogo"
+import { TailorHubLogoWithName } from "@/components/Logo/TailorHubLogoWithName"
 import "@/tokens/tokens.css"
 
 export default function ShowcasePage() {
