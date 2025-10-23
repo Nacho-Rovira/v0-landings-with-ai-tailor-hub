@@ -27,3 +27,6 @@ export type { HeaderBoxProps } from './HeaderBox/HeaderBox';
 
 export { HighlightSection } from './HighlightSection/HighlightSection';
 export type { HighlightSectionProps } from './HighlightSection/HighlightSection';
+
+export { BodyText } from './BodyText/BodyText';
+export type { BodyTextProps, BodyTextSection } from './BodyText/BodyText';

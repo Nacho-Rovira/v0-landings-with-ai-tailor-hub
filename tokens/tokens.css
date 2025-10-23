@@ -96,6 +96,7 @@
   --gap-header-2-body: var(--spacing-xl);
   --gap-paragraph-middle: var(--spacing-m);
   --gap-header-1: var(--spacing-4xl);
+  --gap-section-section: var(--spacing-8xl);
 
   /* Component - Padding */
   --padding-card: var(--spacing-m);

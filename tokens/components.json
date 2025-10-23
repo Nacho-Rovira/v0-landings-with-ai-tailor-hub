@@ -124,6 +124,10 @@
         "header-1": {
           "$value": "{spacing.4xl}",
           "$type": "dimension"
+        },
+        "section-section": {
+          "$value": "{spacing.8xl}",
+          "$type": "dimension"
         }
       },
       "padding": {

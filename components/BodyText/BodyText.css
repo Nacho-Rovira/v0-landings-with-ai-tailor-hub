@@ -1,0 +1,108 @@
+/* BodyText Component Styles */
+
+.body-text {
+  /* Container styles */
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-section-section, 80px);
+  width: 100%;
+  max-width: 702px;
+  margin: 0 auto;
+}
+
+.body-text__section {
+  /* Individual section wrapper */
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-paragraph-middle, 16px);
+  width: 100%;
+}
+
+.body-text__title {
+  /* Section title (h3) */
+  font-family: var(--font-default, 'PP Mori', sans-serif);
+  font-size: var(--text-size-large, 40px);
+  line-height: var(--text-line-large, 48px);
+  font-weight: 400;
+  color: var(--color-text-primary, #362C2C);
+  margin: 0;
+  text-transform: uppercase;
+  white-space: pre-wrap;
+  width: 100%;
+}
+
+.body-text__content {
+  /* Paragraphs and quote container */
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-paragraph-middle, 16px);
+  width: 100%;
+}
+
+.body-text__paragraph {
+  /* Individual paragraph */
+  font-family: var(--font-default, 'PP Mori', sans-serif);
+  font-size: var(--text-size-small, 16px);
+  line-height: var(--text-line-small, 22px);
+  color: var(--color-text-primary, #362C2C);
+  margin: 0;
+  white-space: pre-wrap;
+  width: 100%;
+}
+
+.body-text__quote-card {
+  /* Quote card container */
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-paragraph-middle, 16px);
+  padding: var(--padding-card, 16px);
+  background: var(--color-background-surface, #F5F5F5);
+  border-radius: var(--radius-s, 16px);
+  width: 100%;
+}
+
+.body-text__quote-text {
+  /* Quote text */
+  font-family: var(--font-default, 'PP Mori', sans-serif);
+  font-size: var(--text-size-small, 16px);
+  line-height: var(--text-line-small, 22px);
+  color: var(--color-text-secondary, #828086);
+  margin: 0;
+  white-space: pre-wrap;
+  width: 100%;
+}
+
+.body-text__quote-author {
+  /* Quote author name */
+  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-size: var(--text-size-small, 16px);
+  line-height: var(--text-line-small, 22px);
+  color: var(--color-text-primary, #362C2C);
+  margin: 0;
+  white-space: pre-wrap;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .body-text {
+    /* Mobile: add container padding */
+    max-width: 100%;
+    padding: 0 var(--spacing-m, 16px);
+  }
+
+  .body-text__title {
+    /* Mobile: smaller title */
+    font-size: 28px;
+    line-height: 29px;
+  }
+}
+
+@media (max-width: 480px) {
+  .body-text__title {
+    /* Very small screens: maintain readability */
+    font-size: 24px;
+    line-height: 26px;
+  }
+}
+

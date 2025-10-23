@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BodyText Component Demo - Tailor Hub Design System</title>
+  <style>
+    /* Design Tokens */
+    :root {
+      /* Colors */
+      --color-neutral-100: #F5F5F5;
+      --color-neutral-600: #828086;
+      --color-neutral-900: #362C2C;
+
+      /* Text sizes */
+      --text-size-small: 16px;
+      --text-size-large: 40px;
+
+      /* Text line heights */
+      --text-line-small: 22px;
+      --text-line-large: 48px;
+
+      /* Fonts */
+      --font-default: 'PP Mori', sans-serif;
+      --font-tech: 'PP Neue Montreal Mono', monospace;
+
+      /* Radius */
+      --radius-s: 16px;
+
+      /* Spacing */
+      --spacing-m: 16px;
+      --spacing-8xl: 80px;
+
+      /* Component gaps */
+      --gap-section-section: var(--spacing-8xl);
+      --gap-paragraph-middle: var(--spacing-m);
+
+      /* Component padding */
+      --padding-card: var(--spacing-m);
+
+      /* Semantic colors */
+      --color-text-primary: var(--color-neutral-900);
+      --color-text-secondary: var(--color-neutral-600);
+      --color-background-surface: var(--color-neutral-100);
+    }
+
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-default);
+      background-color: #fff;
+      color: var(--color-text-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* BodyText Component Styles */
+    .body-text {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-section-section, 80px);
+      width: 100%;
+      max-width: 702px;
+      margin: 0 auto;
+    }
+
+    .body-text__section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-paragraph-middle, 16px);
+      width: 100%;
+    }
+
+    .body-text__title {
+      font-family: var(--font-default, 'PP Mori', sans-serif);
+      font-size: var(--text-size-large, 40px);
+      line-height: var(--text-line-large, 48px);
+      font-weight: 400;
+      color: var(--color-text-primary, #362C2C);
+      margin: 0;
+      text-transform: uppercase;
+      white-space: pre-wrap;
+      width: 100%;
+    }
+
+    .body-text__content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-paragraph-middle, 16px);
+      width: 100%;
+    }
+
+    .body-text__paragraph {
+      font-family: var(--font-default, 'PP Mori', sans-serif);
+      font-size: var(--text-size-small, 16px);
+      line-height: var(--text-line-small, 22px);
+      color: var(--color-text-primary, #362C2C);
+      margin: 0;
+      white-space: pre-wrap;
+      width: 100%;
+    }
+
+    .body-text__quote-card {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-paragraph-middle, 16px);
+      padding: var(--padding-card, 16px);
+      background: var(--color-background-surface, #F5F5F5);
+      border-radius: var(--radius-s, 16px);
+      width: 100%;
+    }
+
+    .body-text__quote-text {
+      font-family: var(--font-default, 'PP Mori', sans-serif);
+      font-size: var(--text-size-small, 16px);
+      line-height: var(--text-line-small, 22px);
+      color: var(--color-text-secondary, #828086);
+      margin: 0;
+      white-space: pre-wrap;
+      width: 100%;
+    }
+
+    .body-text__quote-author {
+      font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+      font-size: var(--text-size-small, 16px);
+      line-height: var(--text-line-small, 22px);
+      color: var(--color-text-primary, #362C2C);
+      margin: 0;
+      white-space: pre-wrap;
+      width: 100%;
+    }
+
+    /* Demo Styles */
+    .demo-container {
+      padding: 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .demo-section {
+      margin-bottom: 120px;
+    }
+
+    .demo-label {
+      font-family: var(--font-tech);
+      font-size: 14px;
+      color: var(--color-text-primary);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    .demo-box {
+      background: white;
+      padding: 48px 24px;
+      border-radius: 16px;
+      border: 1px solid #E5E5E5;
+      display: flex;
+      justify-content: center;
+    }
+
+    .info-box {
+      background: #F5F5F5;
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 16px;
+      font-family: var(--font-tech);
+      font-size: 12px;
+      line-height: 1.6;
+      color: #828086;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .body-text {
+        max-width: 100%;
+        padding: 0 var(--spacing-m, 16px);
+      }
+
+      .body-text__title {
+        font-size: 28px;
+        line-height: 29px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .body-text__title {
+        font-size: 24px;
+        line-height: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <h1 style="font-family: var(--font-default); font-size: 40px; margin-bottom: 48px;">BodyText Component Demo</h1>
+
+    <!-- Single Section -->
+    <div class="demo-section">
+      <div class="demo-label">Single Section (Title + Paragraphs)</div>
+      <div class="demo-box">
+        <div class="body-text">
+          <div class="body-text__section">
+            <h3 class="body-text__title">THE CHALLENGE</h3>
+            <div class="body-text__content">
+              <p class="body-text__paragraph">Transform raw and hardly accesible data into actionable intelligence. With advanced AI models, we help you uncover patterns, predict outcomes, and drive smarter decision-making at every level of your organization.</p>
+              <p class="body-text__paragraph">Transform raw and hardly accesible data into actionable intelligence. With advanced AI models, we help you uncover patterns, predict outcomes, and drive smarter decision-making at every level of your organization.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>Single Section Specs:</strong><br>
+        • Max-width: 702px<br>
+        • Title: 40px / 48px, uppercase<br>
+        • Paragraphs: 16px / 22px<br>
+        • Gap: 16px (gap-paragraph-middle)
+      </div>
+    </div>
+
+    <!-- With Quote Card -->
+    <div class="demo-section">
+      <div class="demo-label">Section with Quote Card</div>
+      <div class="demo-box">
+        <div class="body-text">
+          <div class="body-text__section">
+            <h3 class="body-text__title">THE SOLUTION</h3>
+            <div class="body-text__content">
+              <p class="body-text__paragraph">We built a custom AI-powered data pipeline that processes and analyzes information in real-time, enabling faster decision-making and reducing operational costs.</p>
+              <p class="body-text__paragraph">The new system increased processing speed by 10x while maintaining data accuracy and security standards. Our solution scaled seamlessly as the client's data volume grew.</p>
+              
+              <!-- Quote Card -->
+              <div class="body-text__quote-card">
+                <p class="body-text__quote-text">The solution transformed our entire data operation. We can now make decisions in minutes instead of days, and the insights we gain are more accurate than ever before.</p>
+                <p class="body-text__quote-author">CTO, TECH COMPANY</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>Quote Card Specs:</strong><br>
+        • Background: var(--color-background-surface)<br>
+        • Padding: 16px (padding-card)<br>
+        • Border radius: 16px (radius-s)<br>
+        • Quote text: Secondary color<br>
+        • Author: Tech font, primary color
+      </div>
+    </div>
+
+    <!-- Multiple Sections -->
+    <div class="demo-section">
+      <div class="demo-label">Multiple Sections (Challenge + Solution)</div>
+      <div class="demo-box">
+        <div class="body-text">
+          <!-- Section 1 -->
+          <div class="body-text__section">
+            <h3 class="body-text__title">THE CHALLENGE</h3>
+            <div class="body-text__content">
+              <p class="body-text__paragraph">Our client needed to process massive amounts of unstructured data from multiple sources. The existing system was slow, error-prone, and couldn't handle the growing volume of information.</p>
+              <p class="body-text__paragraph">Manual data processing was taking weeks, delaying critical business decisions and creating bottlenecks across the organization.</p>
+            </div>
+          </div>
+
+          <!-- Section 2 -->
+          <div class="body-text__section">
+            <h3 class="body-text__title">THE SOLUTION</h3>
+            <div class="body-text__content">
+              <p class="body-text__paragraph">We designed and implemented a custom AI-powered data pipeline that automatically ingests, processes, and analyzes data from all sources in real-time.</p>
+              <p class="body-text__paragraph">The solution includes intelligent error handling, automated quality checks, and a user-friendly dashboard for monitoring and insights.</p>
+              
+              <div class="body-text__quote-card">
+                <p class="body-text__quote-text">Tailor Hub's solution completely transformed how we handle data. What used to take weeks now happens in minutes, and the accuracy is incredible. This has been a game-changer for our business.</p>
+                <p class="body-text__quote-author">MARIA GARCIA, CTO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>Multiple Sections:</strong><br>
+        • 80px gap between sections (gap-section-section)<br>
+        • Each section is independent<br>
+        • Consistent styling throughout<br>
+        • Quote cards can appear in any section
+      </div>
+    </div>
+
+    <!-- Design Tokens Info -->
+    <div class="demo-section">
+      <div class="demo-label">Design Tokens Used</div>
+      <div class="info-box">
+        <strong>Spacing & Gaps:</strong><br>
+        • Section-to-section gap: var(--gap-section-section, 80px)<br>
+        • Paragraph gap: var(--gap-paragraph-middle, 16px)<br>
+        • Quote card padding: var(--padding-card, 16px)<br>
+        <br>
+        <strong>Typography:</strong><br>
+        • Title: var(--font-default), var(--text-size-large, 40px), weight 400<br>
+        • Paragraph: var(--font-default), var(--text-size-small, 16px)<br>
+        • Quote text: var(--font-default), var(--text-size-small, 16px)<br>
+        • Quote author: var(--font-tech), var(--text-size-small, 16px)<br>
+        <br>
+        <strong>Colors:</strong><br>
+        • Title & paragraphs: var(--color-text-primary, #362C2C)<br>
+        • Quote text: var(--color-text-secondary, #828086)<br>
+        • Quote background: var(--color-background-surface, #F5F5F5)<br>
+        <br>
+        <strong>Border Radius:</strong><br>
+        • Quote card: var(--radius-s, 16px)<br>
+        <br>
+        <strong>Dimensions:</strong><br>
+        • Max-width: 702px<br>
+        • All elements: 100% width within container
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
