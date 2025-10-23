@@ -12,3 +12,6 @@ export type { HeaderProps } from './Header/Header';
 
 export { Footer } from './Footer/Footer';
 export type { FooterProps } from './Footer/Footer';
+
+export { Card } from './Card/Card';
+export type { CardProps } from './Card/Card';
