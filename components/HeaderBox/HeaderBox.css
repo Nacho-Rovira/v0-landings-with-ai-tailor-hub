@@ -1,0 +1,100 @@
+/* HeaderBox Component Styles */
+
+.header-box {
+  /* Container styles */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxxl, 48px);
+  width: 100%;
+  max-width: 1432px;
+  margin: 0 auto;
+}
+
+.header-box__header-section {
+  /* Header section wrapper */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-box__overheader {
+  /* Overheader with / symbol - matching TitleSection style */
+  display: flex;
+  align-items: center;
+  gap: 112px;
+  padding-left: 121px;
+  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: var(--text-line-xsmall, 17px);
+  color: var(--color-text-primary, #362C2C);
+}
+
+.header-box__content {
+  /* Content section with header and button */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxxl, 48px);
+  padding-left: 121px;
+  width: 100%;
+}
+
+.header-box__header {
+  /* Header text (h2) */
+  font-family: var(--font-default, 'PP Mori', sans-serif);
+  font-size: var(--text-size-large, 40px);
+  line-height: var(--text-line-large, 48px);
+  font-weight: 400;
+  color: var(--color-text-primary, #362C2C);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1279px) {
+  .header-box__overheader {
+    /* Reduce left padding */
+    padding-left: 60px;
+  }
+
+  .header-box__content {
+    /* Reduce left padding */
+    padding-left: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-box__overheader {
+    /* Remove left padding and reduce gap */
+    padding-left: 0;
+    gap: var(--spacing-l, 24px);
+  }
+
+  .header-box__content {
+    /* Remove left padding */
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-box {
+    /* Mobile: add container padding */
+    max-width: 100%;
+    padding: 0 var(--spacing-m, 16px);
+  }
+
+  .header-box__header {
+    /* Mobile: smaller header */
+    font-size: 28px;
+    line-height: 29px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-box__header {
+    /* Very small screens: maintain readability */
+    font-size: 24px;
+    line-height: 26px;
+  }
+}
+

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HeaderBox Component Demo - Tailor Hub Design System</title>
+  <style>
+    /* Design Tokens */
+    :root {
+      /* Colors */
+      --color-neutral-00: #FFFFFF;
+      --color-neutral-100: #F5F5F5;
+      --color-neutral-200: #E5E5E5;
+      --color-neutral-300: #D4D4D4;
+      --color-neutral-600: #828086;
+      --color-neutral-900: #362C2C;
+
+      /* Text sizes */
+      --text-size-xsmall: 14px;
+      --text-size-small: 16px;
+      --text-size-large: 40px;
+
+      /* Text line heights */
+      --text-line-xsmall: 17px;
+      --text-line-small: 22px;
+      --text-line-large: 48px;
+
+      /* Fonts */
+      --font-default: 'PP Mori', sans-serif;
+      --font-tech: 'PP Neue Montreal Mono', monospace;
+
+      /* Radius */
+      --radius-xs: 8px;
+
+      /* Spacing */
+      --spacing-xs: 8px;
+      --spacing-m: 16px;
+      --spacing-l: 24px;
+      --spacing-xxxl: 48px;
+
+      /* Semantic colors */
+      --color-text-primary: var(--color-neutral-900);
+      --color-text-secondary: var(--color-neutral-600);
+      --color-background-surface: var(--color-neutral-100);
+      --color-background-hover: var(--color-neutral-200);
+    }
+
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-default);
+      background-color: #fff;
+      color: var(--color-text-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* HeaderBox Component Styles */
+    .header-box {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-xxxl, 48px);
+      width: 100%;
+      max-width: 1432px;
+      margin: 0 auto;
+    }
+
+    .header-box__header-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .header-box__overheader {
+      display: flex;
+      align-items: center;
+      gap: 112px;
+      padding-left: 121px;
+      font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+      font-size: var(--text-size-xsmall, 14px);
+      line-height: var(--text-line-xsmall, 17px);
+      color: var(--color-text-primary, #362C2C);
+    }
+
+    .header-box__content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-xxxl, 48px);
+      padding-left: 121px;
+      width: 100%;
+    }
+
+    .header-box__header {
+      font-family: var(--font-default, 'PP Mori', sans-serif);
+      font-size: var(--text-size-large, 40px);
+      line-height: var(--text-line-large, 48px);
+      font-weight: 400;
+      color: var(--color-text-primary, #362C2C);
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    /* Button styles */
+    .button {
+      border: none;
+      cursor: pointer;
+      outline: none;
+      text-decoration: none;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: auto;
+      align-self: flex-start;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+      font-size: var(--text-size-xsmall, 14px);
+      line-height: var(--text-line-xsmall, 17px);
+      padding: var(--spacing-xs, 8px);
+      border-radius: var(--radius-xs, 8px);
+      background-color: var(--color-background-surface, #F5F5F5);
+      color: var(--color-text-secondary, #828086);
+    }
+
+    .button:hover {
+      background-color: var(--color-background-hover, #E5E5E5);
+      color: var(--color-text-primary, #362C2C);
+    }
+
+    /* Demo Styles */
+    .demo-container {
+      padding: 48px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .demo-section {
+      margin-bottom: 120px;
+    }
+
+    .demo-label {
+      font-family: var(--font-tech);
+      font-size: var(--text-size-xsmall);
+      color: var(--color-text-primary);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    .demo-box {
+      background: white;
+      padding: 48px 24px;
+      border-radius: 16px;
+      border: 1px solid var(--color-neutral-200);
+    }
+
+    .info-box {
+      background: var(--color-neutral-100);
+      padding: var(--spacing-m);
+      border-radius: var(--radius-xs);
+      margin-top: var(--spacing-m);
+      font-family: var(--font-tech);
+      font-size: 12px;
+      line-height: 1.6;
+      color: var(--color-neutral-600);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1279px) {
+      .header-box__overheader {
+        padding-left: 60px;
+      }
+
+      .header-box__content {
+        padding-left: 60px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .header-box__overheader {
+        padding-left: 0;
+        gap: var(--spacing-l, 24px);
+      }
+
+      .header-box__content {
+        padding-left: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-box {
+        max-width: 100%;
+        padding: 0 var(--spacing-m, 16px);
+      }
+
+      .header-box__header {
+        font-size: 28px;
+        line-height: 29px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-box__header {
+        font-size: 24px;
+        line-height: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <h1 style="font-family: var(--font-default); font-size: 40px; margin-bottom: 48px;">HeaderBox Component Demo</h1>
+
+    <!-- Default Example -->
+    <div class="demo-section">
+      <div class="demo-label">Default HeaderBox (Work with Tailor CTA)</div>
+      <div class="demo-box">
+        <div class="header-box">
+          <!-- Overheader Section -->
+          <div class="header-box__header-section">
+            <div class="header-box__overheader">
+              <span>/</span>
+              <span>WORK WITH TAILOR</span>
+            </div>
+          </div>
+
+          <!-- Content Section -->
+          <div class="header-box__content">
+            <h2 class="header-box__header">We are a Madrid-based global company. We believe giving our teams the autonomy to work wherever they want delivers the best outcomes.</h2>
+            <button class="button">SEND YOUR CV</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>Default Specs:</strong><br>
+        • Container max-width: 1432px<br>
+        • Overheader: "/" + 112px gap + text, 121px left padding<br>
+        • Content: 121px left padding<br>
+        • Header: 40px / 48px line height, uppercase<br>
+        • Vertical gaps: 48px (spacing-xxxl)<br>
+        • Button: Auto width, left-aligned
+      </div>
+    </div>
+
+    <!-- Custom CTA Example -->
+    <div class="demo-section">
+      <div class="demo-label">Custom CTA (Get in Touch)</div>
+      <div class="demo-box">
+        <div class="header-box">
+          <div class="header-box__header-section">
+            <div class="header-box__overheader">
+              <span>/</span>
+              <span>GET IN TOUCH</span>
+            </div>
+          </div>
+
+          <div class="header-box__content">
+            <h2 class="header-box__header">Ready to transform your business with cutting-edge AI and software solutions?</h2>
+            <button class="button">CONTACT US</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>Custom CTA:</strong><br>
+        • Same structure and spacing<br>
+        • Different overheader and header text<br>
+        • Custom button label
+      </div>
+    </div>
+
+    <!-- Join Team Example -->
+    <div class="demo-section">
+      <div class="demo-label">Join Team CTA</div>
+      <div class="demo-box">
+        <div class="header-box">
+          <div class="header-box__header-section">
+            <div class="header-box__overheader">
+              <span>/</span>
+              <span>JOIN OUR TEAM</span>
+            </div>
+          </div>
+
+          <div class="header-box__content">
+            <h2 class="header-box__header">We are always looking for talented engineers, designers, and data scientists to join our growing team.</h2>
+            <button class="button">VIEW OPPORTUNITIES</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>Join Team CTA:</strong><br>
+        • Recruitment focused messaging<br>
+        • Consistent design pattern<br>
+        • Clear call-to-action
+      </div>
+    </div>
+
+    <!-- Multiple HeaderBox Example -->
+    <div class="demo-section">
+      <div class="demo-label">Multiple HeaderBox Sections</div>
+      <div style="display: flex; flex-direction: column; gap: 120px;">
+        <!-- Section 1 -->
+        <div class="demo-box">
+          <div class="header-box">
+            <div class="header-box__header-section">
+              <div class="header-box__overheader">
+                <span>/</span>
+                <span>SERVICES</span>
+              </div>
+            </div>
+            <div class="header-box__content">
+              <h2 class="header-box__header">Transform your business with intelligent software solutions built by expert teams.</h2>
+              <button class="button">EXPLORE SERVICES</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="demo-box">
+          <div class="header-box">
+            <div class="header-box__header-section">
+              <div class="header-box__overheader">
+                <span>/</span>
+                <span>PROJECTS</span>
+              </div>
+            </div>
+            <div class="header-box__content">
+              <h2 class="header-box__header">See how we've helped companies leverage AI and custom software to achieve their goals.</h2>
+              <button class="button">VIEW PROJECTS</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>Multiple Sections:</strong><br>
+        • Each HeaderBox is independent<br>
+        • Consistent spacing and alignment<br>
+        • Perfect for sequential CTAs
+      </div>
+    </div>
+
+    <!-- Responsive Behavior Info -->
+    <div class="demo-section">
+      <div class="demo-label">Responsive Behavior</div>
+      <div class="info-box">
+        <strong>Breakpoints:</strong><br>
+        • > 1279px: padding-left 121px, gap 112px<br>
+        • ≤ 1279px: padding-left 60px, gap 112px<br>
+        • ≤ 992px: padding-left 0px, gap 24px<br>
+        • ≤ 768px: container padding 16px, header 28px<br>
+        • ≤ 480px: header 24px<br>
+        <br>
+        <strong>Design Tokens:</strong><br>
+        • Gap between sections: var(--spacing-xxxl, 48px)<br>
+        • Overheader gap (desktop): 112px<br>
+        • Overheader gap (< 992px): var(--spacing-l, 24px)<br>
+        • Typography: var(--font-tech) for overheader, var(--font-default) for header<br>
+        • Colors: var(--color-text-primary) for all text
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
