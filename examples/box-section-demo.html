@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoxSection Component Demo - Tailor Hub Design System</title>
+  <style>
+    /* Design Tokens */
+    :root {
+      /* Colors */
+      --color-neutral-00: #FFFFFF;
+      --color-neutral-100: #F5F5F5;
+      --color-neutral-200: #E5E5E5;
+      --color-neutral-300: #D4D4D4;
+      --color-neutral-600: #828086;
+      --color-neutral-900: #362C2C;
+      --color-blue-500: #2C54FF;
+
+      /* Text sizes */
+      --text-size-xsmall: 14px;
+      --text-size-small: 16px;
+      --text-size-large: 40px;
+
+      /* Text line heights */
+      --text-line-xsmall: 17px;
+      --text-line-small: 22px;
+      --text-line-large: 48px;
+
+      /* Fonts */
+      --font-default: 'PP Mori', sans-serif;
+      --font-tech: 'PP Neue Montreal Mono', monospace;
+
+      /* Radius */
+      --radius-xs: 8px;
+      --radius-s: 16px;
+
+      /* Spacing */
+      --spacing-xs: 8px;
+      --spacing-m: 16px;
+      --spacing-l: 24px;
+      --spacing-xl: 32px;
+      --spacing-5xl: 60px;
+
+      /* Component gaps */
+      --gap-overheader-header-2: var(--spacing-m);
+      --gap-header-2-body: var(--spacing-xl);
+      --gap-paragraph-middle: var(--spacing-m);
+
+      /* Semantic colors */
+      --color-text-primary: var(--color-neutral-900);
+      --color-text-secondary: var(--color-neutral-600);
+      --color-background-surface: var(--color-neutral-100);
+      --color-background-hover: var(--color-neutral-200);
+    }
+
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-default);
+      background-color: #fff;
+      color: var(--color-text-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* BoxSection Component Styles */
+    .box-section {
+      display: flex;
+      gap: var(--spacing-5xl, 60px);
+      align-items: flex-start;
+      width: 100%;
+      max-width: 1248px;
+    }
+
+    .box-section__image {
+      position: relative;
+      width: 468px;
+      height: 532px;
+      border-radius: var(--radius-s, 16px);
+      overflow: hidden;
+      flex-shrink: 0;
+      background: var(--color-background-surface);
+    }
+
+    .box-section__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+
+    .box-section__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+      min-height: 532px;
+    }
+
+    .box-section__header-body {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-header-2-body, 32px);
+      color: var(--color-text-primary, #362C2C);
+    }
+
+    .box-section__title {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-overheader-header-2, 16px);
+      max-width: 323px;
+    }
+
+    .box-section__overheader {
+      font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+      font-size: var(--text-size-xsmall, 14px);
+      line-height: var(--text-line-xsmall, 17px);
+      margin: 0;
+    }
+
+    .box-section__header {
+      font-family: var(--font-default, 'PP Mori', sans-serif);
+      font-size: var(--text-size-large, 40px);
+      line-height: var(--text-line-large, 48px);
+      font-weight: normal;
+      margin: 0;
+    }
+
+    .box-section__body {
+      font-family: var(--font-default, 'PP Mori', sans-serif);
+      font-size: var(--text-size-small, 16px);
+      line-height: var(--text-line-small, 22px);
+      max-width: 576px;
+      margin: 0;
+    }
+
+    .box-section__bottom {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-paragraph-middle, 16px);
+      max-width: 576px;
+    }
+
+    .box-section__secondary {
+      font-family: var(--font-default, 'PP Mori', sans-serif);
+      font-size: var(--text-size-small, 16px);
+      line-height: var(--text-line-small, 22px);
+      color: var(--color-text-secondary, #828086);
+      margin: 0;
+    }
+
+    /* Button styles */
+    .button {
+      border: none;
+      cursor: pointer;
+      outline: none;
+      text-decoration: none;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+      font-size: var(--text-size-xsmall, 14px);
+      line-height: var(--text-line-xsmall, 17px);
+      padding: var(--spacing-xs, 8px);
+      border-radius: var(--radius-xs, 8px);
+      background-color: var(--color-background-surface, #F5F5F5);
+      color: var(--color-text-secondary, #828086);
+    }
+
+    .button:hover {
+      background-color: var(--color-background-hover, #E5E5E5);
+      color: var(--color-text-primary, #362C2C);
+    }
+
+    /* Mobile variant */
+    .box-section--mobile {
+      flex-direction: column;
+      gap: var(--spacing-xs, 8px);
+      max-width: 361px;
+    }
+
+    .box-section--mobile .box-section__image {
+      width: 100%;
+      height: 410px;
+    }
+
+    .box-section--mobile .box-section__content {
+      min-height: auto;
+      gap: var(--spacing-l, 24px);
+    }
+
+    .box-section--mobile .box-section__header-body {
+      gap: var(--spacing-l, 24px);
+    }
+
+    .box-section--mobile .box-section__title {
+      gap: var(--spacing-xs, 8px);
+      max-width: 100%;
+    }
+
+    .box-section--mobile .box-section__overheader {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    .box-section--mobile .box-section__header {
+      font-size: 28px;
+      line-height: 29px;
+    }
+
+    .box-section--mobile .box-section__body {
+      max-width: 100%;
+    }
+
+    .box-section--mobile .box-section__bottom {
+      max-width: 100%;
+    }
+
+    /* Demo Styles */
+    .demo-container {
+      padding: 48px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .demo-section {
+      margin-bottom: 80px;
+    }
+
+    .demo-label {
+      font-family: var(--font-tech);
+      font-size: var(--text-size-xsmall);
+      color: var(--color-text-primary);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    .demo-box {
+      background: white;
+      padding: 48px;
+      border-radius: var(--radius-s);
+      border: 1px solid var(--color-neutral-200);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .info-box {
+      background: var(--color-background-surface);
+      padding: var(--spacing-m);
+      border-radius: var(--radius-xs);
+      margin-top: var(--spacing-m);
+      font-family: var(--font-tech);
+      font-size: 12px;
+      line-height: 1.6;
+      color: var(--color-neutral-600);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .box-section:not(.box-section--mobile) {
+        flex-direction: column;
+        gap: var(--spacing-xs, 8px);
+        max-width: 100%;
+      }
+
+      .box-section:not(.box-section--mobile) .box-section__image {
+        width: 100%;
+        height: 410px;
+      }
+
+      .box-section:not(.box-section--mobile) .box-section__content {
+        min-height: auto;
+        gap: var(--spacing-l, 24px);
+      }
+
+      .box-section:not(.box-section--mobile) .box-section__header-body {
+        gap: var(--spacing-l, 24px);
+      }
+
+      .box-section:not(.box-section--mobile) .box-section__title {
+        gap: var(--spacing-xs, 8px);
+        max-width: 100%;
+      }
+
+      .box-section:not(.box-section--mobile) .box-section__overheader {
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      .box-section:not(.box-section--mobile) .box-section__header {
+        font-size: 28px;
+        line-height: 29px;
+      }
+
+      .box-section:not(.box-section--mobile) .box-section__body {
+        max-width: 100%;
+      }
+
+      .box-section:not(.box-section--mobile) .box-section__bottom {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .box-section {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <h1 style="font-family: var(--font-default); font-size: 40px; margin-bottom: 48px;">BoxSection Component Demo</h1>
+
+    <!-- Default Variant -->
+    <div class="demo-section">
+      <div class="demo-label">Default Variant (Desktop Layout)</div>
+      <div class="demo-box">
+        <div class="box-section">
+          <!-- Image -->
+          <div class="box-section__image">
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=468&h=532&fit=crop" alt="Section image">
+          </div>
+
+          <!-- Content -->
+          <div class="box-section__content">
+            <!-- Header + Body -->
+            <div class="box-section__header-body">
+              <!-- Title Section -->
+              <div class="box-section__title">
+                <p class="box-section__overheader">S/ 01</p>
+                <h2 class="box-section__header">PROJECT NAME</h2>
+              </div>
+              
+              <!-- Main Body Text -->
+              <p class="box-section__body">Transform raw and hardly accesible data into actionable intelligence. With advanced AI models, we help you uncover patterns, predict outcomes, and drive smarter decision-making at every level of your organization.</p>
+            </div>
+
+            <!-- Bottom Section: Secondary Text + Button -->
+            <div class="box-section__bottom">
+              <p class="box-section__secondary">Transform raw and hardly accesible data into actionable intelligence. With advanced AI models, we help you uncover patterns, predict outcomes, and drive smarter decision-making at every level of your organization.</p>
+              <button class="button">BUTTON</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>Default Variant Specs:</strong><br>
+        • Max width: 1248px<br>
+        • Image: 468px × 532px (fixed width)<br>
+        • Horizontal gap: 60px (spacing-5xl)<br>
+        • Content max-width: 576px<br>
+        • Typography: 40px header, 16px body<br>
+        • Gaps: 16px (overheader-header), 32px (header-body), 16px (paragraph-button)
+      </div>
+    </div>
+
+    <!-- Mobile Variant -->
+    <div class="demo-section">
+      <div class="demo-label">Mobile Variant (Compact Layout)</div>
+      <div class="demo-box">
+        <div class="box-section box-section--mobile">
+          <!-- Image -->
+          <div class="box-section__image">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=361&h=410&fit=crop" alt="Section image">
+          </div>
+
+          <!-- Content -->
+          <div class="box-section__content">
+            <!-- Header + Body -->
+            <div class="box-section__header-body">
+              <!-- Title Section -->
+              <div class="box-section__title">
+                <p class="box-section__overheader">S/ 02</p>
+                <h2 class="box-section__header">MOBILE PROJECT</h2>
+              </div>
+              
+              <!-- Main Body Text -->
+              <p class="box-section__body">Transform raw and hardly accesible data into actionable intelligence. With advanced AI models, we help you uncover patterns, predict outcomes, and drive smarter decision-making at every level of your organization.</p>
+            </div>
+
+            <!-- Bottom Section: Secondary Text + Button -->
+            <div class="box-section__bottom">
+              <p class="box-section__secondary">Transform raw and hardly accesible data into actionable intelligence. With advanced AI models, we help you uncover patterns, predict outcomes, and drive smarter decision-making at every level of your organization.</p>
+              <button class="button">LEARN MORE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>Mobile Variant Specs:</strong><br>
+        • Max width: 361px<br>
+        • Layout: Vertical (image on top, content below)<br>
+        • Image: 100% width × 410px height<br>
+        • Vertical gap: 8px (between image and content)<br>
+        • Typography: 28px header, 16px body<br>
+        • Gaps: 8px (overheader-header), 24px (header-body), 16px (paragraph-button)
+      </div>
+    </div>
+
+    <!-- Multiple Examples -->
+    <div class="demo-section">
+      <div class="demo-label">Multiple Box Sections</div>
+      <div style="display: flex; flex-direction: column; gap: 80px;">
+        <!-- Example 1 -->
+        <div class="demo-box">
+          <div class="box-section">
+            <div class="box-section__image">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=468&h=532&fit=crop" alt="Data Intelligence">
+            </div>
+            <div class="box-section__content">
+              <div class="box-section__header-body">
+                <div class="box-section__title">
+                  <p class="box-section__overheader">S/ 01</p>
+                  <h2 class="box-section__header">DATA INTELLIGENCE</h2>
+                </div>
+                <p class="box-section__body">Transform raw and hardly accesible data into actionable intelligence. With advanced AI models, we help you uncover patterns, predict outcomes, and drive smarter decision-making.</p>
+              </div>
+              <div class="box-section__bottom">
+                <p class="box-section__secondary">Powered by cutting-edge machine learning algorithms that adapt to your business needs.</p>
+                <button class="button">EXPLORE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="demo-box">
+          <div class="box-section">
+            <div class="box-section__image">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=468&h=532&fit=crop" alt="AI Solutions">
+            </div>
+            <div class="box-section__content">
+              <div class="box-section__header-body">
+                <div class="box-section__title">
+                  <p class="box-section__overheader">S/ 02</p>
+                  <h2 class="box-section__header">AI SOLUTIONS</h2>
+                </div>
+                <p class="box-section__body">Build intelligent systems that learn and adapt to changing conditions. Our AI solutions help automate complex processes and improve efficiency.</p>
+              </div>
+              <div class="box-section__bottom">
+                <p class="box-section__secondary">Strategic planning and implementation support for your digital transformation journey.</p>
+                <button class="button">GET STARTED</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Design Tokens Info -->
+    <div class="demo-section">
+      <div class="demo-label">Design Tokens Used</div>
+      <div class="info-box">
+        <strong>Spacing & Gaps:</strong><br>
+        • Horizontal gap: var(--spacing-5xl, 60px)<br>
+        • Overheader-Header gap: var(--gap-overheader-header-2, 16px)<br>
+        • Header-Body gap: var(--gap-header-2-body, 32px)<br>
+        • Paragraph-Button gap: var(--gap-paragraph-middle, 16px)<br>
+        • Mobile component gap: var(--spacing-xs, 8px)<br>
+        • Mobile content gap: var(--spacing-l, 24px)<br>
+        <br>
+        <strong>Typography:</strong><br>
+        • Overheader: var(--font-tech), var(--text-size-xsmall, 14px)<br>
+        • Header: var(--font-default), var(--text-size-large, 40px)<br>
+        • Body: var(--font-default), var(--text-size-small, 16px)<br>
+        <br>
+        <strong>Colors:</strong><br>
+        • Primary text: var(--color-text-primary, #362C2C)<br>
+        • Secondary text: var(--color-text-secondary, #828086)<br>
+        <br>
+        <strong>Border Radius:</strong><br>
+        • Image corners: var(--radius-s, 16px)
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
