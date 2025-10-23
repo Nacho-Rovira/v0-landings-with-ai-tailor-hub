@@ -38,7 +38,7 @@
   /* Content container - sits above image */
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-m, 16px);
+  gap: var(--gap-overheader-header-2, 16px);
   position: relative;
   z-index: 1;
   width: 100%;

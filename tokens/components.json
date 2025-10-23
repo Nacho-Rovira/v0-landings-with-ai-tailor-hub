@@ -107,6 +107,12 @@
             "$type": "color"
           }
         }
+      },
+      "gap": {
+        "overheader-header-2": {
+          "$value": "{spacing.m}",
+          "$type": "dimension"
+        }
       }
     }
   }

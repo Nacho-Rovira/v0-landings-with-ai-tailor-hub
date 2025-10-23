@@ -90,4 +90,7 @@
   --logo-size-small: 49px;
   --logo-size-large: 201px;
   --logo-color-primary: var(--menu-color-text);
+
+  /* Component - Gap */
+  --gap-overheader-header-2: var(--spacing-m);
 }

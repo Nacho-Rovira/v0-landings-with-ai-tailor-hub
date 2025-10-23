@@ -38,6 +38,9 @@
       --spacing-xs: 8px;
       --spacing-m: 16px;
 
+      /* Component gaps */
+      --gap-overheader-header-2: var(--spacing-m);
+
       /* Semantic colors */
       --color-text-primary: var(--color-neutral-900);
       --color-background-surface: var(--color-neutral-100);
@@ -93,7 +96,7 @@
     .card__content {
       display: flex;
       flex-direction: column;
-      gap: var(--spacing-m, 16px);
+      gap: var(--gap-overheader-header-2, 16px);
       position: relative;
       z-index: 1;
       width: 100%;
@@ -307,9 +310,9 @@
         • Category size: var(--text-size-xsmall, 14px)<br>
         • Title size: var(--text-size-large, 40px)<br>
         <br>
-        <strong>Spacing:</strong><br>
+        <strong>Spacing & Gaps:</strong><br>
         • Card padding: var(--spacing-m, 16px)<br>
-        • Content gap (default): var(--spacing-m, 16px)<br>
+        • Content gap (default): var(--gap-overheader-header-2, 16px)<br>
         • Content gap (mobile): var(--spacing-xs, 8px)<br>
         <br>
         <strong>Border Radius:</strong><br>

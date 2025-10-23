@@ -78,8 +78,9 @@ The card consists of:
 
 ## Design Tokens Used
 
-### Spacing
+### Spacing & Gaps
 - `--spacing-m` (16px): Card padding
+- `--gap-overheader-header-2` (16px): Gap between category and title in default variant
 - `--spacing-xs` (8px): Mobile content gap
 
 ### Typography
