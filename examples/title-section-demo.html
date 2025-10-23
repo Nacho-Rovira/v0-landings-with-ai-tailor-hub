@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TitleSection Component Demo - Tailor Hub Design System</title>
+  <style>
+    /* Design Tokens */
+    :root {
+      /* Colors */
+      --color-neutral-00: #FFFFFF;
+      --color-neutral-100: #F5F5F5;
+      --color-neutral-200: #E5E5E5;
+      --color-neutral-300: #D4D4D4;
+      --color-neutral-600: #828086;
+      --color-neutral-900: #362C2C;
+
+      /* Text sizes */
+      --text-size-xsmall: 14px;
+      --text-size-small: 16px;
+      --text-size-xxlarge: 66px;
+
+      /* Text line heights */
+      --text-line-xsmall: 17px;
+      --text-line-small: 22px;
+      --text-line-xxlarge: 62px;
+
+      /* Fonts */
+      --font-default: 'PP Mori', sans-serif;
+      --font-tech: 'PP Neue Montreal Mono', monospace;
+
+      /* Spacing */
+      --spacing-m: 16px;
+      --spacing-4xl: 56px;
+
+      /* Component gaps */
+      --gap-header-1: var(--spacing-4xl);
+
+      /* Semantic colors */
+      --color-text-primary: var(--color-neutral-900);
+    }
+
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-default);
+      background-color: #fff;
+      color: var(--color-text-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* TitleSection Component Styles */
+    .title-section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-header-1, 56px);
+      width: 100%;
+      max-width: 1432px;
+      margin: 0 auto;
+    }
+
+    .title-section__overheader {
+      font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+      font-size: var(--text-size-xsmall, 14px);
+      line-height: var(--text-line-xsmall, 17px);
+      color: var(--color-text-primary, #362C2C);
+      margin: 0;
+    }
+
+    .title-section__title {
+      font-family: var(--font-default, 'PP Mori', sans-serif);
+      font-size: var(--text-size-xxlarge, 66px);
+      line-height: var(--text-line-xxlarge, 62px);
+      font-weight: 400;
+      color: var(--color-text-primary, #362C2C);
+      margin: 0;
+    }
+
+    .title-section__paragraph {
+      font-family: var(--font-default, 'PP Mori', sans-serif);
+      font-size: var(--text-size-small, 16px);
+      line-height: var(--text-line-small, 22px);
+      color: var(--color-text-primary, #362C2C);
+      margin: 0;
+      max-width: 816px;
+    }
+
+    /* Demo Styles */
+    .demo-container {
+      padding: 48px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .demo-section {
+      margin-bottom: 120px;
+    }
+
+    .demo-label {
+      font-family: var(--font-tech);
+      font-size: var(--text-size-xsmall);
+      color: var(--color-text-primary);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    .demo-box {
+      background: white;
+      padding: 48px;
+      border-radius: 16px;
+      border: 1px solid var(--color-neutral-200);
+    }
+
+    .info-box {
+      background: var(--color-neutral-100);
+      padding: var(--spacing-m);
+      border-radius: 8px;
+      margin-top: var(--spacing-m);
+      font-family: var(--font-tech);
+      font-size: 12px;
+      line-height: 1.6;
+      color: var(--color-neutral-600);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .title-section {
+        max-width: 100%;
+        padding: 0 var(--spacing-m, 16px);
+      }
+
+      .title-section__title {
+        font-size: 40px;
+        line-height: 48px;
+      }
+
+      .title-section__paragraph {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .title-section__title {
+        font-size: 28px;
+        line-height: 29px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <h1 style="font-family: var(--font-default); font-size: 40px; margin-bottom: 48px;">TitleSection Component Demo</h1>
+
+    <!-- Complete Title Section -->
+    <div class="demo-section">
+      <div class="demo-label">Complete Title Section (Overheader + Title + Paragraph)</div>
+      <div class="demo-box">
+        <div class="title-section">
+          <p class="title-section__overheader">ABOUT US</p>
+          <h1 class="title-section__title">WE BUILD THE FUTURE</h1>
+          <p class="title-section__paragraph">Our team of expert engineers and data scientists work with you to create custom AI solutions that drive real business value and competitive advantage. We transform complex challenges into elegant, scalable systems.</p>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>Complete Section Specs:</strong><br>
+        • Container max-width: 1432px<br>
+        • Overheader: 14px / 17px line height (PP Neue Montreal Mono)<br>
+        • Title: 66px / 62px line height (PP Mori, weight 400)<br>
+        • Paragraph: 16px / 22px line height, max-width 816px<br>
+        • Vertical gap: 56px (gap-header-1)
+      </div>
+    </div>
+
+    <!-- Title + Paragraph Only -->
+    <div class="demo-section">
+      <div class="demo-label">Title Section (No Overheader)</div>
+      <div class="demo-box">
+        <div class="title-section">
+          <h1 class="title-section__title">INTELLIGENT SYSTEMS FOR MODERN BUSINESS</h1>
+          <p class="title-section__paragraph">Transform raw and hardly accessible data into actionable intelligence. With advanced AI models, we help you uncover patterns, predict outcomes, and drive smarter decision-making at every level of your organization.</p>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>Without Overheader:</strong><br>
+        • Same spacing and typography<br>
+        • Title directly followed by paragraph<br>
+        • 56px gap maintained between elements
+      </div>
+    </div>
+
+    <!-- Title Only -->
+    <div class="demo-section">
+      <div class="demo-label">Title Only (Minimal)</div>
+      <div class="demo-box">
+        <div class="title-section">
+          <p class="title-section__overheader">SERVICES</p>
+          <h1 class="title-section__title">WHAT WE DO</h1>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>Minimal Version:</strong><br>
+        • Just overheader and title<br>
+        • No paragraph text<br>
+        • Perfect for section headers
+      </div>
+    </div>
+
+    <!-- Long Content Example -->
+    <div class="demo-section">
+      <div class="demo-label">Long Content Example</div>
+      <div class="demo-box">
+        <div class="title-section">
+          <p class="title-section__overheader">OUR APPROACH</p>
+          <h1 class="title-section__title">WE COMBINE CUTTING-EDGE TECHNOLOGY WITH HUMAN EXPERTISE</h1>
+          <p class="title-section__paragraph">At Tailor Hub, we believe that the best solutions come from understanding both the technical possibilities and the human needs. Our multidisciplinary team brings together software engineering, data science, AI research, and UX design to create systems that not only work flawlessly but also delight users. We don't just build software – we craft experiences that transform how organizations operate and compete in the digital age.</p>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>Long Content:</strong><br>
+        • Paragraph naturally wraps at 816px max-width<br>
+        • Title can span multiple lines<br>
+        • Maintains consistent spacing throughout
+      </div>
+    </div>
+
+    <!-- Multiple Sections Example -->
+    <div class="demo-section">
+      <div class="demo-label">Multiple Title Sections in Sequence</div>
+      <div style="display: flex; flex-direction: column; gap: 120px;">
+        <!-- Section 1 -->
+        <div class="demo-box">
+          <div class="title-section">
+            <p class="title-section__overheader">S/ 01</p>
+            <h1 class="title-section__title">DATA INTELLIGENCE</h1>
+            <p class="title-section__paragraph">Transform raw and hardly accessible data into actionable intelligence. Our advanced AI models help you uncover patterns and drive smarter decisions.</p>
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="demo-box">
+          <div class="title-section">
+            <p class="title-section__overheader">S/ 02</p>
+            <h1 class="title-section__title">AI SOLUTIONS</h1>
+            <p class="title-section__paragraph">Build intelligent systems that learn and adapt to changing conditions. We automate complex processes and improve efficiency across your organization.</p>
+          </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="demo-box">
+          <div class="title-section">
+            <p class="title-section__overheader">S/ 03</p>
+            <h1 class="title-section__title">CONSULTING</h1>
+            <p class="title-section__paragraph">Expert guidance for your digital transformation journey. Strategic planning and implementation support to ensure success.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>Multiple Sections:</strong><br>
+        • Each section is independent<br>
+        • Consistent spacing across all instances<br>
+        • Can be used for sequential content
+      </div>
+    </div>
+
+    <!-- Design Tokens Info -->
+    <div class="demo-section">
+      <div class="demo-label">Design Tokens Used</div>
+      <div class="info-box">
+        <strong>Spacing & Gaps:</strong><br>
+        • Vertical gap: var(--gap-header-1, 56px) = spacing-4xl<br>
+        <br>
+        <strong>Typography:</strong><br>
+        • Overheader: var(--font-tech), var(--text-size-xsmall, 14px)<br>
+        • Title: var(--font-default), var(--text-size-xxlarge, 66px), weight 400<br>
+        • Paragraph: var(--font-default), var(--text-size-small, 16px)<br>
+        <br>
+        <strong>Colors:</strong><br>
+        • All text: var(--color-text-primary, #362C2C)<br>
+        <br>
+        <strong>Dimensions:</strong><br>
+        • Container max-width: 1432px<br>
+        • Paragraph max-width: 816px (left-aligned)
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
