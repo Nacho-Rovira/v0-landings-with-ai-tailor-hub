@@ -86,6 +86,19 @@
   margin: 0;
 }
 
+.footer__contact-line a,
+.footer__address {
+  /* Contact links styling */
+  color: var(--color-text-primary, #362C2C);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__contact-line a:hover,
+.footer__address:hover {
+  color: var(--color-text-hover, #D4D4D4);
+}
+
 .footer__logo {
   /* Logo section - matching the aspect ratio from the image */
   width: 606px;

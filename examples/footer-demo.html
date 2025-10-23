@@ -129,9 +129,21 @@
       white-space: nowrap;
     }
 
-    .footer__address p {
-      margin: 0;
-    }
+      .footer__address p {
+        margin: 0;
+      }
+
+      .footer__contact-line a,
+      .footer__address {
+        color: var(--color-text-primary, #362C2C);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .footer__contact-line a:hover,
+      .footer__address:hover {
+        color: var(--color-text-hover, #D4D4D4);
+      }
 
     .footer__logo {
       width: 606px;
@@ -515,10 +527,10 @@
             
             <div class="footer__contact footer__contact--mobile">
               <div class="footer__contact-line footer__contact-line--mobile">
-                <p>SALES@TAILOR-HUB.COM</p>
-                <p>+34 682 270 526</p>
+                <a href="mailto:SALES@TAILOR-HUB.COM">SALES@TAILOR-HUB.COM</a>
+                <a href="tel:+34682270526">+34 682 270 526</a>
               </div>
-              <p class="footer__address">CALLE HERMANOS ÁLVAREZ QUINTERO, 2, SEMISÓTANO A, 28004 MADRID</p>
+              <a href="https://www.google.com/maps?q=Calle%20Hermanos%20%C3%81lvarez%20Quintero%2C%202%2C%20Semis%C3%B3tano%20A%2C%2028004%20Madrid" target="_blank" rel="noopener noreferrer" class="footer__address">CALLE HERMANOS ÁLVAREZ QUINTERO, 2, SEMISÓTANO A, 28004 MADRID</a>
             </div>
           </div>
 
