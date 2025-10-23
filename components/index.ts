@@ -15,3 +15,6 @@ export type { FooterProps } from './Footer/Footer';
 
 export { Card } from './Card/Card';
 export type { CardProps } from './Card/Card';
+
+export { BoxSection } from './BoxSection/BoxSection';
+export type { BoxSectionProps } from './BoxSection/BoxSection';

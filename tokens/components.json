@@ -112,6 +112,14 @@
         "overheader-header-2": {
           "$value": "{spacing.m}",
           "$type": "dimension"
+        },
+        "header-2-body": {
+          "$value": "{spacing.xl}",
+          "$type": "dimension"
+        },
+        "paragraph-middle": {
+          "$value": "{spacing.m}",
+          "$type": "dimension"
         }
       },
       "padding": {
