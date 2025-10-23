@@ -24,3 +24,6 @@ export type { TitleSectionProps } from './TitleSection/TitleSection';
 
 export { HeaderBox } from './HeaderBox/HeaderBox';
 export type { HeaderBoxProps } from './HeaderBox/HeaderBox';
+
+export { HighlightSection } from './HighlightSection/HighlightSection';
+export type { HighlightSectionProps } from './HighlightSection/HighlightSection';

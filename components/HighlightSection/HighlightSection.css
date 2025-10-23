@@ -1,0 +1,80 @@
+/* HighlightSection Component Styles */
+
+.highlight-section {
+  /* Container styles */
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-header-1, 56px);
+  width: 100%;
+  max-width: 1432px;
+  margin: 0 auto;
+}
+
+.highlight-section__concepts {
+  /* Concepts row - center aligned on desktop */
+  display: flex;
+  gap: var(--spacing-m, 16px);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.highlight-section__concept {
+  /* Individual concept item */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 225px;
+  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: normal;
+  color: var(--color-text-primary, #362C2C);
+}
+
+.highlight-section__header {
+  /* Main header text */
+  font-family: var(--font-default, 'PP Mori', sans-serif);
+  font-size: var(--text-size-xxlarge, 66px);
+  line-height: var(--text-line-xxlarge, 62px);
+  font-weight: 400;
+  color: var(--color-text-primary, #362C2C);
+  margin: 0;
+  text-transform: uppercase;
+  white-space: pre-wrap;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .highlight-section {
+    /* Mobile: add container padding */
+    max-width: 100%;
+    padding: 0 var(--spacing-m, 16px);
+  }
+
+  .highlight-section__concepts {
+    /* Mobile: align to the left */
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .highlight-section__concept {
+    /* Mobile: auto width */
+    width: auto;
+  }
+
+  .highlight-section__header {
+    /* Mobile: smaller header */
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlight-section__header {
+    /* Very small screens: even smaller header */
+    font-size: 28px;
+    line-height: 29px;
+  }
+}
+
