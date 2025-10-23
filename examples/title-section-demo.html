@@ -136,15 +136,23 @@
     }
 
     /* Responsive adjustments */
+    @media (max-width: 1279px) {
+      .title-section__overheader {
+        padding-left: 60px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .title-section__overheader {
+        padding-left: 0;
+        gap: var(--spacing-l, 24px);
+      }
+    }
+
     @media (max-width: 768px) {
       .title-section {
         max-width: 100%;
         padding: 0 var(--spacing-m, 16px);
-      }
-
-      .title-section__overheader {
-        padding-left: 0;
-        gap: 24px;
       }
 
       .title-section__title {
@@ -292,6 +300,8 @@
       <div class="info-box">
         <strong>Spacing & Gaps:</strong><br>
         • Vertical gap: var(--gap-header-1, 56px) = spacing-4xl<br>
+        • Overheader gap: 112px (desktop), 24px (< 992px)<br>
+        • Overheader padding-left: 121px (desktop), 60px (< 1279px), 0px (< 992px)<br>
         <br>
         <strong>Typography:</strong><br>
         • Overheader: var(--font-tech), var(--text-size-xsmall, 14px)<br>

@@ -49,17 +49,26 @@
 }
 
 /* Responsive adjustments */
+@media (max-width: 1279px) {
+  .title-section__overheader {
+    /* Reduce left padding */
+    padding-left: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .title-section__overheader {
+    /* Remove left padding and reduce gap */
+    padding-left: 0;
+    gap: var(--spacing-l, 24px);
+  }
+}
+
 @media (max-width: 768px) {
   .title-section {
     /* Mobile: reduce max width */
     max-width: 100%;
     padding: 0 var(--spacing-m, 16px);
-  }
-
-  .title-section__overheader {
-    /* Mobile: reduce padding and gap */
-    padding-left: 0;
-    gap: var(--spacing-l, 24px);
   }
 
   .title-section__title {
