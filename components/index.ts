@@ -18,3 +18,6 @@ export type { CardProps } from './Card/Card';
 
 export { BoxSection } from './BoxSection/BoxSection';
 export type { BoxSectionProps } from './BoxSection/BoxSection';
+
+export { TitleSection } from './TitleSection/TitleSection';
+export type { TitleSectionProps } from './TitleSection/TitleSection';

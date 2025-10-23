@@ -120,6 +120,10 @@
         "paragraph-middle": {
           "$value": "{spacing.m}",
           "$type": "dimension"
+        },
+        "header-1": {
+          "$value": "{spacing.4xl}",
+          "$type": "dimension"
         }
       },
       "padding": {
