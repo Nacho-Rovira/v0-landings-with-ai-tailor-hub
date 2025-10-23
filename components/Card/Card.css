@@ -43,7 +43,7 @@
   z-index: 1;
   width: 100%;
   white-space: pre-wrap;
-  color: var(--color-text-primary, #362C2C);
+  color: var(--color-text-invert, #FFFFFF);
 }
 
 .card__category {

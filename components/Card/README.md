@@ -98,7 +98,7 @@ The card consists of:
 - `--radius-s` (16px): Card corner radius
 
 ### Colors
-- `--color-text-primary` (#362C2C): Text color
+- `--color-text-invert` (#FFFFFF): Text color for content over images
 
 ## Dimensions
 
