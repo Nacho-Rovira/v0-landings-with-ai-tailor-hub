@@ -93,4 +93,7 @@
 
   /* Component - Gap */
   --gap-overheader-header-2: var(--spacing-m);
+
+  /* Component - Padding */
+  --padding-card: var(--spacing-m);
 }

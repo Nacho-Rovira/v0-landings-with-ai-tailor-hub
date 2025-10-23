@@ -113,6 +113,12 @@
           "$value": "{spacing.m}",
           "$type": "dimension"
         }
+      },
+      "padding": {
+        "card": {
+          "$value": "{spacing.m}",
+          "$type": "dimension"
+        }
       }
     }
   }
