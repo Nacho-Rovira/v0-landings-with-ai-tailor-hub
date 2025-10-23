@@ -272,55 +272,55 @@
 
 /* Responsive adjustments */
 @media (max-width: 1400px) {
-  .footer {
+  .footer:not(.footer--mobile) {
     max-width: 100%;
     padding: 0 var(--spacing-l, 24px);
   }
   
-  .footer__section-title {
+  .footer:not(.footer--mobile) .footer__section-title {
     padding-left: var(--spacing-xxxl, 48px);
     gap: var(--spacing-6xl, 64px);
   }
   
-  .footer__contact {
+  .footer:not(.footer--mobile) .footer__contact {
     padding-left: var(--spacing-8xl, 80px);
   }
   
-  .footer__logo {
+  .footer:not(.footer--mobile) .footer__logo {
     width: 100%;
     max-width: 606px;
   }
   
-  .footer__links {
+  .footer:not(.footer--mobile) .footer__links {
     width: 100%;
   }
 }
 
 @media (max-width: 1024px) {
-  .footer__section-title {
+  .footer:not(.footer--mobile) .footer__section-title {
     padding-left: var(--spacing-l, 24px);
     gap: var(--spacing-xl, 32px);
   }
   
-  .footer__contact {
+  .footer:not(.footer--mobile) .footer__contact {
     padding-left: var(--spacing-4xl, 56px);
     font-size: var(--text-size-small, 16px);
     line-height: var(--text-line-small, 22px);
   }
   
-  .footer__contact-line {
+  .footer:not(.footer--mobile) .footer__contact-line {
     flex-direction: column;
     gap: var(--spacing-m, 16px);
     align-items: flex-start;
   }
   
-  .footer__link-group {
+  .footer:not(.footer--mobile) .footer__link-group {
     flex-direction: column;
     gap: var(--spacing-s, 12px);
     align-items: flex-start;
   }
   
-  .footer__link {
+  .footer:not(.footer--mobile) .footer__link {
     width: auto;
   }
 }
@@ -380,6 +380,45 @@
   
   .footer:not(.footer--mobile) .footer__link {
     width: 225px;
+    text-align: right;
+  }
+}
+
+/* Ensure mobile variant maintains two-column layout on all screen sizes */
+@media (max-width: 480px) {
+  .footer--mobile {
+    /* Keep mobile layout compact */
+    max-width: 100%;
+    padding: 0 var(--spacing-m, 16px);
+  }
+  
+  .footer--mobile .footer__link-row {
+    /* Force two-column layout to persist */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  
+  .footer--mobile .footer__section-title {
+    /* Allow title to shrink if needed */
+    flex-shrink: 1;
+    min-width: 0;
+  }
+  
+  .footer--mobile .footer__link-group {
+    /* Keep links in column, aligned right */
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m, 16px);
+    align-items: flex-end;
+    flex-shrink: 0;
+  }
+  
+  .footer--mobile .footer__link {
+    /* Links stay right-aligned */
+    width: auto;
+    min-width: 150px;
     text-align: right;
   }
 }

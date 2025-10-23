@@ -303,6 +303,40 @@
       color: var(--color-text-hover, #D4D4D4);
     }
 
+    /* Ensure mobile variant maintains two-column layout on all screen sizes */
+    @media (max-width: 480px) {
+      .footer--mobile {
+        max-width: 100%;
+        padding: 0 var(--spacing-m, 16px);
+      }
+      
+      .footer--mobile .footer__link-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+      }
+      
+      .footer--mobile .footer__section-title {
+        flex-shrink: 1;
+        min-width: 0;
+      }
+      
+      .footer--mobile .footer__link-group {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-m, 16px);
+        align-items: flex-end;
+        flex-shrink: 0;
+      }
+      
+      .footer--mobile .footer__link {
+        width: auto;
+        min-width: 150px;
+        text-align: right;
+      }
+    }
+
     /* Demo Styles */
     .demo-container {
       padding: var(--spacing-xxxl);
