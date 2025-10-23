@@ -11,12 +11,21 @@
 }
 
 .title-section__overheader {
-  /* Overheader text (small label) */
+  /* Overheader text (small label with / prefix) */
   font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
   font-size: var(--text-size-xsmall, 14px);
   line-height: var(--text-line-xsmall, 17px);
   color: var(--color-text-primary, #362C2C);
   margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 112px;
+  padding-left: 121px;
+}
+
+.title-section__overheader::before {
+  /* "/" symbol before overheader text */
+  content: '/';
 }
 
 .title-section__title {
@@ -45,6 +54,12 @@
     /* Mobile: reduce max width */
     max-width: 100%;
     padding: 0 var(--spacing-m, 16px);
+  }
+
+  .title-section__overheader {
+    /* Mobile: reduce padding and gap */
+    padding-left: 0;
+    gap: var(--spacing-l, 24px);
   }
 
   .title-section__title {
