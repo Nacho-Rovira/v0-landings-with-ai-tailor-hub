@@ -46,4 +46,3 @@ export const HighlightSection = React.forwardRef<HTMLDivElement, HighlightSectio
 )
 
 HighlightSection.displayName = 'HighlightSection'
-

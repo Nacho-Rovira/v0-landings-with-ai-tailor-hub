@@ -75,4 +75,3 @@ export const MultipleSections: Story = {
     ]
   },
 }
-

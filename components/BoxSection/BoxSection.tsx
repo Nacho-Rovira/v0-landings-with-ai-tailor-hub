@@ -76,4 +76,3 @@ export const BoxSection = React.forwardRef<HTMLDivElement, BoxSectionProps>(
 )
 
 BoxSection.displayName = 'BoxSection'
-

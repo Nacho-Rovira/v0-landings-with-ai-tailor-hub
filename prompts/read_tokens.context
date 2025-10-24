@@ -45,7 +45,7 @@ The design system uses a three-tier token hierarchy:
 ## Common Token Patterns
 
 ### Colors
-```css
+\`\`\`css
 /* Component tokens (preferred) */
 color: var(--button-primary-text, #828086);
 
@@ -54,20 +54,20 @@ color: var(--color-text-primary, #362C2C);
 
 /* Primitive tokens (last resort) */
 color: var(--color-neutral-600, #828086);
-```
+\`\`\`
 
 ### Spacing
-```css
+\`\`\`css
 /* Component tokens */
 padding: var(--button-primary-padding, 8px);
 gap: var(--gap-header-logo-info, 60px);
 
 /* Primitive tokens */
 margin: var(--spacing-m, 16px);
-```
+\`\`\`
 
 ### Typography
-```css
+\`\`\`css
 /* Component tokens */
 font-size: var(--button-primary-text-size, 14px);
 font-family: var(--button-primary-font, 'PP Neue Montreal Mono');
@@ -75,7 +75,7 @@ font-family: var(--button-primary-font, 'PP Neue Montreal Mono');
 /* Primitive tokens */
 font-size: var(--text-size-xsmall, 14px);
 line-height: var(--text-line-xsmall, 17px);
-```
+\`\`\`
 
 ## Token Categories
 

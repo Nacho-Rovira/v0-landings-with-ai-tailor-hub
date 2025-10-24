@@ -70,4 +70,3 @@ export const BodyText = React.forwardRef<HTMLDivElement, BodyTextProps>(
 )
 
 BodyText.displayName = 'BodyText'
-

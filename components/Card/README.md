@@ -4,7 +4,7 @@ A project card component with image, category, and title. Built using design tok
 
 ## Usage
 
-```tsx
+\`\`\`tsx
 import { Card } from './components/Card';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
     />
   );
 }
-```
+\`\`\`
 
 ## Props
 
@@ -50,31 +50,31 @@ The card consists of:
 ## Examples
 
 ### Default Card
-```tsx
+\`\`\`tsx
 <Card 
   category="SOFTWARE AND AI"
   title="PROJECT NAME"
   imageSrc="https://example.com/image.jpg"
 />
-```
+\`\`\`
 
 ### Mobile Variant
-```tsx
+\`\`\`tsx
 <Card 
   variant="mobile"
   category="WEB DEVELOPMENT"
   title="E-COMMERCE PLATFORM"
   imageSrc="https://example.com/image.jpg"
 />
-```
+\`\`\`
 
 ### Without Image
-```tsx
+\`\`\`tsx
 <Card 
   category="DESIGN"
   title="BRAND IDENTITY"
 />
-```
+\`\`\`
 
 ## Design Tokens Used
 
@@ -122,4 +122,3 @@ The card consists of:
 ### Very Small Screens (< 480px)
 - 100% width
 - Maintains layout integrity
-

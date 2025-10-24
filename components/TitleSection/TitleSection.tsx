@@ -34,4 +34,3 @@ export const TitleSection = React.forwardRef<HTMLDivElement, TitleSectionProps>(
 )
 
 TitleSection.displayName = 'TitleSection'
-

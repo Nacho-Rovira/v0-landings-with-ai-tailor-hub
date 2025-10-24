@@ -82,4 +82,3 @@ export const WithoutImage: Story = {
     buttonLabel: 'LEARN MORE',
   },
 }
-

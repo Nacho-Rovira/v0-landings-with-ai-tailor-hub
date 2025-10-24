@@ -70,4 +70,3 @@ export const CustomContent: Story = {
     imageSrc: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=440&fit=crop',
   },
 }
-

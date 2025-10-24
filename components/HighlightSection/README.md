@@ -4,7 +4,7 @@ A section component for highlighting key concepts with a large header. Features 
 
 ## Usage
 
-```tsx
+\`\`\`tsx
 import { HighlightSection } from './components/HighlightSection';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
     />
   );
 }
-```
+\`\`\`
 
 ## Props
 
@@ -42,28 +42,28 @@ The highlight section consists of:
 ## Examples
 
 ### Default Highlight
-```tsx
+\`\`\`tsx
 <HighlightSection 
   concepts={['MENDESALTAREN', 'MINIMUNRUN', 'NO CODE HACKERS', 'MITO']}
   header="We build advanced tech solutions to accelerate and optimize your business needs."
 />
-```
+\`\`\`
 
 ### Three Concepts
-```tsx
+\`\`\`tsx
 <HighlightSection 
   concepts={['AI POWERED', 'SCALABLE', 'SECURE']}
   header="Building the future of enterprise software with cutting-edge technology."
 />
-```
+\`\`\`
 
 ### Custom Header
-```tsx
+\`\`\`tsx
 <HighlightSection 
   concepts={['INNOVATION', 'RELIABILITY', 'PERFORMANCE']}
   header="Comprehensive solutions designed to meet your most demanding requirements."
 />
-```
+\`\`\`
 
 ## Design Tokens Used
 
@@ -112,4 +112,3 @@ The highlight section consists of:
 - Header: 28px font size
 - Concepts can wrap to multiple lines
 - Maintains readability
-

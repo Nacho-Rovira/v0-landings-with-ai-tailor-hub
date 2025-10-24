@@ -50,4 +50,3 @@ export const JoinTeam: Story = {
     buttonLabel: 'VIEW OPPORTUNITIES',
   },
 }
-

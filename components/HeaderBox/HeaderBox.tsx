@@ -52,4 +52,3 @@ export const HeaderBox = React.forwardRef<HTMLDivElement, HeaderBoxProps>(
 )
 
 HeaderBox.displayName = 'HeaderBox'
-

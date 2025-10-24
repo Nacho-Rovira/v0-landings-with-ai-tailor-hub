@@ -69,7 +69,7 @@ Use these components from `/components/` directory:
 ## Token Usage Examples
 
 ### Colors
-```css
+\`\`\`css
 /* Component tokens (preferred) */
 background: var(--button-primary-bg, #F5F5F5);
 color: var(--color-text-primary, #362C2C);
@@ -77,10 +77,10 @@ color: var(--color-text-primary, #362C2C);
 /* Semantic tokens */
 background: var(--color-background-surface, #F5F5F5);
 color: var(--color-text-secondary, #828086);
-```
+\`\`\`
 
 ### Spacing
-```css
+\`\`\`css
 /* Component tokens */
 padding: var(--button-primary-padding, 8px);
 gap: var(--gap-header-logo-info, 60px);
@@ -88,10 +88,10 @@ gap: var(--gap-header-logo-info, 60px);
 /* Primitive tokens */
 margin: var(--spacing-m, 16px);
 padding: var(--spacing-xl, 32px);
-```
+\`\`\`
 
 ### Typography
-```css
+\`\`\`css
 /* Component tokens */
 font-size: var(--button-primary-text-size, 14px);
 font-family: var(--button-primary-font, 'PP Neue Montreal Mono');
@@ -99,7 +99,7 @@ font-family: var(--button-primary-font, 'PP Neue Montreal Mono');
 /* Primitive tokens */
 font-size: var(--text-size-large, 40px);
 line-height: var(--text-line-large, 48px);
-```
+\`\`\`
 
 ## Quality Checklist
 - [ ] All components use design tokens

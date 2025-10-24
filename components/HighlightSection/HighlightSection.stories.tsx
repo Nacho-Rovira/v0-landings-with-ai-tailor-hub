@@ -43,4 +43,3 @@ export const FiveConcepts: Story = {
     header: 'Comprehensive solutions designed to meet your most demanding requirements.',
   },
 }
-

@@ -56,4 +56,3 @@ export const WithoutParagraph: Story = {
     title: 'TITLE ONLY',
   },
 }
-
