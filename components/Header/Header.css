@@ -14,7 +14,7 @@
   transition: all 0.3s ease;
 }
 
-/* Scrolling variant - compact header with small logo */
+/* Add fixed positioning support */
 .header--scrolling {
   height: var(--logo-size-small, 49px);
 }
@@ -48,7 +48,7 @@
 
 .header__mobile-toggle {
   /* Button styling matching Figma design */
-  background: var(--color-background-surface, #F5F5F5);
+  background: var(--color-background-surface, #f5f5f5);
   color: var(--color-text-secondary, #828086);
   border: none;
   border-radius: var(--radius-xs, 8px);
