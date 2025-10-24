@@ -51,7 +51,9 @@ export default function CoverPage() {
           Welcome to the Tailor Hub Landing Page Generator. This tool helps you create custom landing pages using our
           design system.
         </p>
+      </div>
 
+      <div style={{ width: "100%", maxWidth: "800px" }}>
         <BodyText
           sections={[
             {
@@ -66,20 +68,21 @@ export default function CoverPage() {
             },
           ]}
         />
-
-        <p
-          style={{
-            fontSize: "var(--font-size-sm)",
-            color: "var(--color-text-tertiary)",
-            marginTop: "var(--spacing-md)",
-            fontFamily: "var(--font-body)",
-            textAlign: "center",
-          }}
-        >
-          All generated pages use design tokens from the Tailor Hub design system, ensuring consistency and brand
-          alignment.
-        </p>
       </div>
+
+      <p
+        style={{
+          fontSize: "var(--font-size-sm)",
+          color: "var(--color-text-tertiary)",
+          marginTop: "var(--spacing-md)",
+          fontFamily: "var(--font-body)",
+          textAlign: "center",
+          maxWidth: "800px",
+        }}
+      >
+        All generated pages use design tokens from the Tailor Hub design system, ensuring consistency and brand
+        alignment.
+      </p>
     </main>
   )
 }
