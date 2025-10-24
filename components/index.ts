@@ -30,3 +30,6 @@ export type { HighlightSectionProps } from './HighlightSection/HighlightSection'
 
 export { BodyText } from './BodyText/BodyText';
 export type { BodyTextProps, BodyTextSection } from './BodyText/BodyText';
+
+export { Tab } from './Tab/Tab';
+export type { TabProps } from './Tab/Tab';

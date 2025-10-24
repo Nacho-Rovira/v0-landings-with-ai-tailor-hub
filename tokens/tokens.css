@@ -77,6 +77,17 @@
   --button-primary-text: var(--color-text-secondary);
   --button-primary-text-hover: var(--color-text-primary);
 
+  /* Component - Tab */
+  --tab-padding: var(--spacing-xs);
+  --tab-gap: var(--spacing-xsm);
+  --tab-text-size: var(--text-size-xsmall);
+  --tab-color-background: var(--color-neutral-100);
+  --tab-color-background-hover: var(--color-neutral-200);
+  --tab-color-background-selected: var(--color-neutral-600);
+  --tab-color-text: var(--color-neutral-600);
+  --tab-color-text-hover: var(--color-neutral-900);
+  --tab-color-text-selected: var(--color-neutral-00);
+
   /* Component - Menu */
   --menu-padding: var(--spacing-m);
   --menu-gap: var(--spacing-xl);

@@ -1,0 +1,74 @@
+/* Tab Component Styles */
+
+.tab {
+  /* Base tab styles */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--tab-gap, 10px);
+  padding: var(--tab-padding, 8px);
+  border-radius: var(--radius-xs, 8px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.tab__label {
+  /* Tab label text */
+  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-size: var(--tab-text-size, 14px);
+  line-height: normal;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* Default state */
+.tab--default {
+  background: var(--tab-color-background, #F5F5F5);
+  color: var(--tab-color-text, #828086);
+}
+
+.tab--default:hover {
+  background: var(--tab-color-background-hover, #E5E5E5);
+  color: var(--tab-color-text-hover, #362C2C);
+}
+
+/* Hover state */
+.tab--hover {
+  background: var(--tab-color-background-hover, #E5E5E5);
+  color: var(--tab-color-text-hover, #362C2C);
+}
+
+/* Selected state */
+.tab--selected {
+  background: var(--tab-color-background-selected, #828086);
+  color: var(--tab-color-text-selected, #FFFFFF);
+}
+
+.tab--selected:hover {
+  /* Maintain selected appearance on hover */
+  background: var(--tab-color-background-selected, #828086);
+  color: var(--tab-color-text-selected, #FFFFFF);
+}
+
+/* Focus styles for accessibility */
+.tab:focus {
+  outline: 2px solid var(--color-blue-500, #2C54FF);
+  outline-offset: 2px;
+}
+
+.tab:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Disabled state */
+.tab:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tab:disabled:hover {
+  background: var(--tab-color-background, #F5F5F5);
+  color: var(--tab-color-text, #828086);
+}

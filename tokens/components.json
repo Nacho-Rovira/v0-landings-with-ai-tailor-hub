@@ -38,20 +38,40 @@
       },
       "tab": {
         "padding": {
-          "$value": "0",
+          "$value": "{spacing.xs}",
+          "$type": "dimension"
+        },
+        "gap": {
+          "$value": "{spacing.xsm}",
+          "$type": "dimension"
+        },
+        "textSize": {
+          "$value": "{text.size.xsmall}",
           "$type": "dimension"
         },
         "color": {
+          "background": {
+            "$value": "{color.neutral.100}",
+            "$type": "color"
+          },
+          "backgroundHover": {
+            "$value": "{color.neutral.200}",
+            "$type": "color"
+          },
+          "backgroundSelected": {
+            "$value": "{color.neutral.600}",
+            "$type": "color"
+          },
           "text": {
-            "$value": "{color.text.primary}",
+            "$value": "{color.neutral.600}",
             "$type": "color"
           },
           "textHover": {
-            "$value": "{color.text.accent}",
+            "$value": "{color.neutral.900}",
             "$type": "color"
           },
           "textSelected": {
-            "$value": "{color.text.accent}",
+            "$value": "{color.neutral.00}",
             "$type": "color"
           }
         }

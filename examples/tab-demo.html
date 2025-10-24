@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Component Demo - Tailor Hub Design System</title>
+  <style>
+    /* Design Tokens */
+    :root {
+      /* Colors */
+      --color-neutral-00: #FFFFFF;
+      --color-neutral-100: #F5F5F5;
+      --color-neutral-200: #E5E5E5;
+      --color-neutral-600: #828086;
+      --color-neutral-900: #362C2C;
+      --color-blue-500: #2C54FF;
+
+      /* Text sizes */
+      --text-size-xsmall: 14px;
+
+      /* Fonts */
+      --font-tech: 'PP Neue Montreal Mono', monospace;
+
+      /* Radius */
+      --radius-xs: 8px;
+
+      /* Spacing */
+      --spacing-xs: 8px;
+      --spacing-xsm: 10px;
+
+      /* Component tokens */
+      --tab-padding: var(--spacing-xs);
+      --tab-gap: var(--spacing-xsm);
+      --tab-text-size: var(--text-size-xsmall);
+      --tab-color-background: var(--color-neutral-100);
+      --tab-color-background-hover: var(--color-neutral-200);
+      --tab-color-background-selected: var(--color-neutral-600);
+      --tab-color-text: var(--color-neutral-600);
+      --tab-color-text-hover: var(--color-neutral-900);
+      --tab-color-text-selected: var(--color-neutral-00);
+    }
+
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-tech);
+      background-color: #fff;
+      color: var(--color-neutral-900);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Tab Component Styles */
+    .tab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--tab-gap, 10px);
+      padding: var(--tab-padding, 8px);
+      border-radius: var(--radius-xs, 8px);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+      box-sizing: border-box;
+    }
+
+    .tab__label {
+      font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+      font-size: var(--tab-text-size, 14px);
+      line-height: normal;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
+    /* Default state */
+    .tab--default {
+      background: var(--tab-color-background, #F5F5F5);
+      color: var(--tab-color-text, #828086);
+    }
+
+    .tab--default:hover {
+      background: var(--tab-color-background-hover, #E5E5E5);
+      color: var(--tab-color-text-hover, #362C2C);
+    }
+
+    /* Hover state */
+    .tab--hover {
+      background: var(--tab-color-background-hover, #E5E5E5);
+      color: var(--tab-color-text-hover, #362C2C);
+    }
+
+    /* Selected state */
+    .tab--selected {
+      background: var(--tab-color-background-selected, #828086);
+      color: var(--tab-color-text-selected, #FFFFFF);
+    }
+
+    .tab--selected:hover {
+      background: var(--tab-color-background-selected, #828086);
+      color: var(--tab-color-text-selected, #FFFFFF);
+    }
+
+    /* Focus styles for accessibility */
+    .tab:focus {
+      outline: 2px solid var(--color-blue-500, #2C54FF);
+      outline-offset: 2px;
+    }
+
+    .tab:focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    /* Demo Styles */
+    .demo-container {
+      padding: 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .demo-section {
+      margin-bottom: 80px;
+    }
+
+    .demo-label {
+      font-family: var(--font-tech);
+      font-size: 14px;
+      color: var(--color-neutral-900);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    .demo-box {
+      background: white;
+      padding: 48px 24px;
+      border-radius: 16px;
+      border: 1px solid #E5E5E5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .demo-box--vertical {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .info-box {
+      background: #F5F5F5;
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 16px;
+      font-family: var(--font-tech);
+      font-size: 12px;
+      line-height: 1.6;
+      color: #828086;
+    }
+
+    .tab-group {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    /* Interactive demo styles */
+    .interactive-demo {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .tab-container {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .demo-button {
+      background: var(--color-blue-500);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-family: var(--font-tech);
+      font-size: 12px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .demo-button:hover {
+      background: #1e3a8a;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <h1 style="font-family: var(--font-tech); font-size: 40px; margin-bottom: 48px;">Tab Component Demo</h1>
+
+    <!-- Individual States -->
+    <div class="demo-section">
+      <div class="demo-label">Individual States</div>
+      <div class="demo-box">
+        <div class="tab tab--default">
+          <span class="tab__label">DEFAULT</span>
+        </div>
+        <div class="tab tab--hover">
+          <span class="tab__label">HOVER</span>
+        </div>
+        <div class="tab tab--selected">
+          <span class="tab__label">SELECTED</span>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>Tab States:</strong><br>
+        • Default: Light background (#F5F5F5), secondary text (#828086)<br>
+        • Hover: Medium background (#E5E5E5), primary text (#362C2C)<br>
+        • Selected: Dark background (#828086), white text (#FFFFFF)
+      </div>
+    </div>
+
+    <!-- Tab Group -->
+    <div class="demo-section">
+      <div class="demo-label">Tab Group (Navigation)</div>
+      <div class="demo-box">
+        <div class="tab-group">
+          <div class="tab tab--selected">
+            <span class="tab__label">OVERVIEW</span>
+          </div>
+          <div class="tab tab--default">
+            <span class="tab__label">DETAILS</span>
+          </div>
+          <div class="tab tab--default">
+            <span class="tab__label">SETTINGS</span>
+          </div>
+          <div class="tab tab--default">
+            <span class="tab__label">ANALYTICS</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>Tab Group Usage:</strong><br>
+        • 8px gap between tabs<br>
+        • One tab should be selected at a time<br>
+        • Perfect for content navigation
+      </div>
+    </div>
+
+    <!-- Interactive Demo -->
+    <div class="demo-section">
+      <div class="demo-label">Interactive Demo</div>
+      <div class="demo-box">
+        <div class="interactive-demo">
+          <div class="tab-container">
+            <div class="tab tab--default" onclick="selectTab(this, 'overview')">
+              <span class="tab__label">OVERVIEW</span>
+            </div>
+            <div class="tab tab--default" onclick="selectTab(this, 'details')">
+              <span class="tab__label">DETAILS</span>
+            </div>
+            <div class="tab tab--default" onclick="selectTab(this, 'settings')">
+              <span class="tab__label">SETTINGS</span>
+            </div>
+          </div>
+          <div id="content" style="text-align: center; color: #828086; font-size: 14px;">
+            Click a tab to see content change
+          </div>
+          <button class="demo-button" onclick="resetTabs()">Reset Selection</button>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>Interactive Features:</strong><br>
+        • Click tabs to change selection<br>
+        • Content updates based on selection<br>
+        • Reset button to clear selection<br>
+        • Smooth transitions between states
+      </div>
+    </div>
+
+    <!-- Different Labels -->
+    <div class="demo-section">
+      <div class="demo-label">Different Label Lengths</div>
+      <div class="demo-box">
+        <div class="tab tab--default">
+          <span class="tab__label">A</span>
+        </div>
+        <div class="tab tab--default">
+          <span class="tab__label">TAB</span>
+        </div>
+        <div class="tab tab--default">
+          <span class="tab__label">LONG TAB NAME</span>
+        </div>
+        <div class="tab tab--default">
+          <span class="tab__label">VERY LONG TAB LABEL</span>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <strong>Label Flexibility:</strong><br>
+        • Adapts to any label length<br>
+        • Maintains consistent padding<br>
+        • Text doesn't wrap (white-space: nowrap)<br>
+        • Perfect for various content types
+      </div>
+    </div>
+
+    <!-- Design Tokens Info -->
+    <div class="demo-section">
+      <div class="demo-label">Design Tokens Used</div>
+      <div class="info-box">
+        <strong>Spacing & Layout:</strong><br>
+        • Padding: var(--tab-padding, 8px)<br>
+        • Gap: var(--tab-gap, 10px)<br>
+        • Border radius: var(--radius-xs, 8px)<br>
+        <br>
+        <strong>Typography:</strong><br>
+        • Font: var(--font-tech) (PP Neue Montreal Mono)<br>
+        • Size: var(--tab-text-size, 14px)<br>
+        • Weight: 400<br>
+        • Line height: normal<br>
+        <br>
+        <strong>Colors:</strong><br>
+        • Default background: var(--tab-color-background, #F5F5F5)<br>
+        • Default text: var(--tab-color-text, #828086)<br>
+        • Hover background: var(--tab-color-background-hover, #E5E5E5)<br>
+        • Hover text: var(--tab-color-text-hover, #362C2C)<br>
+        • Selected background: var(--tab-color-background-selected, #828086)<br>
+        • Selected text: var(--tab-color-text-selected, #FFFFFF)<br>
+        <br>
+        <strong>Interaction:</strong><br>
+        • Transition: 0.2s ease<br>
+        • Focus outline: 2px solid blue<br>
+        • Cursor: pointer<br>
+        • User select: none
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function selectTab(element, content) {
+      // Remove selected class from all tabs in the same container
+      const container = element.parentElement;
+      const tabs = container.querySelectorAll('.tab');
+      tabs.forEach(tab => {
+        tab.classList.remove('tab--selected');
+        tab.classList.add('tab--default');
+      });
+      
+      // Add selected class to clicked tab
+      element.classList.remove('tab--default');
+      element.classList.add('tab--selected');
+      
+      // Update content
+      const contentElement = document.getElementById('content');
+      const contentMap = {
+        'overview': 'Overview content would be displayed here',
+        'details': 'Detailed information and data would be shown here',
+        'settings': 'Settings and configuration options would appear here'
+      };
+      contentElement.textContent = contentMap[content] || 'Content not found';
+    }
+    
+    function resetTabs() {
+      const container = document.querySelector('.interactive-demo .tab-container');
+      const tabs = container.querySelectorAll('.tab');
+      tabs.forEach(tab => {
+        tab.classList.remove('tab--selected');
+        tab.classList.add('tab--default');
+      });
+      
+      document.getElementById('content').textContent = 'Click a tab to see content change';
+    }
+  </script>
+</body>
+</html>
