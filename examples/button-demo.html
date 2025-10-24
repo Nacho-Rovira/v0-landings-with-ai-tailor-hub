@@ -23,9 +23,21 @@
       /* Spacing */
       --spacing-xs: 8px;
       --spacing-xsm: 10px;
+      --spacing-m: 16px;
       
       /* Border Radius */
       --radius-xs: 8px;
+
+      /* Component - Button Primary */
+      --button-primary-padding: var(--spacing-xs);
+      --button-primary-text-size: var(--text-size-xsmall);
+      --button-primary-font: var(--font-tech);
+      --button-primary-bg: var(--color-neutral-100);
+      --button-primary-bg-hover: var(--color-neutral-200);
+      --button-primary-bg-active: var(--color-neutral-300);
+      --button-primary-text: var(--color-neutral-600);
+      --button-primary-text-hover: var(--color-neutral-900);
+      --button-primary-text-active: var(--color-neutral-900);
     }
 
     * {
@@ -103,22 +115,24 @@
       align-items: center;
       gap: var(--spacing-xsm);
       transition: background-color 0.2s ease, color 0.2s ease;
-      font-family: var(--font-tech);
-      font-size: var(--text-size-xsmall);
+      font-family: var(--button-primary-font);
+      font-size: var(--button-primary-text-size);
       line-height: var(--text-line-xsmall);
-      padding: var(--spacing-xs);
+      padding: var(--button-primary-padding);
       border-radius: var(--radius-xs);
-      background-color: var(--color-neutral-100);
-      color: var(--color-neutral-600);
+      background-color: var(--button-primary-bg);
+      color: var(--button-primary-text);
+      text-transform: uppercase;
     }
 
     .button:hover:not(:disabled) {
-      background-color: var(--color-neutral-200);
-      color: var(--color-neutral-900);
+      background-color: var(--button-primary-bg-hover);
+      color: var(--button-primary-text-hover);
     }
 
     .button:active:not(:disabled) {
-      background-color: var(--color-neutral-300);
+      background-color: var(--button-primary-bg-active);
+      color: var(--button-primary-text-active);
     }
 
     .button:disabled {
@@ -195,7 +209,7 @@
       <h2>Multiple Buttons</h2>
       <div class="demo-item">
         <h3>Button Group</h3>
-        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+        <div style="display: flex; gap: var(--spacing-m); flex-wrap: wrap;">
           <button class="button">BUTTON 1</button>
           <button class="button">BUTTON 2</button>
           <button class="button">BUTTON 3</button>
@@ -206,19 +220,25 @@
     <div class="section">
       <h2>Design Tokens Used</h2>
       <div class="token-reference">
-        <h4>Primitives</h4>
+        <h4>Component Tokens (Button Primary)</h4>
         <ul>
-          <li>color.neutral.100: #F5F5F5 (background)</li>
-          <li>color.neutral.200: #E5E5E5 (hover background)</li>
-          <li>color.neutral.300: #D4D4D4 (active background)</li>
-          <li>color.neutral.600: #828086 (text color)</li>
-          <li>color.neutral.900: #362C2C (hover text color)</li>
-          <li>text.size.xsmall: 14px</li>
-          <li>text.line.xsmall: 17px</li>
-          <li>text.font.tech: 'PP Neue Montreal Mono', monospace</li>
+          <li>--button-primary-bg: var(--color-neutral-100) (background)</li>
+          <li>--button-primary-bg-hover: var(--color-neutral-200) (hover background)</li>
+          <li>--button-primary-bg-active: var(--color-neutral-300) (active background)</li>
+          <li>--button-primary-text: var(--color-neutral-600) (text color)</li>
+          <li>--button-primary-text-hover: var(--color-neutral-900) (hover text color)</li>
+          <li>--button-primary-text-active: var(--color-neutral-900) (active text color)</li>
+          <li>--button-primary-padding: var(--spacing-xs) (8px)</li>
+          <li>--button-primary-text-size: var(--text-size-xsmall) (14px)</li>
+          <li>--button-primary-font: var(--font-tech) (PP Neue Montreal Mono)</li>
+        </ul>
+        <h4>Primitive Tokens</h4>
+        <ul>
           <li>spacing.xs: 8px (padding)</li>
           <li>spacing.xsm: 10px (gap between elements)</li>
+          <li>spacing.m: 16px (button group gap)</li>
           <li>radius.xs: 8px (border radius)</li>
+          <li>text.line.xsmall: 17px (line height)</li>
         </ul>
       </div>
     </div>

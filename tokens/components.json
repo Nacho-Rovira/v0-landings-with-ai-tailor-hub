@@ -25,11 +25,19 @@
               "$value": "{color.background.hover}",
               "$type": "color"
             },
+            "active": {
+              "$value": "{color.neutral.300}",
+              "$type": "color"
+            },
             "text": {
               "$value": "{color.text.secondary}",
               "$type": "color"
             },
             "textHover": {
+              "$value": "{color.text.primary}",
+              "$type": "color"
+            },
+            "textActive": {
               "$value": "{color.text.primary}",
               "$type": "color"
             }

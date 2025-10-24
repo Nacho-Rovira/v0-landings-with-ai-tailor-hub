@@ -74,8 +74,10 @@
   --button-primary-font: var(--font-tech);
   --button-primary-bg: var(--color-background-surface);
   --button-primary-bg-hover: var(--color-background-hover);
+  --button-primary-bg-active: var(--color-neutral-300);
   --button-primary-text: var(--color-text-secondary);
   --button-primary-text-hover: var(--color-text-primary);
+  --button-primary-text-active: var(--color-text-primary);
 
   /* Component - Tab */
   --tab-padding: var(--spacing-xs);

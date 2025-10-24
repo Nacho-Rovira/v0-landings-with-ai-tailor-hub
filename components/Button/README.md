@@ -31,22 +31,25 @@ All standard HTML button attributes are also supported.
 
 The button uses the following design tokens from the system:
 
-### From Primitives
-- `color.neutral.100` - Background color (#F5F5F5)
-- `color.neutral.200` - Hover background color (#E5E5E5)
-- `color.neutral.600` - Text color (#828086)
-- `color.neutral.900` - Hover text color (#362C2C)
-- `text.size.xsmall` - Font size (14px)
-- `text.font.tech` - Font family (PP Neue Montreal Mono, monospace)
-- `spacing.xs` - Padding (8px)
+### Component Tokens (Button Primary)
+- `--button-primary-bg` - Background color (references `color.background.surface`)
+- `--button-primary-bg-hover` - Hover background color (references `color.background.hover`)
+- `--button-primary-bg-active` - Active background color (references `color.neutral.300`)
+- `--button-primary-text` - Text color (references `color.text.secondary`)
+- `--button-primary-text-hover` - Hover text color (references `color.text.primary`)
+- `--button-primary-text-active` - Active text color (references `color.text.primary`)
+- `--button-primary-padding` - Internal padding (references `spacing.xs`)
+- `--button-primary-text-size` - Font size (references `text.size.xsmall`)
+- `--button-primary-font` - Font family (references `text.font.tech`)
+
+### Primitive Tokens
 - `spacing.xsm` - Gap between elements (10px)
 - `radius.xs` - Border radius (8px)
+- `text.line.xsmall` - Line height (17px)
 
-### From Semantics
-- `color.background.surface` → `color.neutral.100`
-- `color.background.hover` → `color.neutral.200`
-- `color.text.secondary` → `color.neutral.600`
-- `color.text.primary` → `color.neutral.900`
+### Token Hierarchy
+- **Component tokens** → **Semantic tokens** → **Primitive tokens**
+- Example: `--button-primary-bg` → `--color-background-surface` → `--color-neutral-100`
 
 ### From Components
 - `component.button.primary.padding` → `spacing.xs`

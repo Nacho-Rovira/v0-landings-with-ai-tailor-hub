@@ -38,7 +38,7 @@ export const Interactive = () => {
 
 // Multiple buttons
 export const MultipleButtons = () => (
-  <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+  <div style={{ display: 'flex', gap: 'var(--spacing-m)', flexWrap: 'wrap' }}>
     <Button variant="primary">BUTTON 1</Button>
     <Button variant="primary">BUTTON 2</Button>
     <Button variant="primary">BUTTON 3</Button>
