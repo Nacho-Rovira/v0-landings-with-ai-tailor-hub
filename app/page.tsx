@@ -3,7 +3,7 @@ import { BodyText } from "@/components/BodyText/BodyText"
 
 export default function CoverPage() {
   return (
-    <main
+    <main className="text-left"
       style={{
         minHeight: "100vh",
         display: "flex",
@@ -26,31 +26,9 @@ export default function CoverPage() {
       >
         <TailorHubLogoWithName size="large" />
 
-        <h1
-          style={{
-            fontSize: "var(--font-size-2xl)",
-            fontWeight: "var(--font-weight-bold)",
-            color: "var(--color-text-primary)",
-            marginTop: "var(--spacing-xl)",
-            fontFamily: "var(--font-heading)",
-            textAlign: "center",
-          }}
-        >
-          Landing Page Generator
-        </h1>
+        
 
-        <p
-          style={{
-            color: "var(--color-text-secondary)",
-            fontSize: "var(--font-size-base)",
-            lineHeight: "var(--line-height-relaxed)",
-            fontFamily: "var(--font-body)",
-            textAlign: "center",
-          }}
-        >
-          Welcome to the Tailor Hub Landing Page Generator. This tool helps you create custom landing pages using our
-          design system.
-        </p>
+        
       </div>
 
       <div style={{ width: "100%", maxWidth: "800px" }}>
@@ -70,19 +48,7 @@ export default function CoverPage() {
         />
       </div>
 
-      <p
-        style={{
-          fontSize: "var(--font-size-sm)",
-          color: "var(--color-text-tertiary)",
-          marginTop: "var(--spacing-md)",
-          fontFamily: "var(--font-body)",
-          textAlign: "center",
-          maxWidth: "800px",
-        }}
-      >
-        All generated pages use design tokens from the Tailor Hub design system, ensuring consistency and brand
-        alignment.
-      </p>
+      
     </main>
   )
 }
