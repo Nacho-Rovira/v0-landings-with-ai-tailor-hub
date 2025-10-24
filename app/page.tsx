@@ -3,7 +3,8 @@ import { BodyText } from "@/components/BodyText/BodyText"
 
 export default function CoverPage() {
   return (
-    <main className="text-left"
+    <main
+      className="text-left"
       style={{
         minHeight: "100vh",
         display: "flex",
@@ -12,7 +13,7 @@ export default function CoverPage() {
         justifyContent: "center",
         padding: "var(--spacing-xl)",
         backgroundColor: "var(--color-bg-surface)",
-        gap: "var(--spacing-xl)",
+        gap: "var(--gap-header-logo-info)",
       }}
     >
       <div
@@ -20,15 +21,9 @@ export default function CoverPage() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          gap: "var(--spacing-lg)",
-          maxWidth: "800px",
         }}
       >
         <TailorHubLogoWithName size="large" />
-
-        
-
-        
       </div>
 
       <div style={{ width: "100%", maxWidth: "800px" }}>
@@ -47,8 +42,6 @@ export default function CoverPage() {
           ]}
         />
       </div>
-
-      
     </main>
   )
 }
