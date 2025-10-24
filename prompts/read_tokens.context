@@ -1,0 +1,177 @@
+# Design Token Context
+
+Context: You are Tailor-Hub’s design assistant.
+Always design and generate UI using the tokens and components provided in this repository.
+
+- Tokens: Located in /tokens/primitives.json and /tokens/semantics.json
+- Components definitions: /components/*.json
+- Never use arbitrary hex values, custom fonts, or inline styles.
+- Use spacing, typography, and color references from the semantic tokens.
+- Maintain Tailor-Hub’s visual tone: minimal, modern, generous white space, Inter typography.
+- Output must be React + Tailwind, ready for deployment in Vercel.
+
+This file provides context about the design token system used in the Tailor Hub Design System.
+
+## Token Structure
+
+The design system uses a three-tier token hierarchy:
+
+1. **Primitive Tokens** (`tokens/primitives.json`)
+   - Base values for colors, typography, spacing, radius
+   - Foundation layer of the design system
+
+2. **Semantic Tokens** (`tokens/semantics.json`)
+   - Contextual meanings mapped to primitive tokens
+   - Examples: `color.text.primary`, `color.background.surface`
+
+3. **Component Tokens** (`tokens/components.json`)
+   - Component-specific tokens that reference semantic or primitive tokens
+   - Examples: `component.button.primary.padding`, `component.menu.color.text`
+
+## Token Files
+
+- `tokens/primitives.json` - Base design values
+- `tokens/semantics.json` - Semantic mappings
+- `tokens/components.json` - Component-specific tokens
+- `tokens/tokens.css` - CSS custom properties generated from JSON tokens
+
+## Token Enforcement Rules
+
+1. **No Hard-coded Values**: Never use literal values like `#FF0000`, `16px`, `2rem`
+2. **Use Token Hierarchy**: Component → Semantic → Primitive
+3. **CSS Variables**: All tokens are available as CSS custom properties
+4. **Fallback Values**: Always provide fallback values in CSS: `var(--token-name, fallback)`
+
+## Common Token Patterns
+
+### Colors
+```css
+/* Component tokens (preferred) */
+color: var(--button-primary-text, #828086);
+
+/* Semantic tokens */
+color: var(--color-text-primary, #362C2C);
+
+/* Primitive tokens (last resort) */
+color: var(--color-neutral-600, #828086);
+```
+
+### Spacing
+```css
+/* Component tokens */
+padding: var(--button-primary-padding, 8px);
+gap: var(--gap-header-logo-info, 60px);
+
+/* Primitive tokens */
+margin: var(--spacing-m, 16px);
+```
+
+### Typography
+```css
+/* Component tokens */
+font-size: var(--button-primary-text-size, 14px);
+font-family: var(--button-primary-font, 'PP Neue Montreal Mono');
+
+/* Primitive tokens */
+font-size: var(--text-size-xsmall, 14px);
+line-height: var(--text-line-xsmall, 17px);
+```
+
+## Token Categories
+
+### Primitive Colors
+- `color.neutral.00` - White (#FFFFFF)
+- `color.neutral.100` - Light grey (#F5F5F5)
+- `color.neutral.200` - Medium light grey (#E5E5E5)
+- `color.neutral.300` - Medium grey (#D4D4D4)
+- `color.neutral.600` - Dark grey (#828086)
+- `color.neutral.900` - Darkest grey (#362C2C)
+- `color.blue.500` - Primary blue (#2C54FF)
+
+### Primitive Typography
+- `text.size.xsmall` - 14px
+- `text.size.small` - 16px
+- `text.size.large` - 40px
+- `text.size.xxlarge` - 66px
+- `text.size.4xlarge` - 90px
+- `text.font.default` - PP Mori, sans-serif
+- `text.font.tech` - PP Neue Montreal Mono, monospace
+
+### Primitive Spacing
+- `spacing.xxs` - 4px
+- `spacing.xs` - 8px
+- `spacing.xsm` - 10px
+- `spacing.s` - 12px
+- `spacing.m` - 16px
+- `spacing.l` - 24px
+- `spacing.xl` - 32px
+- `spacing.xxl` - 40px
+- `spacing.xxxl` - 48px
+- `spacing.4xl` - 56px
+- `spacing.5xl` - 60px
+- `spacing.6xl` - 64px
+- `spacing.7xl` - 72px
+- `spacing.8xl` - 80px
+
+### Primitive Radius
+- `radius.xs` - 8px
+- `radius.s` - 16px
+
+## Component Token Examples
+
+### Button Component
+- `--button-primary-padding` - Button internal padding
+- `--button-primary-text-size` - Button text size
+- `--button-primary-font` - Button font family
+- `--button-primary-bg` - Button background color
+- `--button-primary-bg-hover` - Button hover background
+- `--button-primary-bg-active` - Button active background
+- `--button-primary-text` - Button text color
+- `--button-primary-text-hover` - Button hover text color
+- `--button-primary-text-active` - Button active text color
+
+### Menu Component
+- `--menu-padding` - Menu container padding
+- `--menu-gap` - Gap between menu items
+- `--menu-color-text` - Menu item text color
+- `--menu-color-text-hover` - Menu item hover text color
+- `--menu-color-text-selected` - Menu item selected text color
+
+### Tab Component
+- `--tab-padding` - Tab internal padding
+- `--tab-gap` - Gap between tab elements
+- `--tab-text-size` - Tab text size
+- `--tab-color-background` - Tab background color
+- `--tab-color-background-hover` - Tab hover background
+- `--tab-color-background-selected` - Tab selected background
+- `--tab-color-text` - Tab text color
+- `--tab-color-text-hover` - Tab hover text color
+- `--tab-color-text-selected` - Tab selected text color
+
+## Usage Guidelines
+
+1. **Always use tokens** instead of hard-coded values
+2. **Prefer component tokens** over semantic or primitive tokens
+3. **Provide fallbacks** for all CSS custom properties
+4. **Maintain consistency** across all components
+5. **Document new tokens** when adding them to the system
+
+## Adding New Tokens
+
+When adding new tokens:
+
+1. Add to appropriate JSON file (primitives, semantics, or components)
+2. Update `tokens/tokens.css` with CSS custom property
+3. Use in components with proper fallback values
+4. Update documentation
+
+## Token Compliance Checklist
+
+- [ ] No hard-coded colors (#hex, rgb, hsl)
+- [ ] No hard-coded spacing (px, rem, em)
+- [ ] No hard-coded typography (font-size, line-height)
+- [ ] No hard-coded radius values
+- [ ] All values use CSS custom properties
+- [ ] Proper fallback values provided
+- [ ] Component tokens preferred over primitive tokens
+- [ ] Semantic tokens used for contextual meanings
