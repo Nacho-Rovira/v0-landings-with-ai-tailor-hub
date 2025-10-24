@@ -1,4 +1,5 @@
 import { TailorHubLogoWithName } from "@/components/Logo/TailorHubLogoWithName"
+import { BodyText } from "@/components/BodyText/BodyText"
 
 export default function CoverPage() {
   return (
@@ -51,45 +52,20 @@ export default function CoverPage() {
           design system.
         </p>
 
-        <div
-          style={{
-            backgroundColor: "var(--color-bg-muted)",
-            padding: "var(--spacing-lg)",
-            borderRadius: "var(--radius-md)",
-            marginTop: "var(--spacing-md)",
-            width: "100%",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "var(--font-size-lg)",
-              fontWeight: "var(--font-weight-semibold)",
-              color: "var(--color-text-primary)",
-              marginBottom: "var(--spacing-sm)",
-              fontFamily: "var(--font-heading)",
-            }}
-          >
-            How to Create a Landing Page:
-          </h2>
-          <ol
-            style={{
-              paddingLeft: "var(--spacing-lg)",
-              display: "flex",
-              flexDirection: "column",
-              gap: "var(--spacing-sm)",
-              color: "var(--color-text-secondary)",
-              fontSize: "var(--font-size-base)",
-              lineHeight: "var(--line-height-relaxed)",
-              fontFamily: "var(--font-body)",
-            }}
-          >
-            <li>Describe your landing page requirements in natural language</li>
-            <li>Specify the sections you need (hero, features, testimonials, etc.)</li>
-            <li>The generator will create a page using Tailor Hub design tokens</li>
-            <li>All components follow the established design system</li>
-            <li>Review and customize the generated page as needed</li>
-          </ol>
-        </div>
+        <BodyText
+          sections={[
+            {
+              title: "HOW TO CREATE A LANDING PAGE",
+              paragraphs: [
+                "1. Describe your landing page requirements in natural language",
+                "2. Specify the sections you need (hero, features, testimonials, etc.)",
+                "3. The generator will create a page using Tailor Hub design tokens",
+                "4. All components follow the established design system",
+                "5. Review and customize the generated page as needed",
+              ],
+            },
+          ]}
+        />
 
         <p
           style={{

@@ -1,5 +1,5 @@
-import React from 'react'
-import './BodyText.css'
+import React from "react"
+import "./BodyText.css"
 
 export interface BodyTextSection {
   /** Section title */
@@ -20,24 +20,17 @@ export interface BodyTextProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const defaultSections: BodyTextSection[] = [
   {
-    title: 'THE CHALLENGE',
+    title: "THE CHALLENGE",
     paragraphs: [
-      'Transform raw and hardly accesible data into actionable intelligence. With advanced AI models, we help you uncover patterns, predict outcomes, and drive smarter decision-making at every level of your organization.',
-      'Transform raw and hardly accesible data into actionable intelligence. With advanced AI models, we help you uncover patterns, predict outcomes, and drive smarter decision-making at every level of your organization.'
-    ]
-  }
+      "Transform raw and hardly accesible data into actionable intelligence. With advanced AI models, we help you uncover patterns, predict outcomes, and drive smarter decision-making at every level of your organization.",
+      "Transform raw and hardly accesible data into actionable intelligence. With advanced AI models, we help you uncover patterns, predict outcomes, and drive smarter decision-making at every level of your organization.",
+    ],
+  },
 ]
 
 export const BodyText = React.forwardRef<HTMLDivElement, BodyTextProps>(
-  ({ 
-    sections = defaultSections,
-    className = '',
-    ...props
-  }, ref) => {
-    const classes = [
-      'body-text',
-      className
-    ].filter(Boolean).join(' ')
+  ({ sections = defaultSections, className = "", ...props }, ref) => {
+    const classes = ["body-text", className].filter(Boolean).join(" ")
 
     return (
       <div ref={ref} className={classes} {...props}>
@@ -66,7 +59,7 @@ export const BodyText = React.forwardRef<HTMLDivElement, BodyTextProps>(
         ))}
       </div>
     )
-  }
+  },
 )
 
-BodyText.displayName = 'BodyText'
+BodyText.displayName = "BodyText"
