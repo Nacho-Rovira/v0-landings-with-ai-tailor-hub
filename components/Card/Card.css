@@ -5,9 +5,9 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  height: 440px;
-  width: 589px;
+  gap: var(--spacing-xsm, 10px);
+  height: var(--height-card, 440px);
+  width: var(--width-card, 589px);
   padding: var(--padding-card, 16px) 0 0 var(--padding-card, 16px);
   border-radius: var(--radius-s, 16px);
   position: relative;
@@ -73,14 +73,14 @@
 
 .card--mobile .card__category {
   /* Mobile: smaller text */
-  font-size: 12px;
-  line-height: 14px;
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: var(--text-line-xsmall, 17px);
 }
 
 .card--mobile .card__title {
   /* Mobile: smaller text */
-  font-size: 28px;
-  line-height: 29px;
+  font-size: var(--text-size-large, 40px);
+  line-height: var(--text-line-large, 48px);
 }
 
 /* Responsive adjustments */
@@ -88,7 +88,7 @@
   .card:not(.card--mobile) {
     /* Apply mobile styles to default variant on small screens */
     width: 100%;
-    max-width: 589px;
+    max-width: var(--width-card, 589px);
   }
   
   .card:not(.card--mobile) .card__content {
@@ -96,13 +96,13 @@
   }
   
   .card:not(.card--mobile) .card__category {
-    font-size: 12px;
-    line-height: 14px;
+    font-size: var(--text-size-xsmall, 14px);
+    line-height: var(--text-line-xsmall, 17px);
   }
   
   .card:not(.card--mobile) .card__title {
-    font-size: 28px;
-    line-height: 29px;
+    font-size: var(--text-size-large, 40px);
+    line-height: var(--text-line-large, 48px);
   }
 }
 

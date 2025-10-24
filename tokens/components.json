@@ -156,11 +156,35 @@
         "section-section": {
           "$value": "{spacing.8xl}",
           "$type": "dimension"
+        },
+        "header-logo-info": {
+          "$value": "{spacing.5xl}",
+          "$type": "dimension"
+        },
+        "header-logo-info-max": {
+          "$value": "{spacing.8xl}",
+          "$type": "dimension"
         }
       },
       "padding": {
         "card": {
           "$value": "{spacing.m}",
+          "$type": "dimension"
+        }
+      },
+      "width": {
+        "header-max": {
+          "$value": "1432px",
+          "$type": "dimension"
+        },
+        "card": {
+          "$value": "589px",
+          "$type": "dimension"
+        }
+      },
+      "height": {
+        "card": {
+          "$value": "440px",
           "$type": "dimension"
         }
       }

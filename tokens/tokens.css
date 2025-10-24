@@ -110,7 +110,16 @@
   --gap-paragraph-middle: var(--spacing-m);
   --gap-header-1: var(--spacing-4xl);
   --gap-section-section: var(--spacing-8xl);
+  --gap-header-logo-info: var(--spacing-5xl);
+  --gap-header-logo-info-max: var(--spacing-8xl);
 
   /* Component - Padding */
   --padding-card: var(--spacing-m);
+
+  /* Component - Width */
+  --width-header-max: 1432px;
+  --width-card: 589px;
+
+  /* Component - Height */
+  --height-card: 440px;
 }

@@ -7,7 +7,7 @@
   /* Layout - matching Figma design */
   position: relative;
   width: 100%;
-  max-width: 1432px;
+  max-width: var(--width-header-max, 1432px);
   margin: 0 auto;
 
   /* Transitions */
@@ -119,7 +119,7 @@
   display: flex;
   align-items: flex-end;
   width: 100%;
-  gap: 60px; /* Minimum gap between logo and info */
+  gap: var(--gap-header-logo-info, 60px);
 }
 
 .header__logo {
@@ -133,7 +133,7 @@
   align-items: flex-end;
   justify-content: space-between;
   flex: 1;
-  max-width: calc(100% - var(--logo-size-large, 225px) - 120px); /* Maximum gap of 120px from logo */
+  max-width: calc(100% - var(--logo-size-large, 225px) - var(--gap-header-logo-info-max, 120px));
   margin-left: auto; /* Push to the right */
 
   /* Typography - using tech font */
@@ -166,7 +166,7 @@
   }
 
   .header__info {
-    max-width: calc(100% - var(--logo-size-large, 225px) - 60px);
+    max-width: calc(100% - var(--logo-size-large, 225px) - var(--spacing-5xl, 60px));
     padding-right: var(--spacing-l, 24px);
   }
 }
