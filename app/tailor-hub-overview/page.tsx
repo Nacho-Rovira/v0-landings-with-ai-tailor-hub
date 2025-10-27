@@ -40,7 +40,7 @@ export default function TailorHubOverview() {
       <main
         style={{
           flex: 1,
-          paddingTop: headerVariant === "starter" ? "201px" : "49px",
+          paddingTop: headerVariant === "starter" ? "201px" : "var(--spacing-xxl)",
           transition: "padding-top 0.3s ease",
         }}
       >
