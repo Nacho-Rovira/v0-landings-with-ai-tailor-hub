@@ -14,8 +14,8 @@
   flex-direction: column;
   gap: var(--spacing-8xl, 80px);
 
-  /* Added bottom padding of 40px */
-  padding-bottom: var(--spacing-xxl, 40px);
+  /* Updated bottom padding from 40px to 116px */
+  padding-bottom: 116px;
 
   /* Transitions */
   transition: all 0.3s ease;
@@ -170,8 +170,8 @@
   /* Updated gap from 84px to use spacing-8xl token (80px) */
   gap: var(--spacing-8xl, 80px);
 
-  /* Added bottom padding of 40px */
-  padding-bottom: var(--spacing-xxl, 40px);
+  /* Updated bottom padding from 40px to 116px */
+  padding-bottom: 116px;
 }
 
 .footer--mobile .footer__section {
