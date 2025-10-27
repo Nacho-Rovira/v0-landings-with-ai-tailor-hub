@@ -1,0 +1,3 @@
+Generate a landing page for a creative proposal to a fintech client.
+Goal: showcase Tailor-Hub’s expertise in design systems and digital brand consistency.
+Include a CTA inviting to “Book a discovery session”.
