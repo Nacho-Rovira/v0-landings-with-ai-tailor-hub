@@ -63,3 +63,4 @@ export const Interactive: Story = {
     onClick: () => alert('Tab clicked!'),
   },
 }
+

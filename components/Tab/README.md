@@ -116,3 +116,4 @@ function App() {
 ## Responsive Behavior
 
 The Tab component maintains consistent sizing across all screen sizes. The text remains readable and the interactive area is appropriately sized for touch devices.
+

@@ -61,16 +61,16 @@ export const Header = React.forwardRef<HTMLElement, HeaderProps>(
           {isMobileMenuOpen && (
             <div className="header__mobile-menu">
               <nav className="header__mobile-nav">
-                {menuItems.map((item, index) => (
-                  <a
-                    key={index}
-                    href={item.href}
-                    className={`header__mobile-link ${item.isSelected ? "header__mobile-link--selected" : ""}`}
-                    onClick={handleMenuItemClick}
-                  >
-                    {item.label.toUpperCase()}
-                  </a>
-                ))}
+            {menuItems.map((item, index) => (
+              <a
+                key={index}
+                href={item.href}
+                className={`header__mobile-link`}
+                onClick={handleMenuItemClick}
+              >
+                {item.label.toUpperCase()}
+              </a>
+            ))}
               </nav>
             </div>
           )}
@@ -84,7 +84,7 @@ export const Header = React.forwardRef<HTMLElement, HeaderProps>(
         <div className="header__menu">
           <Menu variant={isScrolling ? "scrolling" : "starter"}>
             {menuItems.map((item, index) => (
-              <MenuItem key={index} href={item.href} isSelected={item.isSelected}>
+              <MenuItem key={index} href={item.href}>
                 {item.label}
               </MenuItem>
             ))}

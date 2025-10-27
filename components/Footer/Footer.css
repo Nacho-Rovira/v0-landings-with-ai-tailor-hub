@@ -8,6 +8,9 @@
   width: 100%;
   max-width: 1304px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-section-section, var(--spacing-8xl, 80px));
   
   /* Transitions */
   transition: all 0.3s ease;
@@ -17,7 +20,7 @@
   /* Contact section container */
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xxxl, 48px);
+  gap: var(--gap-section-section, var(--spacing-xxxl, 48px));
   width: 100%;
 }
 
@@ -57,7 +60,7 @@
   /* Contact information container */
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs, 8px);
+  gap: var(--gap-paragraph-middle, var(--spacing-xs, 8px));
   padding-left: 240px;
   width: 100%;
   
@@ -112,7 +115,7 @@
   /* Social and legal links container */
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-l, 24px);
+  gap: var(--gap-paragraph-middle, var(--spacing-l, 24px));
   width: 1281px;
 }
 
@@ -127,7 +130,7 @@
 .footer__link-group {
   /* Group of links */
   display: flex;
-  gap: var(--spacing-m, 16px);
+  gap: var(--gap-paragraph-middle, var(--spacing-m, 16px));
   align-items: center;
 }
 
@@ -159,14 +162,14 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 84px; /* Main gap between sections from Figma */
+  gap: var(--gap-section-section, var(--spacing-8xl, 80px));
 }
 
 .footer--mobile .footer__section {
   /* Contact section wrapper */
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xxxl, 48px);
+  gap: var(--gap-section-section, var(--spacing-xxxl, 48px));
   width: 100%;
 }
 
@@ -205,7 +208,7 @@
   /* Mobile contact - smaller font and stacked layout */
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs, 8px);
+  gap: var(--gap-paragraph-middle, var(--spacing-xs, 8px));
   padding-left: 0;
   font-size: var(--text-size-small, 16px);
   line-height: var(--text-line-small, 22px);
@@ -216,7 +219,7 @@
   /* Mobile contact line - vertical stack */
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs, 8px);
+  gap: var(--gap-paragraph-middle, var(--spacing-xs, 8px));
   align-items: flex-start;
 }
 
@@ -240,7 +243,7 @@
   /* Mobile links - full width with internal gap */
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-l, 24px);
+  gap: var(--gap-paragraph-middle, var(--spacing-l, 24px));
   width: 100%;
 }
 
@@ -256,7 +259,7 @@
   /* Mobile link group - vertical stack */
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-m, 16px);
+  gap: var(--gap-paragraph-middle, var(--spacing-m, 16px));
   align-items: flex-start;
 }
 
@@ -310,13 +313,13 @@
   
   .footer:not(.footer--mobile) .footer__contact-line {
     flex-direction: column;
-    gap: var(--spacing-m, 16px);
+    gap: var(--gap-paragraph-middle, var(--spacing-m, 16px));
     align-items: flex-start;
   }
   
   .footer:not(.footer--mobile) .footer__link-group {
     flex-direction: column;
-    gap: var(--spacing-s, 12px);
+    gap: var(--gap-paragraph-middle, var(--spacing-s, 12px));
     align-items: flex-start;
   }
   
@@ -329,13 +332,13 @@
 @media (max-width: 768px) {
   .footer:not(.footer--mobile) {
     /* Apply mobile-like layout to default variant on small screens */
-    gap: 84px;
+    gap: var(--gap-section-section, var(--spacing-8xl, 80px));
     max-width: 334px;
     margin: 0 auto;
   }
   
   .footer:not(.footer--mobile) .footer__section {
-    gap: var(--spacing-xxxl, 48px);
+    gap: var(--gap-section-section, var(--spacing-xxxl, 48px));
   }
   
   .footer:not(.footer--mobile) .footer__header {
@@ -367,7 +370,7 @@
   
   .footer:not(.footer--mobile) .footer__links {
     width: 100%;
-    gap: var(--spacing-l, 24px);
+    gap: var(--gap-paragraph-middle, var(--spacing-l, 24px));
   }
   
   .footer:not(.footer--mobile) .footer__link-row {
@@ -375,7 +378,7 @@
   }
   
   .footer:not(.footer--mobile) .footer__link-group {
-    gap: var(--spacing-m, 16px);
+    gap: var(--gap-paragraph-middle, var(--spacing-m, 16px));
   }
   
   .footer:not(.footer--mobile) .footer__link {
@@ -410,7 +413,7 @@
     /* Keep links in column, aligned right */
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-m, 16px);
+    gap: var(--gap-paragraph-middle, var(--spacing-m, 16px));
     align-items: flex-end;
     flex-shrink: 0;
   }

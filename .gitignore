@@ -37,3 +37,10 @@ coverage/
 .cache/
 temp/
 tmp/
+
+# Next.js
+.next/
+out/
+
+# Cursor
+.cursor/
