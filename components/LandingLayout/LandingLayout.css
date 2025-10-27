@@ -1,0 +1,42 @@
+/**
+ * Landing Layout Component
+ * Provides consistent layout structure for all landing pages
+ */
+
+.landing-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fixed Header */
+.landing-layout__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Main Content Area */
+.landing-layout__main {
+  flex: 1;
+  transition: padding-top 0.3s ease;
+}
+
+/* Main Container with max-width and padding */
+.landing-layout__container {
+  max-width: var(--width-header-max, 1432px);
+  margin: 0 auto;
+  padding-left: var(--spacing-xxl, 40px);
+  padding-right: var(--spacing-xxl, 40px);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .landing-layout__container {
+    padding-left: var(--spacing-l, 24px);
+    padding-right: var(--spacing-l, 24px);
+  }
+}
