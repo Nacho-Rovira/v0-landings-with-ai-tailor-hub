@@ -8,7 +8,12 @@
   width: 100%;
   max-width: 1432px;
   margin: 0 auto;
-  
+
+  /* Added flex layout with 80px gap between sections */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8xl, 80px);
+
   /* Transitions */
   transition: all 0.3s ease;
 }
@@ -35,20 +40,20 @@
   align-items: center;
   gap: 112px;
   padding-left: 121px;
-  
+
   /* Typography - using tech font */
-  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
   font-size: var(--text-size-xsmall, 14px);
   line-height: normal;
-  color: var(--color-text-primary, #362C2C);
+  color: var(--color-text-primary, #362c2c);
 }
 
 .footer__info-title {
   /* Right-aligned info title */
-  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
   font-size: var(--text-size-xsmall, 14px);
   line-height: normal;
-  color: var(--color-text-primary, #362C2C);
+  color: var(--color-text-primary, #362c2c);
   text-align: right;
   width: 303px;
 }
@@ -60,12 +65,12 @@
   gap: var(--spacing-xs, 8px);
   padding-left: 240px;
   width: 100%;
-  
+
   /* Typography - using default font */
-  font-family: var(--font-default, 'PP Mori', sans-serif);
+  font-family: var(--font-default, "PP Mori", sans-serif);
   font-size: var(--text-size-large, 40px);
   line-height: var(--text-line-large, 48px);
-  color: var(--color-text-primary, #362C2C);
+  color: var(--color-text-primary, #362c2c);
 }
 
 .footer__contact-line {
@@ -89,14 +94,14 @@
 .footer__contact-line a,
 .footer__address {
   /* Contact links styling */
-  color: var(--color-text-primary, #362C2C);
+  color: var(--color-text-primary, #362c2c);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .footer__contact-line a:hover,
 .footer__address:hover {
-  color: var(--color-text-hover, #D4D4D4);
+  color: var(--color-text-hover, #d4d4d4);
 }
 
 .footer__logo {
@@ -137,18 +142,18 @@
   gap: var(--spacing-xsm, 10px);
   align-items: center;
   width: 225px;
-  
+
   /* Typography - using tech font */
-  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
   font-size: var(--text-size-xsmall, 14px);
   line-height: normal;
-  color: var(--color-text-primary, #362C2C);
+  color: var(--color-text-primary, #362c2c);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .footer__link:hover {
-  color: var(--color-text-hover, #D4D4D4);
+  color: var(--color-text-hover, #d4d4d4);
 }
 
 /* Mobile variant styles */
@@ -159,7 +164,8 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 84px; /* Main gap between sections from Figma */
+  /* Updated gap from 84px to use spacing-8xl token (80px) */
+  gap: var(--spacing-8xl, 80px);
 }
 
 .footer--mobile .footer__section {
@@ -183,23 +189,23 @@
   display: flex;
   gap: var(--spacing-l, 24px);
   align-items: center;
-  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
   font-size: var(--text-size-xsmall, 14px);
   line-height: normal;
   padding-left: 0;
 }
 
-    .footer--mobile .footer__info-title {
-      /* Info title - right aligned wrapper with text inside */
-      width: 303px;
-      text-align: right;
-      font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
-      font-size: var(--text-size-xsmall, 14px);
-      line-height: normal;
-      white-space: pre-wrap;
-      display: flex;
-      justify-content: flex-end;
-    }
+.footer--mobile .footer__info-title {
+  /* Info title - right aligned wrapper with text inside */
+  width: 303px;
+  text-align: right;
+  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: normal;
+  white-space: pre-wrap;
+  display: flex;
+  justify-content: flex-end;
+}
 
 .footer--mobile .footer__contact {
   /* Mobile contact - smaller font and stacked layout */
@@ -209,7 +215,7 @@
   padding-left: 0;
   font-size: var(--text-size-small, 16px);
   line-height: var(--text-line-small, 22px);
-  font-family: var(--font-default, 'PP Mori', sans-serif);
+  font-family: var(--font-default, "PP Mori", sans-serif);
 }
 
 .footer--mobile .footer__contact-line {
@@ -265,7 +271,7 @@
   width: 225px;
   text-align: right;
   justify-content: flex-end;
-  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
   font-size: var(--text-size-xsmall, 14px);
   line-height: normal;
 }
@@ -276,21 +282,21 @@
     max-width: 100%;
     padding: 0 var(--spacing-l, 24px);
   }
-  
+
   .footer:not(.footer--mobile) .footer__section-title {
     padding-left: var(--spacing-xxxl, 48px);
     gap: var(--spacing-6xl, 64px);
   }
-  
+
   .footer:not(.footer--mobile) .footer__contact {
     padding-left: var(--spacing-8xl, 80px);
   }
-  
+
   .footer:not(.footer--mobile) .footer__logo {
     width: 100%;
     max-width: 606px;
   }
-  
+
   .footer:not(.footer--mobile) .footer__links {
     width: 100%;
   }
@@ -301,25 +307,25 @@
     padding-left: var(--spacing-l, 24px);
     gap: var(--spacing-xl, 32px);
   }
-  
+
   .footer:not(.footer--mobile) .footer__contact {
     padding-left: var(--spacing-4xl, 56px);
     font-size: var(--text-size-small, 16px);
     line-height: var(--text-line-small, 22px);
   }
-  
+
   .footer:not(.footer--mobile) .footer__contact-line {
     flex-direction: column;
     gap: var(--spacing-m, 16px);
     align-items: flex-start;
   }
-  
+
   .footer:not(.footer--mobile) .footer__link-group {
     flex-direction: column;
     gap: var(--spacing-s, 12px);
     align-items: flex-start;
   }
-  
+
   .footer:not(.footer--mobile) .footer__link {
     width: auto;
   }
@@ -333,21 +339,21 @@
     max-width: 334px;
     margin: 0 auto;
   }
-  
+
   .footer:not(.footer--mobile) .footer__section {
     gap: var(--spacing-xxxl, 48px);
   }
-  
+
   .footer:not(.footer--mobile) .footer__header {
     align-items: center;
     justify-content: space-between;
   }
-  
+
   .footer:not(.footer--mobile) .footer__section-title {
     padding-left: 0;
     gap: var(--spacing-l, 24px);
   }
-  
+
   .footer:not(.footer--mobile) .footer__info-title {
     width: 303px;
     text-align: right;
@@ -355,29 +361,29 @@
     display: flex;
     justify-content: flex-end;
   }
-  
+
   .footer:not(.footer--mobile) .footer__contact {
     padding-left: 0;
   }
-  
+
   .footer:not(.footer--mobile) .footer__logo {
     width: 192px;
     height: 43px;
   }
-  
+
   .footer:not(.footer--mobile) .footer__links {
     width: 100%;
     gap: var(--spacing-l, 24px);
   }
-  
+
   .footer:not(.footer--mobile) .footer__link-row {
     justify-content: space-between;
   }
-  
+
   .footer:not(.footer--mobile) .footer__link-group {
     gap: var(--spacing-m, 16px);
   }
-  
+
   .footer:not(.footer--mobile) .footer__link {
     width: 225px;
     text-align: right;
@@ -391,7 +397,7 @@
     max-width: 100%;
     padding: 0 var(--spacing-m, 16px);
   }
-  
+
   .footer--mobile .footer__link-row {
     /* Force two-column layout to persist */
     display: flex;
@@ -399,13 +405,13 @@
     justify-content: space-between;
     flex-wrap: nowrap;
   }
-  
+
   .footer--mobile .footer__section-title {
     /* Allow title to shrink if needed */
     flex-shrink: 1;
     min-width: 0;
   }
-  
+
   .footer--mobile .footer__link-group {
     /* Keep links in column, aligned right */
     display: flex;
@@ -414,7 +420,7 @@
     align-items: flex-end;
     flex-shrink: 0;
   }
-  
+
   .footer--mobile .footer__link {
     /* Links stay right-aligned */
     width: auto;
