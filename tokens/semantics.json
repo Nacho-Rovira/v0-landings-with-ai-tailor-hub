@@ -113,9 +113,29 @@
         "$value": "{spacing.xxxl}"
       }
     },
+    "layout": {
+      "content": {
+        "max": {
+          "$type": "dimension",
+          "semantic": true
+        }
+      }
+    },
     "padding": {
       "card": {
         "$value": "{spacing.m}"
+      }
+    },
+    "spacing": {
+      "page": {
+        "x": {
+          "$type": "dimension",
+          "semantic": true
+        },
+        "y": {
+          "$type": "dimension",
+          "semantic": true
+        }
       }
     }
   }

@@ -1,0 +1,28 @@
+{
+  "dark": {
+    "layout": {
+      "content": {
+        "max": 1432
+      }
+    },
+    "spacing": {
+      "page": {
+        "x": 40,
+        "y": 40
+      }
+    }
+  },
+  "light": {
+    "layout": {
+      "content": {
+        "max": 1432
+      }
+    },
+    "spacing": {
+      "page": {
+        "x": 40,
+        "y": 40
+      }
+    }
+  }
+}
