@@ -1,4 +1,4 @@
-/* 
+/*
  * Footer Component Styles
  * Using design tokens from the project
  */
@@ -13,6 +13,9 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-8xl, 80px);
+
+  /* Added bottom padding of 40px */
+  padding-bottom: var(--spacing-xxl, 40px);
 
   /* Transitions */
   transition: all 0.3s ease;
@@ -166,6 +169,9 @@
   flex-direction: column;
   /* Updated gap from 84px to use spacing-8xl token (80px) */
   gap: var(--spacing-8xl, 80px);
+
+  /* Added bottom padding of 40px */
+  padding-bottom: var(--spacing-xxl, 40px);
 }
 
 .footer--mobile .footer__section {
