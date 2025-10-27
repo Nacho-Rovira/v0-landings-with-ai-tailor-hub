@@ -92,7 +92,7 @@ export const Header = React.forwardRef<HTMLElement, HeaderProps>(
         </div>
 
         {/* Main content with logo and info */}
-        <div className="header__content">
+        <div className="header__content mt-10">
           <div className="header__logo">
             <TailorHubLogo size={isScrolling ? "small" : "large"} aria-label="Tailor Hub" />
           </div>
