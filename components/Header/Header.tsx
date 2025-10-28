@@ -91,29 +91,11 @@ export const Header = React.forwardRef<HTMLElement, HeaderProps>(
           </Menu>
         </div>
 
-        {/* Main content with logo and info */}
+        {/* Main content with logo */}
         <div className="header__content mt-10">
           <div className="header__logo">
             <TailorHubLogo size={isScrolling ? "small" : "large"} aria-label="Tailor Hub" />
           </div>
-
-          {/* Info blocks - hidden in scrolling variant */}
-          {!isScrolling && (
-            <div className="header__info">
-              <div className="header__info-item">
-                <p>AN ELITE TEAM OF SOFTWARE</p>
-                <p>ENGINEERS</p>
-              </div>
-              <div className="header__info-item">
-                <p>DEVELOPMENT</p>
-                <p>LABS</p>
-              </div>
-              <div className="header__info-item">
-                <p>ARTIFICIAL</p>
-                <p>INTELLIGENCE & DEV</p>
-              </div>
-            </div>
-          )}
         </div>
       </header>
     )
