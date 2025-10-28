@@ -18,19 +18,19 @@
   color: var(--color-text-primary, #362c2c);
 }
 
+/* Updated to use space-between to fill full width */
 .home-header-description {
   display: flex;
-  gap: var(--spacing-m, 16px);
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
 }
 
+/* Removed fixed width to allow flexible spacing */
 .home-header-description span {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 225px;
 }
 
 .highlight-section__header {
@@ -58,6 +58,7 @@
     /* Mobile: align to the left */
     justify-content: flex-start;
     flex-wrap: wrap;
+    gap: var(--spacing-m, 16px); /* Restore gap for mobile when wrapping */
   }
 
   .home-header-description span {
