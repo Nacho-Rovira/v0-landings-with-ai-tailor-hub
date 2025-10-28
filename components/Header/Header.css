@@ -10,6 +10,10 @@
   max-width: var(--width-header-max, 1432px);
   margin: 0 auto;
 
+  /* Added 40px left-right padding to align with main content */
+  padding-left: var(--spacing-xxl, 40px);
+  padding-right: var(--spacing-xxl, 40px);
+
   /* Transitions */
   transition: all 0.3s ease;
 }
@@ -158,7 +162,7 @@
 @media (max-width: 1480px) {
   .header {
     max-width: 100%;
-    padding-left: var(--spacing-l, 24px);
+    /* Removed redundant padding-left since it's now in base .header */
   }
 
   .header__content {
@@ -167,13 +171,14 @@
 
   .header__info {
     max-width: calc(100% - var(--logo-size-large, 225px) - var(--spacing-5xl, 60px));
-    padding-right: var(--spacing-l, 24px);
+    /* Removed padding-right since header now has consistent padding */
   }
 }
 
 @media (max-width: 768px) {
   .header {
     padding-top: var(--spacing-8xl, 80px);
+    /* Reduced padding to 24px on mobile for better space usage */
     padding-left: var(--spacing-l, 24px);
     padding-right: var(--spacing-l, 24px);
   }
@@ -196,7 +201,7 @@
     gap: var(--spacing-l, 24px);
     align-items: flex-start;
     justify-content: flex-start;
-    padding-right: 0;
+    /* Removed padding-right */
   }
 
   .header__info-item {

@@ -9,6 +9,10 @@
   max-width: 1432px;
   margin: 0 auto;
 
+  /* Added 40px left-right padding to align with main content */
+  padding-left: var(--spacing-xxl, 40px);
+  padding-right: var(--spacing-xxl, 40px);
+
   /* Added flex layout with 80px gap between sections */
   display: flex;
   flex-direction: column;
@@ -286,7 +290,7 @@
 @media (max-width: 1400px) {
   .footer:not(.footer--mobile) {
     max-width: 100%;
-    padding: 0 var(--spacing-l, 24px);
+    /* Removed redundant padding since it's now in base .footer */
   }
 
   .footer:not(.footer--mobile) .footer__section-title {
@@ -344,6 +348,9 @@
     gap: 84px;
     max-width: 334px;
     margin: 0 auto;
+    /* Reduced padding to 24px on mobile */
+    padding-left: var(--spacing-l, 24px);
+    padding-right: var(--spacing-l, 24px);
   }
 
   .footer:not(.footer--mobile) .footer__section {
@@ -401,7 +408,9 @@
   .footer--mobile {
     /* Keep mobile layout compact */
     max-width: 100%;
-    padding: 0 var(--spacing-m, 16px);
+    /* Updated to use consistent padding tokens */
+    padding-left: var(--spacing-l, 24px);
+    padding-right: var(--spacing-l, 24px);
   }
 
   .footer--mobile .footer__link-row {
