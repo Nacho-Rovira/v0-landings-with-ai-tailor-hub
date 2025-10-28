@@ -1,5 +1,5 @@
 import { LandingLayout } from "@/components/LandingLayout/LandingLayout"
-import { TitleSection } from "@/components/TitleSection/TitleSection"
+import { HighlightSection } from "@/components/HighlightSection/HighlightSection"
 import { BodyText } from "@/components/BodyText/BodyText"
 import { Button } from "@/components/Button/Button"
 
@@ -8,9 +8,9 @@ export default function LayoutDemoPage() {
     <LandingLayout>
       {/* Hero Section */}
       <section style={{ marginBottom: "var(--spacing-8xl)" }}>
-        <TitleSection
-          title="Landing Layout Demo"
-          subtitle="This demonstrates the standard layout structure for all Tailor Hub landing pages"
+        <HighlightSection
+          concepts={["INNOVATION", "EXCELLENCE", "PARTNERSHIP"]}
+          header="We build advanced tech solutions to accelerate and optimize your business needs."
         />
       </section>
 
