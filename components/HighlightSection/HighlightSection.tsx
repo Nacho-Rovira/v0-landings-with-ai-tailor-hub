@@ -1,5 +1,5 @@
-import React from 'react'
-import './HighlightSection.css'
+import React from "react"
+import "./HighlightSection.css"
 
 export interface HighlightSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Concept items to display in overheader */
@@ -8,33 +8,25 @@ export interface HighlightSectionProps extends React.HTMLAttributes<HTMLDivEleme
   header?: string
 }
 
-const defaultConcepts = [
-  'MENDESALTAREN',
-  'MINIMUNRUN',
-  'NO CODE HACKERS',
-  'MITO'
-]
+const defaultConcepts = ["MENDESALTAREN", "MINIMUNRUN", "NO CODE HACKERS", "MITO"]
 
 export const HighlightSection = React.forwardRef<HTMLDivElement, HighlightSectionProps>(
-  ({ 
-    concepts = defaultConcepts,
-    header = 'We build advanced tech solutions to accelerate and optimize your business needs.',
-    className = '',
-    ...props
-  }, ref) => {
-    const classes = [
-      'highlight-section',
-      className
-    ].filter(Boolean).join(' ')
+  (
+    {
+      concepts = defaultConcepts,
+      header = "We build advanced tech solutions to accelerate and optimize your business needs.",
+      className = "",
+      ...props
+    },
+    ref,
+  ) => {
+    const classes = ["highlight-section", className].filter(Boolean).join(" ")
 
     return (
       <div ref={ref} className={classes} {...props}>
-        {/* Concepts Row (Overheader) */}
-        <div className="highlight-section__concepts">
+        <div className="text-style-mono home-header-description">
           {concepts.map((concept, index) => (
-            <div key={index} className="highlight-section__concept">
-              {concept}
-            </div>
+            <span key={index}>{concept}</span>
           ))}
         </div>
 
@@ -42,7 +34,7 @@ export const HighlightSection = React.forwardRef<HTMLDivElement, HighlightSectio
         {header && <h2 className="highlight-section__header">{header}</h2>}
       </div>
     )
-  }
+  },
 )
 
-HighlightSection.displayName = 'HighlightSection'
+HighlightSection.displayName = "HighlightSection"

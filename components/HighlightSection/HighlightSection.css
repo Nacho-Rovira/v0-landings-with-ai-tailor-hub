@@ -10,8 +10,15 @@
   margin: 0 auto;
 }
 
-.highlight-section__concepts {
-  /* Concepts row - center aligned on desktop */
+/* Added styles for new text-style-mono and home-header-description classes */
+.text-style-mono {
+  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: normal;
+  color: var(--color-text-primary, #362c2c);
+}
+
+.home-header-description {
   display: flex;
   gap: var(--spacing-m, 16px);
   align-items: center;
@@ -19,25 +26,20 @@
   width: 100%;
 }
 
-.highlight-section__concept {
-  /* Individual concept item */
+.home-header-description span {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 225px;
-  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
-  font-size: var(--text-size-xsmall, 14px);
-  line-height: normal;
-  color: var(--color-text-primary, #362C2C);
 }
 
 .highlight-section__header {
   /* Main header text */
-  font-family: var(--font-default, 'PP Mori', sans-serif);
+  font-family: var(--font-default, "PP Mori", sans-serif);
   font-size: var(--text-size-xxlarge, 66px);
   line-height: var(--text-line-xxlarge, 62px);
   font-weight: 400;
-  color: var(--color-text-primary, #362C2C);
+  color: var(--color-text-primary, #362c2c);
   margin: 0;
   text-transform: uppercase;
   white-space: pre-wrap;
@@ -52,13 +54,13 @@
     padding: 0 var(--spacing-m, 16px);
   }
 
-  .highlight-section__concepts {
+  .home-header-description {
     /* Mobile: align to the left */
     justify-content: flex-start;
     flex-wrap: wrap;
   }
 
-  .highlight-section__concept {
+  .home-header-description span {
     /* Mobile: auto width */
     width: auto;
   }
