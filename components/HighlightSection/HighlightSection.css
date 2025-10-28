@@ -19,11 +19,13 @@
 }
 
 /* Updated to use space-between to fill full width */
+/* Added responsive left padding: 361px default, 308px for medium screens, 0px for mobile */
 .home-header-description {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding-left: 361px;
 }
 
 /* Removed fixed width to allow flexible spacing */
@@ -47,6 +49,13 @@
 }
 
 /* Responsive adjustments */
+/* Added medium screen breakpoint for 308px left padding */
+@media (max-width: 1280px) {
+  .home-header-description {
+    padding-left: 308px;
+  }
+}
+
 @media (max-width: 768px) {
   .highlight-section {
     /* Mobile: add container padding */
@@ -54,11 +63,13 @@
     padding: 0 var(--spacing-m, 16px);
   }
 
+  /* Mobile screens get 0px left padding */
   .home-header-description {
     /* Mobile: align to the left */
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: var(--spacing-m, 16px); /* Restore gap for mobile when wrapping */
+    padding-left: 0;
   }
 
   .home-header-description span {
