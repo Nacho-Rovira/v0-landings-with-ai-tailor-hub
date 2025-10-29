@@ -1,3 +1,5 @@
+"use client"
+
 import { LandingLayout } from "@/components/LandingLayout/LandingLayout"
 import { HighlightSection } from "@/components/HighlightSection/HighlightSection"
 import { HeaderBox } from "@/components/HeaderBox/HeaderBox"
@@ -7,6 +9,89 @@ import { TitleSection } from "@/components/TitleSection/TitleSection"
 import Image from "next/image"
 
 export default function LayoutDemoPage() {
+  const logos = [
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-UVDzNdU8pSOeEhRyv2S2RwBsrFgzLY.png",
+      alt: "Audi",
+      width: 120,
+    },
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-HkjeEkMnx5IDoIkznNJrv3qYhUsm4V.png",
+      alt: "IBERIA",
+      width: 150,
+    },
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-YdeTq7fRQfhpgWTr9b8rxl9dgL04Cc.png",
+      alt: "Santander",
+      width: 150,
+    },
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-0j9B8DRkm8nLrKy6nzGAw5OOUPAuLt.png",
+      alt: "ELECTROMAPS",
+      width: 180,
+    },
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-UFEfH6rMrO3mXXg1S9dgtX95B6TE49.png",
+      alt: "clikalia",
+      width: 120,
+    },
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-2jePxrcfEuXTozMKoPS4RqNFopr8xJ.png",
+      alt: "dormakaba",
+      width: 180,
+    },
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kZ9nc81RDykGGbHk2ngt4OfQIF7TvQ.png",
+      alt: "Cargill",
+      width: 120,
+    },
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-u0aOyzLlmkr0o4r5LZHDeV7ViK8QTz.png",
+      alt: "MIT media lab",
+      width: 120,
+    },
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dq9im5kPcSkrP4pFlHp6Lhui617S6a.png",
+      alt: "GRUPMEDIAPRO",
+      width: 150,
+    },
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-h4hJVPhv503O5CCpwEFfd88CcKbSO2.png",
+      alt: "INDITEX",
+      width: 120,
+    },
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-RLEp8ScYU8zkcSjMnMlarh7RfRA14m.png",
+      alt: "Cuimo",
+      width: 120,
+    },
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xNoRkoKf2zCZrGWFlW9L9YVrH6DsZG.png",
+      alt: "obuu",
+      width: 100,
+    },
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ssUXofWoEx3sB5xxOZTRFE5AsTlIVp.png",
+      alt: "El Corte Inglés",
+      width: 150,
+    },
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Zsqa7JNOYNjS4NWjjcKAIIqumQwPZs.png",
+      alt: "Repsol",
+      width: 140,
+    },
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eGexZBhRAO6oo69idAbsCywcPFRu9Y.png",
+      alt: "Volkswagen",
+      width: 80,
+    },
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dUNnqpyKvEd3q5gSmhohVhJLHcwVlW.png",
+      alt: "Continental",
+      width: 150,
+    },
+  ]
+
   return (
     <LandingLayout>
       {/* Highlight Section */}
@@ -126,167 +211,100 @@ export default function LayoutDemoPage() {
         <div
           style={{
             marginTop: "var(--spacing-xl)",
-            overflowX: "auto",
-            overflowY: "hidden",
-            WebkitOverflowScrolling: "touch",
-            scrollbarWidth: "thin",
-            scrollbarColor: "var(--color-neutral-300) transparent",
+            position: "relative",
+            overflow: "hidden",
+            width: "100%",
           }}
         >
+          {/* Gradient overlays for fade effect */}
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              bottom: 0,
+              width: "120px",
+              background: "linear-gradient(to right, var(--color-bg-primary) 0%, transparent 100%)",
+              zIndex: 2,
+              pointerEvents: "none",
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              right: 0,
+              bottom: 0,
+              width: "120px",
+              background: "linear-gradient(to left, var(--color-bg-primary) 0%, transparent 100%)",
+              zIndex: 2,
+              pointerEvents: "none",
+            }}
+          />
+
+          {/* Animated carousel track */}
           <div
             style={{
               display: "flex",
               gap: "var(--spacing-2xl)",
-              paddingBottom: "var(--spacing-md)",
-              minWidth: "min-content",
               alignItems: "center",
+              animation: "scroll 40s linear infinite",
+              width: "max-content",
             }}
           >
-            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-UVDzNdU8pSOeEhRyv2S2RwBsrFgzLY.png"
-                alt="Audi"
-                width={120}
-                height={60}
-                style={{ width: "auto", height: "60px", objectFit: "contain" }}
-              />
-            </div>
-            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-HkjeEkMnx5IDoIkznNJrv3qYhUsm4V.png"
-                alt="IBERIA"
-                width={150}
-                height={60}
-                style={{ width: "auto", height: "60px", objectFit: "contain" }}
-              />
-            </div>
-            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-YdeTq7fRQfhpgWTr9b8rxl9dgL04Cc.png"
-                alt="Santander"
-                width={150}
-                height={60}
-                style={{ width: "auto", height: "60px", objectFit: "contain" }}
-              />
-            </div>
-            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-0j9B8DRkm8nLrKy6nzGAw5OOUPAuLt.png"
-                alt="ELECTROMAPS"
-                width={180}
-                height={60}
-                style={{ width: "auto", height: "60px", objectFit: "contain" }}
-              />
-            </div>
-            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-UFEfH6rMrO3mXXg1S9dgtX95B6TE49.png"
-                alt="clikalia"
-                width={120}
-                height={60}
-                style={{ width: "auto", height: "60px", objectFit: "contain" }}
-              />
-            </div>
-            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-2jePxrcfEuXTozMKoPS4RqNFopr8xJ.png"
-                alt="dormakaba"
-                width={180}
-                height={60}
-                style={{ width: "auto", height: "60px", objectFit: "contain" }}
-              />
-            </div>
-            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kZ9nc81RDykGGbHk2ngt4OfQIF7TvQ.png"
-                alt="Cargill"
-                width={120}
-                height={60}
-                style={{ width: "auto", height: "60px", objectFit: "contain" }}
-              />
-            </div>
-            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-u0aOyzLlmkr0o4r5LZHDeV7ViK8QTz.png"
-                alt="MIT media lab"
-                width={120}
-                height={60}
-                style={{ width: "auto", height: "60px", objectFit: "contain" }}
-              />
-            </div>
-            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dq9im5kPcSkrP4pFlHp6Lhui617S6a.png"
-                alt="GRUPMEDIAPRO"
-                width={150}
-                height={60}
-                style={{ width: "auto", height: "60px", objectFit: "contain" }}
-              />
-            </div>
-            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-h4hJVPhv503O5CCpwEFfd88CcKbSO2.png"
-                alt="INDITEX"
-                width={120}
-                height={60}
-                style={{ width: "auto", height: "60px", objectFit: "contain" }}
-              />
-            </div>
-            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-RLEp8ScYU8zkcSjMnMlarh7RfRA14m.png"
-                alt="Cuimo"
-                width={120}
-                height={60}
-                style={{ width: "auto", height: "60px", objectFit: "contain" }}
-              />
-            </div>
-            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xNoRkoKf2zCZrGWFlW9L9YVrH6DsZG.png"
-                alt="obuu"
-                width={100}
-                height={60}
-                style={{ width: "auto", height: "60px", objectFit: "contain" }}
-              />
-            </div>
-            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ssUXofWoEx3sB5xxOZTRFE5AsTlIVp.png"
-                alt="El Corte Inglés"
-                width={150}
-                height={60}
-                style={{ width: "auto", height: "60px", objectFit: "contain" }}
-              />
-            </div>
-            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Zsqa7JNOYNjS4NWjjcKAIIqumQwPZs.png"
-                alt="Repsol"
-                width={140}
-                height={60}
-                style={{ width: "auto", height: "60px", objectFit: "contain" }}
-              />
-            </div>
-            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eGexZBhRAO6oo69idAbsCywcPFRu9Y.png"
-                alt="Volkswagen"
-                width={80}
-                height={60}
-                style={{ width: "auto", height: "60px", objectFit: "contain" }}
-              />
-            </div>
-            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dUNnqpyKvEd3q5gSmhohVhJLHcwVlW.png"
-                alt="Continental"
-                width={150}
-                height={60}
-                style={{ width: "auto", height: "60px", objectFit: "contain" }}
-              />
-            </div>
+            {/* First set of logos */}
+            {logos.map((logo, index) => (
+              <div
+                key={`logo-1-${index}`}
+                style={{
+                  flexShrink: 0,
+                  height: "60px",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <Image
+                  src={logo.src || "/placeholder.svg"}
+                  alt={logo.alt}
+                  width={logo.width}
+                  height={60}
+                  style={{ width: "auto", height: "60px", objectFit: "contain" }}
+                />
+              </div>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {logos.map((logo, index) => (
+              <div
+                key={`logo-2-${index}`}
+                style={{
+                  flexShrink: 0,
+                  height: "60px",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <Image
+                  src={logo.src || "/placeholder.svg"}
+                  alt={logo.alt}
+                  width={logo.width}
+                  height={60}
+                  style={{ width: "auto", height: "60px", objectFit: "contain" }}
+                />
+              </div>
+            ))}
           </div>
+
+          {/* CSS animation keyframes */}
+          <style jsx>{`
+            @keyframes scroll {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+          `}</style>
         </div>
       </section>
 
