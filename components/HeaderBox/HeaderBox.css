@@ -24,10 +24,10 @@
   align-items: center;
   gap: 112px;
   padding-left: 121px;
-  font-family: var(--font-tech, 'PP Neue Montreal Mono', monospace);
+  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
   font-size: var(--text-size-xsmall, 14px);
   line-height: var(--text-line-xsmall, 17px);
-  color: var(--color-text-primary, #362C2C);
+  color: var(--color-text-primary, #362c2c);
 }
 
 .header-box__content {
@@ -41,13 +41,20 @@
 
 .header-box__header {
   /* Header text (h2) */
-  font-family: var(--font-default, 'PP Mori', sans-serif);
+  font-family: var(--font-default, "PP Mori", sans-serif);
   font-size: var(--text-size-large, 40px);
   line-height: var(--text-line-large, 48px);
   font-weight: 400;
-  color: var(--color-text-primary, #362C2C);
+  color: var(--color-text-primary, #362c2c);
   margin: 0;
   text-transform: uppercase;
+}
+
+/* Add fixed width for button in HeaderBox */
+.header-box__content .button,
+.header-box__content .button--primary {
+  width: 206px;
+  flex-shrink: 0;
 }
 
 /* Responsive adjustments */
