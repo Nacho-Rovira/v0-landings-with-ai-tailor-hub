@@ -136,22 +136,102 @@ export default function LayoutDemoPage() {
           <div
             style={{
               display: "flex",
-              gap: "var(--spacing-xl)",
+              gap: "var(--spacing-2xl)",
               paddingBottom: "var(--spacing-md)",
               minWidth: "min-content",
+              alignItems: "center",
             }}
           >
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-VFQIj5T8LTENldU0ZdpHpnqHoI6ONF.png"
-              alt="Client Logos - INDITEX, IBERIA, dormakaba, Cargill, GRUPMEDIAPRO, MIT media lab, clikalia, Santander, ELECTROMAPS, Audi, Repsol, Continental, Volkswagen, Cuimo, obuu, El Corte Inglés"
-              width={1400}
-              height={600}
-              style={{
-                height: "auto",
-                maxHeight: "400px",
-                width: "auto",
-              }}
-            />
+            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-UVDzNdU8pSOeEhRyv2S2RwBsrFgzLY.png"
+                alt="Audi"
+                width={120}
+                height={60}
+                style={{ width: "auto", height: "60px", objectFit: "contain" }}
+              />
+            </div>
+            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-HkjeEkMnx5IDoIkznNJrv3qYhUsm4V.png"
+                alt="IBERIA"
+                width={150}
+                height={60}
+                style={{ width: "auto", height: "60px", objectFit: "contain" }}
+              />
+            </div>
+            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-YdeTq7fRQfhpgWTr9b8rxl9dgL04Cc.png"
+                alt="Santander"
+                width={150}
+                height={60}
+                style={{ width: "auto", height: "60px", objectFit: "contain" }}
+              />
+            </div>
+            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-0j9B8DRkm8nLrKy6nzGAw5OOUPAuLt.png"
+                alt="ELECTROMAPS"
+                width={180}
+                height={60}
+                style={{ width: "auto", height: "60px", objectFit: "contain" }}
+              />
+            </div>
+            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-UFEfH6rMrO3mXXg1S9dgtX95B6TE49.png"
+                alt="clikalia"
+                width={120}
+                height={60}
+                style={{ width: "auto", height: "60px", objectFit: "contain" }}
+              />
+            </div>
+            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-2jePxrcfEuXTozMKoPS4RqNFopr8xJ.png"
+                alt="dormakaba"
+                width={180}
+                height={60}
+                style={{ width: "auto", height: "60px", objectFit: "contain" }}
+              />
+            </div>
+            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kZ9nc81RDykGGbHk2ngt4OfQIF7TvQ.png"
+                alt="Cargill"
+                width={120}
+                height={60}
+                style={{ width: "auto", height: "60px", objectFit: "contain" }}
+              />
+            </div>
+            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-u0aOyzLlmkr0o4r5LZHDeV7ViK8QTz.png"
+                alt="MIT media lab"
+                width={120}
+                height={60}
+                style={{ width: "auto", height: "60px", objectFit: "contain" }}
+              />
+            </div>
+            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dq9im5kPcSkrP4pFlHp6Lhui617S6a.png"
+                alt="GRUPMEDIAPRO"
+                width={150}
+                height={60}
+                style={{ width: "auto", height: "60px", objectFit: "contain" }}
+              />
+            </div>
+            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-h4hJVPhv503O5CCpwEFfd88CcKbSO2.png"
+                alt="INDITEX"
+                width={120}
+                height={60}
+                style={{ width: "auto", height: "60px", objectFit: "contain" }}
+              />
+            </div>
           </div>
         </div>
       </section>
