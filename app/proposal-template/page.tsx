@@ -141,26 +141,17 @@ export default function LayoutDemoPage() {
               minWidth: "min-content",
             }}
           >
-            {["REPSOL", "TELEFÓNICA", "SANTANDER", "BBVA"].map((client) => (
-              <div
-                key={client}
-                style={{
-                  minWidth: "200px",
-                  height: "100px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  background: "var(--color-neutral-100)",
-                  borderRadius: "var(--radius-xs)",
-                  fontFamily: "var(--text-font-tech)",
-                  fontSize: "var(--text-size-xsmall)",
-                  color: "var(--color-neutral-600)",
-                  textTransform: "uppercase",
-                }}
-              >
-                {client}
-              </div>
-            ))}
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-VFQIj5T8LTENldU0ZdpHpnqHoI6ONF.png"
+              alt="Client Logos - INDITEX, IBERIA, dormakaba, Cargill, GRUPMEDIAPRO, MIT media lab, clikalia, Santander, ELECTROMAPS, Audi, Repsol, Continental, Volkswagen, Cuimo, obuu, El Corte Inglés"
+              width={1400}
+              height={600}
+              style={{
+                height: "auto",
+                maxHeight: "400px",
+                width: "auto",
+              }}
+            />
           </div>
         </div>
       </section>
