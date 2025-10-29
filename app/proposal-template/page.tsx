@@ -232,6 +232,60 @@ export default function LayoutDemoPage() {
                 style={{ width: "auto", height: "60px", objectFit: "contain" }}
               />
             </div>
+            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-RLEp8ScYU8zkcSjMnMlarh7RfRA14m.png"
+                alt="Cuimo"
+                width={120}
+                height={60}
+                style={{ width: "auto", height: "60px", objectFit: "contain" }}
+              />
+            </div>
+            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xNoRkoKf2zCZrGWFlW9L9YVrH6DsZG.png"
+                alt="obuu"
+                width={100}
+                height={60}
+                style={{ width: "auto", height: "60px", objectFit: "contain" }}
+              />
+            </div>
+            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ssUXofWoEx3sB5xxOZTRFE5AsTlIVp.png"
+                alt="El Corte Inglés"
+                width={150}
+                height={60}
+                style={{ width: "auto", height: "60px", objectFit: "contain" }}
+              />
+            </div>
+            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Zsqa7JNOYNjS4NWjjcKAIIqumQwPZs.png"
+                alt="Repsol"
+                width={140}
+                height={60}
+                style={{ width: "auto", height: "60px", objectFit: "contain" }}
+              />
+            </div>
+            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eGexZBhRAO6oo69idAbsCywcPFRu9Y.png"
+                alt="Volkswagen"
+                width={80}
+                height={60}
+                style={{ width: "auto", height: "60px", objectFit: "contain" }}
+              />
+            </div>
+            <div style={{ flexShrink: 0, height: "60px", display: "flex", alignItems: "center" }}>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dUNnqpyKvEd3q5gSmhohVhJLHcwVlW.png"
+                alt="Continental"
+                width={150}
+                height={60}
+                style={{ width: "auto", height: "60px", objectFit: "contain" }}
+              />
+            </div>
           </div>
         </div>
       </section>
