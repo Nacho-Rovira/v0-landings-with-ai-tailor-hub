@@ -2,7 +2,6 @@ import { LandingLayout } from "@/components/LandingLayout/LandingLayout"
 import { HighlightSection } from "@/components/HighlightSection/HighlightSection"
 import { HeaderBox } from "@/components/HeaderBox/HeaderBox"
 import { BodyText } from "@/components/BodyText/BodyText"
-import { Button } from "@/components/Button/Button"
 import { MenuSidebar, MenuSidebarItem } from "@/components/MenuSidebar/MenuSidebar"
 import { TitleSection } from "@/components/TitleSection/TitleSection"
 import Image from "next/image"
@@ -126,36 +125,56 @@ export default function LayoutDemoPage() {
         <TitleSection overheader="OUR CLIENTS" />
         <div
           style={{
-            display: "flex",
-            gap: "var(--spacing-xl)",
-            marginTop: "var(--spacing-lg)",
-            flexWrap: "wrap",
+            marginTop: "var(--spacing-xl)",
+            overflowX: "auto",
+            overflowY: "hidden",
+            WebkitOverflowScrolling: "touch",
+            scrollbarWidth: "thin",
+            scrollbarColor: "var(--color-neutral-300) transparent",
           }}
         >
-          {["REPSOL", "TELEFÓNICA", "SANTANDER", "BBVA"].map((client) => (
-            null
-          ))}
+          <div
+            style={{
+              display: "flex",
+              gap: "var(--spacing-xl)",
+              paddingBottom: "var(--spacing-md)",
+              minWidth: "min-content",
+            }}
+          >
+            {["REPSOL", "TELEFÓNICA", "SANTANDER", "BBVA"].map((client) => (
+              <div
+                key={client}
+                style={{
+                  minWidth: "200px",
+                  height: "100px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  background: "var(--color-neutral-100)",
+                  borderRadius: "var(--radius-xs)",
+                  fontFamily: "var(--text-font-tech)",
+                  fontSize: "var(--text-size-xsmall)",
+                  color: "var(--color-neutral-600)",
+                  textTransform: "uppercase",
+                }}
+              >
+                {client}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Content Section 1 */}
-      
 
       {/* Placeholder Content Sections */}
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
-        
-      </section>
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}></section>
 
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
-        
-      </section>
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}></section>
 
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
-        
-      </section>
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}></section>
 
       {/* CTA Section */}
-      
     </LandingLayout>
   )
 }

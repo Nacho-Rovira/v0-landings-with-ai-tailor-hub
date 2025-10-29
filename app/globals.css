@@ -124,4 +124,22 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Custom scrollbar styling for horizontal scroll containers */
+  *::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: var(--color-neutral-300, #d4d4d4);
+    border-radius: 4px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--color-neutral-400, #a3a3a3);
+  }
 }
