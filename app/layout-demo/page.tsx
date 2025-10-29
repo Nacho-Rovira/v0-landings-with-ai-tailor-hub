@@ -9,7 +9,7 @@ export default function LayoutDemoPage() {
       {/* Hero Section */}
       <section style={{ marginBottom: "var(--spacing-8xl)" }}>
         <HighlightSection
-          concepts={["AN ELITE TEAM OF SOFTWARE ENGINEERS", "DEVELOPMENT HUB", "ARTIFICIAL INTELLIGENCE & DEV"]}
+          concepts={["AN ELITE TEAM OF <span> SOFTWARE ENGINEERS", "DEVELOPMENT <span> HUB", "ARTIFICIAL <span>INTELLIGENCE & DEV"]}
           header="ARTIFICIAL INTELLIGENCE LAB AND SOFTWARE BOUTIQUE"
         />
       </section>
