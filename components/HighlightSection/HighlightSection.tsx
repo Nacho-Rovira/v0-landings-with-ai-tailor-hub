@@ -22,11 +22,21 @@ export const HighlightSection = React.forwardRef<HTMLDivElement, HighlightSectio
   ) => {
     const classes = ["highlight-section", className].filter(Boolean).join(" ")
 
+    const renderConcept = (concept: string) => {
+      const parts = concept.split("<span>")
+      return parts.map((part, i) => (
+        <React.Fragment key={i}>
+          {part}
+          {i < parts.length - 1 && <br />}
+        </React.Fragment>
+      ))
+    }
+
     return (
       <div ref={ref} className={classes} {...props}>
         <div className="text-style-mono home-header-description">
           {concepts.map((concept, index) => (
-            <span key={index}>{concept}</span>
+            <span key={index}>{renderConcept(concept)}</span>
           ))}
         </div>
 
