@@ -42,7 +42,7 @@ export default function LayoutDemoPage() {
           }}
         >
           <Image
-            src="/hero-image.png"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tailor%20hub%20image%2001-N8H2Ie2JIDDlziqITakxD2LFyO5FIU.png"
             alt="Tailor Hub - Technical Development"
             width={1432}
             height={800}
