@@ -120,6 +120,11 @@ export default function LayoutDemoPage() {
         </div>
       </section>
 
+      {/* Our Clients Section */}
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+        <HighlightSection concepts={["REPSOL", "TELEFÓNICA", "SANTANDER", "BBVA"]} header="OUR CLIENTS" />
+      </section>
+
       {/* Content Section 1 */}
       <section style={{ marginBottom: "var(--spacing-8xl)" }}>
         <div style={{ marginBottom: "var(--spacing-6xl)" }}>
