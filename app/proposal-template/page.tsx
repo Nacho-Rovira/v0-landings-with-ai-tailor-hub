@@ -3,6 +3,7 @@ import { HighlightSection } from "@/components/HighlightSection/HighlightSection
 import { HeaderBox } from "@/components/HeaderBox/HeaderBox"
 import { BodyText } from "@/components/BodyText/BodyText"
 import { Button } from "@/components/Button/Button"
+import { MenuSidebar, MenuSidebarItem } from "@/components/MenuSidebar/MenuSidebar"
 import Image from "next/image"
 
 export default function LayoutDemoPage() {
@@ -53,6 +54,69 @@ export default function LayoutDemoPage() {
             }}
             priority
           />
+        </div>
+      </section>
+
+      {/* Proposal Details Section */}
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
+            gap: "var(--spacing-xxl)",
+            width: "100%",
+          }}
+        >
+          {/* Menu Sidebar */}
+          <MenuSidebar>
+            <MenuSidebarItem href="#challenge" number={1}>
+              THE CHALLENGE
+            </MenuSidebarItem>
+            <MenuSidebarItem href="#solution" number={2}>
+              THE SOLUTION
+            </MenuSidebarItem>
+            <MenuSidebarItem href="#approach" number={3} isActive>
+              THE APPROACH
+            </MenuSidebarItem>
+            <MenuSidebarItem href="#results" number={4}>
+              RESULTS
+            </MenuSidebarItem>
+            <MenuSidebarItem href="#timeline" number={5}>
+              TIMELINE
+            </MenuSidebarItem>
+            <MenuSidebarItem href="#team" number={6}>
+              TEAM
+            </MenuSidebarItem>
+          </MenuSidebar>
+
+          {/* Body Content */}
+          <div style={{ flex: 1, maxWidth: "702px" }}>
+            <BodyText
+              sections={[
+                {
+                  title: "THE CHALLENGE",
+                  paragraphs: [
+                    "Transform raw and hardly accessible data into actionable intelligence. With advanced AI models, we help you uncover patterns, predict outcomes, and drive smarter decision-making at every level of your organization.",
+                    "The complexity of modern data landscapes requires sophisticated approaches. Traditional methods fall short when dealing with unstructured data, real-time analytics, and predictive modeling needs.",
+                  ],
+                },
+                {
+                  title: "THE SOLUTION",
+                  paragraphs: [
+                    "Our comprehensive AI-driven platform integrates seamlessly with your existing infrastructure, providing powerful analytics capabilities without disrupting your current workflows.",
+                    "Leveraging cutting-edge machine learning algorithms, we transform data chaos into clear, actionable insights that drive measurable business outcomes.",
+                  ],
+                },
+                {
+                  title: "THE APPROACH",
+                  paragraphs: [
+                    "We follow a systematic methodology that ensures successful implementation from discovery through deployment and optimization. Our approach combines technical excellence with deep understanding of business requirements.",
+                    "Each phase is carefully planned and executed, with continuous feedback loops to ensure alignment with your strategic objectives and operational constraints.",
+                  ],
+                },
+              ]}
+            />
+          </div>
         </div>
       </section>
 
