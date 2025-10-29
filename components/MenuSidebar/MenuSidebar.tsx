@@ -63,4 +63,3 @@ export const MenuSidebar = React.forwardRef<HTMLElement, MenuSidebarProps>(
 )
 
 MenuSidebar.displayName = "MenuSidebar"
-

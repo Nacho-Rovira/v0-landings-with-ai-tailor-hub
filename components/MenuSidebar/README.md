@@ -4,7 +4,7 @@ A vertical sidebar navigation menu component with support for active, disabled, 
 
 ## Usage
 
-```tsx
+\`\`\`tsx
 import { MenuSidebar, MenuSidebarItem } from './components/MenuSidebar';
 
 function Navigation() {
@@ -18,7 +18,7 @@ function Navigation() {
     </MenuSidebar>
   );
 }
-```
+\`\`\`
 
 ## Props
 
@@ -81,14 +81,14 @@ The menu sidebar uses the following design tokens from the system:
 
 ### Proposal Navigation with Numbering
 
-```tsx
+\`\`\`tsx
 <MenuSidebar>
   <MenuSidebarItem href="#challenge" number={1}>THE CHALLENGE</MenuSidebarItem>
   <MenuSidebarItem href="#solution" number={2}>THE SOLUTION</MenuSidebarItem>
   <MenuSidebarItem href="#approach" number={3} isActive>THE APPROACH</MenuSidebarItem>
   <MenuSidebarItem href="#results" number={4}>RESULTS</MenuSidebarItem>
 </MenuSidebar>
-```
+\`\`\`
 
 This will display as:
 - 01. THE CHALLENGE
@@ -100,29 +100,29 @@ Note: Menu items are automatically displayed in uppercase letters via CSS `text-
 
 ### Basic Menu Sidebar
 
-```tsx
+\`\`\`tsx
 <MenuSidebar>
   <MenuSidebarItem href="#services">SERVICES</MenuSidebarItem>
   <MenuSidebarItem href="#projects">PROJECTS</MenuSidebarItem>
   <MenuSidebarItem href="#about">ABOUT</MenuSidebarItem>
   <MenuSidebarItem href="#contact">CONTACT</MenuSidebarItem>
 </MenuSidebar>
-```
+\`\`\`
 
 ### Menu Sidebar with Active Item
 
-```tsx
+\`\`\`tsx
 <MenuSidebar>
   <MenuSidebarItem href="#services">SERVICES</MenuSidebarItem>
   <MenuSidebarItem href="#projects">PROJECTS</MenuSidebarItem>
   <MenuSidebarItem href="#about" isActive>ABOUT</MenuSidebarItem>
   <MenuSidebarItem href="#contact">CONTACT</MenuSidebarItem>
 </MenuSidebar>
-```
+\`\`\`
 
 ### Menu Sidebar with Disabled Item
 
-```tsx
+\`\`\`tsx
 <MenuSidebar>
   <MenuSidebarItem href="#services">SERVICES</MenuSidebarItem>
   <MenuSidebarItem href="#projects">PROJECTS</MenuSidebarItem>
@@ -130,11 +130,10 @@ Note: Menu items are automatically displayed in uppercase letters via CSS `text-
   <MenuSidebarItem href="#contact">CONTACT</MenuSidebarItem>
   <MenuSidebarItem href="#coming-soon" isDisabled>COMING SOON</MenuSidebarItem>
 </MenuSidebar>
-```
+\`\`\`
 
 ## Accessibility
 
 - Supports keyboard navigation
 - Proper ARIA attributes for disabled state
 - Respects `prefers-reduced-motion` for reduced animation
-

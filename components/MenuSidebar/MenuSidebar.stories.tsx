@@ -71,4 +71,3 @@ export const ProposalNavigation = () => (
     </MenuSidebarItem>
   </MenuSidebar>
 )
-
