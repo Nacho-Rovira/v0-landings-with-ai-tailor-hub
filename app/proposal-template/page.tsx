@@ -4,6 +4,7 @@ import { HeaderBox } from "@/components/HeaderBox/HeaderBox"
 import { BodyText } from "@/components/BodyText/BodyText"
 import { Button } from "@/components/Button/Button"
 import { MenuSidebar, MenuSidebarItem } from "@/components/MenuSidebar/MenuSidebar"
+import { TitleSection } from "@/components/TitleSection/TitleSection"
 import Image from "next/image"
 
 export default function LayoutDemoPage() {
@@ -122,7 +123,30 @@ export default function LayoutDemoPage() {
 
       {/* Our Clients Section */}
       <section style={{ marginBottom: "var(--spacing-8xl)" }}>
-        <HighlightSection concepts={["REPSOL", "TELEFÓNICA", "SANTANDER", "BBVA"]} header="OUR CLIENTS" />
+        <TitleSection overheader="OUR CLIENTS" />
+        <div
+          style={{
+            display: "flex",
+            gap: "var(--spacing-xl)",
+            marginTop: "var(--spacing-lg)",
+            flexWrap: "wrap",
+          }}
+        >
+          {["REPSOL", "TELEFÓNICA", "SANTANDER", "BBVA"].map((client) => (
+            <span
+              key={client}
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "var(--font-size-sm)",
+                color: "var(--color-text-primary)",
+                textTransform: "uppercase",
+                letterSpacing: "0.05em",
+              }}
+            >
+              {client}
+            </span>
+          ))}
+        </div>
       </section>
 
       {/* Content Section 1 */}
