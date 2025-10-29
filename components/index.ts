@@ -7,6 +7,9 @@ export type { MenuProps } from "./Menu/Menu"
 export { MenuItem } from "./MenuItem/MenuItem"
 export type { MenuItemProps } from "./MenuItem/MenuItem"
 
+export { MenuSidebar, MenuSidebarItem } from "./MenuSidebar/MenuSidebar"
+export type { MenuSidebarProps, MenuSidebarItemProps } from "./MenuSidebar/MenuSidebar"
+
 export { Header } from './Header/Header';
 export type { HeaderProps } from './Header/Header';
 

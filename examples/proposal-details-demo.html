@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposal Details Layout - Tailor Hub Design System</title>
+  <style>
+    /* Design Tokens */
+    :root {
+      /* Primitive Colors - Neutral */
+      --color-neutral-00: #FFFFFF;
+      --color-neutral-100: #F5F5F5;
+      --color-neutral-200: #E5E5E5;
+      --color-neutral-300: #D4D4D4;
+      --color-neutral-600: #828086;
+      --color-neutral-900: #362C2C;
+      
+      /* Primitive Colors - Blue */
+      --color-blue-500: #2C54FF;
+      
+      /* Text Sizes */
+      --text-size-small: 16px;
+      --text-size-large: 40px;
+      
+      /* Line Heights */
+      --text-line-small: 22px;
+      --text-line-large: 48px;
+      
+      /* Font Families */
+      --font-default: "PP Mori", sans-serif;
+      --font-tech: "PP Neue Montreal Mono", monospace;
+      
+      /* Spacing */
+      --spacing-xs: 8px;
+      --spacing-m: 16px;
+      --spacing-l: 24px;
+      --spacing-xxl: 40px;
+      --spacing-8xl: 80px;
+      
+      /* Semantic Colors */
+      --color-text-primary: var(--color-neutral-900);
+      --color-text-secondary: var(--color-neutral-600);
+      --color-text-accent: var(--color-blue-500);
+      --color-text-hover: var(--color-neutral-300);
+      --color-background-surface: var(--color-neutral-100);
+      
+      /* Component Gaps */
+      --gap-section-section: var(--spacing-8xl);
+      --gap-paragraph-middle: var(--spacing-m);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--color-neutral-00);
+      color: var(--color-text-primary);
+      line-height: 1.6;
+      padding: var(--spacing-xxl);
+    }
+
+    .page-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      margin: calc(var(--spacing-xxl) * -1) calc(var(--spacing-xxl) * -1) var(--spacing-xxl);
+    }
+
+    .page-header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .page-header p {
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1432px;
+      margin: 0 auto;
+    }
+
+    /* Proposal Details Layout */
+    .proposal-details {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--spacing-xxl);
+      width: 100%;
+    }
+
+    /* Menu Sidebar Styles */
+    .menu-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-m);
+      width: 322px;
+      min-width: 206px;
+      flex-shrink: 0;
+    }
+
+    /* Responsive: Reduce width on smaller screens */
+    @media (max-width: 1200px) {
+      .menu-sidebar {
+        width: 206px;
+      }
+    }
+
+    .menu-sidebar__item {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+      font-family: var(--font-tech);
+      font-size: var(--text-size-small);
+      line-height: var(--text-line-small);
+      color: var(--color-text-primary);
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      transition: color 120ms ease;
+    }
+
+    .menu-sidebar__item:hover {
+      color: var(--color-text-accent);
+    }
+
+    .menu-sidebar__item--active {
+      color: var(--color-text-accent);
+      font-weight: 500;
+    }
+
+    .menu-sidebar__item--disabled {
+      color: var(--color-text-hover);
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    .menu-sidebar__number {
+      flex-shrink: 0;
+    }
+
+    .menu-sidebar__label {
+      flex: 1;
+    }
+
+    /* Body Text Styles */
+    .proposal-content {
+      flex: 1;
+      max-width: 702px;
+    }
+
+    .body-text {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-section-section);
+      width: 100%;
+    }
+
+    .body-text__section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-paragraph-middle);
+      width: 100%;
+    }
+
+    .body-text__title {
+      font-family: var(--font-default);
+      font-size: var(--text-size-large);
+      line-height: var(--text-line-large);
+      font-weight: 400;
+      color: var(--color-text-primary);
+      margin: 0;
+      text-transform: uppercase;
+      white-space: pre-wrap;
+      width: 100%;
+    }
+
+    .body-text__content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-paragraph-middle);
+      width: 100%;
+    }
+
+    .body-text__paragraph {
+      font-family: var(--font-default);
+      font-size: var(--text-size-small);
+      line-height: var(--text-line-small);
+      color: var(--color-text-primary);
+      margin: 0;
+      width: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 968px) {
+      .proposal-details {
+        flex-direction: column;
+        gap: var(--spacing-l);
+      }
+
+      .menu-sidebar {
+        width: 100%;
+        min-width: 206px;
+        max-width: 322px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--spacing-xs);
+      }
+    }
+
+    /* Accessibility: Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .menu-sidebar__item {
+        transition: none;
+      }
+    }
+
+    .info-box {
+      background: #EEF2FF;
+      border-left: 3px solid var(--color-blue-500);
+      padding: 16px;
+      margin-top: 24px;
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .code-block {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 16px;
+      border-radius: 4px;
+      overflow-x: auto;
+      margin-top: 16px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .demo-label {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-neutral-600);
+    }
+  </style>
+</head>
+<body>
+  <div class="page-header">
+    <h1>Proposal Details Layout</h1>
+    <p>Sidebar navigation with body content - Two column layout</p>
+  </div>
+
+  <div class="container">
+    <div class="proposal-details">
+      <!-- Menu Sidebar -->
+      <aside class="menu-sidebar">
+        <a href="#challenge" class="menu-sidebar__item">
+          <span class="menu-sidebar__number">01.</span>
+          <span class="menu-sidebar__label">THE CHALLENGE</span>
+        </a>
+        <a href="#solution" class="menu-sidebar__item">
+          <span class="menu-sidebar__number">02.</span>
+          <span class="menu-sidebar__label">THE SOLUTION</span>
+        </a>
+        <a href="#approach" class="menu-sidebar__item menu-sidebar__item--active">
+          <span class="menu-sidebar__number">03.</span>
+          <span class="menu-sidebar__label">THE APPROACH</span>
+        </a>
+        <a href="#results" class="menu-sidebar__item">
+          <span class="menu-sidebar__number">04.</span>
+          <span class="menu-sidebar__label">RESULTS</span>
+        </a>
+        <a href="#timeline" class="menu-sidebar__item">
+          <span class="menu-sidebar__number">05.</span>
+          <span class="menu-sidebar__label">TIMELINE</span>
+        </a>
+        <a href="#team" class="menu-sidebar__item">
+          <span class="menu-sidebar__number">06.</span>
+          <span class="menu-sidebar__label">TEAM</span>
+        </a>
+      </aside>
+
+      <!-- Body Content -->
+      <div class="proposal-content">
+        <div class="body-text">
+          <!-- Section 1: The Challenge -->
+          <div class="body-text__section">
+            <h3 class="body-text__title">THE CHALLENGE</h3>
+            <div class="body-text__content">
+              <p class="body-text__paragraph">
+                Transform raw and hardly accessible data into actionable intelligence. With advanced AI models, we help you uncover patterns, predict outcomes, and drive smarter decision-making at every level of your organization.
+              </p>
+              <p class="body-text__paragraph">
+                The complexity of modern data landscapes requires sophisticated approaches. Traditional methods fall short when dealing with unstructured data, real-time analytics, and predictive modeling needs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Section 2: The Solution -->
+          <div class="body-text__section">
+            <h3 class="body-text__title">THE SOLUTION</h3>
+            <div class="body-text__content">
+              <p class="body-text__paragraph">
+                Our comprehensive AI-driven platform integrates seamlessly with your existing infrastructure, providing powerful analytics capabilities without disrupting your current workflows.
+              </p>
+              <p class="body-text__paragraph">
+                Leveraging cutting-edge machine learning algorithms, we transform data chaos into clear, actionable insights that drive measurable business outcomes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Section 3: The Approach -->
+          <div class="body-text__section">
+            <h3 class="body-text__title">THE APPROACH</h3>
+            <div class="body-text__content">
+              <p class="body-text__paragraph">
+                We follow a systematic methodology that ensures successful implementation from discovery through deployment and optimization. Our approach combines technical excellence with deep understanding of business requirements.
+              </p>
+              <p class="body-text__paragraph">
+                Each phase is carefully planned and executed, with continuous feedback loops to ensure alignment with your strategic objectives and operational constraints.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Documentation -->
+    <div style="margin-top: 80px; padding: 24px; background: var(--color-neutral-100); border-radius: 8px;">
+      <h2 style="font-size: 24px; margin-bottom: 24px; font-weight: 500;">Layout Specifications</h2>
+      
+      <div class="demo-label">Structure</div>
+      <div class="info-box">
+        <strong>Proposal Details Layout:</strong><br>
+        • Two-column layout with MenuSidebar on the left<br>
+        • MenuSidebar width: 322px (default), 206px (minimum on smaller screens)<br>
+        • BodyText content on the right<br>
+        • Horizontal gap: spacing.xxl (40px)<br>
+        • Max container width: 1432px (matching header max width)<br>
+        • Responsive: Stacks vertically on smaller screens
+      </div>
+
+      <div class="demo-label" style="margin-top: 32px;">React Usage</div>
+      <div class="code-block">import { MenuSidebar, MenuSidebarItem } from '@/components/MenuSidebar';
+import { BodyText } from '@/components/BodyText';
+
+function ProposalDetails() {
+  return (
+    &lt;div className="proposal-details"&gt;
+      &lt;MenuSidebar&gt;
+        &lt;MenuSidebarItem href="#challenge" number={1}&gt;THE CHALLENGE&lt;/MenuSidebarItem&gt;
+        &lt;MenuSidebarItem href="#solution" number={2}&gt;THE SOLUTION&lt;/MenuSidebarItem&gt;
+        &lt;MenuSidebarItem href="#approach" number={3} isActive&gt;THE APPROACH&lt;/MenuSidebarItem&gt;
+        &lt;MenuSidebarItem href="#results" number={4}&gt;RESULTS&lt;/MenuSidebarItem&gt;
+        &lt;MenuSidebarItem href="#timeline" number={5}&gt;TIMELINE&lt;/MenuSidebarItem&gt;
+        &lt;MenuSidebarItem href="#team" number={6}&gt;TEAM&lt;/MenuSidebarItem&gt;
+      &lt;/MenuSidebar&gt;
+      
+      &lt;div className="proposal-content"&gt;
+        &lt;BodyText sections={sections} /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+// CSS
+.proposal-details {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-xxl);
+  width: 100%;
+}</div>
+
+      <div class="demo-label" style="margin-top: 32px;">Design Tokens</div>
+      <div class="info-box">
+        <strong>Layout Tokens:</strong><br>
+        • Horizontal gap: spacing.xxl (40px)<br>
+        • Menu sidebar: Vertical gap spacing.l (24px) between items<br>
+        • Body text: Section gap spacing.8xl (80px)<br>
+        • Paragraph gap: spacing.m (16px)<br>
+        • Max width: 1432px (matches header container)
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

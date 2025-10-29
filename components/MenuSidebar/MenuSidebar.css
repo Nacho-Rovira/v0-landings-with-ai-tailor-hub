@@ -1,0 +1,72 @@
+/* Menu Sidebar Component */
+.menu-sidebar {
+  display: flex;
+  flex-direction: column;
+  /* Using spacing.m (16px) for vertical gap between menu items */
+  gap: var(--spacing-m);
+  /* Width: 322px default, minimum 206px on smaller screens */
+  width: 322px;
+  min-width: 206px;
+  flex-shrink: 0;
+}
+
+/* Responsive: Reduce width on smaller screens */
+@media (max-width: 1200px) {
+  .menu-sidebar {
+    width: 206px;
+  }
+}
+
+/* Menu Item */
+.menu-sidebar__item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  /* Typography */
+  font-family: var(--font-tech);
+  font-size: var(--text-size-small);
+  line-height: var(--text-line-small);
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  /* Interaction */
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 120ms ease;
+}
+
+/* Number prefix */
+.menu-sidebar__number {
+  flex-shrink: 0;
+}
+
+/* Label text */
+.menu-sidebar__label {
+  flex: 1;
+}
+
+/* Hover state */
+.menu-sidebar__item:hover {
+  color: var(--color-text-accent);
+}
+
+/* Active/Selected state */
+.menu-sidebar__item--active {
+  color: var(--color-text-accent);
+  font-weight: 500;
+}
+
+/* Disabled state */
+.menu-sidebar__item:disabled,
+.menu-sidebar__item--disabled {
+  color: var(--color-text-hover);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Accessibility: Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .menu-sidebar__item {
+    transition: none;
+  }
+}
+
