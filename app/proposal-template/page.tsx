@@ -312,8 +312,7 @@ export default function LayoutDemoPage() {
       {/* Our Partners Section */}
       <section style={{ marginBottom: "var(--spacing-8xl)" }}>
         <Highlight2Section
-          overheaderLeft="OFICIAL"
-          overheaderRight="PARTNERS"
+          concepts={["OFICIAL", "PARTNERS"]}
           items={["CONTENTFUL", "AWS", "SHOPIFY PARTNERS", "MICROSOFT AI CLOUD PARTNER", "NETLIFY", ""]}
         />
       </section>
