@@ -379,7 +379,7 @@ export default function LayoutDemoPage() {
 
       {/* Tech Stack Section */}
       <section style={{ marginBottom: "var(--spacing-8xl)" }}>
-        <TitleSection overheader="/ SERVICIOS — STACK & TECNOLOGÍA" title="NUESTRAS TECNOLOGÍAS Y LENGUAJES" />
+        <TitleSection overheader="CORE TECHNOLOGY" title="NUESTRAS TECNOLOGÍAS Y LENGUAJES" />
 
         <div style={{ marginTop: "var(--spacing-xl)" }}>
           <TechStackSection
