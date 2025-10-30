@@ -28,6 +28,14 @@
   padding-left: 361px;
 }
 
+/* Custom overheader layout for Highlight2Section - centers concepts while aligning first with other overheaders */
+.highlight2-section .home-header-description {
+  /* Override justify-content to center the concepts */
+  justify-content: center;
+  gap: var(--spacing-4xl, 64px);
+  padding-left: 361px;
+}
+
 .home-header-description span {
   display: flex;
   align-items: center;
@@ -63,7 +71,8 @@
 /* Responsive adjustments */
 /* Added medium screen breakpoint for 308px left padding */
 @media (max-width: 1280px) {
-  .home-header-description {
+  /* Update padding for medium screens */
+  .highlight2-section .home-header-description {
     padding-left: 308px;
   }
 
@@ -86,7 +95,8 @@
   }
 
   /* Updated mobile overheader styles to match HighlightSection */
-  .home-header-description {
+  /* Mobile: reset to flex-start and remove custom padding */
+  .highlight2-section .home-header-description {
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: var(--spacing-m, 16px);
