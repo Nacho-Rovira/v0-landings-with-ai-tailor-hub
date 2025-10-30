@@ -327,7 +327,7 @@ export default function LayoutDemoPage() {
             marginTop: "var(--spacing-xl)",
             display: "flex",
             flexDirection: "column",
-            gap: "var(--spacing-3xl)",
+            gap: "var(--spacing-xxxl)",
           }}
         >
           <BoxSection
