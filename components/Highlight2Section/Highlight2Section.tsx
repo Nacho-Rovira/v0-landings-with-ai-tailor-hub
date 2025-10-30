@@ -10,7 +10,7 @@ export interface Highlight2SectionProps extends React.HTMLAttributes<HTMLDivElem
   items?: string[]
 }
 
-const defaultItems = ["CONTENTFUL", "AWS", "SHOPIFY PARTNERS","MICROSOFT AI CLOUD PARTNER","NETLIFY", ""]
+const defaultItems = ["CONTENTFUL", "AWS", "SHOPIFY PARTNERS", "MICROSOFT AI CLOUD PARTNER", "NETLIFY", ""]
 
 export const Highlight2Section = React.forwardRef<HTMLDivElement, Highlight2SectionProps>(
   (
@@ -21,10 +21,9 @@ export const Highlight2Section = React.forwardRef<HTMLDivElement, Highlight2Sect
 
     return (
       <div ref={ref} className={classes} {...props}>
-        {/* Overheaders */}
-        <div className="highlight2-section__overheaders">
-          <span className="highlight2-section__overheader">{overheaderLeft}</span>
-          <span className="highlight2-section__overheader">{overheaderRight}</span>
+        <div className="text-style-mono home-header-description">
+          <span>{overheaderLeft}</span>
+          <span>{overheaderRight}</span>
         </div>
 
         {/* Content Grid: 3 columns x 2 rows */}

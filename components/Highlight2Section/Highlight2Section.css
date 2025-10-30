@@ -10,31 +10,35 @@
   margin: 0 auto;
 }
 
-/* Overheaders container */
-.highlight2-section__overheaders {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
+/* Removed custom overheader styles, now using shared text-style-mono and home-header-description classes from HighlightSection */
 
-/* Individual overheader */
-.highlight2-section__overheader {
+/* Added shared styles for text-style-mono and home-header-description */
+.text-style-mono {
   font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
   font-size: var(--text-size-xsmall, 14px);
-  line-height: var(--text-line-xsmall, 17px);
+  line-height: normal;
   color: var(--color-text-primary, #362c2c);
-  text-transform: uppercase;
+}
+
+.home-header-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 361px;
+}
+
+.home-header-description span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Content grid: 3 columns x 2 rows */
 .highlight2-section__grid {
   display: grid;
-  /* Reverted back to 1fr for equal column distribution */
   grid-template-columns: repeat(3, 1fr);
-  /* Fixed grid rows height to maintain consistent layout */
   grid-template-rows: repeat(2, minmax(104px, 104px));
-  /* Updated vertical gap to spacing.xl */
   gap: var(--spacing-xl, 32px);
   width: 100%;
 }
@@ -42,7 +46,6 @@
 /* Individual grid item */
 .highlight2-section__item {
   font-family: var(--font-default, "PP Mori", sans-serif);
-  /* Updated to use Header 2 font size and line height */
   font-size: var(--text-size-large, 48px);
   line-height: var(--text-line-large, 52px);
   font-weight: 400;
@@ -51,21 +54,23 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  /* Allow text wrapping within fixed height */
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
 }
 
 /* Responsive adjustments */
+/* Added medium screen breakpoint for 308px left padding */
 @media (max-width: 1280px) {
+  .home-header-description {
+    padding-left: 308px;
+  }
+
   .highlight2-section__item {
-    /* Slightly smaller text on medium screens */
     font-size: 40px;
     line-height: 44px;
   }
 
-  /* Adjust fixed row height for medium screens */
   .highlight2-section__grid {
     grid-template-rows: repeat(2, minmax(88px, 88px));
   }
@@ -73,28 +78,30 @@
 
 @media (max-width: 768px) {
   .highlight2-section {
-    /* Mobile: add container padding */
     max-width: 100%;
     padding: 0 var(--spacing-m, 16px);
     gap: var(--gap-header-2-body, 32px);
   }
 
-  .highlight2-section__overheaders {
-    /* Mobile: stack overheaders or reduce spacing */
+  /* Updated mobile overheader styles to match HighlightSection */
+  .home-header-description {
+    justify-content: flex-start;
+    flex-wrap: wrap;
     gap: var(--spacing-m, 16px);
+    padding-left: 0;
+  }
+
+  .home-header-description span {
+    width: auto;
   }
 
   .highlight2-section__grid {
-    /* Mobile: 2 columns instead of 3 */
-    /* Reverted back to 1fr for equal column distribution */
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-xl, 32px);
-    /* Adjust fixed row height for mobile */
     grid-template-rows: repeat(3, minmax(72px, 72px));
   }
 
   .highlight2-section__item {
-    /* Mobile: smaller text */
     font-size: 32px;
     line-height: 36px;
   }
@@ -102,16 +109,12 @@
 
 @media (max-width: 480px) {
   .highlight2-section__grid {
-    /* Very small screens: 1 column */
-    /* Reverted back to 1fr for equal column distribution */
     grid-template-columns: 1fr;
     gap: var(--spacing-l, 24px);
-    /* Adjust fixed row height for very small screens */
     grid-template-rows: repeat(6, minmax(56px, 56px));
   }
 
   .highlight2-section__item {
-    /* Very small screens: even smaller text */
     font-size: 24px;
     line-height: 28px;
   }
