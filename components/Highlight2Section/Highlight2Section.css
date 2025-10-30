@@ -32,15 +32,17 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: var(--gap-header-1, 56px);
+  /* Updated vertical gap to spacing.xl */
+  gap: var(--spacing-xl, 32px);
   width: 100%;
 }
 
 /* Individual grid item */
 .highlight2-section__item {
   font-family: var(--font-default, "PP Mori", sans-serif);
-  font-size: var(--text-size-xxlarge, 66px);
-  line-height: var(--text-line-xxlarge, 62px);
+  /* Updated to use Header 2 font size and line height */
+  font-size: var(--text-size-large, 48px);
+  line-height: var(--text-line-large, 52px);
   font-weight: 400;
   color: var(--color-text-primary, #362c2c);
   text-transform: uppercase;
@@ -53,8 +55,8 @@
 @media (max-width: 1280px) {
   .highlight2-section__item {
     /* Slightly smaller text on medium screens */
-    font-size: 48px;
-    line-height: 52px;
+    font-size: 40px;
+    line-height: 44px;
   }
 }
 
