@@ -50,7 +50,7 @@ export const BoxSection = React.forwardRef<HTMLDivElement, BoxSectionProps>(
   ) => {
     const classes = ["box-section", `box-section--${variant}`, className].filter(Boolean).join(" ")
 
-    const hasBottomContent = secondaryText || buttonLabel
+    const hasBottomContent = Boolean(secondaryText || buttonLabel)
 
     return (
       <div ref={ref} className={classes} {...props}>
