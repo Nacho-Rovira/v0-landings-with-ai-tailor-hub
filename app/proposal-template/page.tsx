@@ -316,7 +316,7 @@ export default function LayoutDemoPage() {
           style={{
             marginTop: "var(--spacing-xl)",
             display: "flex",
-            gap: "var(--spacing-2xl)",
+            gap: "var(--spacing-4xl)", // Increased gap from 2xl to 4xl for more spacing between partner logos
             flexWrap: "wrap",
             alignItems: "center",
             justifyContent: "center",
