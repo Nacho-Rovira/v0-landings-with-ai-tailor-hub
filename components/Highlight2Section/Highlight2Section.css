@@ -1,0 +1,99 @@
+/* Highlight2Section Component Styles */
+
+.highlight2-section {
+  /* Container styles */
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-header-1, 56px);
+  width: 100%;
+  max-width: 1432px;
+  margin: 0 auto;
+}
+
+/* Overheaders container */
+.highlight2-section__overheaders {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Individual overheader */
+.highlight2-section__overheader {
+  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: var(--text-line-xsmall, 17px);
+  color: var(--color-text-primary, #362c2c);
+  text-transform: uppercase;
+}
+
+/* Content grid: 3 columns x 2 rows */
+.highlight2-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: var(--gap-header-1, 56px);
+  width: 100%;
+}
+
+/* Individual grid item */
+.highlight2-section__item {
+  font-family: var(--font-default, "PP Mori", sans-serif);
+  font-size: var(--text-size-xxlarge, 66px);
+  line-height: var(--text-line-xxlarge, 62px);
+  font-weight: 400;
+  color: var(--color-text-primary, #362c2c);
+  text-transform: uppercase;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1280px) {
+  .highlight2-section__item {
+    /* Slightly smaller text on medium screens */
+    font-size: 48px;
+    line-height: 52px;
+  }
+}
+
+@media (max-width: 768px) {
+  .highlight2-section {
+    /* Mobile: add container padding */
+    max-width: 100%;
+    padding: 0 var(--spacing-m, 16px);
+    gap: var(--gap-header-2-body, 32px);
+  }
+
+  .highlight2-section__overheaders {
+    /* Mobile: stack overheaders or reduce spacing */
+    gap: var(--spacing-m, 16px);
+  }
+
+  .highlight2-section__grid {
+    /* Mobile: 2 columns instead of 3 */
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl, 32px);
+  }
+
+  .highlight2-section__item {
+    /* Mobile: smaller text */
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlight2-section__grid {
+    /* Very small screens: 1 column */
+    grid-template-columns: 1fr;
+    gap: var(--spacing-l, 24px);
+  }
+
+  .highlight2-section__item {
+    /* Very small screens: even smaller text */
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
