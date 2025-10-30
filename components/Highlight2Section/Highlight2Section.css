@@ -30,7 +30,8 @@
 /* Content grid: 3 columns x 2 rows */
 .highlight2-section__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* Changed from 1fr to max-content so columns hug their content */
+  grid-template-columns: repeat(3, max-content);
   /* Fixed grid rows height to maintain consistent layout */
   grid-template-rows: repeat(2, minmax(104px, 104px));
   /* Updated vertical gap to spacing.xl */
@@ -85,7 +86,8 @@
 
   .highlight2-section__grid {
     /* Mobile: 2 columns instead of 3 */
-    grid-template-columns: repeat(2, 1fr);
+    /* Changed to max-content for mobile as well */
+    grid-template-columns: repeat(2, max-content);
     gap: var(--spacing-xl, 32px);
     /* Adjust fixed row height for mobile */
     grid-template-rows: repeat(3, minmax(72px, 72px));
@@ -101,7 +103,8 @@
 @media (max-width: 480px) {
   .highlight2-section__grid {
     /* Very small screens: 1 column */
-    grid-template-columns: 1fr;
+    /* Changed to max-content for very small screens */
+    grid-template-columns: max-content;
     gap: var(--spacing-l, 24px);
     /* Adjust fixed row height for very small screens */
     grid-template-rows: repeat(6, minmax(56px, 56px));
