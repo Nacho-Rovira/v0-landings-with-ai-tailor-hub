@@ -31,7 +31,8 @@
 .highlight2-section__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
+  /* Fixed grid rows height to maintain consistent layout */
+  grid-template-rows: repeat(2, minmax(104px, 104px));
   /* Updated vertical gap to spacing.xl */
   gap: var(--spacing-xl, 32px);
   width: 100%;
@@ -49,6 +50,10 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  /* Allow text wrapping within fixed height */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 /* Responsive adjustments */
@@ -57,6 +62,11 @@
     /* Slightly smaller text on medium screens */
     font-size: 40px;
     line-height: 44px;
+  }
+
+  /* Adjust fixed row height for medium screens */
+  .highlight2-section__grid {
+    grid-template-rows: repeat(2, minmax(88px, 88px));
   }
 }
 
@@ -77,6 +87,8 @@
     /* Mobile: 2 columns instead of 3 */
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-xl, 32px);
+    /* Adjust fixed row height for mobile */
+    grid-template-rows: repeat(3, minmax(72px, 72px));
   }
 
   .highlight2-section__item {
@@ -91,6 +103,8 @@
     /* Very small screens: 1 column */
     grid-template-columns: 1fr;
     gap: var(--spacing-l, 24px);
+    /* Adjust fixed row height for very small screens */
+    grid-template-rows: repeat(6, minmax(56px, 56px));
   }
 
   .highlight2-section__item {
