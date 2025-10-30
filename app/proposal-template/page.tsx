@@ -8,6 +8,7 @@ import { MenuSidebar, MenuSidebarItem } from "@/components/MenuSidebar/MenuSideb
 import { TitleSection } from "@/components/TitleSection/TitleSection"
 import { Highlight2Section } from "@/components/Highlight2Section/Highlight2Section"
 import { BoxSection } from "@/components/BoxSection/BoxSection"
+import { TechStackSection } from "@/components/TechStackSection/TechStackSection"
 import Image from "next/image"
 
 export default function LayoutDemoPage() {
@@ -372,6 +373,51 @@ export default function LayoutDemoPage() {
             imageAlt="ISO 27001 Security Certification - Stone and water droplets on dark blue background"
             certificationBadgeSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Modo_de_aislamiento-vjgtN0dPVKXNWgUsSYw20TQ0JKU29B.webp"
             certificationBadgeAlt="Arplus ISO 27001 Systems Certification Badge"
+          />
+        </div>
+      </section>
+
+      {/* Tech Stack Section */}
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+        <TitleSection
+          overheader="SERVICIOS                    STACK & TECNOLOGÍA"
+          title="NUESTRAS TECNOLOGÍAS Y LENGUAJES"
+        />
+
+        <div style={{ marginTop: "var(--spacing-xl)" }}>
+          <TechStackSection
+            categories={[
+              {
+                title: "Front-end & Mobile",
+                technologies: [
+                  "REACT JS",
+                  "NEXT JS",
+                  "VUE JS",
+                  "ANGULAR",
+                  "TAILWIND CSS",
+                  "TYPESCRIPT",
+                  "REACT NATIVE",
+                  "EXPO",
+                  "IONIC",
+                ],
+              },
+              {
+                title: "Back-end",
+                technologies: ["NODE", "EXPRESS", "TYPESCRIPT", "MONGO", "SQL", "NESTJS"],
+              },
+              {
+                title: "Data & IA",
+                technologies: ["PYTHON", "LANGCHAIN", "OPENAI GPT-40", "AZURE OPENAI", "MCP", "A2A"],
+              },
+              {
+                title: "CMS/e-commerce",
+                technologies: ["WORDPRESS", "CONTENTFUL", "DATO CMS", "SANITY", "SHOPIFY"],
+              },
+              {
+                title: "Infraestructura",
+                technologies: ["KUBERNETES", "DOCKER", "AWS", "AZURE"],
+              },
+            ]}
           />
         </div>
       </section>
