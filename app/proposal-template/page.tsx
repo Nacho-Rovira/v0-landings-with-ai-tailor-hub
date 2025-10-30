@@ -359,6 +359,21 @@ export default function LayoutDemoPage() {
         </div>
       </section>
 
+      {/* Certification Section */}
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+        <TitleSection overheader="/ SECURITY ISO" title="TECH WITH THE HIGHEST STANDARDS OF SECURITY" />
+
+        <div style={{ marginTop: "var(--spacing-xl)" }}>
+          <BoxSection
+            overheader="SECURITY CERTIFICATION"
+            header="ISO 27001"
+            bodyText="We are proud to be ISO/IEC 27001 certified, the leading international standard for managing information security. This means that in Tailor, your data is handled with the utmost care, following rigorous protocols for confidentiality, integrity, and availability."
+            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-tgMK0q7bcjw2tJtEHcImX44cBVfVJl.png"
+            imageAlt="ISO 27001 Security Certification - Stone and water droplets on dark blue background"
+          />
+        </div>
+      </section>
+
       {/* Content Section 1 */}
       <section style={{ marginBottom: "var(--spacing-8xl)" }}></section>
 
