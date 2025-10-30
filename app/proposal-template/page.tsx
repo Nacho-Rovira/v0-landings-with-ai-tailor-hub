@@ -316,13 +316,57 @@ export default function LayoutDemoPage() {
           style={{
             marginTop: "var(--spacing-xl)",
             display: "flex",
-            gap: "var(--spacing-xl)",
+            gap: "var(--spacing-2xl)",
             flexWrap: "wrap",
             alignItems: "center",
             justifyContent: "center",
           }}
         >
-          {/* Partner logos will be added here */}
+          <div style={{ height: "60px", display: "flex", alignItems: "center" }}>
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-TPnXnQfEzhlcehJTKdiFEVv48WhjZq.png"
+              alt="Shopify Partners"
+              width={200}
+              height={60}
+              style={{ width: "auto", height: "60px", objectFit: "contain" }}
+            />
+          </div>
+          <div style={{ height: "60px", display: "flex", alignItems: "center" }}>
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-IBEJ822EQBJdK6iYBBXrNwva0AUWtD.png"
+              alt="AWS"
+              width={120}
+              height={60}
+              style={{ width: "auto", height: "60px", objectFit: "contain" }}
+            />
+          </div>
+          <div style={{ height: "60px", display: "flex", alignItems: "center" }}>
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-0Ca4ftOHoyHJ7dK1wryzUTRd3NnxdY.png"
+              alt="Netlify"
+              width={140}
+              height={60}
+              style={{ width: "auto", height: "60px", objectFit: "contain" }}
+            />
+          </div>
+          <div style={{ height: "60px", display: "flex", alignItems: "center" }}>
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-grwunuqAEigKoM5XPv0xBsnSPgaE2d.png"
+              alt="Microsoft AI Cloud Partner"
+              width={220}
+              height={60}
+              style={{ width: "auto", height: "60px", objectFit: "contain" }}
+            />
+          </div>
+          <div style={{ height: "60px", display: "flex", alignItems: "center" }}>
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-2reoolxEAlUwih2YLFzCMPQSrzaM70.png"
+              alt="Contentful"
+              width={160}
+              height={60}
+              style={{ width: "auto", height: "60px", objectFit: "contain" }}
+            />
+          </div>
         </div>
       </section>
 
