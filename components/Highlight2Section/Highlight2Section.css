@@ -30,8 +30,8 @@
 
 /* Custom overheader layout for Highlight2Section - centers concepts while aligning first with other overheaders */
 .highlight2-section .home-header-description {
-  /* Override justify-content to center the concepts */
-  justify-content: center;
+  /* Changed from center to flex-start to align concepts to the left */
+  justify-content: flex-start;
   gap: var(--spacing-4xl, 64px);
   padding-left: 361px;
 }
