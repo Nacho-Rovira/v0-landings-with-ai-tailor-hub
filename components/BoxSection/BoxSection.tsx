@@ -23,6 +23,10 @@ export interface BoxSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   imageSrc?: string
   /** Image alt text */
   imageAlt?: string
+  /** Certification badge image source (appears below body text) */
+  certificationBadgeSrc?: string
+  /** Certification badge alt text */
+  certificationBadgeAlt?: string
 }
 
 export const BoxSection = React.forwardRef<HTMLDivElement, BoxSectionProps>(
@@ -37,6 +41,8 @@ export const BoxSection = React.forwardRef<HTMLDivElement, BoxSectionProps>(
       onButtonClick,
       imageSrc,
       imageAlt = "Section image",
+      certificationBadgeSrc,
+      certificationBadgeAlt = "Certification badge",
       className = "",
       ...props
     },
@@ -65,6 +71,14 @@ export const BoxSection = React.forwardRef<HTMLDivElement, BoxSectionProps>(
 
             {/* Main Body Text */}
             {bodyText && <p className="box-section__body">{bodyText}</p>}
+
+            {certificationBadgeSrc && (
+              <img
+                src={certificationBadgeSrc || "/placeholder.svg"}
+                alt={certificationBadgeAlt}
+                className="box-section__certification-badge"
+              />
+            )}
           </div>
 
           {/* Bottom Section: Secondary Text + Button - only render if content exists */}

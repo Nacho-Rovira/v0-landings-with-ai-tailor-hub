@@ -370,6 +370,8 @@ export default function LayoutDemoPage() {
             bodyText="We are proud to be ISO/IEC 27001 certified, the leading international standard for managing information security. This means that in Tailor, your data is handled with the utmost care, following rigorous protocols for confidentiality, integrity, and availability."
             imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ISO%20Certification%20-f4WhAAGoMuKdDFCFl5l9pZugJuvWww.png"
             imageAlt="ISO 27001 Security Certification - Stone and water droplets on dark blue background"
+            certificationBadgeSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Modo_de_aislamiento-vjgtN0dPVKXNWgUsSYw20TQ0JKU29B.webp"
+            certificationBadgeAlt="Arplus ISO 27001 Systems Certification Badge"
           />
         </div>
       </section>
