@@ -10,7 +10,7 @@ export interface Highlight2SectionProps extends React.HTMLAttributes<HTMLDivElem
   items?: string[]
 }
 
-const defaultItems = ["CONTENTFUL", "AWS", "MICROSOFT AI CLOUD PARTNER", "SHOPIFY PARTNERS", "NETLIFY", ""]
+const defaultItems = ["CONTENTFUL", "AWS", "SHOPIFY PARTNERS","MICROSOFT AI CLOUD PARTNER","NETLIFY", ""]
 
 export const Highlight2Section = React.forwardRef<HTMLDivElement, Highlight2SectionProps>(
   (
