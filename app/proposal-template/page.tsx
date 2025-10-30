@@ -7,6 +7,7 @@ import { BodyText } from "@/components/BodyText/BodyText"
 import { MenuSidebar, MenuSidebarItem } from "@/components/MenuSidebar/MenuSidebar"
 import { TitleSection } from "@/components/TitleSection/TitleSection"
 import { Highlight2Section } from "@/components/Highlight2Section/Highlight2Section"
+import { BoxSection } from "@/components/BoxSection/BoxSection"
 import Image from "next/image"
 
 export default function LayoutDemoPage() {
@@ -315,6 +316,47 @@ export default function LayoutDemoPage() {
           concepts={["OFICIAL", "PARTNERS"]}
           items={["CONTENTFUL", "AWS", "SHOPIFY PARTNERS", "MICROSOFT AI CLOUD PARTNER", "NETLIFY", ""]}
         />
+      </section>
+
+      {/* Servicios Section */}
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+        <TitleSection overheader="SERVICIOS" />
+
+        <div
+          style={{
+            marginTop: "var(--spacing-xl)",
+            display: "flex",
+            flexDirection: "column",
+            gap: "var(--spacing-3xl)",
+          }}
+        >
+          <BoxSection
+            overheader="S/ 01"
+            header="LANDING PAGES CON IA"
+            bodyText="Creamos landing pages de alto rendimiento optimizadas con inteligencia artificial. Nuestras soluciones combinan diseño estratégico con tecnología avanzada para maximizar conversiones y engagement."
+            secondaryText="Utilizamos modelos de IA para personalizar la experiencia del usuario, optimizar el contenido y mejorar continuamente el rendimiento de cada página."
+            buttonLabel="VER MÁS"
+            imageSrc="/modern-landing-page-design-with-ai-elements.jpg"
+          />
+
+          <BoxSection
+            overheader="S/ 02"
+            header="E-COMMERCE ESCALABLE"
+            bodyText="Desarrollamos plataformas de e-commerce robustas y escalables que crecen con tu negocio. Integramos las mejores prácticas de UX, seguridad y rendimiento para garantizar una experiencia de compra excepcional."
+            secondaryText="Nuestras soluciones incluyen gestión de inventario, procesamiento de pagos, análisis avanzado y personalización impulsada por IA para aumentar las ventas."
+            buttonLabel="VER MÁS"
+            imageSrc="/modern-ecommerce-platform.png"
+          />
+
+          <BoxSection
+            overheader="S/ 03"
+            header="DESARROLLO WEB EMPRESARIAL"
+            bodyText="Construimos aplicaciones web empresariales de nivel enterprise con arquitecturas modernas y escalables. Desde portales corporativos hasta sistemas complejos de gestión."
+            secondaryText="Implementamos las últimas tecnologías y mejores prácticas para garantizar seguridad, rendimiento y mantenibilidad a largo plazo."
+            buttonLabel="VER MÁS"
+            imageSrc="/enterprise-web-app-dashboard.png"
+          />
+        </div>
       </section>
 
       {/* Content Section 1 */}
