@@ -314,7 +314,7 @@ export default function LayoutDemoPage() {
         <Highlight2Section
           overheaderLeft="OFICIAL"
           overheaderRight="PARTNERS"
-          items={["CONTENTFUL", "AWS", "MICROSOFT AI CLOUD PARTNER", "SHOPIFY PARTNERS", "NETLIFY", ""]}
+          items={["CONTENTFUL", "AWS", "SHOPIFY PARTNERS", "MICROSOFT AI CLOUD PARTNER", "NETLIFY", ""]}
         />
       </section>
 
