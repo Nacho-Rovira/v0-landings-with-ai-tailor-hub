@@ -308,9 +308,29 @@ export default function LayoutDemoPage() {
         </div>
       </section>
 
-      {/* Content Section 1 */}
+      {/* Our Partners Section */}
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+        <HighlightSection
+          concepts={["/ Nuestra diferencia. 1 concept/ Partners"]}
+          header="CONSTRUIMOS CONFIANZA. SOMOS PARTNERS OFICIALES DE"
+        />
 
-      {/* Placeholder Content Sections */}
+        {/* Partner logos placeholder - user will add logos here */}
+        <div
+          style={{
+            marginTop: "var(--spacing-xl)",
+            display: "flex",
+            gap: "var(--spacing-xl)",
+            flexWrap: "wrap",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {/* Partner logos will be added here */}
+        </div>
+      </section>
+
+      {/* Content Section 1 */}
       <section style={{ marginBottom: "var(--spacing-8xl)" }}></section>
 
       <section style={{ marginBottom: "var(--spacing-8xl)" }}></section>
