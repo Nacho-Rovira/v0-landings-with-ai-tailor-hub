@@ -11,6 +11,7 @@ import { BoxSection } from "@/components/BoxSection/BoxSection"
 import { TechStackSection } from "@/components/TechStackSection/TechStackSection"
 import { CaseStudiesSection } from "@/components/CaseStudiesSection/CaseStudiesSection"
 import { TimelineSection } from "@/components/TimelineSection/TimelineSection"
+import { BudgetSection } from "@/components/BudgetSection/BudgetSection"
 import Image from "next/image"
 
 export default function LayoutDemoPage() {
@@ -174,7 +175,10 @@ export default function LayoutDemoPage() {
             <MenuSidebarItem href="#timeline" number={5}>
               TIMELINE
             </MenuSidebarItem>
-            <MenuSidebarItem href="#team" number={6}>
+            <MenuSidebarItem href="#budget" number={6}>
+              BUDGET
+            </MenuSidebarItem>
+            <MenuSidebarItem href="#team" number={7}>
               TEAM
             </MenuSidebarItem>
           </MenuSidebar>
@@ -302,6 +306,64 @@ export default function LayoutDemoPage() {
                       "Technical support",
                     ],
                   },
+                ]}
+              />
+            </div>
+
+            {/* Budget Section */}
+            <div id="budget" style={{ marginTop: "var(--spacing-4xl)" }}>
+              <h3
+                style={{
+                  fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
+                  fontSize: "var(--text-size-large, 40px)",
+                  lineHeight: "var(--text-line-large, 48px)",
+                  fontWeight: 400,
+                  color: "var(--color-text-primary)",
+                  textTransform: "uppercase",
+                  margin: 0,
+                  marginBottom: "var(--spacing-m, 16px)",
+                }}
+              >
+                BUDGET
+              </h3>
+              <BudgetSection
+                items={[
+                  {
+                    category: "DISCOVERY & PLANNING",
+                    description: "Requirements analysis, architecture design, and project roadmap",
+                    amount: "€8,500",
+                  },
+                  {
+                    category: "DESIGN & PROTOTYPING",
+                    description: "UI/UX design, interactive prototypes, and design system",
+                    amount: "€12,000",
+                  },
+                  {
+                    category: "DEVELOPMENT & INTEGRATION",
+                    description: "Core features, API integrations, and database implementation",
+                    amount: "€45,000",
+                  },
+                  {
+                    category: "TESTING & OPTIMIZATION",
+                    description: "QA testing, performance optimization, and security audits",
+                    amount: "€9,500",
+                  },
+                  {
+                    category: "DEPLOYMENT & LAUNCH",
+                    description: "Production deployment, monitoring setup, and team training",
+                    amount: "€6,000",
+                  },
+                  {
+                    category: "MAINTENANCE & SUPPORT",
+                    description: "3 months of ongoing support and updates",
+                    amount: "€9,000",
+                  },
+                ]}
+                total="€90,000"
+                notes={[
+                  "Payment terms: 30% upfront, 40% at development milestone, 30% upon completion",
+                  "All prices exclude VAT",
+                  "Maintenance and support can be extended on a monthly basis after the initial 3-month period",
                 ]}
               />
             </div>
