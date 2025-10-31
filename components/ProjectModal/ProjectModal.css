@@ -88,6 +88,14 @@
   gap: var(--spacing-xl, 40px);
   overflow-y: auto;
   max-height: 100%;
+  /* Hide scrollbar while keeping scroll functionality */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+.project-modal__content-column::-webkit-scrollbar {
+  display: none;
 }
 
 .project-modal__insights {
@@ -134,6 +142,14 @@
   color: var(--color-text-secondary, #6b6b6b);
   text-transform: uppercase;
   margin: 0;
+}
+
+/* Hide header menu when dialog overlay is open */
+[data-slot="dialog-overlay"][data-state="open"] ~ * .header,
+body:has([data-slot="dialog-overlay"][data-state="open"]) .header {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
 }
 
 /* Responsive adjustments */
