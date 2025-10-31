@@ -71,6 +71,14 @@
   bottom: var(--padding-card, 16px);
   right: var(--padding-card, 16px);
   z-index: 2;
+  /* Hide button by default and show on card hover */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show button when hovering over the card */
+.card:hover .card__button {
+  opacity: 1;
 }
 
 /* Mobile variant */
