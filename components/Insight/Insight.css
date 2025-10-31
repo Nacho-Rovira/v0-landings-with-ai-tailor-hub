@@ -1,0 +1,26 @@
+/* Insight Component Styles */
+
+.insight {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs, 8px);
+}
+
+.insight__value {
+  /* Large number/value */
+  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
+  font-size: var(--text-size-4xlarge, 80px);
+  line-height: var(--text-line-4xlarge, 96px);
+  margin: 0;
+  color: inherit;
+}
+
+.insight__label {
+  /* Small label text */
+  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: var(--text-line-xsmall, 17px);
+  margin: 0;
+  text-transform: uppercase;
+  color: inherit;
+}

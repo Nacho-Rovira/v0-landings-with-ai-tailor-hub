@@ -1,5 +1,5 @@
 import React from "react"
-import { Card } from "../Card/Card"
+import { Card, type CardInsight } from "../Card/Card"
 import "./CaseStudiesSection.css"
 
 export interface CaseStudy {
@@ -11,15 +11,21 @@ export interface CaseStudy {
   imageSrc: string
   /** Project image alt text */
   imageAlt: string
+  /** Project description (for flip variant) */
+  description?: string
+  /** Project insights (for flip variant) */
+  insights?: CardInsight[]
 }
 
 export interface CaseStudiesSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Array of case studies to display */
   caseStudies: CaseStudy[]
+  /** Card variant to use */
+  variant?: "default" | "flip"
 }
 
 export const CaseStudiesSection = React.forwardRef<HTMLDivElement, CaseStudiesSectionProps>(
-  ({ caseStudies, className = "", ...props }, ref) => {
+  ({ caseStudies, variant = "default", className = "", ...props }, ref) => {
     const classes = ["case-studies-section", className].filter(Boolean).join(" ")
 
     return (
@@ -28,10 +34,13 @@ export const CaseStudiesSection = React.forwardRef<HTMLDivElement, CaseStudiesSe
           {caseStudies.map((study, index) => (
             <Card
               key={index}
+              variant={variant}
               category={study.category}
               title={study.title}
               imageSrc={study.imageSrc}
               imageAlt={study.imageAlt}
+              description={study.description}
+              insights={study.insights}
             />
           ))}
         </div>

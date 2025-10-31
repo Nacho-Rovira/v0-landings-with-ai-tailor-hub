@@ -42,3 +42,6 @@ export type { TechStackSectionProps, TechCategory } from "./TechStackSection/Tec
 
 export { CaseStudiesSection } from "./CaseStudiesSection/CaseStudiesSection"
 export type { CaseStudiesSectionProps, CaseStudy } from "./CaseStudiesSection/CaseStudiesSection"
+
+export { Insight } from "./Insight/Insight"
+export type { InsightProps } from "./Insight/Insight"
