@@ -1,0 +1,38 @@
+/* 
+ * Chip Component Styles
+ * Using design tokens from the project
+ */
+
+.chip {
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+
+  /* Typography */
+  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
+  font-size: var(--text-small-size, 14px);
+  line-height: var(--text-small-line, 17px);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  /* Spacing */
+  padding: var(--spacing-xs, 4px) var(--spacing-s, 8px);
+
+  /* Visual - using radius.s to align with button style */
+  border-radius: var(--radius-s, 16px);
+
+  /* Transitions */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.chip--default {
+  background-color: var(--color-background-default);
+  color: var(--color-text-secondary);
+}
+
+.chip--primary {
+  background-color: var(--color-brand-primary);
+  color: var(--color-background-default);
+}

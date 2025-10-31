@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react"
+import { Chip } from "../Chip/Chip"
 import "./TimelineSection.css"
 
 export interface TimelinePhase {
@@ -40,7 +41,7 @@ export const TimelineSection = React.forwardRef<HTMLDivElement, TimelineSectionP
                 <h3 className="timeline-section__title">{phase.title}</h3>
               </div>
 
-              {phase.duration && <div className="timeline-section__duration">{phase.duration}</div>}
+              {phase.duration && <Chip variant="default">{phase.duration}</Chip>}
 
               <p className="timeline-section__description">{phase.description}</p>
 

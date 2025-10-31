@@ -99,19 +99,7 @@
   text-transform: uppercase;
 }
 
-.timeline-section__duration {
-  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
-  font-size: var(--text-small-size);
-  line-height: var(--text-small-line);
-  color: var(--color-text-secondary);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: var(--spacing-xs) var(--spacing-s);
-  background-color: var(--color-background-default);
-  /* using radius.s token to match Card component */
-  border-radius: var(--radius-s, 16px);
-  width: fit-content;
-}
+/* removed timeline-section__duration styles as it now uses Chip component */
 
 .timeline-section__description {
   font-family: var(--font-default, "PP Mori", sans-serif);
