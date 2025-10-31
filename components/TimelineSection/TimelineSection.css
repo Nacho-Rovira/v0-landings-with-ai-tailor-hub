@@ -1,96 +1,79 @@
+/* Redesigned as horizontal timeline layout */
 .timeline-section {
   display: flex;
   flex-direction: column;
-  gap: 0;
   width: 100%;
   position: relative;
+  padding: var(--spacing-2xl) 0;
+}
+
+.timeline-section__line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-border-default);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.timeline-section__phases {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--spacing-xl);
+  position: relative;
+  z-index: 2;
 }
 
 .timeline-section__phase {
   display: flex;
-  gap: var(--spacing-xl);
-  position: relative;
-  padding-bottom: var(--spacing-4xl);
-}
-
-.timeline-section__phase:last-child {
-  padding-bottom: 0;
-}
-
-/* Adjusted marker to align with header baseline */
-.timeline-section__marker {
-  position: relative;
-  display: flex;
   flex-direction: column;
   align-items: center;
-  flex-shrink: 0;
-  padding-top: 0;
+  flex: 1;
+  position: relative;
+}
+
+.timeline-section__marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-m);
 }
 
 .timeline-section__dot {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: var(--color-brand-primary);
-  border: 3px solid var(--color-background-default);
-  box-shadow: 0 0 0 1px var(--color-brand-primary);
+  background-color: var(--color-background-default);
+  border: 2px solid var(--color-text-primary);
   position: relative;
-  z-index: 2;
-  flex-shrink: 0;
-  /* Added margin to vertically center with title */
-  margin-top: 4px;
+  z-index: 3;
 }
 
-.timeline-section__line {
-  position: absolute;
-  top: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: calc(100% + var(--spacing-4xl) - 8px);
-  background: linear-gradient(to bottom, var(--color-brand-primary) 0%, var(--color-text-hover) 100%);
-  z-index: 1;
-}
-
-/* Removed card background, border, padding, and hover effects */
 .timeline-section__content {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-m);
-}
-
-/* Removed hover effect */
-
-.timeline-section__header {
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--spacing-m);
-}
-
-.timeline-section__header-left {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  gap: var(--spacing-s);
-  flex: 1;
+  text-align: center;
+  gap: var(--spacing-xs);
+  max-width: 280px;
 }
 
 .timeline-section__number {
   font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
-  font-size: var(--text-overheader-size);
-  line-height: var(--text-overheader-line);
-  color: var(--color-text-primary);
+  font-size: var(--text-small-size);
+  line-height: var(--text-small-line);
+  color: var(--color-text-secondary);
   letter-spacing: 0.1em;
   font-weight: 500;
 }
 
 .timeline-section__title {
   font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
-  font-size: var(--text-overheader-size);
-  line-height: var(--text-overheader-line);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-line);
   color: var(--color-text-primary);
   font-weight: 500;
   margin: 0;
@@ -98,54 +81,49 @@
   text-transform: uppercase;
 }
 
+.timeline-section__chip {
+  margin-top: var(--spacing-2xs);
+}
+
 .timeline-section__description {
-  font-family: var(--font-default, "PP Mori", sans-serif);
-  font-size: var(--text-body-size);
-  line-height: var(--text-body-line);
-  color: var(--color-text-primary);
-  margin: 0;
-}
-
-/* Reduced gap between deliverables items */
-.timeline-section__deliverables {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-2xs);
-  margin: var(--spacing-s) 0 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.timeline-section__deliverables li {
   font-family: var(--font-default, "PP Mori", sans-serif);
   font-size: var(--text-small-size);
   line-height: var(--text-small-line);
   color: var(--color-text-secondary);
-  padding-left: var(--spacing-m);
-  position: relative;
+  margin: 0;
 }
 
-.timeline-section__deliverables li::before {
-  content: "→";
-  position: absolute;
-  left: 0;
-  color: var(--color-text-secondary);
-}
-
-/* Responsive adjustments */
+/* Responsive: Stack vertically on mobile */
 @media (max-width: 768px) {
+  .timeline-section__line {
+    top: 8px;
+    left: 8px;
+    right: auto;
+    bottom: 8px;
+    width: 2px;
+    height: auto;
+    transform: none;
+  }
+
+  .timeline-section__phases {
+    flex-direction: column;
+    gap: var(--spacing-2xl);
+  }
+
   .timeline-section__phase {
+    flex-direction: row;
+    align-items: flex-start;
     gap: var(--spacing-m);
   }
 
-  /* Removed content padding for mobile */
-
-  .timeline-section__dot {
-    width: 12px;
-    height: 12px;
+  .timeline-section__marker {
+    margin-bottom: 0;
+    flex-shrink: 0;
   }
 
-  .timeline-section__line {
-    top: 20px;
+  .timeline-section__content {
+    align-items: flex-start;
+    text-align: left;
+    max-width: none;
   }
 }
