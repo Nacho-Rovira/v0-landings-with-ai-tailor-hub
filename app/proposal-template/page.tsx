@@ -426,55 +426,30 @@ export default function LayoutDemoPage() {
 
         <div style={{ marginTop: "var(--spacing-xl)" }}>
           <CaseStudiesSection
-            variant="flip"
             caseStudies={[
               {
                 category: "SOFTWARE",
                 title: "ON RUNNING + STRAVA",
                 imageSrc: "/athletes-running-outdoors-fitness-app.jpg",
                 imageAlt: "ON Running and Strava integration - Athletes running outdoors",
-                description:
-                  "Integration platform connecting ON Running's premium footwear with Strava's global running community, enabling seamless activity tracking and performance analytics.",
-                insights: [
-                  { value: "2.5M", label: "ACTIVE USERS" },
-                  { value: "98%", label: "UPTIME" },
-                ],
               },
               {
                 category: "SOFTWARE",
                 title: "CLIKALIA",
                 imageSrc: "/modern-luxury-house-with-pool-architecture.jpg",
                 imageAlt: "Clikalia real estate platform - Modern house with pool",
-                description:
-                  "Revolutionary real estate platform transforming property transactions with AI-powered valuations, virtual tours, and streamlined buying processes.",
-                insights: [
-                  { value: "€2.5B", label: "PROPERTIES VALUE" },
-                  { value: "15K", label: "TRANSACTIONS" },
-                ],
               },
               {
                 category: "SOFTWARE",
                 title: "DORMAKABA",
                 imageSrc: "/hand-touching-digital-interface-smart-technology.jpg",
                 imageAlt: "Dormakaba smart access solutions - Hand interacting with digital interface",
-                description:
-                  "Enterprise access control system providing secure, intelligent building management with biometric authentication and real-time monitoring capabilities.",
-                insights: [
-                  { value: "500K", label: "ACCESS POINTS" },
-                  { value: "99.9%", label: "SECURITY RATE" },
-                ],
               },
               {
                 category: "ECOMMERCE",
                 title: "VRAI",
                 imageSrc: "/elegant-jewelry-pieces-dramatic-lighting-luxury.jpg",
                 imageAlt: "VRAI jewelry e-commerce - Elegant jewelry pieces with dramatic lighting",
-                description:
-                  "Luxury jewelry e-commerce platform featuring lab-grown diamonds with immersive 3D visualization, personalization tools, and seamless checkout experience.",
-                insights: [
-                  { value: "250%", label: "GROWTH YOY" },
-                  { value: "4.8", label: "AVG RATING" },
-                ],
               },
             ]}
           />
