@@ -210,14 +210,14 @@ export default function LayoutDemoPage() {
             <div id="timeline" style={{ marginTop: "var(--spacing-4xl)" }}>
               <h3
                 style={{
-                  fontFamily: "var(--font-tech, 'PP Neue Montreal Mono', monospace)",
-                  fontSize: "var(--text-overheader-size)",
-                  lineHeight: "var(--text-overheader-line)",
+                  fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
+                  fontSize: "var(--text-size-large, 40px)",
+                  lineHeight: "var(--text-line-large, 48px)",
+                  fontWeight: 400,
                   color: "var(--color-text-primary)",
-                  letterSpacing: "0.1em",
-                  fontWeight: 500,
-                  marginBottom: "var(--spacing-xl)",
                   textTransform: "uppercase",
+                  margin: 0,
+                  marginBottom: "var(--spacing-m, 16px)",
                 }}
               >
                 TIMELINE
