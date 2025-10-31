@@ -10,6 +10,7 @@ import { Highlight2Section } from "@/components/Highlight2Section/Highlight2Sect
 import { BoxSection } from "@/components/BoxSection/BoxSection"
 import { TechStackSection } from "@/components/TechStackSection/TechStackSection"
 import { CaseStudiesSection } from "@/components/CaseStudiesSection/CaseStudiesSection"
+import { TimelineSection } from "@/components/TimelineSection/TimelineSection"
 import Image from "next/image"
 
 export default function LayoutDemoPage() {
@@ -589,6 +590,60 @@ export default function LayoutDemoPage() {
       <section style={{ marginBottom: "var(--spacing-8xl)" }}></section>
 
       <section style={{ marginBottom: "var(--spacing-8xl)" }}></section>
+
+      {/* Timeline Section */}
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+        <TitleSection overheader="PROJECT TIMELINE" title="PHASES & MILESTONES" />
+
+        <div style={{ marginTop: "var(--spacing-xl)" }}>
+          <TimelineSection
+            phases={[
+              {
+                number: "01",
+                title: "DISCOVERY & PLANNING",
+                description:
+                  "Comprehensive analysis of requirements, technical architecture design, and project roadmap definition. We establish clear objectives, identify potential challenges, and create a detailed implementation strategy.",
+                duration: "2-3 WEEKS",
+              },
+              {
+                number: "02",
+                title: "DESIGN & PROTOTYPING",
+                description:
+                  "Creation of high-fidelity designs, interactive prototypes, and design system components. We validate the user experience through testing and iterate based on feedback to ensure optimal usability.",
+                duration: "3-4 WEEKS",
+              },
+              {
+                number: "03",
+                title: "DEVELOPMENT & INTEGRATION",
+                description:
+                  "Implementation of core features, API integrations, and database architecture. Our development process follows best practices with continuous integration, automated testing, and code reviews.",
+                duration: "8-10 WEEKS",
+              },
+              {
+                number: "04",
+                title: "TESTING & OPTIMIZATION",
+                description:
+                  "Comprehensive quality assurance, performance optimization, and security audits. We conduct thorough testing across devices and browsers to ensure a flawless user experience.",
+                duration: "2-3 WEEKS",
+              },
+              {
+                number: "05",
+                title: "DEPLOYMENT & LAUNCH",
+                description:
+                  "Production deployment, monitoring setup, and launch support. We ensure a smooth transition to production with comprehensive documentation and team training.",
+                duration: "1-2 WEEKS",
+              },
+              {
+                number: "06",
+                title: "MAINTENANCE & SUPPORT",
+                description:
+                  "Ongoing support, performance monitoring, and continuous improvements. We provide regular updates, security patches, and feature enhancements to keep your platform running optimally.",
+                duration: "ONGOING",
+              },
+            ]}
+          />
+        </div>
+      </section>
 
       {/* Our Partners Section */}
       <section style={{ marginBottom: "var(--spacing-8xl)" }}>
