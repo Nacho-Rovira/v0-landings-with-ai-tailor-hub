@@ -1,5 +1,4 @@
 import React from "react"
-import { Insight } from "../Insight"
 import "./Card.css"
 
 export interface CardInsight {
@@ -72,7 +71,10 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
                 {insights.length > 0 && (
                   <div className="card__insights">
                     {insights.map((insight, index) => (
-                      <Insight key={index} value={insight.value} label={insight.label} />
+                      <div key={index} className="card__insight">
+                        <p className="card__insight-value">{insight.value}</p>
+                        <p className="card__insight-label">{insight.label}</p>
+                      </div>
                     ))}
                   </div>
                 )}
@@ -86,14 +88,12 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
     // Default and mobile variants
     return (
       <div ref={ref} className={classes} {...props}>
-        {/* Image */}
         {imageSrc && (
           <div className="card__image">
             <img src={imageSrc || "/placeholder.svg"} alt={imageAlt} />
           </div>
         )}
 
-        {/* Title Section */}
         <div className="card__content">
           <p className="card__category">{category}</p>
           <h3 className="card__title">{title}</h3>
