@@ -28,26 +28,26 @@ export const TimelineSection = React.forwardRef<HTMLDivElement, TimelineSectionP
 
     return (
       <div ref={ref} className={classes} {...props}>
-        <div className="timeline-section__line" />
-        <div className="timeline-section__phases">
-          {phases.map((phase, index) => (
-            <div key={index} className="timeline-section__phase">
-              <div className="timeline-section__marker">
-                <div className="timeline-section__dot" />
-              </div>
-              <div className="timeline-section__content">
-                <div className="timeline-section__number">/{phase.number}</div>
-                <h3 className="timeline-section__title">{phase.title}</h3>
-                {phase.duration && (
-                  <Chip variant="default" className="timeline-section__chip">
-                    {phase.duration}
-                  </Chip>
-                )}
-                <p className="timeline-section__description">{phase.description}</p>
-              </div>
+        {phases.map((phase, index) => (
+          <div key={index} className="timeline-section__phase">
+            <div className="timeline-section__marker">
+              <div className="timeline-section__dot" />
+              {index < phases.length - 1 && <div className="timeline-section__line" />}
             </div>
-          ))}
-        </div>
+
+            <div className="timeline-section__content">
+              <div className="timeline-section__header">
+                <div className="timeline-section__header-left">
+                  <span className="timeline-section__number">/{phase.number}</span>
+                  <h3 className="timeline-section__title">{phase.title}</h3>
+                </div>
+                {phase.duration && <Chip variant="button">{phase.duration}</Chip>}
+              </div>
+
+              <p className="timeline-section__description">{phase.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     )
   },

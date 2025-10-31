@@ -36,3 +36,11 @@
   background-color: var(--color-brand-primary);
   color: var(--color-background-default);
 }
+
+/* Added button variant to match button component styling */
+.chip--button {
+  background-color: var(--button-primary-bg, #f5f5f5);
+  color: var(--button-primary-text, #828086);
+  padding: var(--button-primary-padding, 8px);
+  border-radius: var(--radius-xs, 8px);
+}

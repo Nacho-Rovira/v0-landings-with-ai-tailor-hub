@@ -7,7 +7,7 @@ export interface ChipProps extends React.HTMLAttributes<HTMLSpanElement> {
   /** Chip content */
   children: React.ReactNode
   /** Optional variant for different chip styles */
-  variant?: "default" | "primary"
+  variant?: "default" | "primary" | "button"
 }
 
 export const Chip = React.forwardRef<HTMLSpanElement, ChipProps>(
