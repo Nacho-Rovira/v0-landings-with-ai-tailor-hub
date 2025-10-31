@@ -430,25 +430,25 @@ export default function LayoutDemoPage() {
               {
                 category: "SOFTWARE",
                 title: "ON RUNNING + STRAVA",
-                imageSrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/on-running-strava-case-study.jpg",
+                imageSrc: "/athletes-running-outdoors-fitness-app.jpg",
                 imageAlt: "ON Running and Strava integration - Athletes running outdoors",
               },
               {
                 category: "SOFTWARE",
                 title: "CLIKALIA",
-                imageSrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/clikalia-case-study.jpg",
+                imageSrc: "/modern-luxury-house-with-pool-architecture.jpg",
                 imageAlt: "Clikalia real estate platform - Modern house with pool",
               },
               {
                 category: "SOFTWARE",
                 title: "DORMAKABA",
-                imageSrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dormakaba-case-study.jpg",
+                imageSrc: "/hand-touching-digital-interface-smart-technology.jpg",
                 imageAlt: "Dormakaba smart access solutions - Hand interacting with digital interface",
               },
               {
                 category: "ECOMMERCE",
                 title: "VRAI",
-                imageSrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/vrai-case-study.jpg",
+                imageSrc: "/elegant-jewelry-pieces-dramatic-lighting-luxury.jpg",
                 imageAlt: "VRAI jewelry e-commerce - Elegant jewelry pieces with dramatic lighting",
               },
             ]}
