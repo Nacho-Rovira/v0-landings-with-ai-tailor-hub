@@ -1,5 +1,6 @@
 import React from "react"
 import { Card } from "../Card/Card"
+import { ProjectModal, type ProjectModalData } from "../ProjectModal/ProjectModal"
 import "./CaseStudiesSection.css"
 
 export interface CaseStudy {
@@ -11,6 +12,8 @@ export interface CaseStudy {
   imageSrc: string
   /** Project image alt text */
   imageAlt: string
+  /** Full project data for modal */
+  modalData: ProjectModalData
 }
 
 export interface CaseStudiesSectionProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -26,13 +29,15 @@ export const CaseStudiesSection = React.forwardRef<HTMLDivElement, CaseStudiesSe
       <div ref={ref} className={classes} {...props}>
         <div className="case-studies-section__scroll-container">
           {caseStudies.map((study, index) => (
-            <Card
-              key={index}
-              category={study.category}
-              title={study.title}
-              imageSrc={study.imageSrc}
-              imageAlt={study.imageAlt}
-            />
+            <ProjectModal key={index} project={study.modalData}>
+              <Card
+                category={study.category}
+                title={study.title}
+                imageSrc={study.imageSrc}
+                imageAlt={study.imageAlt}
+                style={{ cursor: "pointer" }}
+              />
+            </ProjectModal>
           ))}
         </div>
       </div>

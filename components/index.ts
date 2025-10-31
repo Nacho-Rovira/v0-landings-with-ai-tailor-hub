@@ -45,3 +45,6 @@ export type { CaseStudiesSectionProps, CaseStudy } from "./CaseStudiesSection/Ca
 
 export { Insight } from "./Insight/Insight"
 export type { InsightProps } from "./Insight/Insight"
+
+export { ProjectModal } from "./ProjectModal/ProjectModal"
+export type { ProjectModalProps, ProjectModalData } from "./ProjectModal/ProjectModal"
