@@ -36,24 +36,21 @@ export const ProjectModal = React.forwardRef<HTMLDivElement, ProjectModalProps>(
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="project-modal" showCloseButton={true}>
+        <div className="project-modal__overheader">
+          <span className="project-modal__overheader-left">/ PROJECTS</span>
+          <span className="project-modal__overheader-center">{project.title}</span>
+        </div>
+
         <div className="project-modal__container">
-          {/* Left Column: Project Image */}
+          {/* Left Column: Project Image (fixed width like MenuSidebar) */}
           <div className="project-modal__image-column">
             <img src={project.imageSrc || "/placeholder.svg"} alt={project.imageAlt} className="project-modal__image" />
           </div>
 
-          {/* Right Column: Content */}
+          {/* Right Column: Content (max-width 702px like BodyText in proposal) */}
           <div className="project-modal__content-column">
-            {/* Header */}
-            <div className="project-modal__header">
-              <p className="project-modal__breadcrumb">/ PROJECTS</p>
-              <h2 className="project-modal__title">{project.title}</h2>
-            </div>
-
-            {/* Body Text Sections */}
-            <div className="project-modal__body">
-              <BodyText sections={project.sections} />
-            </div>
+            {/* Body Text Sections with quotes */}
+            <BodyText sections={project.sections} />
 
             {/* Insights */}
             {project.insights && project.insights.length > 0 && (
