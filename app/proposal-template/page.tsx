@@ -132,8 +132,8 @@ export default function LayoutDemoPage() {
           }}
         >
           <Image
-            src="/images/design-mode/Tailor%20hub%20image%2001.png"
-            alt="Tailor Hub - Technical Development"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HERO-7QyVasLSj8cjn2jGivuMQ2gC7PCZiA.png"
+            alt="Tailor Hub - Smart access and security solutions"
             width={1432}
             height={800}
             style={{
