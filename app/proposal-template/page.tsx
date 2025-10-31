@@ -338,7 +338,8 @@ export default function LayoutDemoPage() {
             bodyText="Creamos landing pages de alto rendimiento optimizadas con inteligencia artificial. Nuestras soluciones combinan diseño estratégico con tecnología avanzada para maximizar conversiones y engagement."
             secondaryText="Utilizamos modelos de IA para personalizar la experiencia del usuario, optimizar el contenido y mejorar continuamente el rendimiento de cada página."
             buttonLabel="VER MÁS"
-            imageSrc="/modern-landing-page-design-with-ai-elements.jpg"
+            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/auditoria%20y%20formacion-yEPDDM6kqZrHq379cziXJRkTCq50X8.jpeg"
+            imageAlt="AI-powered landing pages - Hands holding glittering digital fabric"
           />
 
           <BoxSection
@@ -347,7 +348,8 @@ export default function LayoutDemoPage() {
             bodyText="Desarrollamos plataformas de e-commerce robustas y escalables que crecen con tu negocio. Integramos las mejores prácticas de UX, seguridad y rendimiento para garantizar una experiencia de compra excepcional."
             secondaryText="Nuestras soluciones incluyen gestión de inventario, procesamiento de pagos, análisis avanzado y personalización impulsada por IA para aumentar las ventas."
             buttonLabel="VER MÁS"
-            imageSrc="/modern-ecommerce-platform.png"
+            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-10-31%20at%2013.13.01-5RMqdNOAGrauG3tONkF07WU0hkUV0Q.png"
+            imageAlt="Scalable e-commerce platform - Elegant diamond jewelry piece"
           />
 
           <BoxSection
@@ -356,7 +358,8 @@ export default function LayoutDemoPage() {
             bodyText="Construimos aplicaciones web empresariales de nivel enterprise con arquitecturas modernas y escalables. Desde portales corporativos hasta sistemas complejos de gestión."
             secondaryText="Implementamos las últimas tecnologías y mejores prácticas para garantizar seguridad, rendimiento y mantenibilidad a largo plazo."
             buttonLabel="VER MÁS"
-            imageSrc="/enterprise-web-app-dashboard.png"
+            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/desarrollo%20de%20software-YxRzp41zYzwOmwdLBL490SWpxVZLFI.jpeg"
+            imageAlt="Enterprise web development - Hands working with precision components"
           />
         </div>
       </section>
@@ -430,12 +433,14 @@ export default function LayoutDemoPage() {
               {
                 category: "SOFTWARE",
                 title: "ON RUNNING + STRAVA",
-                imageSrc: "/athletes-running-outdoors-fitness-app.jpg",
-                imageAlt: "ON Running and Strava integration - Athletes running outdoors",
+                imageSrc:
+                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-95ak8iqiC08KKCRJGEh5qSIvJz92o0.jpeg",
+                imageAlt: "ON Running and Strava integration - Smart jacket with glowing technology pocket",
                 modalData: {
                   title: "ON RUNNING + STRAVA",
                   category: "SOFTWARE",
-                  imageSrc: "/athletes-running-outdoors-fitness-app.jpg",
+                  imageSrc:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-95ak8iqiC08KKCRJGEh5qSIvJz92o0.jpeg",
                   imageAlt: "ON Running and Strava integration",
                   sections: [
                     {
@@ -467,12 +472,14 @@ export default function LayoutDemoPage() {
               {
                 category: "SOFTWARE",
                 title: "CLIKALIA",
-                imageSrc: "/modern-luxury-house-with-pool-architecture.jpg",
-                imageAlt: "Clikalia real estate platform - Modern house with pool",
+                imageSrc:
+                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dormakaba.png-BL23wcJL31B0CAp4LCnI5yUkA8STg7.jpeg",
+                imageAlt: "Clikalia real estate platform - Hand interacting with geometric blocks",
                 modalData: {
                   title: "CLIKALIA",
                   category: "SOFTWARE",
-                  imageSrc: "/modern-luxury-house-with-pool-architecture.jpg",
+                  imageSrc:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dormakaba.png-BL23wcJL31B0CAp4LCnI5yUkA8STg7.jpeg",
                   imageAlt: "Clikalia real estate platform",
                   sections: [
                     {
@@ -504,12 +511,14 @@ export default function LayoutDemoPage() {
               {
                 category: "SOFTWARE",
                 title: "DORMAKABA",
-                imageSrc: "/hand-touching-digital-interface-smart-technology.jpg",
-                imageAlt: "Dormakaba smart access solutions - Hand interacting with digital interface",
+                imageSrc:
+                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HERO-7QyVasLSj8cjn2jGivuMQ2gC7PCZiA.png",
+                imageAlt: "Dormakaba smart access solutions - Hand holding blank access card",
                 modalData: {
                   title: "DORMAKABA",
                   category: "SOFTWARE",
-                  imageSrc: "/hand-touching-digital-interface-smart-technology.jpg",
+                  imageSrc:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HERO-7QyVasLSj8cjn2jGivuMQ2gC7PCZiA.png",
                   imageAlt: "Dormakaba smart access solutions",
                   sections: [
                     {
@@ -541,12 +550,14 @@ export default function LayoutDemoPage() {
               {
                 category: "ECOMMERCE",
                 title: "VRAI",
-                imageSrc: "/elegant-jewelry-pieces-dramatic-lighting-luxury.jpg",
-                imageAlt: "VRAI jewelry e-commerce - Elegant jewelry pieces with dramatic lighting",
+                imageSrc:
+                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VRAI-rtQZ9X0qUMRrgQLGlhPug0u3y9JEGo.jpeg",
+                imageAlt: "VRAI jewelry e-commerce - Model wearing elegant diamond earrings",
                 modalData: {
                   title: "VRAI",
                   category: "ECOMMERCE",
-                  imageSrc: "/elegant-jewelry-pieces-dramatic-lighting-luxury.jpg",
+                  imageSrc:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VRAI-rtQZ9X0qUMRrgQLGlhPug0u3y9JEGo.jpeg",
                   imageAlt: "VRAI jewelry e-commerce",
                   sections: [
                     {
