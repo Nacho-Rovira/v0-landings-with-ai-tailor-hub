@@ -10,6 +10,8 @@
   overflow: hidden;
   /* Ensure modal is above header */
   z-index: 100 !important;
+  /* Add white background to modal */
+  background-color: var(--color-bg-primary, #ffffff);
 }
 
 /* Updated overheader to match TitleSection styling with same left padding */
@@ -29,10 +31,11 @@
   gap: 112px;
 }
 
+/* Fixed ::before to add "/" only once, matching TitleSection pattern */
 .project-modal__overheader-left::before {
   /* "/" symbol before "PROJECTS" text, matching TitleSection */
   content: "/";
-  margin-right: 0;
+  margin-right: 112px;
 }
 
 .project-modal__overheader-center {

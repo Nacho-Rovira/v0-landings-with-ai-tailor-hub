@@ -37,7 +37,7 @@ export const ProjectModal = React.forwardRef<HTMLDivElement, ProjectModalProps>(
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="project-modal" showCloseButton={true}>
         <div className="project-modal__overheader">
-          <span className="project-modal__overheader-left">/ PROJECTS</span>
+          <span className="project-modal__overheader-left">PROJECTS</span>
           <span className="project-modal__overheader-center">{project.title}</span>
         </div>
 
