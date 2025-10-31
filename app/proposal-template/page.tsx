@@ -312,14 +312,6 @@ export default function LayoutDemoPage() {
         </div>
       </section>
 
-      {/* Our Partners Section */}
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
-        <Highlight2Section
-          concepts={["OFICIAL", "PARTNERS"]}
-          items={["CONTENTFUL", "AWS", "SHOPIFY PARTNERS", "MICROSOFT AI CLOUD PARTNER", "NETLIFY", ""]}
-        />
-      </section>
-
       {/* Servicios Section */}
       <section style={{ marginBottom: "var(--spacing-8xl)" }}>
         <TitleSection overheader="SERVICIOS" />
@@ -597,6 +589,14 @@ export default function LayoutDemoPage() {
       <section style={{ marginBottom: "var(--spacing-8xl)" }}></section>
 
       <section style={{ marginBottom: "var(--spacing-8xl)" }}></section>
+
+      {/* Our Partners Section */}
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+        <Highlight2Section
+          concepts={["OFICIAL", "PARTNERS"]}
+          items={["CONTENTFUL", "AWS", "SHOPIFY PARTNERS", "MICROSOFT AI CLOUD PARTNER", "NETLIFY", ""]}
+        />
+      </section>
 
       {/* CTA Section */}
     </LandingLayout>
