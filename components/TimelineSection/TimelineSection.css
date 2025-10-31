@@ -17,14 +17,14 @@
   padding-bottom: 0;
 }
 
-/* Added visual marker column with dot and line */
+/* Adjusted marker to align with header baseline */
 .timeline-section__marker {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
-  padding-top: var(--spacing-xs);
+  padding-top: 0;
 }
 
 .timeline-section__dot {
@@ -37,6 +37,8 @@
   position: relative;
   z-index: 2;
   flex-shrink: 0;
+  /* Added margin to vertically center with title */
+  margin-top: 4px;
 }
 
 .timeline-section__line {
@@ -50,26 +52,16 @@
   z-index: 1;
 }
 
-/* Redesigned content area as a card-like container */
+/* Removed card background, border, padding, and hover effects */
 .timeline-section__content {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-m);
-  padding: var(--spacing-l) var(--spacing-xl);
-  background-color: var(--color-background-surface);
-  /* using radius.s token to match Card component */
-  border-radius: var(--radius-s, 16px);
-  border: 1px solid var(--color-border-default);
-  transition: all 0.2s ease;
 }
 
-.timeline-section__content:hover {
-  border-color: var(--color-brand-primary);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
+/* Removed hover effect */
 
-/* updated header to support chip on the right */
 .timeline-section__header {
   display: flex;
   flex-direction: row;
@@ -90,14 +82,12 @@
   font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
   font-size: var(--text-overheader-size);
   line-height: var(--text-overheader-line);
-  /* Changed from brand-primary to text-primary */
   color: var(--color-text-primary);
   letter-spacing: 0.1em;
   font-weight: 500;
 }
 
 .timeline-section__title {
-  /* using tech font and keeping primary color */
   font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
   font-size: var(--text-overheader-size);
   line-height: var(--text-overheader-line);
@@ -108,22 +98,19 @@
   text-transform: uppercase;
 }
 
-/* removed timeline-section__duration styles as it now uses Chip component */
-
 .timeline-section__description {
   font-family: var(--font-default, "PP Mori", sans-serif);
   font-size: var(--text-body-size);
   line-height: var(--text-body-line);
-  /* keeping text in primary color */
   color: var(--color-text-primary);
   margin: 0;
 }
 
-/* Added styled deliverables list */
+/* Reduced gap between deliverables items */
 .timeline-section__deliverables {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs);
+  gap: var(--spacing-2xs);
   margin: var(--spacing-s) 0 0 0;
   padding: 0;
   list-style: none;
@@ -133,7 +120,6 @@
   font-family: var(--font-default, "PP Mori", sans-serif);
   font-size: var(--text-small-size);
   line-height: var(--text-small-line);
-  /* using secondary text color for deliverables */
   color: var(--color-text-secondary);
   padding-left: var(--spacing-m);
   position: relative;
@@ -143,7 +129,6 @@
   content: "→";
   position: absolute;
   left: 0;
-  /* using secondary text color for arrows */
   color: var(--color-text-secondary);
 }
 
@@ -153,9 +138,7 @@
     gap: var(--spacing-m);
   }
 
-  .timeline-section__content {
-    padding: var(--spacing-m) var(--spacing-l);
-  }
+  /* Removed content padding for mobile */
 
   .timeline-section__dot {
     width: 12px;
