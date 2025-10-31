@@ -450,15 +450,17 @@ export default function LayoutDemoPage() {
                       paragraphs: [
                         "We developed a comprehensive integration platform that connects ON Running's proprietary tracking technology with Strava's social features. The solution includes automatic activity syncing, performance analytics, and community engagement tools.",
                       ],
-                      quote: {
-                        text: "The Tailor Hub team delivered an exceptional integration that exceeded our expectations. The seamless connection between our platforms has significantly improved user engagement and retention.",
-                        author: "SARAH CHEN - HEAD OF DIGITAL PRODUCTS AT ON RUNNING",
-                      },
                     },
                   ],
                   insights: [
                     { value: "2.5M+", label: "ACTIVE USERS" },
                     { value: "98%", label: "SYNC SUCCESS RATE" },
+                  ],
+                  quotes: [
+                    {
+                      text: "The Tailor Hub team delivered an exceptional integration that exceeded our expectations. The seamless connection between our platforms has significantly improved user engagement and retention.",
+                      author: "SARAH CHEN - HEAD OF DIGITAL PRODUCTS AT ON RUNNING",
+                    },
                   ],
                 },
               },
@@ -485,15 +487,17 @@ export default function LayoutDemoPage() {
                       paragraphs: [
                         "We built a scalable, cloud-native platform with advanced search algorithms, 3D virtual tour integration, and AI-powered property recommendations. The new system handles 10x more concurrent users while reducing load times by 70%.",
                       ],
-                      quote: {
-                        text: "Tailor Hub transformed our platform into a market-leading solution. The new system is fast, reliable, and our users love the enhanced search and virtual tour features.",
-                        author: "MIGUEL RODRIGUEZ - CTO AT CLIKALIA",
-                      },
                     },
                   ],
                   insights: [
                     { value: "50K+", label: "PROPERTIES LISTED" },
                     { value: "70%", label: "FASTER LOAD TIMES" },
+                  ],
+                  quotes: [
+                    {
+                      text: "Tailor Hub transformed our platform into a market-leading solution. The new system is fast, reliable, and our users love the enhanced search and virtual tour features.",
+                      author: "MIGUEL RODRIGUEZ - CTO AT CLIKALIA",
+                    },
                   ],
                 },
               },
@@ -520,15 +524,17 @@ export default function LayoutDemoPage() {
                       paragraphs: [
                         "dormakaba is a global leader in access control and security solutions, headquartered in Rümlang, Switzerland. With operations in over 50 countries and a history of innovation, they deliver cutting-edge solutions ranging from electronic access systems to advanced door hardware. Serving industries like hospitality, healthcare, and commercial real estate, dormakaba combines reliability with forward-thinking design to set the standard for security solutions.",
                       ],
-                      quote: {
-                        text: "I am very pleased with the Tailor team. They adapt exceptionally well to our needs, demonstrating great flexibility and responsiveness. Additionally, they always meet the established deadlines, allowing us to advance our projects without delays. Their professionalism and commitment are truly remarkable, and their collaboration has been key to the success of our global initiatives.",
-                        author: "PABLO GONZALEZ CELA - GLOBAL DIGITAL SOLUTIONS LEAD AT DORMAKABA",
-                      },
                     },
                   ],
                   insights: [
                     { value: "40+", label: "COUNTRIES SUPPORTED" },
                     { value: "35", label: "LANGUAGES" },
+                  ],
+                  quotes: [
+                    {
+                      text: "I am very pleased with the Tailor team. They adapt exceptionally well to our needs, demonstrating great flexibility and responsiveness. Additionally, they always meet the established deadlines, allowing us to advance our projects without delays. Their professionalism and commitment are truly remarkable, and their collaboration has been key to the success of our global initiatives.",
+                      author: "PABLO GONZALEZ CELA - GLOBAL DIGITAL SOLUTIONS LEAD AT DORMAKABA",
+                    },
                   ],
                 },
               },
@@ -555,15 +561,17 @@ export default function LayoutDemoPage() {
                       paragraphs: [
                         "We developed a custom Shopify Plus solution with advanced 3D product visualization, real-time customization tools, and a streamlined checkout process. The platform integrates with VRAI's inventory management system and provides detailed analytics for business intelligence.",
                       ],
-                      quote: {
-                        text: "The Tailor Hub team created a stunning e-commerce experience that perfectly captures our brand's luxury positioning. Sales have increased significantly since launch.",
-                        author: "VANESSA STOFENMACHER - HEAD OF E-COMMERCE AT VRAI",
-                      },
                     },
                   ],
                   insights: [
                     { value: "150%", label: "SALES INCREASE" },
                     { value: "4.8/5", label: "CUSTOMER RATING" },
+                  ],
+                  quotes: [
+                    {
+                      text: "The Tailor Hub team created a stunning e-commerce experience that perfectly captures our brand's luxury positioning. Sales have increased significantly since launch.",
+                      author: "VANESSA STOFENMACHER - HEAD OF E-COMMERCE AT VRAI",
+                    },
                   ],
                 },
               },

@@ -15,12 +15,17 @@ export interface ProjectModalData {
   imageSrc: string
   /** Project image alt text */
   imageAlt: string
-  /** Body text sections (Challenge, Client, etc.) */
+  /** Body text sections (Challenge, Client, etc.) - without quotes */
   sections: BodyTextSection[]
   /** Project insights/metrics */
   insights?: Array<{
     value: string
     label: string
+  }>
+  /** Client quotes - rendered after insights */
+  quotes?: Array<{
+    text: string
+    author: string
   }>
 }
 
@@ -49,7 +54,7 @@ export const ProjectModal = React.forwardRef<HTMLDivElement, ProjectModalProps>(
 
           {/* Right Column: Content (max-width 702px like BodyText in proposal) */}
           <div className="project-modal__content-column">
-            {/* Body Text Sections with quotes */}
+            {/* Body Text Sections (without quotes) */}
             <BodyText sections={project.sections} />
 
             {/* Insights */}
@@ -57,6 +62,17 @@ export const ProjectModal = React.forwardRef<HTMLDivElement, ProjectModalProps>(
               <div className="project-modal__insights">
                 {project.insights.map((insight, index) => (
                   <Insight key={index} value={insight.value} label={insight.label} />
+                ))}
+              </div>
+            )}
+
+            {project.quotes && project.quotes.length > 0 && (
+              <div className="project-modal__quotes">
+                {project.quotes.map((quote, index) => (
+                  <div key={index} className="project-modal__quote-card">
+                    <p className="project-modal__quote-text">{quote.text}</p>
+                    <p className="project-modal__quote-author">{quote.author}</p>
+                  </div>
                 ))}
               </div>
             )}
