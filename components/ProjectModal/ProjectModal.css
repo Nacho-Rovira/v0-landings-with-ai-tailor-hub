@@ -12,33 +12,33 @@
   z-index: 100 !important;
 }
 
-/* Added full-width overheader spanning the entire modal */
+/* Updated overheader to match TitleSection styling with same left padding */
 .project-modal__overheader {
-  /* Full width overheader */
+  /* Full width overheader matching TitleSection */
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
   margin-bottom: var(--spacing-xl, 40px);
-  /* Typography */
+  /* Typography matching TitleSection */
   font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
   font-size: var(--text-size-xsmall, 14px);
   line-height: var(--text-line-xsmall, 17px);
-  color: var(--color-text-secondary, #828086);
-  text-transform: uppercase;
+  color: var(--color-text-primary, #362c2c);
+  /* Same left padding as TitleSection */
+  padding-left: 121px;
+  gap: 112px;
 }
 
-.project-modal__overheader-left {
-  /* Left: "/ PROJECTS" */
-  flex-shrink: 0;
+.project-modal__overheader-left::before {
+  /* "/" symbol before "PROJECTS" text, matching TitleSection */
+  content: "/";
+  margin-right: 0;
 }
 
 .project-modal__overheader-center {
   /* Center: Project title */
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-weight: 500;
+  font-weight: 400;
+  color: var(--color-text-primary, #362c2c);
 }
 
 /* Updated container to match proposal-template two-column layout */
@@ -93,7 +93,12 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 1200px) {
+@media (max-width: 1279px) {
+  .project-modal__overheader {
+    /* Match TitleSection responsive padding */
+    padding-left: 60px;
+  }
+
   .project-modal__image-column {
     /* Reduce width on smaller screens like MenuSidebar */
     width: 206px;
@@ -124,6 +129,14 @@
   .project-modal__content-column {
     /* Full width on tablets */
     max-width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .project-modal__overheader {
+    /* Match TitleSection responsive padding - remove left padding */
+    padding-left: 0;
+    gap: var(--spacing-l, 24px);
   }
 }
 
