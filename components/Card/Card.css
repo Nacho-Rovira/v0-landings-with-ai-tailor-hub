@@ -65,6 +65,14 @@
   width: 100%;
 }
 
+/* Added button container positioned at bottom right */
+.card__button {
+  position: absolute;
+  bottom: var(--padding-card, 16px);
+  right: var(--padding-card, 16px);
+  z-index: 2;
+}
+
 /* Mobile variant */
 .card--mobile .card__content {
   /* Mobile: smaller gap */

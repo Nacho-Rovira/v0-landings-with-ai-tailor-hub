@@ -1,33 +1,42 @@
+"use client"
+
 import React from "react"
+import { Button } from "../Button/Button"
 import "./Card.css"
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Card variant */
   variant?: "default" | "mobile"
-  /** Card category/overheader text */
-  category?: string
-  /** Card title */
-  title?: string
-  /** Card image source */
+  /** Image source URL */
   imageSrc?: string
-  /** Card image alt text */
+  /** Image alt text */
   imageAlt?: string
+  /** Category/overheader text */
+  category?: string
+  /** Title text */
+  title?: string
+  /** Show the "SEE PROJECT" button */
+  showButton?: boolean
+  /** Button click handler */
+  onButtonClick?: () => void
 }
 
 export const Card = React.forwardRef<HTMLDivElement, CardProps>(
   (
     {
       variant = "default",
-      category = "SOFTWARE AND AI",
-      title = "PROJECT NAME",
       imageSrc,
-      imageAlt = "Project image",
+      imageAlt = "",
+      category,
+      title,
+      showButton = false,
+      onButtonClick,
       className = "",
       ...props
     },
     ref,
   ) => {
-    const classes = ["card", `card--${variant}`, className].filter(Boolean).join(" ")
+    const classes = ["card", variant !== "default" && `card--${variant}`, className].filter(Boolean).join(" ")
 
     return (
       <div ref={ref} className={classes} {...props}>
@@ -36,11 +45,15 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
             <img src={imageSrc || "/placeholder.svg"} alt={imageAlt} />
           </div>
         )}
-
         <div className="card__content">
-          <p className="card__category">{category}</p>
-          <h3 className="card__title">{title}</h3>
+          {category && <div className="card__category">{category}</div>}
+          {title && <h3 className="card__title">{title}</h3>}
         </div>
+        {showButton && (
+          <div className="card__button">
+            <Button onClick={onButtonClick}>SEE PROJECT</Button>
+          </div>
+        )}
       </div>
     )
   },
