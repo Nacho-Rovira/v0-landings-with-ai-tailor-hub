@@ -135,8 +135,8 @@
   font-family: var(--font-default, "PP Mori", sans-serif);
   font-size: var(--text-small-size);
   line-height: var(--text-small-line);
-  /* keeping text in primary color */
-  color: var(--color-text-primary);
+  /* using secondary text color for deliverables */
+  color: var(--color-text-secondary);
   padding-left: var(--spacing-m);
   position: relative;
 }
@@ -145,7 +145,8 @@
   content: "→";
   position: absolute;
   left: 0;
-  color: var(--color-brand-primary);
+  /* using secondary text color for arrows */
+  color: var(--color-text-secondary);
 }
 
 /* Responsive adjustments */
