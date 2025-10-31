@@ -1,0 +1,43 @@
+/* Case Studies Section Styles */
+
+.case-studies-section {
+  /* Container for the entire section */
+  width: 100%;
+  overflow: hidden;
+}
+
+.case-studies-section__scroll-container {
+  /* Horizontal scrolling container */
+  display: flex;
+  gap: var(--spacing-m, 24px);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  /* Hide scrollbar for cleaner look while maintaining functionality */
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-default, #e5e5e5) transparent;
+}
+
+.case-studies-section__scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.case-studies-section__scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.case-studies-section__scroll-container::-webkit-scrollbar-thumb {
+  background-color: var(--color-border-default, #e5e5e5);
+  border-radius: 4px;
+}
+
+.case-studies-section__scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-border-hover, #cccccc);
+}
+
+/* Ensure cards don't shrink */
+.case-studies-section__scroll-container .card {
+  flex-shrink: 0;
+}

@@ -9,6 +9,7 @@ import { TitleSection } from "@/components/TitleSection/TitleSection"
 import { Highlight2Section } from "@/components/Highlight2Section/Highlight2Section"
 import { BoxSection } from "@/components/BoxSection/BoxSection"
 import { TechStackSection } from "@/components/TechStackSection/TechStackSection"
+import { CaseStudiesSection } from "@/components/CaseStudiesSection/CaseStudiesSection"
 import Image from "next/image"
 
 export default function LayoutDemoPage() {
@@ -413,6 +414,42 @@ export default function LayoutDemoPage() {
               {
                 title: "Infraestructura",
                 technologies: ["KUBERNETES", "DOCKER", "AWS", "AZURE"],
+              },
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* Case Studies Section */}
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+        <TitleSection overheader="CASE STUDIES" />
+
+        <div style={{ marginTop: "var(--spacing-xl)" }}>
+          <CaseStudiesSection
+            caseStudies={[
+              {
+                category: "SOFTWARE",
+                title: "ON RUNNING + STRAVA",
+                imageSrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/on-running-strava-case-study.jpg",
+                imageAlt: "ON Running and Strava integration - Athletes running outdoors",
+              },
+              {
+                category: "SOFTWARE",
+                title: "CLIKALIA",
+                imageSrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/clikalia-case-study.jpg",
+                imageAlt: "Clikalia real estate platform - Modern house with pool",
+              },
+              {
+                category: "SOFTWARE",
+                title: "DORMAKABA",
+                imageSrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dormakaba-case-study.jpg",
+                imageAlt: "Dormakaba smart access solutions - Hand interacting with digital interface",
+              },
+              {
+                category: "ECOMMERCE",
+                title: "VRAI",
+                imageSrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/vrai-case-study.jpg",
+                imageAlt: "VRAI jewelry e-commerce - Elegant jewelry pieces with dramatic lighting",
               },
             ]}
           />

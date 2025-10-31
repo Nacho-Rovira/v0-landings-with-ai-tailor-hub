@@ -39,3 +39,6 @@ export type { TabProps } from "./Tab/Tab"
 
 export { TechStackSection } from "./TechStackSection/TechStackSection"
 export type { TechStackSectionProps, TechCategory } from "./TechStackSection/TechStackSection"
+
+export { CaseStudiesSection } from "./CaseStudiesSection/CaseStudiesSection"
+export type { CaseStudiesSectionProps, CaseStudy } from "./CaseStudiesSection/CaseStudiesSection"
