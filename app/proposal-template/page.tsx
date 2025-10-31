@@ -206,6 +206,105 @@ export default function LayoutDemoPage() {
                 },
               ]}
             />
+
+            <div id="timeline" style={{ marginTop: "var(--spacing-4xl)" }}>
+              <h3
+                style={{
+                  fontFamily: "var(--font-tech, 'PP Neue Montreal Mono', monospace)",
+                  fontSize: "var(--text-overheader-size)",
+                  lineHeight: "var(--text-overheader-line)",
+                  color: "var(--color-text-primary)",
+                  letterSpacing: "0.1em",
+                  fontWeight: 500,
+                  marginBottom: "var(--spacing-xl)",
+                  textTransform: "uppercase",
+                }}
+              >
+                TIMELINE
+              </h3>
+              <TimelineSection
+                phases={[
+                  {
+                    number: "01",
+                    title: "DISCOVERY & PLANNING",
+                    description:
+                      "Comprehensive analysis of requirements, technical architecture design, and project roadmap definition. We establish clear objectives, identify potential challenges, and create a detailed implementation strategy.",
+                    duration: "2-3 WEEKS",
+                    deliverables: [
+                      "Technical requirements document",
+                      "System architecture blueprint",
+                      "Project timeline and milestones",
+                      "Risk assessment report",
+                    ],
+                  },
+                  {
+                    number: "02",
+                    title: "DESIGN & PROTOTYPING",
+                    description:
+                      "Creation of high-fidelity designs, interactive prototypes, and design system components. We validate the user experience through testing and iterate based on feedback to ensure optimal usability.",
+                    duration: "3-4 WEEKS",
+                    deliverables: [
+                      "Design system documentation",
+                      "Interactive prototypes",
+                      "User flow diagrams",
+                      "Component library",
+                    ],
+                  },
+                  {
+                    number: "03",
+                    title: "DEVELOPMENT & INTEGRATION",
+                    description:
+                      "Implementation of core features, API integrations, and database architecture. Our development process follows best practices with continuous integration, automated testing, and code reviews.",
+                    duration: "8-10 WEEKS",
+                    deliverables: [
+                      "Functional application modules",
+                      "API documentation",
+                      "Database schema",
+                      "Integration test suite",
+                    ],
+                  },
+                  {
+                    number: "04",
+                    title: "TESTING & OPTIMIZATION",
+                    description:
+                      "Comprehensive quality assurance, performance optimization, and security audits. We conduct thorough testing across devices and browsers to ensure a flawless user experience.",
+                    duration: "2-3 WEEKS",
+                    deliverables: [
+                      "QA test reports",
+                      "Performance benchmarks",
+                      "Security audit results",
+                      "Bug fix documentation",
+                    ],
+                  },
+                  {
+                    number: "05",
+                    title: "DEPLOYMENT & LAUNCH",
+                    description:
+                      "Production deployment, monitoring setup, and launch support. We ensure a smooth transition to production with comprehensive documentation and team training.",
+                    duration: "1-2 WEEKS",
+                    deliverables: [
+                      "Production environment setup",
+                      "Deployment documentation",
+                      "Monitoring dashboards",
+                      "Team training materials",
+                    ],
+                  },
+                  {
+                    number: "06",
+                    title: "MAINTENANCE & SUPPORT",
+                    description:
+                      "Ongoing support, performance monitoring, and continuous improvements. We provide regular updates, security patches, and feature enhancements to keep your platform running optimally.",
+                    duration: "ONGOING",
+                    deliverables: [
+                      "Monthly performance reports",
+                      "Security updates",
+                      "Feature enhancements",
+                      "Technical support",
+                    ],
+                  },
+                ]}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -590,96 +689,6 @@ export default function LayoutDemoPage() {
       <section style={{ marginBottom: "var(--spacing-8xl)" }}></section>
 
       <section style={{ marginBottom: "var(--spacing-8xl)" }}></section>
-
-      {/* Timeline Section */}
-      <section id="timeline" style={{ marginBottom: "var(--spacing-8xl)" }}>
-        <TitleSection overheader="PROJECT TIMELINE" title="PHASES & MILESTONES" />
-
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
-          <TimelineSection
-            phases={[
-              {
-                number: "01",
-                title: "DISCOVERY & PLANNING",
-                description:
-                  "Comprehensive analysis of requirements, technical architecture design, and project roadmap definition. We establish clear objectives, identify potential challenges, and create a detailed implementation strategy.",
-                duration: "2-3 WEEKS",
-                deliverables: [
-                  "Technical requirements document",
-                  "System architecture blueprint",
-                  "Project timeline and milestones",
-                  "Risk assessment report",
-                ],
-              },
-              {
-                number: "02",
-                title: "DESIGN & PROTOTYPING",
-                description:
-                  "Creation of high-fidelity designs, interactive prototypes, and design system components. We validate the user experience through testing and iterate based on feedback to ensure optimal usability.",
-                duration: "3-4 WEEKS",
-                deliverables: [
-                  "Design system documentation",
-                  "Interactive prototypes",
-                  "User flow diagrams",
-                  "Component library",
-                ],
-              },
-              {
-                number: "03",
-                title: "DEVELOPMENT & INTEGRATION",
-                description:
-                  "Implementation of core features, API integrations, and database architecture. Our development process follows best practices with continuous integration, automated testing, and code reviews.",
-                duration: "8-10 WEEKS",
-                deliverables: [
-                  "Functional application modules",
-                  "API documentation",
-                  "Database schema",
-                  "Integration test suite",
-                ],
-              },
-              {
-                number: "04",
-                title: "TESTING & OPTIMIZATION",
-                description:
-                  "Comprehensive quality assurance, performance optimization, and security audits. We conduct thorough testing across devices and browsers to ensure a flawless user experience.",
-                duration: "2-3 WEEKS",
-                deliverables: [
-                  "QA test reports",
-                  "Performance benchmarks",
-                  "Security audit results",
-                  "Bug fix documentation",
-                ],
-              },
-              {
-                number: "05",
-                title: "DEPLOYMENT & LAUNCH",
-                description:
-                  "Production deployment, monitoring setup, and launch support. We ensure a smooth transition to production with comprehensive documentation and team training.",
-                duration: "1-2 WEEKS",
-                deliverables: [
-                  "Production environment setup",
-                  "Deployment documentation",
-                  "Monitoring dashboards",
-                  "Team training materials",
-                ],
-              },
-              {
-                number: "06",
-                title: "MAINTENANCE & SUPPORT",
-                description:
-                  "Ongoing support, performance monitoring, and continuous improvements. We provide regular updates, security patches, and feature enhancements to keep your platform running optimally.",
-                duration: "ONGOING",
-                deliverables: [
-                  "Monthly performance reports",
-                  "Security updates",
-                  "Feature enhancements",
-                  "Technical support",
-                ],
-              },
-            ]}
-          />
-        </div>
-      </section>
 
       {/* Our Partners Section */}
       <section style={{ marginBottom: "var(--spacing-8xl)" }}>
