@@ -37,11 +37,12 @@ export const TimelineSection = React.forwardRef<HTMLDivElement, TimelineSectionP
 
             <div className="timeline-section__content">
               <div className="timeline-section__header">
-                <span className="timeline-section__number">/{phase.number}</span>
-                <h3 className="timeline-section__title">{phase.title}</h3>
+                <div className="timeline-section__header-left">
+                  <span className="timeline-section__number">/{phase.number}</span>
+                  <h3 className="timeline-section__title">{phase.title}</h3>
+                </div>
+                {phase.duration && <Chip variant="default">{phase.duration}</Chip>}
               </div>
-
-              {phase.duration && <Chip variant="default">{phase.duration}</Chip>}
 
               <p className="timeline-section__description">{phase.description}</p>
 
