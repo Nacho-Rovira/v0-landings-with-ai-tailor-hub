@@ -35,6 +35,7 @@ export const CaseStudiesSection = React.forwardRef<HTMLDivElement, CaseStudiesSe
                 title={study.title}
                 imageSrc={study.imageSrc}
                 imageAlt={study.imageAlt}
+                showButton={true} // Enable the "SEE PROJECT" button
                 style={{ cursor: "pointer" }}
               />
             </ProjectModal>
