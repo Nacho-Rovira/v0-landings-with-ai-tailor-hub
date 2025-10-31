@@ -97,10 +97,5 @@
   font-size: var(--text-size-small, 14px);
   line-height: var(--text-line-small, 20px);
   color: var(--color-text-secondary);
-}
-
-.budget-section__note::before {
-  content: "→ ";
-  color: var(--color-text-secondary);
-  margin-right: var(--spacing-xs, 8px);
+  /* Removed arrow indicator from notes */
 }
