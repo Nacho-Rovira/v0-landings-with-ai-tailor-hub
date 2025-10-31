@@ -81,7 +81,8 @@
   font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
   font-size: var(--text-overheader-size);
   line-height: var(--text-overheader-line);
-  color: var(--color-brand-primary);
+  /* Changed from brand-primary to text-primary */
+  color: var(--color-text-primary);
   letter-spacing: 0.1em;
   font-weight: 500;
 }
