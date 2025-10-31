@@ -370,8 +370,8 @@ export default function LayoutDemoPage() {
             overheader="SECURITY CERTIFICATION"
             header="ISO 27001"
             bodyText="We are proud to be ISO/IEC 27001 certified, the leading international standard for managing information security. This means that in Tailor, your data is handled with the utmost care, following rigorous protocols for confidentiality, integrity, and availability."
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-trzqcqfMCxJ5Kp2g2n4Ao3wasBtiqz.jpeg"
-            imageAlt="ISO 27001 Security Certification - Professional wearing smart jacket with illuminated technology"
+            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ISO-kpHVH2mPLHZCP8BUHzRfFH9tVsrxKa.png"
+            imageAlt="ISO 27001 Security Certification - Stone and water droplets on dark blue background"
             certificationBadgeSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Modo_de_aislamiento-vjgtN0dPVKXNWgUsSYw20TQ0JKU29B.webp"
             certificationBadgeAlt="Arplus ISO 27001 Systems Certification Badge"
           />
