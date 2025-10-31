@@ -12,6 +12,8 @@ export interface TimelinePhase {
   description: string
   /** Optional duration (e.g., "4 weeks", "Q1 2025") */
   duration?: string
+  /** Optional list of deliverables or milestones */
+  deliverables?: string[]
 }
 
 export interface TimelineSectionProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -27,20 +29,29 @@ export const TimelineSection = React.forwardRef<HTMLDivElement, TimelineSectionP
       <div ref={ref} className={classes} {...props}>
         {phases.map((phase, index) => (
           <div key={index} className="timeline-section__phase">
-            {/* Phase number and title */}
-            <div className="timeline-section__header">
-              <span className="timeline-section__number">{phase.number}</span>
-              <h3 className="timeline-section__title">{phase.title}</h3>
+            <div className="timeline-section__marker">
+              <div className="timeline-section__dot" />
+              {index < phases.length - 1 && <div className="timeline-section__line" />}
             </div>
 
-            {/* Phase description */}
-            <p className="timeline-section__description">{phase.description}</p>
+            <div className="timeline-section__content">
+              <div className="timeline-section__header">
+                <span className="timeline-section__number">/{phase.number}</span>
+                <h3 className="timeline-section__title">{phase.title}</h3>
+              </div>
 
-            {/* Optional duration */}
-            {phase.duration && <span className="timeline-section__duration">{phase.duration}</span>}
+              {phase.duration && <div className="timeline-section__duration">{phase.duration}</div>}
 
-            {/* Connecting line (not shown for last item) */}
-            {index < phases.length - 1 && <div className="timeline-section__line" />}
+              <p className="timeline-section__description">{phase.description}</p>
+
+              {phase.deliverables && phase.deliverables.length > 0 && (
+                <ul className="timeline-section__deliverables">
+                  {phase.deliverables.map((deliverable, idx) => (
+                    <li key={idx}>{deliverable}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </div>
         ))}
       </div>

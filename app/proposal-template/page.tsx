@@ -592,7 +592,7 @@ export default function LayoutDemoPage() {
       <section style={{ marginBottom: "var(--spacing-8xl)" }}></section>
 
       {/* Timeline Section */}
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+      <section id="timeline" style={{ marginBottom: "var(--spacing-8xl)" }}>
         <TitleSection overheader="PROJECT TIMELINE" title="PHASES & MILESTONES" />
 
         <div style={{ marginTop: "var(--spacing-xl)" }}>
@@ -604,6 +604,12 @@ export default function LayoutDemoPage() {
                 description:
                   "Comprehensive analysis of requirements, technical architecture design, and project roadmap definition. We establish clear objectives, identify potential challenges, and create a detailed implementation strategy.",
                 duration: "2-3 WEEKS",
+                deliverables: [
+                  "Technical requirements document",
+                  "System architecture blueprint",
+                  "Project timeline and milestones",
+                  "Risk assessment report",
+                ],
               },
               {
                 number: "02",
@@ -611,6 +617,12 @@ export default function LayoutDemoPage() {
                 description:
                   "Creation of high-fidelity designs, interactive prototypes, and design system components. We validate the user experience through testing and iterate based on feedback to ensure optimal usability.",
                 duration: "3-4 WEEKS",
+                deliverables: [
+                  "Design system documentation",
+                  "Interactive prototypes",
+                  "User flow diagrams",
+                  "Component library",
+                ],
               },
               {
                 number: "03",
@@ -618,6 +630,12 @@ export default function LayoutDemoPage() {
                 description:
                   "Implementation of core features, API integrations, and database architecture. Our development process follows best practices with continuous integration, automated testing, and code reviews.",
                 duration: "8-10 WEEKS",
+                deliverables: [
+                  "Functional application modules",
+                  "API documentation",
+                  "Database schema",
+                  "Integration test suite",
+                ],
               },
               {
                 number: "04",
@@ -625,6 +643,12 @@ export default function LayoutDemoPage() {
                 description:
                   "Comprehensive quality assurance, performance optimization, and security audits. We conduct thorough testing across devices and browsers to ensure a flawless user experience.",
                 duration: "2-3 WEEKS",
+                deliverables: [
+                  "QA test reports",
+                  "Performance benchmarks",
+                  "Security audit results",
+                  "Bug fix documentation",
+                ],
               },
               {
                 number: "05",
@@ -632,6 +656,12 @@ export default function LayoutDemoPage() {
                 description:
                   "Production deployment, monitoring setup, and launch support. We ensure a smooth transition to production with comprehensive documentation and team training.",
                 duration: "1-2 WEEKS",
+                deliverables: [
+                  "Production environment setup",
+                  "Deployment documentation",
+                  "Monitoring dashboards",
+                  "Team training materials",
+                ],
               },
               {
                 number: "06",
@@ -639,6 +669,12 @@ export default function LayoutDemoPage() {
                 description:
                   "Ongoing support, performance monitoring, and continuous improvements. We provide regular updates, security patches, and feature enhancements to keep your platform running optimally.",
                 duration: "ONGOING",
+                deliverables: [
+                  "Monthly performance reports",
+                  "Security updates",
+                  "Feature enhancements",
+                  "Technical support",
+                ],
               },
             ]}
           />
