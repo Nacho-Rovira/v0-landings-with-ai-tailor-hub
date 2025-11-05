@@ -8,9 +8,9 @@
   width: 322px;
   min-width: 206px;
   flex-shrink: 0;
-  /* Added sticky positioning with spacing.8xl (80px) top offset */
+  /* Updated sticky positioning to use spacing.9xl (124px) top offset */
   position: sticky;
-  top: var(--spacing-8xl);
+  top: var(--spacing-9xl);
   /* Ensure sidebar has proper height to work with sticky positioning */
   align-self: flex-start;
 }
