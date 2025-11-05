@@ -6,6 +6,8 @@
   display: flex;
   flex-direction: column;
   gap: 0; /* removed gap between items to use dividers instead */
+  /* Add left padding to align with TitleSection overheader */
+  padding-left: 121px;
 }
 
 .faq__item {
@@ -86,11 +88,25 @@
   /* Fixed undefined CSS variables --text-size-body and --text-line-body to use --text-size-small and --text-line-small */
   font-size: var(--text-size-small, 16px);
   line-height: var(--text-line-small, 22px);
-  color: var(--color-text-secondary, #828086);
+  /* Changed from text-secondary to text-primary for better readability */
+  color: var(--color-text-primary, #362c2c);
   margin: 0;
 }
 
 /* Mobile responsive */
+/* Add responsive padding adjustments to match TitleSection */
+@media (max-width: 1279px) {
+  .faq__accordion {
+    padding-left: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .faq__accordion {
+    padding-left: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .faq__item {
     padding: var(--spacing-m, 16px) 0;
