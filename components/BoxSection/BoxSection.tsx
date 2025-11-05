@@ -69,6 +69,8 @@ export const BoxSection = React.forwardRef<HTMLDivElement, BoxSectionProps>(
               {header && <h2 className="box-section__header">{header}</h2>}
             </div>
 
+            {(header || overheader) && (bodyText || certificationBadgeSrc) && <hr className="box-section__divider" />}
+
             {/* Main Body Text */}
             {bodyText && <p className="box-section__body">{bodyText}</p>}
 
@@ -80,6 +82,8 @@ export const BoxSection = React.forwardRef<HTMLDivElement, BoxSectionProps>(
               />
             )}
           </div>
+
+          {hasBottomContent && <hr className="box-section__divider" />}
 
           {/* Bottom Section: Secondary Text + Button - only render if content exists */}
           {hasBottomContent && (
