@@ -12,6 +12,7 @@ import { TechStackSection } from "@/components/TechStackSection/TechStackSection
 import { CaseStudiesSection } from "@/components/CaseStudiesSection/CaseStudiesSection"
 import { TimelineSection } from "@/components/TimelineSection/TimelineSection"
 import { BudgetSection } from "@/components/BudgetSection/BudgetSection"
+import { Table } from "@/components/Table/Table"
 import Image from "next/image"
 
 export default function LayoutDemoPage() {
@@ -426,128 +427,39 @@ export default function LayoutDemoPage() {
                 mantenimiento evolutivo (mejoras y desarrollo de nuevas entidades simples).
               </p>
 
-              {/* Maintenance scope table */}
-              <div
-                style={{
-                  marginTop: "var(--spacing-xl)",
-                  border: "1px solid var(--color-border-primary, #E5E5E5)",
-                  borderRadius: "var(--radius-s, 8px)",
-                  overflow: "hidden",
-                }}
-              >
-                {/* Table Header */}
-                <div
-                  style={{
-                    display: "flex",
-                    backgroundColor: "var(--color-bg-secondary, #F5F5F5)",
-                    borderBottom: "1px solid var(--color-border-primary, #E5E5E5)",
-                  }}
-                >
-                  <div
-                    style={{
-                      flex: "0 0 200px",
-                      padding: "var(--spacing-m, 16px)",
-                      fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
-                      fontSize: "var(--text-size-body, 16px)",
-                      fontWeight: 500,
-                      color: "var(--color-text-primary)",
-                    }}
-                  >
-                    Alcance
-                  </div>
-                  <div
-                    style={{
-                      flex: 1,
-                      padding: "var(--spacing-m, 16px)",
-                      fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
-                      fontSize: "var(--text-size-body, 16px)",
-                      fontWeight: 500,
-                      color: "var(--color-text-primary)",
-                      borderLeft: "1px solid var(--color-border-primary, #E5E5E5)",
-                    }}
-                  >
-                    Ejemplos
-                  </div>
-                </div>
-
-                {/* Incluido Row */}
-                <div
-                  style={{
-                    display: "flex",
-                    borderBottom: "1px solid var(--color-border-primary, #E5E5E5)",
-                  }}
-                >
-                  <div
-                    style={{
-                      flex: "0 0 200px",
-                      padding: "var(--spacing-m, 16px)",
-                      fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
-                      fontSize: "var(--text-size-body, 16px)",
-                      color: "var(--color-text-primary)",
-                      backgroundColor: "var(--color-bg-primary, #FFFFFF)",
-                    }}
-                  >
-                    Incluido
-                  </div>
-                  <div
-                    style={{
-                      flex: 1,
-                      padding: "var(--spacing-m, 16px)",
-                      fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
-                      fontSize: "var(--text-size-body, 16px)",
-                      lineHeight: "var(--text-line-body, 24px)",
-                      color: "var(--color-text-secondary)",
-                      borderLeft: "1px solid var(--color-border-primary, #E5E5E5)",
-                      backgroundColor: "var(--color-bg-primary, #FFFFFF)",
-                    }}
-                  >
-                    <ul style={{ margin: 0, paddingLeft: "var(--spacing-m, 16px)" }}>
-                      <li>Corrección de errores e incidencias</li>
-                      <li>Actualizaciones de seguridad</li>
-                      <li>Mejoras de rendimiento</li>
-                      <li>Ajustes en funcionalidades existentes</li>
-                      <li>
-                        Desarrollo de nuevas entidades simples (tipos de contenido, campos o reglas de baja complejidad)
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                {/* No incluido Row */}
-                <div style={{ display: "flex" }}>
-                  <div
-                    style={{
-                      flex: "0 0 200px",
-                      padding: "var(--spacing-m, 16px)",
-                      fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
-                      fontSize: "var(--text-size-body, 16px)",
-                      color: "var(--color-text-primary)",
-                      backgroundColor: "var(--color-bg-primary, #FFFFFF)",
-                    }}
-                  >
-                    No incluido*
-                  </div>
-                  <div
-                    style={{
-                      flex: 1,
-                      padding: "var(--spacing-m, 16px)",
-                      fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
-                      fontSize: "var(--text-size-body, 16px)",
-                      lineHeight: "var(--text-line-body, 24px)",
-                      color: "var(--color-text-secondary)",
-                      borderLeft: "1px solid var(--color-border-primary, #E5E5E5)",
-                      backgroundColor: "var(--color-bg-primary, #FFFFFF)",
-                    }}
-                  >
-                    <ul style={{ margin: 0, paddingLeft: "var(--spacing-m, 16px)" }}>
-                      <li>
-                        Desarrollo de nuevas funcionalidades o entidades complejas (modelos multirrelación, workflows
-                        avanzados)
-                      </li>
-                      <li>Integración con nuevas APIs o plataformas externas</li>
-                    </ul>
-                  </div>
-                </div>
+              <div style={{ marginTop: "var(--spacing-xl)" }}>
+                <Table
+                  columns={["Alcance", "Ejemplos"]}
+                  rows={[
+                    {
+                      label: "Incluido",
+                      content: (
+                        <ul>
+                          <li>Corrección de errores e incidencias</li>
+                          <li>Actualizaciones de seguridad</li>
+                          <li>Mejoras de rendimiento</li>
+                          <li>Ajustes en funcionalidades existentes</li>
+                          <li>
+                            Desarrollo de nuevas entidades simples (tipos de contenido, campos o reglas de baja
+                            complejidad)
+                          </li>
+                        </ul>
+                      ),
+                    },
+                    {
+                      label: "No incluido*",
+                      content: (
+                        <ul>
+                          <li>
+                            Desarrollo de nuevas funcionalidades o entidades complejas (modelos multirrelación,
+                            workflows avanzados)
+                          </li>
+                          <li>Integración con nuevas APIs o plataformas externas</li>
+                        </ul>
+                      ),
+                    },
+                  ]}
+                />
               </div>
 
               {/* Closing text */}
