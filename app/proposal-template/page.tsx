@@ -187,29 +187,6 @@ export default function LayoutDemoPage() {
 
           {/* Body Content */}
           <div style={{ flex: 1, maxWidth: "702px" }}>
-            <div id="challenge" style={{ marginBottom: "var(--spacing-xl)" }}>
-              <div
-                style={{
-                  width: "100%",
-                  borderRadius: "var(--radius-s)",
-                  overflow: "hidden",
-                  marginBottom: "var(--spacing-l)",
-                }}
-              >
-                <Image
-                  src="/images/design-mode/Cargill(1).png"
-                  alt="Partnership and collaboration"
-                  width={702}
-                  height={400}
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    display: "block",
-                  }}
-                />
-              </div>
-            </div>
-
             <BodyText
               sections={[
                 {
@@ -219,34 +196,6 @@ export default function LayoutDemoPage() {
                     "Detail the pain points, inefficiencies, or opportunities that have led to this project. Help stakeholders understand why this initiative is critical and what's at stake if the problem remains unsolved.",
                   ],
                 },
-              ]}
-            />
-
-            <div id="objectives" style={{ marginTop: "var(--spacing-4xl)", marginBottom: "var(--spacing-l)" }}>
-              <div
-                style={{
-                  width: "100%",
-                  borderRadius: "var(--radius-s)",
-                  overflow: "hidden",
-                  marginBottom: "var(--spacing-l)",
-                }}
-              >
-                <Image
-                  src="/images/design-mode/1(1).jpeg"
-                  alt="Innovation and forward-thinking objectives"
-                  width={702}
-                  height={400}
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    display: "block",
-                  }}
-                />
-              </div>
-            </div>
-
-            <BodyText
-              sections={[
                 {
                   title: "OBJECTIVES",
                   paragraphs: [
@@ -254,34 +203,6 @@ export default function LayoutDemoPage() {
                     "Establish both short-term deliverables and long-term strategic objectives. Ensure alignment between technical implementation and business value creation.",
                   ],
                 },
-              ]}
-            />
-
-            <div id="approach" style={{ marginTop: "var(--spacing-4xl)", marginBottom: "var(--spacing-l)" }}>
-              <div
-                style={{
-                  width: "100%",
-                  borderRadius: "var(--radius-s)",
-                  overflow: "hidden",
-                  marginBottom: "var(--spacing-l)",
-                }}
-              >
-                <Image
-                  src="/images/design-mode/Design%20systems(1).png"
-                  alt="Precision methodology and systematic approach"
-                  width={702}
-                  height={400}
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    display: "block",
-                  }}
-                />
-              </div>
-            </div>
-
-            <BodyText
-              sections={[
                 {
                   title: "OUR APPROACH",
                   paragraphs: [
@@ -289,34 +210,6 @@ export default function LayoutDemoPage() {
                     "Describe our agile methodology, communication protocols, quality assurance practices, and how we adapt to changing requirements while maintaining project momentum and quality standards.",
                   ],
                 },
-              ]}
-            />
-
-            <div id="technology" style={{ marginTop: "var(--spacing-4xl)", marginBottom: "var(--spacing-l)" }}>
-              <div
-                style={{
-                  width: "100%",
-                  borderRadius: "var(--radius-s)",
-                  overflow: "hidden",
-                  marginBottom: "var(--spacing-l)",
-                }}
-              >
-                <Image
-                  src="/images/design-mode/Dormakaba(1).png"
-                  alt="Technical architecture and system design"
-                  width={702}
-                  height={400}
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    display: "block",
-                  }}
-                />
-              </div>
-            </div>
-
-            <BodyText
-              sections={[
                 {
                   title: "TECHNOLOGY & ARCHITECTURE",
                   paragraphs: [
@@ -328,7 +221,7 @@ export default function LayoutDemoPage() {
             />
 
             {/* Technology & Architecture Section */}
-            <div style={{ marginTop: "var(--spacing-4xl)" }}>
+            <div id="technology" style={{ marginTop: "var(--spacing-4xl)" }}>
               <div
                 style={{
                   display: "flex",
@@ -629,7 +522,7 @@ export default function LayoutDemoPage() {
             overheader="SOFTWARE DEVELOPMENT"
             header="CUSTOM SOFTWARE DEVELOPMENT"
             bodyText="We build scalable, high-performance software solutions tailored to your business needs. From enterprise applications to microservices architecture, our team delivers robust systems that drive innovation and efficiency."
-            imagesrc="/images/design-mode/desarrollo%20de%20software(2).jpeg"
+            imageSrc="/images/design-mode/desarrollo%20de%20software(2).jpeg"
             imageAlt="Custom software development - Precision engineering and craftsmanship"
           />
 
@@ -637,7 +530,7 @@ export default function LayoutDemoPage() {
             overheader="ARTIFICIAL INTELLIGENCE"
             header="AI & DATA INTELLIGENCE"
             bodyText="Transform raw data into actionable intelligence with our advanced AI solutions. We leverage cutting-edge machine learning algorithms to help you uncover patterns, predict outcomes, and drive smarter decision-making at every level of your organization."
-            imagesrc="/images/design-mode/auditoria%20y%20formacion(2).jpeg"
+            imageSrc="/images/design-mode/auditoria%20y%20formacion(2).jpeg"
             imageAlt="AI and data intelligence - Digital transformation and innovation"
           />
 
@@ -645,7 +538,7 @@ export default function LayoutDemoPage() {
             overheader="E-COMMERCE"
             header="PREMIUM E-COMMERCE PLATFORMS"
             bodyText="Create exceptional online shopping experiences with our custom e-commerce solutions. We build high-converting platforms with advanced features like personalization, real-time inventory, and seamless payment integration."
-            imagesrc="/images/design-mode/VRAI(1).jpeg"
+            imageSrc="/images/design-mode/VRAI(1).jpeg"
             imageAlt="Premium e-commerce platforms - Luxury and elegance"
           />
 
@@ -653,7 +546,7 @@ export default function LayoutDemoPage() {
             overheader="ACCESSIBILITY"
             header="ACCESSIBLE DEVELOPMENT"
             bodyText="We design and develop inclusive digital experiences that work for everyone. Our accessibility-first approach ensures your applications meet WCAG standards while delivering exceptional usability for all users."
-            imagesrc="/images/design-mode/Desarrollor%20accesible(1).jpeg"
+            imageSrc="/images/design-mode/Desarrollor%20accesible(1).jpeg"
             imageAlt="Accessible development - Integration and inclusive solutions"
           />
         </div>
@@ -987,7 +880,7 @@ export default function LayoutDemoPage() {
             overheader="SECURITY CERTIFICATION"
             header="ISO 27001"
             bodyText="We are proud to be ISO/IEC 27001 certified, the leading international standard for managing information security. This means that in Tailor, your data is handled with the utmost care, following rigorous protocols for confidentiality, integrity, and availability."
-            imagesrc="/images/design-mode/ISO(2).png"
+            imageSrc="/images/design-mode/ISO(2).png"
             imageAlt="ISO 27001 Security Certification - Precision and purity represented by stone and water droplets"
             certificationBadgeSrc="/images/design-mode/Modo_de_aislamiento.webp"
             certificationBadgeAlt="Arplus ISO 27001 Systems Certification Badge"
