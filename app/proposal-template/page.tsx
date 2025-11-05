@@ -103,7 +103,7 @@ export default function LayoutDemoPage() {
   return (
     <LandingLayout>
       {/* Highlight Section */}
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <HighlightSection
           concepts={[
             "AN ELITE TEAM OF <span> SOFTWARE ENGINEERS",
@@ -115,7 +115,7 @@ export default function LayoutDemoPage() {
       </section>
 
       {/* HeaderBox Section */}
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <HeaderBox
           overheader="A PROPOSAL FOR REPSOL"
           header="Your technical copilot to develop a scalable e-commerce platform with AI-powered features and enterprise-grade infrastructure"
@@ -127,7 +127,7 @@ export default function LayoutDemoPage() {
       </section>
 
       {/* Hero Image Section */}
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <div
           style={{
             width: "100%",
@@ -151,7 +151,7 @@ export default function LayoutDemoPage() {
       </section>
 
       {/* Proposal Details Section */}
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <div
           style={{
             display: "flex",
@@ -512,7 +512,7 @@ export default function LayoutDemoPage() {
       </section>
 
       {/* Services Section */}
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="OUR SERVICES" />
 
         <div
@@ -553,7 +553,7 @@ export default function LayoutDemoPage() {
       </section>
 
       {/* Case Studies Section */}
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="CASE STUDIES" />
 
         <div style={{ marginTop: "var(--spacing-xl)" }}>
@@ -721,7 +721,7 @@ export default function LayoutDemoPage() {
       </section>
 
       {/* Our Clients Section */}
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="OUR CLIENTS" />
         <div
           style={{
@@ -822,7 +822,7 @@ export default function LayoutDemoPage() {
       </section>
 
       {/* Tech Stack Section */}
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="CORE TECHNOLOGY" title="NUESTRAS TECNOLOGÍAS Y LENGUAJES" />
 
         <div style={{ marginTop: "var(--spacing-xl)" }}>
@@ -864,7 +864,7 @@ export default function LayoutDemoPage() {
       </section>
 
       {/* Our Partners Section */}
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <Highlight2Section
           concepts={["OFICIAL", "PARTNERS"]}
           items={["CONTENTFUL", "AWS", "SHOPIFY PARTNERS", "MICROSOFT AI CLOUD PARTNER", "NETLIFY", ""]}
@@ -872,7 +872,7 @@ export default function LayoutDemoPage() {
       </section>
 
       {/* ISO Certification Section */}
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="SECURITY ISO" title="TECH WITH THE HIGHEST STANDARDS OF SECURITY" />
 
         <div style={{ marginTop: "var(--spacing-xl)" }}>
@@ -889,7 +889,7 @@ export default function LayoutDemoPage() {
       </section>
 
       {/* FAQ Section */}
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="FREQUENTLY ASKED QUESTIONS" title="FAQ" />
 
         <div style={{ marginTop: "var(--spacing-xl)" }}>

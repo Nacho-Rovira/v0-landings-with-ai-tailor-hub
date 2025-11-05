@@ -52,6 +52,7 @@
   --spacing-6xl: 64px;
   --spacing-7xl: 72px;
   --spacing-8xl: 80px;
+  --spacing-9xl: 124px;
 
   /* Semantic Colors - Background */
   --color-background-default: var(--color-neutral-00);
@@ -109,7 +110,7 @@
   --gap-header-2-body: var(--spacing-xl);
   --gap-paragraph-middle: var(--spacing-m);
   --gap-header-1: var(--spacing-4xl);
-  --gap-section-section: var(--spacing-8xl);
+  --gap-section-section: var(--spacing-9xl);
   --gap-header-logo-info: var(--spacing-5xl);
   --gap-header-logo-info-max: var(--spacing-8xl);
 
