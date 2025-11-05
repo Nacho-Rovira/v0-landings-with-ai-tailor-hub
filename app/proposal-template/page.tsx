@@ -222,7 +222,48 @@ export default function LayoutDemoPage() {
 
             {/* Technology & Architecture Section */}
             <div id="technology" style={{ marginTop: "var(--spacing-4xl)" }}>
-              
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: "var(--spacing-s, 12px)",
+                  marginTop: "var(--spacing-m, 16px)",
+                }}
+              >
+                {[
+                  "React 18+",
+                  "Next.js 15",
+                  "TypeScript",
+                  "Tailwind CSS",
+                  "Node.js",
+                  "PostgreSQL",
+                  "AWS",
+                  "Docker",
+                  "Kubernetes",
+                  "OpenAI GPT-4",
+                  "Vercel",
+                  "GitHub Actions",
+                ].map((tech, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      padding: "var(--spacing-xs, 8px) var(--spacing-m, 16px)",
+                      backgroundColor: "var(--color-neutral-100, #F5F5F5)",
+                      border: "1px solid var(--color-neutral-200, #E5E5E5)",
+                      borderRadius: "var(--radius-s, 4px)",
+                      fontFamily: "var(--font-mono, 'PP Neue Montreal Mono', monospace)",
+                      fontSize: "var(--text-size-xsmall, 14px)",
+                      lineHeight: "var(--text-line-xsmall, 20px)",
+                      color: "var(--color-text-primary, #000000)",
+                      textTransform: "uppercase",
+                      whiteSpace: "nowrap",
+                      flexShrink: 0,
+                    }}
+                  >
+                    {tech}
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Roadmap & Phases Section */}
@@ -715,7 +756,6 @@ export default function LayoutDemoPage() {
               pointerEvents: "none",
             }}
           />
-
           {/* Animated carousel track */}
           <div
             style={{
@@ -767,7 +807,6 @@ export default function LayoutDemoPage() {
               </div>
             ))}
           </div>
-
           {/* CSS animation keyframes */}
           <style jsx>{`
             @keyframes scroll {
