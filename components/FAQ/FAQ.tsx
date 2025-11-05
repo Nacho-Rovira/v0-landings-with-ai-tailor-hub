@@ -1,7 +1,6 @@
 "use client"
 
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
-import { Plus } from "lucide-react"
 import "./FAQ.css"
 
 export interface FAQItem {
@@ -22,7 +21,6 @@ export function FAQ({ items, className = "" }: FAQProps) {
           <AccordionItem key={index} value={`item-${index}`} className="faq__item">
             <AccordionTrigger className="faq__trigger">
               <span className="faq__question">{item.question}</span>
-              <Plus className="faq__icon" />
             </AccordionTrigger>
             <AccordionContent className="faq__content">
               <p className="faq__answer">{item.answer}</p>
