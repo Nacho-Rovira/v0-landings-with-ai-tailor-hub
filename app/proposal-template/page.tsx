@@ -187,6 +187,29 @@ export default function LayoutDemoPage() {
 
           {/* Body Content */}
           <div style={{ flex: 1, maxWidth: "702px" }}>
+            <div id="challenge" style={{ marginBottom: "var(--spacing-xl)" }}>
+              <div
+                style={{
+                  width: "100%",
+                  borderRadius: "var(--radius-s)",
+                  overflow: "hidden",
+                  marginBottom: "var(--spacing-l)",
+                }}
+              >
+                <Image
+                  src="/images/design-mode/Cargill(1).png"
+                  alt="Partnership and collaboration"
+                  width={702}
+                  height={400}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    display: "block",
+                  }}
+                />
+              </div>
+            </div>
+
             <BodyText
               sections={[
                 {
@@ -196,6 +219,34 @@ export default function LayoutDemoPage() {
                     "Detail the pain points, inefficiencies, or opportunities that have led to this project. Help stakeholders understand why this initiative is critical and what's at stake if the problem remains unsolved.",
                   ],
                 },
+              ]}
+            />
+
+            <div id="objectives" style={{ marginTop: "var(--spacing-4xl)", marginBottom: "var(--spacing-l)" }}>
+              <div
+                style={{
+                  width: "100%",
+                  borderRadius: "var(--radius-s)",
+                  overflow: "hidden",
+                  marginBottom: "var(--spacing-l)",
+                }}
+              >
+                <Image
+                  src="/images/design-mode/1(1).jpeg"
+                  alt="Innovation and forward-thinking objectives"
+                  width={702}
+                  height={400}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    display: "block",
+                  }}
+                />
+              </div>
+            </div>
+
+            <BodyText
+              sections={[
                 {
                   title: "OBJECTIVES",
                   paragraphs: [
@@ -203,6 +254,34 @@ export default function LayoutDemoPage() {
                     "Establish both short-term deliverables and long-term strategic objectives. Ensure alignment between technical implementation and business value creation.",
                   ],
                 },
+              ]}
+            />
+
+            <div id="approach" style={{ marginTop: "var(--spacing-4xl)", marginBottom: "var(--spacing-l)" }}>
+              <div
+                style={{
+                  width: "100%",
+                  borderRadius: "var(--radius-s)",
+                  overflow: "hidden",
+                  marginBottom: "var(--spacing-l)",
+                }}
+              >
+                <Image
+                  src="/images/design-mode/Design%20systems(1).png"
+                  alt="Precision methodology and systematic approach"
+                  width={702}
+                  height={400}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    display: "block",
+                  }}
+                />
+              </div>
+            </div>
+
+            <BodyText
+              sections={[
                 {
                   title: "OUR APPROACH",
                   paragraphs: [
@@ -210,6 +289,34 @@ export default function LayoutDemoPage() {
                     "Describe our agile methodology, communication protocols, quality assurance practices, and how we adapt to changing requirements while maintaining project momentum and quality standards.",
                   ],
                 },
+              ]}
+            />
+
+            <div id="technology" style={{ marginTop: "var(--spacing-4xl)", marginBottom: "var(--spacing-l)" }}>
+              <div
+                style={{
+                  width: "100%",
+                  borderRadius: "var(--radius-s)",
+                  overflow: "hidden",
+                  marginBottom: "var(--spacing-l)",
+                }}
+              >
+                <Image
+                  src="/images/design-mode/Dormakaba(1).png"
+                  alt="Technical architecture and system design"
+                  width={702}
+                  height={400}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    display: "block",
+                  }}
+                />
+              </div>
+            </div>
+
+            <BodyText
+              sections={[
                 {
                   title: "TECHNOLOGY & ARCHITECTURE",
                   paragraphs: [
@@ -221,7 +328,7 @@ export default function LayoutDemoPage() {
             />
 
             {/* Technology & Architecture Section */}
-            <div id="technology" style={{ marginTop: "var(--spacing-4xl)" }}>
+            <div style={{ marginTop: "var(--spacing-4xl)" }}>
               <div
                 style={{
                   display: "flex",
