@@ -642,50 +642,6 @@ export default function LayoutDemoPage() {
         </div>
       </section>
 
-      {/* Servicios Section */}
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
-        <TitleSection overheader="SERVICIOS" />
-
-        <div
-          style={{
-            marginTop: "var(--spacing-xl)",
-            display: "flex",
-            flexDirection: "column",
-            gap: "var(--spacing-xxxl)",
-          }}
-        >
-          <BoxSection
-            overheader="S/ 01"
-            header="LANDING PAGES CON IA"
-            bodyText="Creamos landing pages de alto rendimiento optimizadas con inteligencia artificial. Nuestras soluciones combinan diseño estratégico con tecnología avanzada para maximizar conversiones y engagement."
-            secondaryText="Utilizamos modelos de IA para personalizar la experiencia del usuario, optimizar el contenido y mejorar continuamente el rendimiento de cada página."
-            buttonLabel="VER MÁS"
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/auditoria%20y%20formacion-D3XW0KE85vRcIllqLEpzsHaxSPlF2l.jpeg"
-            imageAlt="AI-powered landing pages - Hands holding glittering digital fabric"
-          />
-
-          <BoxSection
-            overheader="S/ 02"
-            header="E-COMMERCE ESCALABLE"
-            bodyText="Desarrollamos plataformas de e-commerce robustas y escalables que crecen con tu negocio. Integramos las mejores prácticas de UX, seguridad y rendimiento para garantizar una experiencia de compra excepcional."
-            secondaryText="Nuestras soluciones incluyen gestión de inventario, procesamiento de pagos, análisis avanzado y personalización impulsada por IA para aumentar las ventas."
-            buttonLabel="VER MÁS"
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-10-31%20at%2013.13.01-12fqs5WScz9NsX0LUdS6HJ756DJZMd.png"
-            imageAlt="Scalable e-commerce platform - Elegant diamond jewelry piece"
-          />
-
-          <BoxSection
-            overheader="S/ 03"
-            header="DESARROLLO WEB EMPRESARIAL"
-            bodyText="Construimos aplicaciones web empresariales de nivel enterprise con arquitecturas modernas y escalables. Desde portales corporativos hasta sistemas complejos de gestión."
-            secondaryText="Implementamos las últimas tecnologías y mejores prácticas para garantizar seguridad, rendimiento y mantenibilidad a largo plazo."
-            buttonLabel="VER MÁS"
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/desarrollo%20de%20software-aZkIKB3FXLoNJtwEBUjFMmRl4veRBA.jpeg"
-            imageAlt="Enterprise web development - Hands working with precision components"
-          />
-        </div>
-      </section>
-
       {/* Certification Section */}
       <section style={{ marginBottom: "var(--spacing-8xl)" }}>
         <TitleSection overheader="SECURITY ISO" title="TECH WITH THE HIGHEST STANDARDS OF SECURITY" />
@@ -695,8 +651,8 @@ export default function LayoutDemoPage() {
             overheader="SECURITY CERTIFICATION"
             header="ISO 27001"
             bodyText="We are proud to be ISO/IEC 27001 certified, the leading international standard for managing information security. This means that in Tailor, your data is handled with the utmost care, following rigorous protocols for confidentiality, integrity, and availability."
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Design%20systems-a903e7cVvPGG44Kb5YpdIDawCIqCZX.png"
-            imageAlt="ISO 27001 Security Certification - Precision laboratory work with droppers"
+            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ISO-G3cHEHHXyRrC9iYe1qLmWLlCFlQ8Mg.png"
+            imageAlt="ISO 27001 Security Certification - Precision and purity standards"
             certificationBadgeSrc="/images/design-mode/Modo_de_aislamiento.webp"
             certificationBadgeAlt="Arplus ISO 27001 Systems Certification Badge"
           />
