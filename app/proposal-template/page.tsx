@@ -178,6 +178,9 @@ export default function LayoutDemoPage() {
             <MenuSidebarItem href="#budget" number={6}>
               BUDGET & CONDITIONS
             </MenuSidebarItem>
+            <MenuSidebarItem href="#infra-mantenimiento" number={7}>
+              INFRA & MANTENIMIENTO
+            </MenuSidebarItem>
           </MenuSidebar>
 
           {/* Body Content */}
@@ -388,6 +391,31 @@ export default function LayoutDemoPage() {
                   "All prices exclude VAT",
                   "Maintenance and support can be extended on a monthly basis after the initial 3-month period",
                 ]}
+              />
+            </div>
+
+            {/* Infra & Mantenimiento Section */}
+            <div id="infra-mantenimiento" style={{ marginTop: "var(--spacing-4xl)" }}>
+              <h3
+                style={{
+                  fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
+                  fontSize: "var(--text-size-large, 40px)",
+                  lineHeight: "var(--text-line-large, 48px)",
+                  fontWeight: 400,
+                  color: "var(--color-text-primary)",
+                  textTransform: "uppercase",
+                  margin: 0,
+                  marginBottom: "var(--spacing-m, 16px)",
+                }}
+              >
+                INFRA & MANTENIMIENTO
+              </h3>
+              <BoxSection
+                overheader="/INFRA & MANTENIMIENTO"
+                header="INFRA & MANTENIMIENTO"
+                bodyText="Una vez finalizada la fase de desarrollo, ofrecemos un servicio continuo para garantizar que la plataforma se mantenga estable, segura y alineada con los requisitos de rendimiento y cumplimiento. Este servicio cubre tanto mantenimiento correctivo (incidencias, actualizaciones de seguridad) como mantenimiento evolutivo (mejoras y desarrollo de nuevas entidades simples)."
+                imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Design%20systems-Ql0Vu0Uw0Uw0Uw0Uw0Uw0Uw0Uw0U.png"
+                imageAlt="Infrastructure and maintenance - Precision and methodical approach"
               />
             </div>
           </div>
