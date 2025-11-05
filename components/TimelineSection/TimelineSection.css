@@ -78,8 +78,9 @@
 
 .timeline-section__number {
   font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
-  font-size: var(--text-overheader-size);
-  line-height: var(--text-overheader-line);
+  /* Fixed undefined CSS variables --text-overheader-size and --text-overheader-line */
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: var(--text-line-xsmall, 17px);
   color: var(--color-text-primary);
   letter-spacing: 0.1em;
   font-weight: 500;
@@ -87,8 +88,9 @@
 
 .timeline-section__title {
   font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
-  font-size: var(--text-overheader-size);
-  line-height: var(--text-overheader-line);
+  /* Fixed undefined CSS variables --text-overheader-size and --text-overheader-line */
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: var(--text-line-xsmall, 17px);
   color: var(--color-text-primary);
   font-weight: 500;
   margin: 0;
@@ -98,8 +100,9 @@
 
 .timeline-section__description {
   font-family: var(--font-default, "PP Mori", sans-serif);
-  font-size: var(--text-body-size);
-  line-height: var(--text-body-line);
+  /* Fixed undefined CSS variables --text-body-size and --text-body-line */
+  font-size: var(--text-size-small, 16px);
+  line-height: var(--text-line-small, 22px);
   color: var(--color-text-primary);
   margin: 0;
 }

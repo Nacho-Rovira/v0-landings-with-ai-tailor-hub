@@ -29,8 +29,9 @@
   gap: var(--spacing-xs);
   /* Typography */
   font-family: var(--font-tech);
-  font-size: var(--text-size-small);
-  line-height: var(--text-line-small);
+  /* Added fallback values for CSS variables */
+  font-size: var(--text-size-small, 16px);
+  line-height: var(--text-line-small, 22px);
   color: var(--color-text-primary);
   text-transform: uppercase;
   /* Interaction */

@@ -10,7 +10,8 @@
 
 .faq__item {
   border: none;
-  border-bottom: 1px solid var(--color-border-primary, #e5e5e5);
+  /* Fixed undefined CSS variable --color-border-primary to use --color-neutral-200 */
+  border-bottom: 1px solid var(--color-neutral-200, #e5e5e5);
   padding: var(--spacing-m, 16px) 0;
   background-color: transparent;
   transition: all 0.2s ease;
@@ -48,15 +49,17 @@
 }
 
 .faq__trigger:focus-visible {
-  outline: 2px solid var(--color-border-focus, #2c54ff);
+  /* Fixed undefined CSS variable --color-border-focus to use --color-brand-primary */
+  outline: 2px solid var(--color-brand-primary, #2c54ff);
   outline-offset: 2px;
   border-radius: var(--radius-xs, 8px);
 }
 
 .faq__question {
   flex: 1;
-  font-size: var(--text-size-medium, 20px);
-  line-height: var(--text-line-medium, 28px);
+  /* Fixed undefined CSS variables --text-size-medium and --text-line-medium to use --text-size-small and --text-line-small */
+  font-size: var(--text-size-small, 16px);
+  line-height: var(--text-line-small, 22px);
   font-weight: 400;
   color: var(--color-text-primary, #362c2c);
   text-transform: uppercase;
@@ -80,8 +83,9 @@
 
 .faq__answer {
   font-family: var(--font-default, "PP Mori", sans-serif);
-  font-size: var(--text-size-body, 16px);
-  line-height: var(--text-line-body, 24px);
+  /* Fixed undefined CSS variables --text-size-body and --text-line-body to use --text-size-small and --text-line-small */
+  font-size: var(--text-size-small, 16px);
+  line-height: var(--text-line-small, 22px);
   color: var(--color-text-secondary, #828086);
   margin: 0;
 }
@@ -89,12 +93,12 @@
 /* Mobile responsive */
 @media (max-width: 768px) {
   .faq__item {
-    padding: var(--spacing-m, 16px);
+    padding: var(--spacing-m, 16px) 0;
   }
 
   .faq__question {
-    font-size: var(--text-size-small, 16px);
-    line-height: var(--text-line-small, 24px);
+    font-size: var(--text-size-xsmall, 14px);
+    line-height: var(--text-line-xsmall, 17px);
   }
 
   .faq__trigger {
