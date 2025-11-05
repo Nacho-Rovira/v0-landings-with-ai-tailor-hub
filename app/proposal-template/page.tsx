@@ -148,6 +148,47 @@ export default function LayoutDemoPage() {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+        <TitleSection overheader="OUR SERVICES" title="WHAT WE DO" />
+
+        <div
+          style={{ marginTop: "var(--spacing-xl)", display: "flex", flexDirection: "column", gap: "var(--spacing-xl)" }}
+        >
+          <BoxSection
+            overheader="SOFTWARE DEVELOPMENT"
+            header="Custom Software Solutions"
+            bodyText="We build scalable, high-performance software tailored to your business needs. From web applications to complex enterprise systems, our team delivers solutions that drive growth and efficiency."
+            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/desarrollo%20de%20software-aZkIKB3FXLoNJtwEBUjFMmRl4veRBA.jpeg"
+            imageAlt="Custom software development - Precision engineering and craftsmanship"
+          />
+
+          <BoxSection
+            overheader="AI & DATA INTELLIGENCE"
+            header="AI-Powered Solutions"
+            bodyText="Transform your data into actionable insights with our AI and machine learning solutions. We help you leverage cutting-edge technology to automate processes, predict outcomes, and make smarter decisions."
+            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/auditoria%20y%20formacion-D3XW0KE85vRcIllqLEpzsHaxSPlF2l.jpeg"
+            imageAlt="AI and data intelligence - Digital transformation and innovation"
+          />
+
+          <BoxSection
+            overheader="E-COMMERCE"
+            header="Premium E-commerce Platforms"
+            bodyText="Create exceptional online shopping experiences with our custom e-commerce solutions. We build platforms that combine stunning design with powerful functionality to drive conversions and customer loyalty."
+            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VRAI-dxKdjxbovfV64pEnRkpF4ErnNwuK5J.jpeg"
+            imageAlt="E-commerce solutions - Luxury and premium shopping experiences"
+          />
+
+          <BoxSection
+            overheader="ACCESSIBLE DEVELOPMENT"
+            header="Inclusive Digital Solutions"
+            bodyText="We build accessible, inclusive digital experiences that work for everyone. Our solutions follow WCAG guidelines and best practices to ensure your platform reaches the widest possible audience."
+            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Desarrollor%20accesible-yAjpOEgZO7Ln7100YKzsTZtbozSDmq.jpeg"
+            imageAlt="Accessible development - Integration and inclusive solutions"
+          />
+        </div>
+      </section>
+
       {/* Proposal Details Section */}
       <section style={{ marginBottom: "var(--spacing-8xl)" }}>
         <div
