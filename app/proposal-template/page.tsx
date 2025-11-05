@@ -417,7 +417,6 @@ export default function LayoutDemoPage() {
                   lineHeight: "var(--text-line-body, 24px)",
                   color: "var(--color-text-secondary)",
                   margin: 0,
-                  maxWidth: "576px",
                 }}
               >
                 Una vez finalizada la fase de desarrollo, ofrecemos un servicio continuo para garantizar que la
