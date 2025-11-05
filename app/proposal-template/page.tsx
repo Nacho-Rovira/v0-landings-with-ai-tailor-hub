@@ -222,20 +222,7 @@ export default function LayoutDemoPage() {
 
             {/* Technology & Architecture Section */}
             <div id="technology" style={{ marginTop: "var(--spacing-4xl)" }}>
-              <h3
-                style={{
-                  fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
-                  fontSize: "var(--text-size-large, 40px)",
-                  lineHeight: "var(--text-line-large, 48px)",
-                  fontWeight: 400,
-                  color: "var(--color-text-primary)",
-                  textTransform: "uppercase",
-                  margin: 0,
-                  marginBottom: "var(--spacing-m, 16px)",
-                }}
-              >
-                TECHNOLOGY & ARCHITECTURE
-              </h3>
+              
             </div>
 
             {/* Roadmap & Phases Section */}
@@ -494,7 +481,7 @@ export default function LayoutDemoPage() {
             overheader="SOFTWARE DEVELOPMENT"
             header="CUSTOM SOFTWARE DEVELOPMENT"
             bodyText="We build scalable, high-performance software solutions tailored to your business needs. From enterprise applications to microservices architecture, our team delivers robust systems that drive innovation and efficiency."
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/desarrollo%20de%20software-aZkIKB3FXLoNJtwEBUjFMmRl4veRBA.jpeg"
+            imagesrc="/images/design-mode/desarrollo%20de%20software(1).jpeg"
             imageAlt="Custom software development - Precision engineering and craftsmanship"
           />
 
@@ -502,7 +489,7 @@ export default function LayoutDemoPage() {
             overheader="ARTIFICIAL INTELLIGENCE"
             header="AI & DATA INTELLIGENCE"
             bodyText="Transform raw data into actionable intelligence with our advanced AI solutions. We leverage cutting-edge machine learning algorithms to help you uncover patterns, predict outcomes, and drive smarter decision-making at every level of your organization."
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/auditoria%20y%20formacion-D3XW0KE85vRcIllqLEpzsHaxSPlF2l.jpeg"
+            imagesrc="/images/design-mode/auditoria%20y%20formacion(1).jpeg"
             imageAlt="AI and data intelligence - Digital transformation and innovation"
           />
 
@@ -510,7 +497,7 @@ export default function LayoutDemoPage() {
             overheader="E-COMMERCE"
             header="PREMIUM E-COMMERCE PLATFORMS"
             bodyText="Create exceptional online shopping experiences with our custom e-commerce solutions. We build high-converting platforms with advanced features like personalization, real-time inventory, and seamless payment integration."
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VRAI-dxKdjxbovfV64pEnRkpF4ErnNwuK5J.jpeg"
+            imagesrc="/images/design-mode/VRAI.jpeg"
             imageAlt="Premium e-commerce platforms - Luxury and elegance"
           />
 
@@ -518,7 +505,7 @@ export default function LayoutDemoPage() {
             overheader="ACCESSIBILITY"
             header="ACCESSIBLE DEVELOPMENT"
             bodyText="We design and develop inclusive digital experiences that work for everyone. Our accessibility-first approach ensures your applications meet WCAG standards while delivering exceptional usability for all users."
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Desarrollor%20accesible-yAjpOEgZO7Ln7100YKzsTZtbozSDmq.jpeg"
+            imagesrc="/images/design-mode/Desarrollor%20accesible.jpeg"
             imageAlt="Accessible development - Integration and inclusive solutions"
           />
         </div>
@@ -854,7 +841,7 @@ export default function LayoutDemoPage() {
             overheader="SECURITY CERTIFICATION"
             header="ISO 27001"
             bodyText="We are proud to be ISO/IEC 27001 certified, the leading international standard for managing information security. This means that in Tailor, your data is handled with the utmost care, following rigorous protocols for confidentiality, integrity, and availability."
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ISO-ELMW9cLmwEJmJdMpXtAwNsioxOj6mJ.png"
+            imagesrc="/images/design-mode/ISO(1).png"
             imageAlt="ISO 27001 Security Certification - Precision and purity represented by stone and water droplets"
             certificationBadgeSrc="/images/design-mode/Modo_de_aislamiento.webp"
             certificationBadgeAlt="Arplus ISO 27001 Systems Certification Badge"
