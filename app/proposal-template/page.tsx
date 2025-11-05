@@ -15,6 +15,7 @@ import { BudgetSection } from "@/components/BudgetSection/BudgetSection"
 import { Table } from "@/components/Table/Table"
 import Image from "next/image"
 import { FAQ } from "@/components/FAQ/FAQ"
+import { TeamSection } from "@/components/TeamSection/TeamSection"
 
 export default function LayoutDemoPage() {
   const logos = [
@@ -548,6 +549,205 @@ export default function LayoutDemoPage() {
             bodyText="We design and develop inclusive digital experiences that work for everyone. Our accessibility-first approach ensures your applications meet WCAG standards while delivering exceptional usability for all users."
             imageSrc="/images/design-mode/Desarrollor%20accesible(1).jpeg"
             imageAlt="Accessible development - Integration and inclusive solutions"
+          />
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <TitleSection overheader="TEAM" title="MEET OUR EXPERTS" />
+
+        <div style={{ marginTop: "var(--spacing-xl)" }}>
+          <TeamSection
+            members={[
+              {
+                name: "Giorgio G",
+                title: "Tech Lead",
+                imageSrc:
+                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-FDTlZEQ7sEPYH9BQE89wtTnaCeWRNT.png",
+                imageAlt: "Giorgio G - Tech Lead",
+                modalData: {
+                  name: "GIORGIO G",
+                  title: "TECH LEAD",
+                  imageSrc:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-FDTlZEQ7sEPYH9BQE89wtTnaCeWRNT.png",
+                  imageAlt: "Giorgio G - Tech Lead",
+                  bio: [
+                    'Con más de ocho años de experiencia en desarrollo de software, Giorgio ha liderado proyectos complejos y de alto impacto para compañías como dormakaba, Iberia o Inditex. Conocido cariñosamente como "Girgetto", se centra en construir soluciones digitales escalables, de alto rendimiento y alineadas con los objetivos de negocio.',
+                    "Desde el diseño de arquitecturas eficientes hasta la implementación de sistemas robustos, combina una sólida base técnica con una visión estratégica. Destaca por su capacidad para alinear equipos de desarrollo en torno a metas comunes, garantizando coherencia, claridad y entregas de calidad en cada fase del proyecto.",
+                    "Su enfoque práctico, colaborativo y orientado a resultados, junto con una fuerte vocación por la innovación y las buenas prácticas, lo convierten en un aliado clave para impulsar el éxito a largo plazo.",
+                  ],
+                  languages: "ITALIAN (NATIVE), SPANISH (ADVANCED), ENGLISH (ADVANCED)",
+                  skills:
+                    "REACT JS, NEXT JS, VUE JS, ANGULAR, TAILWINDCSS, TYPESCRIPT, REACT NATIVE, EXPO, NODE, EXPRESS, TYPESCRIPT, MONGO DB, SQL, POSTGRESQL, PYTHON, LANG CHAIN, OPENAI, GPT-40, AZURE OPENAI, KUBERNETES, DOCKER, AWS, AZURE",
+                },
+              },
+              {
+                name: "Maria S",
+                title: "Senior Frontend Developer",
+                imageSrc: "/placeholder.svg?height=320&width=240",
+                imageAlt: "Maria S - Senior Frontend Developer",
+                modalData: {
+                  name: "MARIA S",
+                  title: "SENIOR FRONTEND DEVELOPER",
+                  imageSrc: "/placeholder.svg?height=628&width=628",
+                  imageAlt: "Maria S - Senior Frontend Developer",
+                  bio: [
+                    "Maria is a passionate frontend developer with over 6 years of experience creating beautiful, accessible, and performant user interfaces. She specializes in React, Next.js, and modern CSS frameworks.",
+                    "Her attention to detail and commitment to user experience has helped numerous clients achieve their digital goals. Maria is also an advocate for web accessibility and inclusive design practices.",
+                  ],
+                  languages: "SPANISH (NATIVE), ENGLISH (FLUENT), FRENCH (INTERMEDIATE)",
+                  skills:
+                    "REACT JS, NEXT JS, TYPESCRIPT, TAILWIND CSS, STYLED COMPONENTS, FIGMA, STORYBOOK, JEST, CYPRESS",
+                },
+              },
+              {
+                name: "Alex K",
+                title: "AI Engineer",
+                imageSrc: "/placeholder.svg?height=320&width=240",
+                imageAlt: "Alex K - AI Engineer",
+                modalData: {
+                  name: "ALEX K",
+                  title: "AI ENGINEER",
+                  imageSrc: "/placeholder.svg?height=628&width=628",
+                  imageAlt: "Alex K - AI Engineer",
+                  bio: [
+                    "Alex is an AI specialist with a strong background in machine learning and natural language processing. With 5 years of experience, he has developed intelligent systems for various industries.",
+                    "His expertise includes building custom AI models, integrating large language models, and creating automation solutions that drive business value.",
+                  ],
+                  languages: "ENGLISH (NATIVE), GERMAN (FLUENT), SPANISH (INTERMEDIATE)",
+                  skills: "PYTHON, TENSORFLOW, PYTORCH, LANGCHAIN, OPENAI, AZURE AI, AWS SAGEMAKER, DOCKER, KUBERNETES",
+                },
+              },
+              {
+                name: "Sofia R",
+                title: "UX/UI Designer",
+                imageSrc: "/placeholder.svg?height=320&width=240",
+                imageAlt: "Sofia R - UX/UI Designer",
+                modalData: {
+                  name: "SOFIA R",
+                  title: "UX/UI DESIGNER",
+                  imageSrc: "/placeholder.svg?height=628&width=628",
+                  imageAlt: "Sofia R - UX/UI Designer",
+                  bio: [
+                    "Sofia is a creative designer with a keen eye for aesthetics and user-centered design. She has 7 years of experience crafting intuitive interfaces and design systems.",
+                    "Her work focuses on creating cohesive visual languages that enhance user experience while maintaining brand consistency across all touchpoints.",
+                  ],
+                  languages: "SPANISH (NATIVE), ENGLISH (FLUENT), PORTUGUESE (INTERMEDIATE)",
+                  skills: "FIGMA, SKETCH, ADOBE XD, DESIGN SYSTEMS, PROTOTYPING, USER RESEARCH, ACCESSIBILITY",
+                },
+              },
+              {
+                name: "David L",
+                title: "Backend Engineer",
+                imageSrc: "/placeholder.svg?height=320&width=240",
+                imageAlt: "David L - Backend Engineer",
+                modalData: {
+                  name: "DAVID L",
+                  title: "BACKEND ENGINEER",
+                  imageSrc: "/placeholder.svg?height=628&width=628",
+                  imageAlt: "David L - Backend Engineer",
+                  bio: [
+                    "David is a backend specialist with extensive experience in building scalable, high-performance server-side applications. He has 8 years of experience working with various technologies and architectures.",
+                    "His expertise includes microservices architecture, database optimization, and API design. David is passionate about writing clean, maintainable code and implementing best practices.",
+                  ],
+                  languages: "ENGLISH (NATIVE), SPANISH (ADVANCED)",
+                  skills: "NODE JS, EXPRESS, NESTJS, TYPESCRIPT, POSTGRESQL, MONGODB, REDIS, DOCKER, KUBERNETES, AWS",
+                },
+              },
+              {
+                name: "Emma T",
+                title: "Product Manager",
+                imageSrc: "/placeholder.svg?height=320&width=240",
+                imageAlt: "Emma T - Product Manager",
+                modalData: {
+                  name: "EMMA T",
+                  title: "PRODUCT MANAGER",
+                  imageSrc: "/placeholder.svg?height=628&width=628",
+                  imageAlt: "Emma T - Product Manager",
+                  bio: [
+                    "Emma is a strategic product manager with 6 years of experience leading digital product development. She excels at translating business requirements into actionable product roadmaps.",
+                    "Her collaborative approach and data-driven decision-making have helped numerous teams deliver successful products that meet both user needs and business objectives.",
+                  ],
+                  languages: "ENGLISH (NATIVE), FRENCH (FLUENT), SPANISH (INTERMEDIATE)",
+                  skills:
+                    "PRODUCT STRATEGY, AGILE METHODOLOGIES, USER RESEARCH, DATA ANALYSIS, ROADMAPPING, STAKEHOLDER MANAGEMENT",
+                },
+              },
+              {
+                name: "Carlos M",
+                title: "DevOps Engineer",
+                imageSrc: "/placeholder.svg?height=320&width=240",
+                imageAlt: "Carlos M - DevOps Engineer",
+                modalData: {
+                  name: "CARLOS M",
+                  title: "DEVOPS ENGINEER",
+                  imageSrc: "/placeholder.svg?height=628&width=628",
+                  imageAlt: "Carlos M - DevOps Engineer",
+                  bio: [
+                    "Carlos is a DevOps expert with 7 years of experience in cloud infrastructure and automation. He specializes in building robust CI/CD pipelines and maintaining highly available systems.",
+                    "His focus on automation and infrastructure as code has helped teams achieve faster deployment cycles and improved system reliability.",
+                  ],
+                  languages: "SPANISH (NATIVE), ENGLISH (FLUENT)",
+                  skills: "AWS, AZURE, DOCKER, KUBERNETES, TERRAFORM, JENKINS, GITHUB ACTIONS, MONITORING, SECURITY",
+                },
+              },
+              {
+                name: "Lisa W",
+                title: "QA Engineer",
+                imageSrc: "/placeholder.svg?height=320&width=240",
+                imageAlt: "Lisa W - QA Engineer",
+                modalData: {
+                  name: "LISA W",
+                  title: "QA ENGINEER",
+                  imageSrc: "/placeholder.svg?height=628&width=628",
+                  imageAlt: "Lisa W - QA Engineer",
+                  bio: [
+                    "Lisa is a quality assurance specialist with 5 years of experience ensuring software quality through comprehensive testing strategies. She is passionate about automation and continuous improvement.",
+                    "Her meticulous approach to testing and strong technical skills have helped teams deliver bug-free, high-quality software products.",
+                  ],
+                  languages: "ENGLISH (NATIVE), GERMAN (INTERMEDIATE)",
+                  skills:
+                    "TEST AUTOMATION, SELENIUM, CYPRESS, JEST, PLAYWRIGHT, API TESTING, PERFORMANCE TESTING, AGILE",
+                },
+              },
+              {
+                name: "Miguel A",
+                title: "Full Stack Developer",
+                imageSrc: "/placeholder.svg?height=320&width=240",
+                imageAlt: "Miguel A - Full Stack Developer",
+                modalData: {
+                  name: "MIGUEL A",
+                  title: "FULL STACK DEVELOPER",
+                  imageSrc: "/placeholder.svg?height=628&width=628",
+                  imageAlt: "Miguel A - Full Stack Developer",
+                  bio: [
+                    "Miguel is a versatile full stack developer with 6 years of experience building end-to-end web applications. He is comfortable working across the entire technology stack.",
+                    "His ability to understand both frontend and backend challenges makes him an invaluable team member who can bridge the gap between different technical domains.",
+                  ],
+                  languages: "SPANISH (NATIVE), ENGLISH (ADVANCED), ITALIAN (INTERMEDIATE)",
+                  skills: "REACT, NEXT JS, NODE JS, TYPESCRIPT, POSTGRESQL, MONGODB, AWS, DOCKER, REST APIs, GRAPHQL",
+                },
+              },
+              {
+                name: "Anna P",
+                title: "Data Scientist",
+                imageSrc: "/placeholder.svg?height=320&width=240",
+                imageAlt: "Anna P - Data Scientist",
+                modalData: {
+                  name: "ANNA P",
+                  title: "DATA SCIENTIST",
+                  imageSrc: "/placeholder.svg?height=628&width=628",
+                  imageAlt: "Anna P - Data Scientist",
+                  bio: [
+                    "Anna is a data scientist with 5 years of experience turning data into actionable insights. She specializes in statistical analysis, machine learning, and data visualization.",
+                    "Her analytical mindset and technical expertise help organizations make data-driven decisions and uncover hidden patterns in complex datasets.",
+                  ],
+                  languages: "ENGLISH (NATIVE), SPANISH (FLUENT), RUSSIAN (NATIVE)",
+                  skills: "PYTHON, R, SQL, MACHINE LEARNING, TENSORFLOW, PANDAS, NUMPY, DATA VISUALIZATION, STATISTICS",
+                },
+              },
+            ]}
           />
         </div>
       </section>

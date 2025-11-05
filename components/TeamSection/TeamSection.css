@@ -1,0 +1,45 @@
+/* TeamSection Component Styles */
+
+.team-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-section__grid {
+  /* Grid layout for team cards - 5 columns */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--spacing-m, 24px);
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .team-section__grid {
+    /* 4 columns on medium screens */
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .team-section__grid {
+    /* 3 columns on tablets */
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .team-section__grid {
+    /* 2 columns on mobile */
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-m, 16px);
+  }
+}
+
+@media (max-width: 480px) {
+  .team-section__grid {
+    /* 1 column on very small screens */
+    grid-template-columns: 1fr;
+  }
+}
