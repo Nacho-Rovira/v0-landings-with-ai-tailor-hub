@@ -78,17 +78,6 @@
   margin: 0;
 }
 
-/* Added divider styling - full width, aligned with body text */
-.box-section__divider {
-  width: 100%;
-  max-width: 576px;
-  height: 1px;
-  border: none;
-  background-color: var(--color-border-primary, #e5e5e5);
-  margin: 0;
-  align-self: flex-start;
-}
-
 /* Added certification badge styling */
 .box-section__certification-badge {
   /* Certification badge image - appears below body text */
@@ -169,11 +158,6 @@
   max-width: 100%;
 }
 
-/* Mobile divider should be full width */
-.box-section--mobile .box-section__divider {
-  max-width: 100%;
-}
-
 .box-section--mobile .box-section__bottom {
   /* Mobile: full width */
   max-width: 100%;
@@ -218,11 +202,6 @@
   }
 
   .box-section:not(.box-section--mobile) .box-section__body {
-    max-width: 100%;
-  }
-
-  /* Responsive divider should be full width on mobile */
-  .box-section:not(.box-section--mobile) .box-section__divider {
     max-width: 100%;
   }
 

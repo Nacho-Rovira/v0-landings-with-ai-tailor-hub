@@ -148,47 +148,6 @@ export default function LayoutDemoPage() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
-        <TitleSection overheader="OUR SERVICES" title="WHAT WE DO" />
-
-        <div
-          style={{ marginTop: "var(--spacing-xl)", display: "flex", flexDirection: "column", gap: "var(--spacing-xl)" }}
-        >
-          <BoxSection
-            overheader="SOFTWARE DEVELOPMENT"
-            header="Custom Software Solutions"
-            bodyText="We build scalable, high-performance software tailored to your business needs. From web applications to complex enterprise systems, our team delivers solutions that drive growth and efficiency."
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/desarrollo%20de%20software-aZkIKB3FXLoNJtwEBUjFMmRl4veRBA.jpeg"
-            imageAlt="Custom software development - Precision engineering and craftsmanship"
-          />
-
-          <BoxSection
-            overheader="AI & DATA INTELLIGENCE"
-            header="AI-Powered Solutions"
-            bodyText="Transform your data into actionable insights with our AI and machine learning solutions. We help you leverage cutting-edge technology to automate processes, predict outcomes, and make smarter decisions."
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/auditoria%20y%20formacion-D3XW0KE85vRcIllqLEpzsHaxSPlF2l.jpeg"
-            imageAlt="AI and data intelligence - Digital transformation and innovation"
-          />
-
-          <BoxSection
-            overheader="E-COMMERCE"
-            header="Premium E-commerce Platforms"
-            bodyText="Create exceptional online shopping experiences with our custom e-commerce solutions. We build platforms that combine stunning design with powerful functionality to drive conversions and customer loyalty."
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VRAI-dxKdjxbovfV64pEnRkpF4ErnNwuK5J.jpeg"
-            imageAlt="E-commerce solutions - Luxury and premium shopping experiences"
-          />
-
-          <BoxSection
-            overheader="ACCESSIBLE DEVELOPMENT"
-            header="Inclusive Digital Solutions"
-            bodyText="We build accessible, inclusive digital experiences that work for everyone. Our solutions follow WCAG guidelines and best practices to ensure your platform reaches the widest possible audience."
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Desarrollor%20accesible-yAjpOEgZO7Ln7100YKzsTZtbozSDmq.jpeg"
-            imageAlt="Accessible development - Integration and inclusive solutions"
-          />
-        </div>
-      </section>
-
       {/* Proposal Details Section */}
       <section style={{ marginBottom: "var(--spacing-8xl)" }}>
         <div
@@ -683,6 +642,23 @@ export default function LayoutDemoPage() {
         </div>
       </section>
 
+      {/* Certification Section */}
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+        <TitleSection overheader="SECURITY ISO" title="TECH WITH THE HIGHEST STANDARDS OF SECURITY" />
+
+        <div style={{ marginTop: "var(--spacing-xl)" }}>
+          <BoxSection
+            overheader="SECURITY CERTIFICATION"
+            header="ISO 27001"
+            bodyText="We are proud to be ISO/IEC 27001 certified, the leading international standard for managing information security. This means that in Tailor, your data is handled with the utmost care, following rigorous protocols for confidentiality, integrity, and availability."
+            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ISO-kvisG8UzLapJZOhfhDJ5xx9MxNOxKa.png"
+            imageAlt="ISO 27001 Security Certification - Precision and purity with water droplets"
+            certificationBadgeSrc="/images/design-mode/Modo_de_aislamiento.webp"
+            certificationBadgeAlt="Arplus ISO 27001 Systems Certification Badge"
+          />
+        </div>
+      </section>
+
       {/* Tech Stack Section */}
       <section style={{ marginBottom: "var(--spacing-8xl)" }}>
         <TitleSection overheader="CORE TECHNOLOGY" title="NUESTRAS TECNOLOGÍAS Y LENGUAJES" />
@@ -725,29 +701,187 @@ export default function LayoutDemoPage() {
         </div>
       </section>
 
+      {/* Case Studies Section */}
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+        <TitleSection overheader="CASE STUDIES" />
+
+        <div style={{ marginTop: "var(--spacing-xl)" }}>
+          <CaseStudiesSection
+            caseStudies={[
+              {
+                category: "SOFTWARE",
+                title: "ON RUNNING + STRAVA",
+                imageSrc:
+                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-95ak8iqiC08KKCRJGEh5qSIvJz92o0.jpeg",
+                imageAlt: "ON Running and Strava integration - Smart jacket with glowing technology pocket",
+                modalData: {
+                  title: "ON RUNNING + STRAVA",
+                  category: "SOFTWARE",
+                  imageSrc:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-95ak8iqiC08KKCRJGEh5qSIvJz92o0.jpeg",
+                  imageAlt: "ON Running and Strava integration",
+                  sections: [
+                    {
+                      title: "THE CHALLENGE",
+                      paragraphs: [
+                        "ON Running needed to integrate their premium running experience with Strava's social fitness platform. The challenge was creating a seamless connection that would enhance the user experience while maintaining the integrity of both platforms.",
+                        "The integration required real-time data synchronization, robust API handling, and a user interface that felt native to both ecosystems.",
+                      ],
+                    },
+                    {
+                      title: "THE SOLUTION",
+                      paragraphs: [
+                        "We developed a comprehensive integration platform that connects ON Running's proprietary tracking technology with Strava's social features. The solution includes automatic activity syncing, performance analytics, and community engagement tools.",
+                      ],
+                    },
+                  ],
+                  insights: [
+                    { value: "2.5M+", label: "ACTIVE USERS" },
+                    { value: "98%", label: "SYNC SUCCESS RATE" },
+                  ],
+                  quotes: [
+                    {
+                      text: "The Tailor Hub team delivered an exceptional integration that exceeded our expectations. The seamless connection between our platforms has significantly improved user engagement and retention.",
+                      author: "SARAH CHEN - HEAD OF DIGITAL PRODUCTS AT ON RUNNING",
+                    },
+                  ],
+                },
+              },
+              {
+                category: "SOFTWARE",
+                title: "CLIKALIA",
+                imageSrc:
+                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dormakaba.png-BL23wcJL31B0CAp4LCnI5yUkA8STg7.jpeg",
+                imageAlt: "Clikalia real estate platform - Hand interacting with geometric blocks",
+                modalData: {
+                  title: "CLIKALIA",
+                  category: "SOFTWARE",
+                  imageSrc:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dormakaba.png-BL23wcJL31B0CAp4LCnI5yUkA8STg7.jpeg",
+                  imageAlt: "Clikalia real estate platform",
+                  sections: [
+                    {
+                      title: "THE CHALLENGE",
+                      paragraphs: [
+                        "Clikalia, a leading real estate platform, needed to modernize their property management system to handle thousands of listings with advanced search capabilities, virtual tours, and real-time availability updates.",
+                        "The existing infrastructure couldn't scale to meet growing demand, and the user experience needed a complete overhaul to compete in the digital-first real estate market.",
+                      ],
+                    },
+                    {
+                      title: "THE SOLUTION",
+                      paragraphs: [
+                        "We built a scalable, cloud-native platform with advanced search algorithms, 3D virtual tour integration, and AI-powered property recommendations. The new system handles 10x more concurrent users while reducing load times by 70%.",
+                      ],
+                    },
+                  ],
+                  insights: [
+                    { value: "50K+", label: "PROPERTIES LISTED" },
+                    { value: "70%", label: "FASTER LOAD TIMES" },
+                  ],
+                  quotes: [
+                    {
+                      text: "Tailor Hub transformed our platform into a market-leading solution. The new system is fast, reliable, and our users love the enhanced search and virtual tour features.",
+                      author: "MIGUEL RODRIGUEZ - CTO AT CLIKALIA",
+                    },
+                  ],
+                },
+              },
+              {
+                category: "SOFTWARE",
+                title: "DORMAKABA",
+                imageSrc:
+                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HERO-7QyVasLSj8cjn2jGivuMQ2gC7PCZiA.png",
+                imageAlt: "Dormakaba smart access solutions - Hand holding blank access card",
+                modalData: {
+                  title: "DORMAKABA",
+                  category: "SOFTWARE",
+                  imageSrc:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HERO-7QyVasLSj8cjn2jGivuMQ2gC7PCZiA.png",
+                  imageAlt: "Dormakaba smart access solutions",
+                  sections: [
+                    {
+                      title: "THE CHALLENGE",
+                      paragraphs: [
+                        "When dormakaba approached Tailor Hub, they faced a multi-faceted challenge. Their monolithic CMS, Coremedia, had become an operational bottleneck, limiting flexibility for content editors across 40 countries and 35 languages. Additionally, dormakaba needed to execute a seamless transition between technical providers while simultaneously launching their newly restructured digital architecture. The stakes were high—success required flawless execution amidst a complex, global rollout.",
+                        "dormakaba sought a partner who could not only maintain their existing momentum but also elevate the performance and scalability of their digital ecosystem.",
+                      ],
+                    },
+                    {
+                      title: "THE CLIENT",
+                      paragraphs: [
+                        "dormakaba is a global leader in access control and security solutions, headquartered in Rümlang, Switzerland. With operations in over 50 countries and a history of innovation, they deliver cutting-edge solutions ranging from electronic access systems to advanced door hardware. Serving industries like hospitality, healthcare, and commercial real estate, dormakaba combines reliability with forward-thinking design to set the standard for security solutions.",
+                      ],
+                    },
+                  ],
+                  insights: [
+                    { value: "40+", label: "COUNTRIES SUPPORTED" },
+                    { value: "35", label: "LANGUAGES" },
+                  ],
+                  quotes: [
+                    {
+                      text: "I am very pleased with the Tailor team. They adapt exceptionally well to our needs, demonstrating great flexibility and responsiveness. Additionally, they always meet the established deadlines, allowing us to advance our projects without delays. Their professionalism and commitment are truly remarkable, and their collaboration has been key to the success of our global initiatives.",
+                      author: "PABLO GONZALEZ CELA - GLOBAL DIGITAL SOLUTIONS LEAD AT DORMAKABA",
+                    },
+                  ],
+                },
+              },
+              {
+                category: "ECOMMERCE",
+                title: "VRAI",
+                imageSrc:
+                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VRAI-rtQZ9X0qUMRrgQLGlhPug0u3y9JEGo.jpeg",
+                imageAlt: "VRAI jewelry e-commerce - Model wearing elegant diamond earrings",
+                modalData: {
+                  title: "VRAI",
+                  category: "ECOMMERCE",
+                  imageSrc:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VRAI-rtQZ9X0qUMRrgQLGlhPug0u3y9JEGo.jpeg",
+                  imageAlt: "VRAI jewelry e-commerce",
+                  sections: [
+                    {
+                      title: "THE CHALLENGE",
+                      paragraphs: [
+                        "VRAI, a luxury lab-grown diamond jewelry brand, needed an e-commerce platform that matched the elegance and sophistication of their products. The challenge was creating a high-end shopping experience with advanced product customization, 3D visualization, and seamless checkout.",
+                        "The platform needed to handle complex product configurations, real-time inventory management, and provide a premium user experience across all devices.",
+                      ],
+                    },
+                    {
+                      title: "THE SOLUTION",
+                      paragraphs: [
+                        "We developed a custom Shopify Plus solution with advanced 3D product visualization, real-time customization tools, and a streamlined checkout process. The platform integrates with VRAI's inventory management system and provides detailed analytics for business intelligence.",
+                      ],
+                    },
+                  ],
+                  insights: [
+                    { value: "150%", label: "SALES INCREASE" },
+                    { value: "4.8/5", label: "CUSTOMER RATING" },
+                  ],
+                  quotes: [
+                    {
+                      text: "The Tailor Hub team created a stunning e-commerce experience that perfectly captures our brand's luxury positioning. Sales have increased significantly since launch.",
+                      author: "VANESSA STOFENMACHER - HEAD OF E-COMMERCE AT VRAI",
+                    },
+                  ],
+                },
+              },
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* Content Section 1 */}
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}></section>
+
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}></section>
+
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}></section>
+
       {/* Our Partners Section */}
       <section style={{ marginBottom: "var(--spacing-8xl)" }}>
         <Highlight2Section
           concepts={["OFICIAL", "PARTNERS"]}
           items={["CONTENTFUL", "AWS", "SHOPIFY PARTNERS", "MICROSOFT AI CLOUD PARTNER", "NETLIFY", ""]}
         />
-      </section>
-
-      {/* Certification Section */}
-      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
-        <TitleSection overheader="SECURITY ISO" title="TECH WITH THE HIGHEST STANDARDS OF SECURITY" />
-
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
-          <BoxSection
-            overheader="SECURITY CERTIFICATION"
-            header="ISO 27001"
-            bodyText="We are proud to be ISO/IEC 27001 certified, the leading international standard for managing information security. This means that in Tailor, your data is handled with the utmost care, following rigorous protocols for confidentiality, integrity, and availability."
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ISO-G3cHEHHXyRrC9iYe1qLmWLlCFlQ8Mg.png"
-            imageAlt="ISO 27001 Security Certification - Precision and purity standards"
-            certificationBadgeSrc="/images/design-mode/Modo_de_aislamiento.webp"
-            certificationBadgeAlt="Arplus ISO 27001 Systems Certification Badge"
-          />
-        </div>
       </section>
 
       {/* CTA Section */}
