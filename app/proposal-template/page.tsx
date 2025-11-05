@@ -410,13 +410,21 @@ export default function LayoutDemoPage() {
               >
                 INFRA & MANTENIMIENTO
               </h3>
-              <BoxSection
-                overheader="/INFRA & MANTENIMIENTO"
-                header="INFRA & MANTENIMIENTO"
-                bodyText="Una vez finalizada la fase de desarrollo, ofrecemos un servicio continuo para garantizar que la plataforma se mantenga estable, segura y alineada con los requisitos de rendimiento y cumplimiento. Este servicio cubre tanto mantenimiento correctivo (incidencias, actualizaciones de seguridad) como mantenimiento evolutivo (mejoras y desarrollo de nuevas entidades simples)."
-                imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Design%20systems-Ql0Vu0Uw0Uw0Uw0Uw0Uw0Uw0Uw0U.png"
-                imageAlt="Infrastructure and maintenance - Precision and methodical approach"
-              />
+              <p
+                style={{
+                  fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
+                  fontSize: "var(--text-size-body, 16px)",
+                  lineHeight: "var(--text-line-body, 24px)",
+                  color: "var(--color-text-secondary)",
+                  margin: 0,
+                  maxWidth: "576px",
+                }}
+              >
+                Una vez finalizada la fase de desarrollo, ofrecemos un servicio continuo para garantizar que la
+                plataforma se mantenga estable, segura y alineada con los requisitos de rendimiento y cumplimiento. Este
+                servicio cubre tanto mantenimiento correctivo (incidencias, actualizaciones de seguridad) como
+                mantenimiento evolutivo (mejoras y desarrollo de nuevas entidades simples).
+              </p>
             </div>
           </div>
         </div>
