@@ -134,7 +134,7 @@ export default function LayoutDemoPage() {
           }}
         >
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HERO-7QyVasLSj8cjn2jGivuMQ2gC7PCZiA.png"
+            src="/images/design-mode/HERO.png"
             alt="Tailor Hub - Smart access and security solutions"
             width={1432}
             height={800}
@@ -660,7 +660,7 @@ export default function LayoutDemoPage() {
             bodyText="Creamos landing pages de alto rendimiento optimizadas con inteligencia artificial. Nuestras soluciones combinan diseño estratégico con tecnología avanzada para maximizar conversiones y engagement."
             secondaryText="Utilizamos modelos de IA para personalizar la experiencia del usuario, optimizar el contenido y mejorar continuamente el rendimiento de cada página."
             buttonLabel="VER MÁS"
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/auditoria%20y%20formacion-yEPDDM6kqZrHq379cziXJRkTCq50X8.jpeg"
+            imagesrc="/images/design-mode/auditoria%20y%20formacion.jpeg"
             imageAlt="AI-powered landing pages - Hands holding glittering digital fabric"
           />
 
@@ -670,7 +670,7 @@ export default function LayoutDemoPage() {
             bodyText="Desarrollamos plataformas de e-commerce robustas y escalables que crecen con tu negocio. Integramos las mejores prácticas de UX, seguridad y rendimiento para garantizar una experiencia de compra excepcional."
             secondaryText="Nuestras soluciones incluyen gestión de inventario, procesamiento de pagos, análisis avanzado y personalización impulsada por IA para aumentar las ventas."
             buttonLabel="VER MÁS"
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-10-31%20at%2013.13.01-5RMqdNOAGrauG3tONkF07WU0hkUV0Q.png"
+            imagesrc="/images/design-mode/Screenshot%202025-10-31%20at%2013.13.01.png"
             imageAlt="Scalable e-commerce platform - Elegant diamond jewelry piece"
           />
 
@@ -680,7 +680,7 @@ export default function LayoutDemoPage() {
             bodyText="Construimos aplicaciones web empresariales de nivel enterprise con arquitecturas modernas y escalables. Desde portales corporativos hasta sistemas complejos de gestión."
             secondaryText="Implementamos las últimas tecnologías y mejores prácticas para garantizar seguridad, rendimiento y mantenibilidad a largo plazo."
             buttonLabel="VER MÁS"
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/desarrollo%20de%20software-YxRzp41zYzwOmwdLBL490SWpxVZLFI.jpeg"
+            imagesrc="/images/design-mode/desarrollo%20de%20software.jpeg"
             imageAlt="Enterprise web development - Hands working with precision components"
           />
         </div>
@@ -695,9 +695,9 @@ export default function LayoutDemoPage() {
             overheader="SECURITY CERTIFICATION"
             header="ISO 27001"
             bodyText="We are proud to be ISO/IEC 27001 certified, the leading international standard for managing information security. This means that in Tailor, your data is handled with the utmost care, following rigorous protocols for confidentiality, integrity, and availability."
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ISO-kpHVH2mPLHZCP8BUHzRfFH9tVsrxKa.png"
+            imagesrc="/images/design-mode/ISO.png"
             imageAlt="ISO 27001 Security Certification - Stone and water droplets on dark blue background"
-            certificationBadgeSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Modo_de_aislamiento-vjgtN0dPVKXNWgUsSYw20TQ0JKU29B.webp"
+            certificationBadgesrc="/images/design-mode/Modo_de_aislamiento.webp"
             certificationBadgeAlt="Arplus ISO 27001 Systems Certification Badge"
           />
         </div>
