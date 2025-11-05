@@ -491,6 +491,65 @@ export default function LayoutDemoPage() {
               >
                 *EL DESARROLLO DE NUEVAS FUNCIONALIDADES SERÁ PRESUPUESTADO Y ESTIMADO COMO UN PROYECTO INDEPENDIENTE.
               </p>
+
+              <div style={{ marginTop: "var(--spacing-4xl)" }}>
+                <h4
+                  style={{
+                    fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
+                    fontSize: "var(--text-size-medium, 24px)",
+                    lineHeight: "var(--text-line-medium, 32px)",
+                    fontWeight: 400,
+                    color: "var(--color-text-primary)",
+                    textTransform: "uppercase",
+                    margin: 0,
+                    marginBottom: "var(--spacing-l, 24px)",
+                  }}
+                >
+                  PRESUPUESTO MENSUAL
+                </h4>
+                <BudgetSection
+                  items={[
+                    {
+                      category: "MONITORIZACIÓN DE INFRAESTRUCTURA",
+                      description: "Supervisión continua de servidores, bases de datos y servicios",
+                      amount: "€800",
+                    },
+                    {
+                      category: "ACTUALIZACIONES DE SEGURIDAD",
+                      description: "Parches de seguridad, actualizaciones de dependencias y auditorías",
+                      amount: "€600",
+                    },
+                    {
+                      category: "OPTIMIZACIÓN DE RENDIMIENTO",
+                      description: "Mejoras de velocidad, optimización de consultas y recursos",
+                      amount: "€500",
+                    },
+                    {
+                      category: "CORRECCIÓN DE ERRORES",
+                      description: "Resolución de incidencias y bugs reportados",
+                      amount: "€700",
+                    },
+                    {
+                      category: "DESARROLLO DE ENTIDADES SIMPLES",
+                      description: "Nuevos campos, tipos de contenido y reglas de baja complejidad",
+                      amount: "€900",
+                    },
+                    {
+                      category: "SOPORTE TÉCNICO",
+                      description: "Asistencia técnica y consultoría durante horario laboral",
+                      amount: "€500",
+                    },
+                  ]}
+                  total="€4,000/mes"
+                  notes={[
+                    "Contrato mínimo de 6 meses",
+                    "Facturación mensual anticipada",
+                    "Incluye hasta 40 horas de trabajo mensual",
+                    "Horas adicionales se facturan a €100/hora",
+                    "Todos los precios excluyen IVA",
+                  ]}
+                />
+              </div>
             </div>
           </div>
         </div>
