@@ -416,7 +416,7 @@ export default function LayoutDemoPage() {
                   fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
                   fontSize: "var(--text-size-body, 16px)",
                   lineHeight: "var(--text-line-body, 24px)",
-                  color: "var(--color-text-secondary)",
+                  color: "var(--color-text-primary)",
                   margin: 0,
                   marginBottom: "var(--spacing-xl)",
                 }}
@@ -462,13 +462,12 @@ export default function LayoutDemoPage() {
                 />
               </div>
 
-              {/* Closing text */}
               <p
                 style={{
                   fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
                   fontSize: "var(--text-size-body, 16px)",
                   lineHeight: "var(--text-line-body, 24px)",
-                  color: "var(--color-text-secondary)",
+                  color: "var(--color-text-primary)",
                   margin: 0,
                   marginTop: "var(--spacing-l, 24px)",
                 }}
