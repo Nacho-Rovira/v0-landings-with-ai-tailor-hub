@@ -14,6 +14,7 @@ import { TimelineSection } from "@/components/TimelineSection/TimelineSection"
 import { BudgetSection } from "@/components/BudgetSection/BudgetSection"
 import { Table } from "@/components/Table/Table"
 import Image from "next/image"
+import { FAQ } from "@/components/FAQ/FAQ"
 
 export default function LayoutDemoPage() {
   const logos = [
@@ -857,6 +858,58 @@ export default function LayoutDemoPage() {
             imageAlt="ISO 27001 Security Certification - Precision and purity represented by stone and water droplets"
             certificationBadgeSrc="/images/design-mode/Modo_de_aislamiento.webp"
             certificationBadgeAlt="Arplus ISO 27001 Systems Certification Badge"
+          />
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section style={{ marginBottom: "var(--spacing-8xl)" }}>
+        <TitleSection overheader="FREQUENTLY ASKED QUESTIONS" title="FAQ" />
+
+        <div style={{ marginTop: "var(--spacing-xl)" }}>
+          <FAQ
+            items={[
+              {
+                question: "What is Tailor Hub?",
+                answer:
+                  "Tailor Hub is a Madrid-based global company specializing in cutting-edge software engineering and artificial intelligence development. As a proud member of the Modulos Studio Group, we bring together an elite team of software engineers dedicated to delivering exceptional digital solutions.",
+              },
+              {
+                question: "What services does Tailor Hub offer?",
+                answer:
+                  "We offer three core services: Development Labs for custom software development with cutting-edge technologies, Artificial Intelligence solutions that transform business operations through machine learning and intelligent automation, and comprehensive Design Systems with reusable components and design tokens for consistent, accessible interfaces at scale.",
+              },
+              {
+                question: "What is your project methodology?",
+                answer:
+                  "We follow a structured 6-phase approach: Discovery & Planning (2-3 weeks), Design & Prototyping (3-4 weeks), Development & Integration (8-10 weeks), Testing & Optimization (2-3 weeks), Deployment & Launch (1-2 weeks), and ongoing Maintenance & Support. Each phase includes specific deliverables and quality checkpoints.",
+              },
+              {
+                question: "What technologies do you work with?",
+                answer:
+                  "Our core technology stack includes React 18+ for dynamic user interfaces, TypeScript for type-safe development, Next.js for server-side rendering and static site generation, and Design Tokens following W3C DTCG format. We also integrate AI-powered automation with V0 and custom AI models for business-specific solutions.",
+              },
+              {
+                question: "Where is Tailor Hub located?",
+                answer:
+                  "Our headquarters is located at Calle Hermanos Álvarez Quintero, 2, Semisótano A, 28004 Madrid, Spain. However, we are a global company and believe in giving our teams the autonomy to work wherever they want, delivering the best outcomes through flexibility and innovation.",
+              },
+              {
+                question: "How can I contact Tailor Hub?",
+                answer:
+                  "You can reach us via email at sales@tailor-hub.com, call us at +34 682 270 526, or fill out our contact form at tally.so/r/wopD8P. We're also active on LinkedIn and Instagram. Our team typically responds within 24 hours during business days.",
+              },
+              {
+                question: "What makes Tailor Hub different from other development agencies?",
+                answer:
+                  "We deliver end-to-end solutions that bridge the gap between design and development. Our comprehensive design systems, built with reusable components and design tokens, ensure consistency across all touchpoints. We integrate AI-powered automation to accelerate development cycles and enable intelligent decision-making, combining technical excellence with creative innovation.",
+              },
+              {
+                question: "Do you offer ongoing maintenance and support?",
+                answer:
+                  "Yes, we provide comprehensive maintenance and support services including infrastructure monitoring, security updates, performance optimization, bug fixes, and development of simple entities. We offer monthly service packages and can also provide custom support agreements tailored to your specific needs.",
+              },
+            ]}
           />
         </div>
       </section>
