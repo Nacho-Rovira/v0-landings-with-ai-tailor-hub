@@ -563,14 +563,12 @@ export default function LayoutDemoPage() {
               {
                 name: "Giorgio G",
                 title: "Tech Lead",
-                imageSrc:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-FDTlZEQ7sEPYH9BQE89wtTnaCeWRNT.png",
+                imageSrc: "/placeholder.svg?height=320&width=240",
                 imageAlt: "Giorgio G - Tech Lead",
                 modalData: {
                   name: "GIORGIO G",
                   title: "TECH LEAD",
-                  imageSrc:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-FDTlZEQ7sEPYH9BQE89wtTnaCeWRNT.png",
+                  imageSrc: "/placeholder.svg?height=628&width=628",
                   imageAlt: "Giorgio G - Tech Lead",
                   bio: [
                     'Con más de ocho años de experiencia en desarrollo de software, Giorgio ha liderado proyectos complejos y de alto impacto para compañías como dormakaba, Iberia o Inditex. Conocido cariñosamente como "Girgetto", se centra en construir soluciones digitales escalables, de alto rendimiento y alineadas con los objetivos de negocio.',
