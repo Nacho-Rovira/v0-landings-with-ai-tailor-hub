@@ -160,26 +160,23 @@ export default function LayoutDemoPage() {
         >
           {/* Menu Sidebar */}
           <MenuSidebar>
-            <MenuSidebarItem href="#challenge" number={1}>
-              THE CHALLENGE
+            <MenuSidebarItem href="#challenge" number={1} isActive>
+              CHALLENGE / CONTEXT
             </MenuSidebarItem>
-            <MenuSidebarItem href="#solution" number={2}>
-              THE SOLUTION
+            <MenuSidebarItem href="#objectives" number={2}>
+              OBJECTIVES
             </MenuSidebarItem>
-            <MenuSidebarItem href="#approach" number={3} isActive>
-              THE APPROACH
+            <MenuSidebarItem href="#approach" number={3}>
+              OUR APPROACH
             </MenuSidebarItem>
-            <MenuSidebarItem href="#results" number={4}>
-              RESULTS
+            <MenuSidebarItem href="#technology" number={4}>
+              TECHNOLOGY & ARCHITECTURE
             </MenuSidebarItem>
-            <MenuSidebarItem href="#timeline" number={5}>
-              TIMELINE
+            <MenuSidebarItem href="#roadmap" number={5}>
+              ROADMAP & PHASES
             </MenuSidebarItem>
             <MenuSidebarItem href="#budget" number={6}>
-              BUDGET
-            </MenuSidebarItem>
-            <MenuSidebarItem href="#team" number={7}>
-              TEAM
+              BUDGET & CONDITIONS
             </MenuSidebarItem>
           </MenuSidebar>
 
@@ -188,30 +185,38 @@ export default function LayoutDemoPage() {
             <BodyText
               sections={[
                 {
-                  title: "THE CHALLENGE",
+                  title: "CHALLENGE / CONTEXT",
                   paragraphs: [
-                    "Transform raw and hardly accessible data into actionable intelligence. With advanced AI models, we help you uncover patterns, predict outcomes, and drive smarter decision-making at every level of your organization.",
-                    "The complexity of modern data landscapes requires sophisticated approaches. Traditional methods fall short when dealing with unstructured data, real-time analytics, and predictive modeling needs.",
+                    "Explain the client's current situation and the specific problem that needs to be solved. Provide context about their business environment, technical constraints, and the challenges they face in achieving their goals.",
+                    "Detail the pain points, inefficiencies, or opportunities that have led to this project. Help stakeholders understand why this initiative is critical and what's at stake if the problem remains unsolved.",
                   ],
                 },
                 {
-                  title: "THE SOLUTION",
+                  title: "OBJECTIVES",
                   paragraphs: [
-                    "Our comprehensive AI-driven platform integrates seamlessly with your existing infrastructure, providing powerful analytics capabilities without disrupting your current workflows.",
-                    "Leveraging cutting-edge machine learning algorithms, we transform data chaos into clear, actionable insights that drive measurable business outcomes.",
+                    "Define what the project aims to achieve with clear, measurable goals. Outline the key success criteria and expected outcomes that will demonstrate project success.",
+                    "Establish both short-term deliverables and long-term strategic objectives. Ensure alignment between technical implementation and business value creation.",
                   ],
                 },
                 {
-                  title: "THE APPROACH",
+                  title: "OUR APPROACH",
                   paragraphs: [
-                    "We follow a systematic methodology that ensures successful implementation from discovery through deployment and optimization. Our approach combines technical excellence with deep understanding of business requirements.",
-                    "Each phase is carefully planned and executed, with continuous feedback loops to ensure alignment with your strategic objectives and operational constraints.",
+                    "Explain Tailor Hub's working model and methodology for this project. Detail how we collaborate with your team, our development process, and the frameworks we use to ensure successful delivery.",
+                    "Describe our agile methodology, communication protocols, quality assurance practices, and how we adapt to changing requirements while maintaining project momentum and quality standards.",
+                  ],
+                },
+                {
+                  title: "TECHNOLOGY & ARCHITECTURE",
+                  paragraphs: [
+                    "Present the technical proposal clearly, including the technology stack, system architecture, and infrastructure design. Explain the rationale behind each technical decision and how it supports project objectives.",
+                    "Detail the scalability considerations, security measures, integration points, and performance optimization strategies that will ensure a robust, future-proof solution.",
                   ],
                 },
               ]}
             />
 
-            <div id="timeline" style={{ marginTop: "var(--spacing-4xl)" }}>
+            {/* Technology & Architecture Section */}
+            <div id="technology" style={{ marginTop: "var(--spacing-4xl)" }}>
               <h3
                 style={{
                   fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
@@ -224,7 +229,25 @@ export default function LayoutDemoPage() {
                   marginBottom: "var(--spacing-m, 16px)",
                 }}
               >
-                TIMELINE
+                TECHNOLOGY & ARCHITECTURE
+              </h3>
+            </div>
+
+            {/* Roadmap & Phases Section */}
+            <div id="roadmap" style={{ marginTop: "var(--spacing-4xl)" }}>
+              <h3
+                style={{
+                  fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
+                  fontSize: "var(--text-size-large, 40px)",
+                  lineHeight: "var(--text-line-large, 48px)",
+                  fontWeight: 400,
+                  color: "var(--color-text-primary)",
+                  textTransform: "uppercase",
+                  margin: 0,
+                  marginBottom: "var(--spacing-m, 16px)",
+                }}
+              >
+                ROADMAP & PHASES
               </h3>
               <TimelineSection
                 phases={[
@@ -324,7 +347,7 @@ export default function LayoutDemoPage() {
                   marginBottom: "var(--spacing-m, 16px)",
                 }}
               >
-                BUDGET
+                BUDGET & CONDITIONS
               </h3>
               <BudgetSection
                 items={[
