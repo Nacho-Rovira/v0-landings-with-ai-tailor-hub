@@ -13,6 +13,7 @@ import { BoxSection } from "@/components/BoxSection/BoxSection"
 import Image from "next/image"
 import { FAQ } from "@/components/FAQ/FAQ"
 import { TeamSection } from "@/components/TeamSection/TeamSection"
+import { TechBox } from "@/components/TechBox/TechBox"
 
 export default function ClikaliaProposalPage() {
   return (
@@ -158,47 +159,37 @@ export default function ClikaliaProposalPage() {
                 style={{
                   display: "flex",
                   flexWrap: "wrap",
-                  gap: "var(--spacing-s, 12px)",
-                  marginTop: "var(--spacing-m, 16px)",
+                  gap: "var(--spacing-m)",
+                  marginTop: "var(--spacing-m)",
                 }}
               >
-                {[
-                  "React 18+",
-                  "Next.js 16",
-                  "TypeScript",
-                  "Tailwind CSS",
-                  "Node.js",
-                  "PostgreSQL",
-                  "Elasticsearch",
-                  "AWS",
-                  "Docker",
-                  "Kubernetes",
-                  "Redis",
-                  "GraphQL",
-                  "OpenAI",
-                  "Three.js",
-                  "Mapbox",
-                  "Vercel",
-                ].map((tech, index) => (
-                  <div
-                    key={index}
-                    style={{
-                      padding: "var(--spacing-xs, 8px) var(--spacing-m, 16px)",
-                      backgroundColor: "var(--color-neutral-100, #F5F5F5)",
-                      border: "1px solid var(--color-neutral-200, #E5E5E5)",
-                      borderRadius: "var(--radius-s, 4px)",
-                      fontFamily: "var(--font-mono, 'PP Neue Montreal Mono', monospace)",
-                      fontSize: "var(--text-size-xsmall, 14px)",
-                      lineHeight: "var(--text-line-xsmall, 20px)",
-                      color: "var(--color-text-primary, #000000)",
-                      textTransform: "uppercase",
-                      whiteSpace: "nowrap",
-                      flexShrink: 0,
-                    }}
-                  >
-                    {tech}
-                  </div>
-                ))}
+                <TechBox
+                  title="Front-end & Mobile"
+                  technologies={[
+                    "React JS",
+                    "Next JS",
+                    "Vue JS",
+                    "Angular",
+                    "Tailwind CSS",
+                    "TypeScript",
+                    "React Native",
+                    "Expo",
+                    "Ionic",
+                  ]}
+                />
+                <TechBox
+                  title="Back-end"
+                  technologies={["Node", "Express", "TypeScript", "Mongo DB", "SQL", "NestJS"]}
+                />
+                <TechBox
+                  title="Data & IA"
+                  technologies={["Python", "LangChain", "OpenAI GPT-40", "Azure OpenAI", "MCP", "A2A"]}
+                />
+                <TechBox
+                  title="CMS/ e-commerce"
+                  technologies={["WordPress", "Contentful", "Dato CMS", "Sanity", "Shopify"]}
+                />
+                <TechBox title="Infraestructura" technologies={["Kubernetes", "Docker", "AWS", "Azure"]} />
               </div>
             </div>
 
