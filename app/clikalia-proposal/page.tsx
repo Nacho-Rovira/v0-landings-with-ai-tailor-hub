@@ -124,63 +124,6 @@ export default function ClikaliaProposalPage() {
               ]}
             />
 
-            {/* Services Section */}
-            <div id="services" style={{ marginTop: "var(--spacing-4xl)" }}>
-              <h3
-                style={{
-                  fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
-                  fontSize: "var(--text-size-large, 40px)",
-                  lineHeight: "var(--text-line-large, 48px)",
-                  fontWeight: 400,
-                  color: "var(--color-text-primary)",
-                  textTransform: "uppercase",
-                  margin: 0,
-                  marginBottom: "var(--spacing-m, 16px)",
-                }}
-              >
-                TAILOR HUB SERVICES
-              </h3>
-              <p
-                style={{
-                  fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
-                  fontSize: "var(--text-size-small, 16px)",
-                  lineHeight: "var(--text-line-small, 22px)",
-                  color: "var(--color-text-primary)",
-                  margin: 0,
-                  marginBottom: "var(--spacing-xl)",
-                }}
-              >
-                For the Clikalia platform, we'll leverage our full suite of services to deliver a best-in-class
-                solution:
-              </p>
-
-              <div style={{ display: "flex", flexDirection: "column", gap: "var(--spacing-xl)" }}>
-                <BoxSection
-                  overheader="DEVELOPMENT LABS"
-                  header="CUSTOM SOFTWARE DEVELOPMENT"
-                  bodyText="Our elite engineering team will build your platform from the ground up using cutting-edge technologies. We specialize in creating scalable, maintainable solutions with React, Next.js, TypeScript, and modern cloud infrastructure. Every line of code is crafted for performance, security, and long-term maintainability."
-                  imageSrc="/software-development-workspace.png"
-                  imageAlt="Custom software development - Modern workspace and collaboration"
-                />
-
-                <BoxSection
-                  overheader="ARTIFICIAL INTELLIGENCE"
-                  header="AI-POWERED SEARCH & RECOMMENDATIONS"
-                  bodyText="Transform property discovery with intelligent search algorithms and personalized recommendations. Our AI solutions analyze user behavior, search patterns, and property attributes to deliver relevant results that increase engagement and conversion. Machine learning models continuously improve to provide increasingly accurate matches."
-                  imageSrc="/ai-neural-network.png"
-                  imageAlt="AI and machine learning - Neural network visualization"
-                />
-
-                <BoxSection
-                  overheader="DESIGN SYSTEMS"
-                  header="COMPREHENSIVE UI/UX DESIGN"
-                  bodyText="Create a cohesive, beautiful user interface with our comprehensive design system approach. We build reusable component libraries with design tokens that ensure consistency across all touchpoints. From property cards to search interfaces, every element is crafted for accessibility, usability, and visual appeal."
-                  imageSrc="/design-system-components.png"
-                  imageAlt="Design systems - Component library and tokens"
-                />
-              </div>
-            </div>
-
             {/* Technology & Architecture Section */}
             <div id="technology" style={{ marginTop: "var(--spacing-4xl)" }}>
               <h3
@@ -406,6 +349,39 @@ export default function ClikaliaProposalPage() {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <TitleSection overheader="SERVICES" title="TAILOR HUB SERVICES" />
+
+        <div
+          style={{ marginTop: "var(--spacing-xl)", display: "flex", flexDirection: "column", gap: "var(--spacing-xl)" }}
+        >
+          <BoxSection
+            overheader="DEVELOPMENT LABS"
+            header="CUSTOM SOFTWARE DEVELOPMENT"
+            bodyText="Our elite engineering team will build your platform from the ground up using cutting-edge technologies. We specialize in creating scalable, maintainable solutions with React, Next.js, TypeScript, and modern cloud infrastructure. Every line of code is crafted for performance, security, and long-term maintainability."
+            imageSrc="/images/design-mode/desarrollo%20de%20software(2).jpeg"
+            imageAlt="Custom software development - Modern workspace and collaboration"
+          />
+
+          <BoxSection
+            overheader="ARTIFICIAL INTELLIGENCE"
+            header="AI-POWERED SEARCH & RECOMMENDATIONS"
+            bodyText="Transform property discovery with intelligent search algorithms and personalized recommendations. Our AI solutions analyze user behavior, search patterns, and property attributes to deliver relevant results that increase engagement and conversion. Machine learning models continuously improve to provide increasingly accurate matches."
+            imageSrc="/images/design-mode/auditoria%20y%20formacion(2).jpeg"
+            imageAlt="AI and machine learning - Neural network visualization"
+          />
+
+          <BoxSection
+            overheader="DESIGN SYSTEMS"
+            header="COMPREHENSIVE UI/UX DESIGN"
+            bodyText="Create a cohesive, beautiful user interface with our comprehensive design system approach. We build reusable component libraries with design tokens that ensure consistency across all touchpoints. From property cards to search interfaces, every element is crafted for accessibility, usability, and visual appeal."
+            imageSrc="/images/design-mode/Design%20systems.png"
+            imageAlt="Design systems - Component library and tokens"
+          />
         </div>
       </section>
 
