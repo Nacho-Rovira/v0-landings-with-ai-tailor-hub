@@ -157,8 +157,8 @@ export default function ClikaliaProposalPage() {
 
               <div
                 style={{
-                  display: "flex",
-                  flexWrap: "wrap",
+                  display: "grid",
+                  gridTemplateColumns: "repeat(3, 1fr)",
                   gap: "var(--spacing-m)",
                   marginTop: "var(--spacing-m)",
                 }}
