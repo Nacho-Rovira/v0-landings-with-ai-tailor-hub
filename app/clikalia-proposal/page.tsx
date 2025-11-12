@@ -14,6 +14,7 @@ import Image from "next/image"
 import { FAQ } from "@/components/FAQ/FAQ"
 import { TeamSection } from "@/components/TeamSection/TeamSection"
 import { TechBox } from "@/components/TechBox/TechBox"
+import { Highlight2Section } from "@/components/Highlight2Section/Highlight2Section"
 
 export default function ClikaliaProposalPage() {
   return (
@@ -790,6 +791,31 @@ export default function ClikaliaProposalPage() {
                   "Yes, we follow an agile methodology with regular sprint reviews and demos. While we maintain a core scope to ensure timely delivery, we're flexible and can accommodate changes through our change request process. We'll work with you to assess the impact on timeline and budget, and adjust accordingly.",
               },
             ]}
+          />
+        </div>
+      </section>
+
+      {/* Our Partners Section */}
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <Highlight2Section
+          concepts={["OFFICIAL", "PARTNERS"]}
+          items={["CONTENTFUL", "AWS", "SHOPIFY PARTNERS", "MICROSOFT AI CLOUD PARTNER", "NETLIFY", ""]}
+        />
+      </section>
+
+      {/* ISO Certification Section */}
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <TitleSection overheader="SECURITY ISO" title="TECH WITH THE HIGHEST STANDARDS OF SECURITY" />
+
+        <div style={{ marginTop: "var(--spacing-xl)" }}>
+          <BoxSection
+            overheader="SECURITY CERTIFICATION"
+            header="ISO 27001"
+            bodyText="We are proud to be ISO/IEC 27001 certified, the leading international standard for managing information security. This means that in Tailor, your data is handled with the utmost care, following rigorous protocols for confidentiality, integrity, and availability."
+            imageSrc="/images/design-mode/ISO(2).png"
+            imageAlt="ISO 27001 Security Certification - Precision and purity represented by stone and water droplets"
+            certificationBadgeSrc="/images/design-mode/Modo_de_aislamiento.webp"
+            certificationBadgeAlt="Arplus ISO 27001 Systems Certification Badge"
           />
         </div>
       </section>
