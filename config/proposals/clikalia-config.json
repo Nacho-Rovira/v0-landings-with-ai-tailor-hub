@@ -1,0 +1,319 @@
+{
+  "slug": "clikalia-proposal",
+  "clientName": "Clikalia",
+  "highlight": {
+    "concepts": ["REAL ESTATE <span> PLATFORM", "CLOUD-NATIVE <span> ARCHITECTURE", "AI-POWERED <span> EXPERIENCE"],
+    "header": "Building Clikalia's Next-Generation Real Estate Platform"
+  },
+  "headerBox": {
+    "overheader": "A PROPOSAL FOR CLIKALIA",
+    "header": "Comprehensive real estate platform with advanced search, property management, and AI-powered recommendations",
+    "buttonLabel": "START PROJECT"
+  },
+  "heroImage": {
+    "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dormakaba.png-BL23wcJL31B0CAp4LCnI5yUkA8STg7.jpeg",
+    "alt": "Clikalia Platform Hero"
+  },
+  "menuItems": [
+    { "href": "#challenge", "number": 1, "label": "CHALLENGE / CONTEXT" },
+    { "href": "#objectives", "number": 2, "label": "OBJECTIVES" },
+    { "href": "#approach", "number": 3, "label": "OUR APPROACH" },
+    { "href": "#technology", "number": 4, "label": "TECHNOLOGY & ARCHITECTURE" },
+    { "href": "#roadmap", "number": 5, "label": "ROADMAP & PHASES" },
+    { "href": "#budget", "number": 6, "label": "BUDGET & CONDITIONS" }
+  ],
+  "bodySections": [
+    {
+      "id": "challenge",
+      "title": "CHALLENGE / CONTEXT",
+      "paragraphs": [
+        "Clikalia needs a robust, scalable platform to revolutionize the real estate market in Spain. The current landscape demands a solution that can handle thousands of property listings, provide instant search capabilities, and deliver personalized recommendations to users.",
+        "The platform must support multiple user roles (buyers, sellers, agents, administrators), integrate with external property databases, and provide real-time notifications for property updates and user interactions."
+      ]
+    },
+    {
+      "id": "objectives",
+      "title": "OBJECTIVES",
+      "paragraphs": [
+        "Create a high-performance, user-friendly platform that transforms how people buy and sell properties in Spain:",
+        "<strong>1. Build a Scalable Architecture:</strong> Design and implement a cloud-native solution capable of handling millions of property searches and listings with sub-second response times.",
+        "<strong>2. Deliver Exceptional UX:</strong> Create an intuitive interface that makes property search effortless, with advanced filtering, map integration, and virtual tours.",
+        "<strong>3. Implement AI-Powered Features:</strong> Develop intelligent recommendation systems that match users with properties based on preferences, behavior, and market trends.",
+        "<strong>4. Ensure Data Security:</strong> Implement enterprise-grade security measures to protect sensitive user and property data, complying with GDPR and industry standards.",
+        "<strong>5. Enable Seamless Integration:</strong> Connect with external property databases, payment gateways, and third-party services for valuations and legal processes."
+      ]
+    },
+    {
+      "id": "approach",
+      "title": "OUR APPROACH",
+      "paragraphs": [
+        "Tailor Hub follows a proven methodology combining agile development, user-centered design, and cutting-edge technology to deliver world-class digital products:",
+        "<strong>Discovery & Research:</strong> We begin with comprehensive stakeholder interviews, user research, and competitive analysis to understand your market positioning and user needs.",
+        "<strong>Design System First:</strong> We create a scalable design system with reusable components, ensuring consistency and accelerating development across the platform.",
+        "<strong>Iterative Development:</strong> Using agile sprints, we build features incrementally, providing regular demos and incorporating feedback to ensure alignment with your vision.",
+        "<strong>Quality Assurance:</strong> Continuous testing, code reviews, and automated quality checks ensure robust, reliable software that performs flawlessly under load.",
+        "<strong>DevOps Excellence:</strong> We implement CI/CD pipelines, infrastructure as code, and monitoring systems for seamless deployments and proactive issue resolution."
+      ]
+    }
+  ],
+  "technology": {
+    "description": "Clikalia will be built using modern, proven technologies selected for performance, scalability, and developer productivity. Our tech stack ensures the platform can grow with your business while maintaining exceptional user experience and operational efficiency:",
+    "categories": [
+      {
+        "title": "Front-end & Mobile",
+        "technologies": [
+          "REACT JS",
+          "NEXT JS",
+          "VUE JS",
+          "ANGULAR",
+          "TAILWIND CSS",
+          "TYPESCRIPT",
+          "REACT NATIVE",
+          "EXPO",
+          "IONIC"
+        ]
+      },
+      {
+        "title": "Back-end",
+        "technologies": ["NODE", "EXPRESS", "TYPESCRIPT", "MONGO", "SQL", "NESTJS"]
+      },
+      {
+        "title": "Data & IA",
+        "technologies": ["PYTHON", "LANGCHAIN", "OPENAI GPT-40", "AZURE OPENAI", "MCP", "A2A"]
+      },
+      {
+        "title": "CMS/ e-commerce",
+        "technologies": ["WORDPRESS", "CONTENTFUL", "DATO CMS", "SANITY", "SHOPIFY"]
+      },
+      {
+        "title": "Infraestructura",
+        "technologies": ["KUBERNETES", "DOCKER", "AWS", "AZURE"]
+      }
+    ]
+  },
+  "phases": [
+    {
+      "number": "01",
+      "title": "DISCOVERY & ARCHITECTURE DESIGN",
+      "description": "Comprehensive analysis and technical foundation planning",
+      "duration": "4 WEEKS",
+      "deliverables": [
+        "Stakeholder interviews and requirements documentation",
+        "Technical architecture blueprint and infrastructure design",
+        "Data model and API specifications",
+        "Security and compliance audit plan",
+        "Project roadmap and sprint planning"
+      ]
+    },
+    {
+      "number": "02",
+      "title": "DESIGN SYSTEM & UI/UX",
+      "description": "User-centered design and visual identity creation",
+      "duration": "5 WEEKS",
+      "deliverables": [
+        "User research and persona development",
+        "Information architecture and user flows",
+        "Design system with component library",
+        "High-fidelity mockups for key screens",
+        "Interactive prototypes for user testing"
+      ]
+    },
+    {
+      "number": "03",
+      "title": "CORE PLATFORM DEVELOPMENT",
+      "description": "Building essential platform features and infrastructure",
+      "duration": "8 WEEKS",
+      "deliverables": [
+        "User authentication and authorization system",
+        "Property listing and search functionality",
+        "Admin dashboard and content management",
+        "Database implementation and API development",
+        "Integration with external property databases"
+      ]
+    },
+    {
+      "number": "04",
+      "title": "AI & ADVANCED FEATURES",
+      "description": "Implementing intelligent systems and enhanced functionality",
+      "duration": "6 WEEKS",
+      "deliverables": [
+        "AI-powered property recommendation engine",
+        "Advanced search with filters and map integration",
+        "Real-time notifications and messaging system",
+        "Virtual tour integration and media management",
+        "Analytics dashboard and reporting tools"
+      ]
+    },
+    {
+      "number": "05",
+      "title": "TESTING, OPTIMIZATION & LAUNCH",
+      "description": "Quality assurance and production deployment",
+      "duration": "3 WEEKS",
+      "deliverables": [
+        "Comprehensive testing (unit, integration, E2E)",
+        "Performance optimization and load testing",
+        "Security audit and penetration testing",
+        "Production deployment and monitoring setup",
+        "Documentation and team training"
+      ]
+    }
+  ],
+  "budget": {
+    "items": [
+      {
+        "category": "DISCOVERY & PLANNING",
+        "description": "Requirements analysis, technical architecture, project planning",
+        "amount": "€12,000"
+      },
+      {
+        "category": "DESIGN & UX",
+        "description": "Design system, UI/UX design, prototyping, user testing",
+        "amount": "€18,000"
+      },
+      {
+        "category": "DEVELOPMENT",
+        "description": "Front-end, back-end, database, API development, integrations",
+        "amount": "€85,000"
+      },
+      {
+        "category": "AI & ADVANCED FEATURES",
+        "description": "Recommendation engine, advanced search, analytics",
+        "amount": "€25,000"
+      },
+      {
+        "category": "TESTING & DEPLOYMENT",
+        "description": "QA, security audit, performance optimization, launch support",
+        "amount": "€15,000"
+      }
+    ],
+    "total": "€155,000",
+    "notes": [
+      "Payment schedule: 30% upon project start, 40% at mid-project milestone, 30% upon delivery",
+      "Pricing valid for 90 days from proposal date",
+      "Includes 3 months of post-launch support and bug fixes",
+      "Additional features and integrations quoted separately",
+      "Monthly maintenance and support packages available"
+    ]
+  },
+  "services": [
+    {
+      "overheader": "SOFTWARE DEVELOPMENT",
+      "header": "End-to-end Development Excellence",
+      "bodyText": "From concept to deployment, we build scalable, high-performance applications using modern frameworks and cloud-native architectures. Our development process ensures code quality, security, and maintainability.",
+      "imageSrc": "/images/design-mode/desarrollo%20de%20software(2).jpeg",
+      "imageAlt": "Software Development Services"
+    },
+    {
+      "overheader": "AI SOLUTIONS",
+      "header": "Intelligent Automation & Insights",
+      "bodyText": "Harness the power of AI to automate processes, gain insights, and create personalized user experiences. We integrate cutting-edge AI technologies including natural language processing and machine learning.",
+      "imageSrc": "/images/design-mode/auditoria%20y%20formacion(2).jpeg",
+      "imageAlt": "AI Solutions"
+    },
+    {
+      "overheader": "DESIGN SYSTEMS",
+      "header": "Scalable Design Infrastructure",
+      "bodyText": "We create comprehensive design systems that ensure brand consistency, accelerate development, and provide exceptional user experiences across all touchpoints and platforms.",
+      "imageSrc": "/images/design-mode/Design%20systems.png",
+      "imageAlt": "Design Systems"
+    }
+  ],
+  "team": {
+    "overheader": "TEAM",
+    "members": [
+      {
+        "name": "Giorgio G",
+        "title": "Tech Lead",
+        "imageSrc": "/placeholder.svg?height=400&width=400",
+        "imageAlt": "Giorgio G",
+        "modalData": {
+          "name": "GIORGIO G",
+          "title": "TECH LEAD",
+          "imageSrc": "/placeholder.svg?height=600&width=600",
+          "imageAlt": "Giorgio G Full",
+          "bio": [
+            "With over 8 years of experience in software development, Giorgio has led complex projects for companies like dormakaba, Iberia, and Inditex. Known as 'Girgetto', he focuses on building scalable digital solutions that align with business objectives.",
+            "From efficient architecture design to implementing robust systems, Giorgio combines solid technical expertise with strategic vision. He excels at aligning development teams around common goals, ensuring coherence, clarity, and quality deliveries in every project phase.",
+            "His practical, collaborative, results-oriented approach, combined with a strong passion for innovation and best practices, makes him a key ally for driving long-term success."
+          ],
+          "languages": "ITALIAN (NATIVE), SPANISH (ADVANCED), ENGLISH (ADVANCED)",
+          "skills": "REACT JS, NEXT JS, VUE JS, ANGULAR, TAILWINDCSS, TYPESCRIPT, REACT NATIVE, EXPO, NODE, EXPRESS, TYPESCRIPT, MONGO DB, SQL, POSTGRESQL, PYTHON, LANGCHAIN, OPENAI, GPT-40, AZURE OPENAI, KUBERNETES, DOCKER, AWS, AZURE"
+        }
+      }
+    ]
+  },
+  "caseStudies": [
+    {
+      "category": "ECOMMERCE",
+      "title": "Clikalia Real Estate",
+      "imageSrc": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dormakaba.png-BL23wcJL31B0CAp4LCnI5yUkA8STg7.jpeg",
+      "imageAlt": "Clikalia Case Study",
+      "modalData": {
+        "title": "Clikalia",
+        "category": "REAL ESTATE PLATFORM",
+        "imageSrc": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dormakaba.png-BL23wcJL31B0CAp4LCnI5yUkA8STg7.jpeg",
+        "imageAlt": "Clikalia Platform",
+        "sections": [
+          {
+            "title": "THE CHALLENGE",
+            "paragraphs": [
+              "Clikalia needed to modernize their real estate platform to compete in the digital-first market, requiring advanced search capabilities and seamless user experience."
+            ]
+          },
+          {
+            "title": "THE SOLUTION",
+            "paragraphs": [
+              "We developed a comprehensive platform with AI-powered recommendations, advanced filtering, and real-time property updates, built on a scalable cloud architecture."
+            ]
+          }
+        ],
+        "insights": [
+          { "value": "50K+", "label": "PROPERTIES LISTED" },
+          { "value": "3M+", "label": "MONTHLY SEARCHES" },
+          { "value": "98%", "label": "UPTIME" }
+        ],
+        "quotes": [
+          {
+            "text": "Tailor Hub transformed our platform, delivering a solution that exceeded our expectations in every way.",
+            "author": "CEO, Clikalia"
+          }
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is the timeline for this project?",
+      "answer": "The complete project is estimated at 26 weeks (approximately 6 months) from kick-off to launch, divided into 5 phases with regular milestones and demos."
+    },
+    {
+      "question": "What happens after the platform launches?",
+      "answer": "We provide 3 months of complimentary post-launch support including bug fixes and minor adjustments. After that, we offer flexible maintenance packages for ongoing support, updates, and enhancements."
+    },
+    {
+      "question": "Can the platform scale as our business grows?",
+      "answer": "Absolutely. The platform is built on cloud-native architecture using Kubernetes and auto-scaling capabilities, allowing it to handle traffic growth seamlessly. Our infrastructure design supports millions of users and property listings."
+    },
+    {
+      "question": "How do you ensure data security and GDPR compliance?",
+      "answer": "We implement enterprise-grade security measures including encryption at rest and in transit, role-based access control, regular security audits, and GDPR-compliant data handling practices. Tailor Hub is ISO 27001 certified."
+    },
+    {
+      "question": "What level of involvement do you need from our team?",
+      "answer": "We work collaboratively with your team throughout the project. We'll need stakeholder availability for discovery sessions, regular feedback during design and development, and participation in sprint demos and planning meetings."
+    }
+  ],
+  "partners": {
+    "concepts": ["OFFICIAL", "PARTNERS"],
+    "items": ["Contentful", "AWS", "Shopify", "Microsoft AI", "Netlify"]
+  },
+  "isoCertification": {
+    "overheader": "ISO 27001",
+    "header": "Certified Information Security",
+    "bodyText": "Tailor Hub is ISO 27001 certified, demonstrating our commitment to the highest standards of information security management. This certification ensures that we follow rigorous processes to protect your data and maintain confidentiality, integrity, and availability of information systems throughout the development lifecycle.",
+    "imageSrc": "/images/design-mode/ISO(2).png",
+    "imageAlt": "ISO 27001 Certification",
+    "certificationBadgeSrc": "/images/design-mode/Modo_de_aislamiento.webp",
+    "certificationBadgeAlt": "ISO 27001 Badge"
+  }
+}
