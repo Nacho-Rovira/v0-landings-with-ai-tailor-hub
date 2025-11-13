@@ -30,7 +30,7 @@ export default function BarceloProposalPage() {
           header={proposalConfig.headerBox.header}
           buttonLabel={proposalConfig.headerBox.buttonLabel}
           onButtonClick={() => {
-            document.querySelector("#challenge")?.scrollIntoView({ behavior: "smooth" })
+            document.querySelector("#proposal-content")?.scrollIntoView({ behavior: "smooth" })
           }}
         />
       </section>
@@ -50,7 +50,7 @@ export default function BarceloProposalPage() {
       </section>
 
       {/* Proposal Content with Sidebar */}
-      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
+      <section id="proposal-content" style={{ marginBottom: "var(--spacing-9xl)" }}>
         <div style={{ display: "flex", alignItems: "flex-start", gap: "var(--spacing-xxl)", width: "100%" }}>
           {/* Menu Sidebar */}
           <MenuSidebar autoDetectActive>
