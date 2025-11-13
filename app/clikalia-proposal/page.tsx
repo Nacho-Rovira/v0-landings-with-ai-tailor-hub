@@ -74,8 +74,8 @@ export default function ClikaliaProposalPage() {
           }}
         >
           {/* Menu Sidebar */}
-          <MenuSidebar>
-            <MenuSidebarItem href="#challenge" number={1} isActive>
+          <MenuSidebar autoDetectActive>
+            <MenuSidebarItem href="#challenge" number={1}>
               CHALLENGE / CONTEXT
             </MenuSidebarItem>
             <MenuSidebarItem href="#objectives" number={2}>
@@ -100,31 +100,47 @@ export default function ClikaliaProposalPage() {
 
           {/* Body Content */}
           <div style={{ flex: 1, maxWidth: "702px" }}>
-            <BodyText
-              sections={[
-                {
-                  title: "CHALLENGE / CONTEXT",
-                  paragraphs: [
-                    "The real estate industry is undergoing a rapid digital transformation. Traditional property management systems struggle to meet modern user expectations for speed, visual richness, and intelligent search capabilities. Clikalia needs a cutting-edge platform that can handle thousands of property listings while providing an exceptional user experience through advanced search algorithms, 3D virtual tours, and real-time availability updates.",
-                    "The existing infrastructure has reached its limits in terms of scalability and performance. As Clikalia continues to expand its market presence, a modern, cloud-native platform is essential to support business growth, improve operational efficiency, and deliver the seamless digital experience that today's property seekers demand.",
-                  ],
-                },
-                {
-                  title: "OBJECTIVES",
-                  paragraphs: [
-                    "Build a scalable, high-performance real estate platform that can handle 10x more concurrent users while reducing page load times by at least 70%. The platform must support advanced search capabilities with multiple filters, geolocation features, and AI-powered property recommendations that learn from user behavior.",
-                    "Create an immersive property viewing experience through integrated 3D virtual tours, high-quality image galleries, and interactive floor plans. Implement real-time inventory management, automated property updates, and comprehensive analytics to provide Clikalia with actionable business intelligence and optimize their property listings for maximum engagement.",
-                  ],
-                },
-                {
-                  title: "OUR APPROACH",
-                  paragraphs: [
-                    "Tailor Hub will deliver a comprehensive, cloud-native platform built on modern microservices architecture. Our approach combines agile development methodology with continuous user feedback loops to ensure the platform meets both business objectives and user needs. We prioritize scalability, performance, and security from day one.",
-                    "Our development process emphasizes collaboration and transparency. Through regular sprint reviews, prototype demonstrations, and stakeholder workshops, we ensure alignment at every stage. We implement automated testing, continuous integration, and robust monitoring to maintain high code quality and system reliability throughout the development lifecycle.",
-                  ],
-                },
-              ]}
-            />
+            <div id="challenge">
+              <BodyText
+                sections={[
+                  {
+                    title: "CHALLENGE / CONTEXT",
+                    paragraphs: [
+                      "The real estate industry is undergoing a rapid digital transformation. Traditional property management systems struggle to meet modern user expectations for speed, visual richness, and intelligent search capabilities. Clikalia needs a cutting-edge platform that can handle thousands of property listings while providing an exceptional user experience through advanced search algorithms, 3D virtual tours, and real-time availability updates.",
+                      "The existing infrastructure has reached its limits in terms of scalability and performance. As Clikalia continues to expand its market presence, a modern, cloud-native platform is essential to support business growth, improve operational efficiency, and deliver the seamless digital experience that today's property seekers demand.",
+                    ],
+                  },
+                ]}
+              />
+            </div>
+
+            <div id="objectives" style={{ marginTop: "var(--spacing-4xl)" }}>
+              <BodyText
+                sections={[
+                  {
+                    title: "OBJECTIVES",
+                    paragraphs: [
+                      "Build a scalable, high-performance real estate platform that can handle 10x more concurrent users while reducing page load times by at least 70%. The platform must support advanced search capabilities with multiple filters, geolocation features, and AI-powered property recommendations that learn from user behavior.",
+                      "Create an immersive property viewing experience through integrated 3D virtual tours, high-quality image galleries, and interactive floor plans. Implement real-time inventory management, automated property updates, and comprehensive analytics to provide Clikalia with actionable business intelligence and optimize their property listings for maximum engagement.",
+                    ],
+                  },
+                ]}
+              />
+            </div>
+
+            <div id="approach" style={{ marginTop: "var(--spacing-4xl)" }}>
+              <BodyText
+                sections={[
+                  {
+                    title: "OUR APPROACH",
+                    paragraphs: [
+                      "Tailor Hub will deliver a comprehensive, cloud-native platform built on modern microservices architecture. Our approach combines agile development methodology with continuous user feedback loops to ensure the platform meets both business objectives and user needs. We prioritize scalability, performance, and security from day one.",
+                      "Our development process emphasizes collaboration and transparency. Through regular sprint reviews, prototype demonstrations, and stakeholder workshops, we ensure alignment at every stage. We implement automated testing, continuous integration, and robust monitoring to maintain high code quality and system reliability throughout the development lifecycle.",
+                    ],
+                  },
+                ]}
+              />
+            </div>
 
             {/* Technology & Architecture Section */}
             <div id="technology" style={{ marginTop: "var(--spacing-4xl)" }}>

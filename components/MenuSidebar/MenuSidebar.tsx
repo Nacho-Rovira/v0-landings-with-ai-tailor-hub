@@ -1,4 +1,6 @@
-import React from "react"
+"use client"
+
+import React, { useState, useEffect } from "react"
 import "./MenuSidebar.css"
 
 export interface MenuSidebarItemProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -17,10 +19,12 @@ export interface MenuSidebarItemProps extends React.AnchorHTMLAttributes<HTMLAnc
 export interface MenuSidebarProps extends React.HTMLAttributes<HTMLElement> {
   /** The menu sidebar content (typically MenuSidebarItem components) */
   children: React.ReactNode
+  /** Enable automatic active state based on scroll position */
+  autoDetectActive?: boolean
 }
 
 export const MenuSidebarItem = React.forwardRef<HTMLAnchorElement, MenuSidebarItemProps>(
-  ({ children, isActive = false, isDisabled = false, href = "#", number, className = "", ...props }, ref) => {
+  ({ children, isActive = false, isDisabled = false, href = "#", number, className = "", onClick, ...props }, ref) => {
     const classes = [
       "menu-sidebar__item",
       isActive ? "menu-sidebar__item--active" : "",
@@ -32,12 +36,35 @@ export const MenuSidebarItem = React.forwardRef<HTMLAnchorElement, MenuSidebarIt
 
     const formattedNumber = number !== undefined ? String(number).padStart(2, "0") : null
 
+    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+      if (isDisabled) return
+
+      e.preventDefault()
+      const targetId = href.replace("#", "")
+      const targetElement = document.getElementById(targetId)
+
+      if (targetElement) {
+        const offset = 140 // Account for sticky header/spacing
+        const elementPosition = targetElement.getBoundingClientRect().top
+        const offsetPosition = elementPosition + window.pageYOffset - offset
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        })
+      }
+
+      onClick?.(e)
+    }
+
     return (
       <a
         ref={ref}
         href={href}
         className={classes}
+        onClick={handleClick}
         aria-disabled={isDisabled}
+        aria-current={isActive ? "location" : undefined}
         {...(isDisabled ? { tabIndex: -1, "aria-disabled": true } : {})}
         {...props}
       >
@@ -51,12 +78,55 @@ export const MenuSidebarItem = React.forwardRef<HTMLAnchorElement, MenuSidebarIt
 MenuSidebarItem.displayName = "MenuSidebarItem"
 
 export const MenuSidebar = React.forwardRef<HTMLElement, MenuSidebarProps>(
-  ({ children, className = "", ...props }, ref) => {
+  ({ children, className = "", autoDetectActive = false, ...props }, ref) => {
     const classes = ["menu-sidebar", className].filter(Boolean).join(" ")
+    const [activeSection, setActiveSection] = useState<string>("")
+
+    useEffect(() => {
+      if (!autoDetectActive) return
+
+      const handleScroll = () => {
+        // Get all section IDs from menu items
+        const sections = Array.from(
+          document.querySelectorAll(
+            '[id^="challenge"], [id^="objectives"], [id^="approach"], [id^="services"], [id^="technology"], [id^="roadmap"], [id^="budget"]',
+          ),
+        )
+
+        // Find which section is currently in view
+        const scrollPosition = window.scrollY + 200 // Offset for header
+
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const section = sections[i] as HTMLElement
+          if (section.offsetTop <= scrollPosition) {
+            setActiveSection(section.id)
+            break
+          }
+        }
+      }
+
+      window.addEventListener("scroll", handleScroll)
+      handleScroll() // Initial check
+
+      return () => window.removeEventListener("scroll", handleScroll)
+    }, [autoDetectActive])
+
+    const enhancedChildren = autoDetectActive
+      ? React.Children.map(children, (child) => {
+          if (React.isValidElement(child) && child.type === MenuSidebarItem) {
+            const href = child.props.href?.replace("#", "")
+            return React.cloneElement(child, {
+              ...child.props,
+              isActive: href === activeSection || child.props.isActive,
+            } as MenuSidebarItemProps)
+          }
+          return child
+        })
+      : children
 
     return (
       <aside ref={ref} className={classes} {...props}>
-        {children}
+        {enhancedChildren}
       </aside>
     )
   },
