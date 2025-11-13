@@ -1,0 +1,514 @@
+{
+  "slug": "barcelo-proposal",
+  "clientName": "Barceló Hotel Group",
+  "highlight": {
+    "concepts": ["LUXURY <span> HOSPITALITY", "DIGITAL <span> TRANSFORMATION", "GUEST-FIRST <span> INNOVATION"],
+    "header": "Transforming the future of hospitality through intelligent technology"
+  },
+  "headerBox": {
+    "overheader": "A PROPOSAL FOR BARCELÓ HOTEL GROUP",
+    "header": "Next-generation hospitality platform with AI-powered guest experiences, seamless operations management, and scalable multi-property architecture",
+    "buttonLabel": "BEGIN TRANSFORMATION"
+  },
+  "heroImage": {
+    "src": "/images/design-mode/HERO.png",
+    "alt": "Barceló Hotel Group Digital Transformation"
+  },
+  "menuItems": [
+    { "href": "#challenge", "number": 1, "label": "CHALLENGE / CONTEXT" },
+    { "href": "#objectives", "number": 2, "label": "OBJECTIVES" },
+    { "href": "#approach", "number": 3, "label": "OUR APPROACH" },
+    { "href": "#technology", "number": 4, "label": "TECHNOLOGY & ARCHITECTURE" },
+    { "href": "#roadmap", "number": 5, "label": "ROADMAP & PHASES" },
+    { "href": "#budget", "number": 6, "label": "BUDGET & CONDITIONS" },
+    { "href": "#infra", "number": 7, "label": "INFRASTRUCTURE & SUPPORT" }
+  ],
+  "bodySections": [
+    {
+      "id": "challenge",
+      "title": "CHALLENGE / CONTEXT",
+      "paragraphs": [
+        "Barceló Hotel Group operates a diverse portfolio of premium hotels worldwide, serving millions of guests annually. The current digital ecosystem faces critical challenges: fragmented property management systems, disconnected guest touchpoints, and limited real-time visibility across operations. These limitations create friction in the guest experience and operational inefficiencies that impact both service quality and profitability.",
+        "The hospitality industry is experiencing a profound digital shift. Modern travelers expect seamless, personalized experiences across all touchpoints—from initial booking through post-stay engagement. They demand mobile-first interactions, contactless services, and intelligent recommendations. Meanwhile, hotel operations teams need unified tools that streamline workflows, enhance decision-making, and enable data-driven optimization across all properties.",
+        "Barceló requires a comprehensive digital transformation that unifies its technology stack, elevates guest experiences, and provides operational teams with powerful tools for managing multi-property operations at scale. The solution must respect the unique character of each hotel brand while enabling centralized management and insights."
+      ]
+    },
+    {
+      "id": "objectives",
+      "title": "OBJECTIVES",
+      "paragraphs": [
+        "Build a unified digital platform that transforms how Barceló operates and serves guests across its entire portfolio:",
+        "<strong>1. Unified Guest Experience Platform:</strong> Create a seamless, omnichannel experience that connects booking, check-in, in-stay services, and loyalty programs. Guests should enjoy consistent, personalized interactions whether they're using mobile apps, web portals, or in-property touchpoints.",
+        "<strong>2. Intelligent Operations Management:</strong> Develop centralized tools that provide real-time visibility into property operations, revenue management, housekeeping, maintenance, and staff coordination. Enable data-driven decision-making with predictive analytics and automated workflows.",
+        "<strong>3. AI-Powered Personalization:</strong> Implement machine learning systems that understand guest preferences, predict needs, and deliver tailored recommendations for services, amenities, and experiences. Drive revenue through intelligent upselling and cross-property engagement.",
+        "<strong>4. Multi-Property Scalability:</strong> Design a flexible architecture that scales effortlessly across Barceló's portfolio while accommodating the unique requirements of different hotel brands, property types, and geographic markets.",
+        "<strong>5. Enhanced Revenue Optimization:</strong> Build dynamic pricing engines, demand forecasting tools, and channel management systems that maximize revenue per available room while maintaining competitive positioning across all booking channels."
+      ]
+    },
+    {
+      "id": "approach",
+      "title": "OUR APPROACH",
+      "paragraphs": [
+        "Tailor Hub brings deep expertise in hospitality technology and enterprise-scale digital transformation. Our approach combines strategic thinking with technical excellence to deliver transformative results:",
+        "<strong>Discovery & Stakeholder Alignment:</strong> We begin with comprehensive discovery across all stakeholder groups—from C-suite executives to front-line staff. We map existing systems, identify pain points, and establish clear success criteria aligned with Barceló's business strategy.",
+        "<strong>Guest-Centric Design:</strong> Our UX methodology starts with extensive guest research and journey mapping. We design intuitive interfaces that delight users while reducing friction at every touchpoint. Every design decision is validated through user testing with real guests and staff.",
+        "<strong>Phased, Risk-Mitigated Rollout:</strong> We implement a carefully orchestrated rollout strategy that minimizes disruption to ongoing operations. Pilot programs in selected properties validate solutions before wider deployment, ensuring each phase delivers measurable value.",
+        "<strong>Integration Excellence:</strong> Seamless integration with existing systems (PMS, POS, CRS, channel managers) is critical. We architect robust APIs and middleware that connect legacy systems while enabling modern functionality.",
+        "<strong>Training & Change Management:</strong> Technology transformation requires organizational change. We provide comprehensive training programs, documentation, and ongoing support to ensure staff adoption and maximize platform value."
+      ]
+    }
+  ],
+  "technology": {
+    "description": "The Barceló platform leverages modern, proven technologies architected for hospitality-specific requirements. Our stack balances cutting-edge innovation with enterprise reliability, ensuring the platform delivers exceptional performance while scaling across all properties:",
+    "categories": [
+      {
+        "title": "Guest Experience Layer",
+        "technologies": ["REACT 18", "NEXT JS 15", "TYPESCRIPT", "TAILWIND CSS", "REACT NATIVE", "PROGRESSIVE WEB APP"]
+      },
+      {
+        "title": "Backend & APIs",
+        "technologies": ["NODE JS", "NESTJS", "GRAPHQL", "REST APIs", "MICROSERVICES", "WEBSOCKETS"]
+      },
+      {
+        "title": "Data & Intelligence",
+        "technologies": ["POSTGRESQL", "REDIS", "ELASTICSEARCH", "OPENAI GPT-4", "PREDICTIVE ANALYTICS", "ML PIPELINES"]
+      },
+      {
+        "title": "Integrations",
+        "technologies": ["OPERA PMS", "MEWS", "BOOKING.COM", "EXPEDIA", "STRIPE", "PAYMENT GATEWAYS"]
+      },
+      {
+        "title": "Infrastructure",
+        "technologies": ["AWS", "KUBERNETES", "DOCKER", "CDN", "AUTO-SCALING", "MONITORING"]
+      }
+    ]
+  },
+  "phases": [
+    {
+      "number": "01",
+      "title": "DISCOVERY & ARCHITECTURE DESIGN",
+      "description": "Comprehensive analysis of current systems and strategic platform planning",
+      "duration": "6 WEEKS",
+      "deliverables": [
+        "Stakeholder interviews across all hotel properties and departments",
+        "Guest journey mapping and pain point analysis",
+        "Technical architecture blueprint with integration specifications",
+        "Data migration strategy and system compatibility assessment",
+        "Detailed project roadmap with risk mitigation plan",
+        "Security and compliance framework (PCI-DSS, GDPR)"
+      ]
+    },
+    {
+      "number": "02",
+      "title": "UX DESIGN & PROTOTYPING",
+      "description": "Guest-centric interface design and interactive experience validation",
+      "duration": "7 WEEKS",
+      "deliverables": [
+        "Complete design system with hospitality-specific components",
+        "Mobile-first guest app prototypes (iOS & Android)",
+        "Staff operations dashboard wireframes and mockups",
+        "Interactive prototypes validated with real users",
+        "Accessibility compliance documentation (WCAG 2.1 AA)",
+        "Brand alignment review with Barceló creative team"
+      ]
+    },
+    {
+      "number": "03",
+      "title": "CORE PLATFORM DEVELOPMENT",
+      "description": "Building foundational systems and essential guest touchpoints",
+      "duration": "12 WEEKS",
+      "deliverables": [
+        "Guest mobile app (booking, check-in, room access, services)",
+        "Central reservation system with multi-property support",
+        "Property management dashboard for operations teams",
+        "Real-time availability and pricing engine",
+        "Integration layer connecting to existing PMS systems",
+        "Guest profile and preference management system"
+      ]
+    },
+    {
+      "number": "04",
+      "title": "AI & ADVANCED FEATURES",
+      "description": "Intelligent systems for personalization and operational optimization",
+      "duration": "8 WEEKS",
+      "deliverables": [
+        "AI-powered recommendation engine for guest services",
+        "Predictive maintenance alerts for property systems",
+        "Dynamic pricing optimization with demand forecasting",
+        "Chatbot for 24/7 guest support (multilingual)",
+        "Revenue management analytics and reporting suite",
+        "Staff scheduling optimization algorithms"
+      ]
+    },
+    {
+      "number": "05",
+      "title": "PILOT ROLLOUT & VALIDATION",
+      "description": "Controlled deployment to selected properties for real-world testing",
+      "duration": "6 WEEKS",
+      "deliverables": [
+        "Pilot deployment to 3 diverse hotel properties",
+        "Staff training programs and documentation",
+        "Guest feedback collection and analysis",
+        "Performance monitoring and optimization",
+        "Issue resolution and platform refinement",
+        "Success metrics validation and reporting"
+      ]
+    },
+    {
+      "number": "06",
+      "title": "FULL DEPLOYMENT & OPTIMIZATION",
+      "description": "Portfolio-wide rollout with continuous improvement",
+      "duration": "10 WEEKS",
+      "deliverables": [
+        "Phased deployment across all Barceló properties",
+        "Property-specific configuration and customization",
+        "Advanced security testing and penetration audits",
+        "Load testing for peak booking periods",
+        "Complete documentation library (technical & user guides)",
+        "Post-launch support and optimization period"
+      ]
+    }
+  ],
+  "budget": {
+    "items": [
+      {
+        "category": "DISCOVERY & ARCHITECTURE",
+        "description": "Stakeholder research, system analysis, architecture design, integration planning",
+        "amount": "€42,000"
+      },
+      {
+        "category": "UX DESIGN & PROTOTYPING",
+        "description": "Guest research, design system, mobile/web prototypes, user testing",
+        "amount": "€56,000"
+      },
+      {
+        "category": "CORE DEVELOPMENT",
+        "description": "Guest apps, reservation system, operations dashboards, PMS integration",
+        "amount": "€180,000"
+      },
+      {
+        "category": "AI & ADVANCED FEATURES",
+        "description": "Recommendation engine, predictive analytics, chatbot, revenue optimization",
+        "amount": "€95,000"
+      },
+      {
+        "category": "PILOT & DEPLOYMENT",
+        "description": "Pilot rollout, training, full deployment, testing, documentation",
+        "amount": "€72,000"
+      },
+      {
+        "category": "PROJECT MANAGEMENT",
+        "description": "Dedicated project management, quality assurance, stakeholder coordination",
+        "amount": "€35,000"
+      }
+    ],
+    "total": "€480,000",
+    "notes": [
+      "Payment schedule: 25% upon contract signing, 25% at Phase 3 completion, 25% at pilot validation, 25% upon final deployment",
+      "Pricing valid for 120 days from proposal date",
+      "Includes 6 months of post-launch support, bug fixes, and minor enhancements",
+      "Infrastructure costs (AWS, third-party services) billed separately at cost",
+      "Additional properties beyond initial scope quoted separately",
+      "Ongoing managed services available—see Infrastructure & Support section"
+    ]
+  },
+  "infrastructure": {
+    "description": "Following successful platform launch, Barceló requires robust infrastructure management and continuous optimization to ensure exceptional performance, security, and reliability across all properties. Our managed services provide peace of mind while your team focuses on delivering outstanding guest experiences.",
+    "serviceCategories": [
+      {
+        "title": "Infrastructure Management",
+        "items": [
+          "24/7 monitoring and incident response",
+          "Auto-scaling configuration and optimization",
+          "Security patching and vulnerability management",
+          "Performance tuning and load optimization",
+          "Disaster recovery testing and backup management",
+          "Cost optimization and infrastructure governance"
+        ]
+      },
+      {
+        "title": "Platform Maintenance",
+        "items": [
+          "Bug fixes and issue resolution",
+          "Minor feature enhancements",
+          "Integration updates and API maintenance",
+          "Database optimization and query tuning",
+          "Mobile app updates (iOS/Android)",
+          "Browser compatibility and accessibility updates"
+        ]
+      },
+      {
+        "title": "Support & Training",
+        "items": [
+          "Dedicated support team (email, phone, chat)",
+          "Staff training sessions and workshops",
+          "Technical documentation updates",
+          "Guest support escalation handling",
+          "Quarterly business reviews",
+          "Strategic technology consulting"
+        ]
+      }
+    ],
+    "monthlyCost": "€18,500/month",
+    "monthlyCostNotes": [
+      "Includes all maintenance, support, and infrastructure management",
+      "Infrastructure costs (AWS) estimated at €12,000/month (scales with usage)",
+      "12-month minimum commitment, annual contracts receive 10% discount",
+      "New feature development quoted separately as projects",
+      "On-call support available 24/7 for critical incidents"
+    ]
+  },
+  "services": [
+    {
+      "overheader": "HOSPITALITY TECHNOLOGY",
+      "header": "End-to-End Hotel Tech Solutions",
+      "bodyText": "We specialize in building comprehensive digital platforms for the hospitality industry—from guest-facing mobile apps to property management systems and revenue optimization tools. Our solutions integrate seamlessly with existing hotel tech stacks while delivering modern, intuitive experiences.",
+      "imageSrc": "/images/design-mode/desarrollo%20de%20software(2).jpeg",
+      "imageAlt": "Hospitality Technology Solutions"
+    },
+    {
+      "overheader": "AI & GUEST INTELLIGENCE",
+      "header": "Personalization at Scale",
+      "bodyText": "Harness artificial intelligence to understand guest preferences, predict needs, and deliver personalized recommendations. Our AI systems analyze booking patterns, in-stay behavior, and feedback to create tailored experiences that drive satisfaction and revenue.",
+      "imageSrc": "/images/design-mode/auditoria%20y%20formacion(2).jpeg",
+      "imageAlt": "AI & Guest Intelligence"
+    },
+    {
+      "overheader": "REVENUE OPTIMIZATION",
+      "header": "Dynamic Pricing & Forecasting",
+      "bodyText": "Maximize revenue per available room with intelligent pricing engines that analyze market demand, competitor rates, and historical data. Our forecasting models help you make data-driven decisions about pricing, inventory, and channel distribution.",
+      "imageSrc": "/images/design-mode/Design%20systems.png",
+      "imageAlt": "Revenue Optimization"
+    }
+  ],
+  "team": {
+    "overheader": "TEAM",
+    "members": [
+      {
+        "name": "Giorgio G",
+        "title": "Tech Lead",
+        "imageSrc": "/placeholder.svg?height=400&width=400",
+        "imageAlt": "Giorgio G - Tech Lead",
+        "modalData": {
+          "name": "GIORGIO G",
+          "title": "TECH LEAD",
+          "imageSrc": "/placeholder.svg?height=600&width=600",
+          "imageAlt": "Giorgio G",
+          "bio": [
+            "Con más de ocho años de experiencia en desarrollo de software, Giorgio ha liderado proyectos complejos y de alto impacto para compañías como dormakaba, Iberia o Inditex. Conocido cariñosamente como 'Girgetto', se centra en construir soluciones digitales escalables, de alto rendimiento y alineadas con los objetivos de negocio.",
+            "Desde el diseño de arquitecturas eficientes hasta la implementación de sistemas robustos, combina una sólida base técnica con una visión estratégica. Destaca por su capacidad para alinear equipos de desarrollo en torno a metas comunes, garantizando coherencia, claridad y entregas de calidad en cada fase del proyecto.",
+            "Su enfoque práctico, colaborativo y orientado a resultados, junto con una fuerte vocación por la innovación y las buenas prácticas, lo convierten en un aliado clave para impulsar el éxito a largo plazo."
+          ],
+          "languages": "ITALIAN (NATIVE), SPANISH (ADVANCED), ENGLISH (ADVANCED)",
+          "skills": "REACT JS, NEXT JS, NODE JS, TYPESCRIPT, POSTGRESQL, AWS, KUBERNETES, MICROSERVICES, API DESIGN, SYSTEM ARCHITECTURE"
+        }
+      },
+      {
+        "name": "Maria L",
+        "title": "Hospitality UX Lead",
+        "imageSrc": "/placeholder.svg?height=400&width=400",
+        "imageAlt": "Maria L - UX Lead",
+        "modalData": {
+          "name": "MARIA L",
+          "title": "HOSPITALITY UX LEAD",
+          "imageSrc": "/placeholder.svg?height=600&width=600",
+          "imageAlt": "Maria L",
+          "bio": [
+            "Maria brings 9 years of specialized experience designing digital experiences for the hospitality industry. She has crafted guest-facing apps and staff tools for major hotel chains including Meliá, NH Hotels, and Paradores.",
+            "Her deep understanding of guest psychology and hotel operations enables her to design interfaces that balance guest delight with operational efficiency. Maria's work consistently achieves high user satisfaction scores while streamlining staff workflows."
+          ],
+          "languages": "SPANISH (NATIVE), ENGLISH (FLUENT), FRENCH (ADVANCED)",
+          "skills": "UX RESEARCH, GUEST JOURNEY MAPPING, FIGMA, DESIGN SYSTEMS, ACCESSIBILITY, MOBILE APP DESIGN, PROTOTYPING"
+        }
+      },
+      {
+        "name": "Alex K",
+        "title": "AI Engineer",
+        "imageSrc": "/placeholder.svg?height=400&width=400",
+        "imageAlt": "Alex K - AI Engineer",
+        "modalData": {
+          "name": "ALEX K",
+          "title": "AI ENGINEER",
+          "imageSrc": "/placeholder.svg?height=600&width=600",
+          "imageAlt": "Alex K",
+          "bio": [
+            "Alex specializes in building AI systems for personalization and revenue optimization in hospitality. His machine learning models have increased conversion rates by 40% and revenue per guest by 25% for major hotel brands.",
+            "From recommendation engines to demand forecasting, Alex's solutions combine theoretical rigor with practical business impact."
+          ],
+          "languages": "ENGLISH (NATIVE), GERMAN (FLUENT), SPANISH (INTERMEDIATE)",
+          "skills": "PYTHON, TENSORFLOW, OPENAI, LANGCHAIN, RECOMMENDATION SYSTEMS, PREDICTIVE ANALYTICS, ML PIPELINES"
+        }
+      },
+      {
+        "name": "Carlos M",
+        "title": "DevOps Lead",
+        "imageSrc": "/placeholder.svg?height=400&width=400",
+        "imageAlt": "Carlos M - DevOps Lead",
+        "modalData": {
+          "name": "CARLOS M",
+          "title": "DEVOPS LEAD",
+          "imageSrc": "/placeholder.svg?height=600&width=600",
+          "imageAlt": "Carlos M",
+          "bio": [
+            "Carlos has 7 years of experience building and maintaining mission-critical hospitality infrastructure. He ensures 99.99% uptime for platforms serving millions of guests annually.",
+            "His expertise in auto-scaling, disaster recovery, and security hardening provides the foundation for reliable, performant hotel technology systems."
+          ],
+          "languages": "SPANISH (NATIVE), ENGLISH (FLUENT)",
+          "skills": "AWS, KUBERNETES, DOCKER, TERRAFORM, CI/CD, MONITORING, SECURITY, INFRASTRUCTURE AS CODE"
+        }
+      }
+    ]
+  },
+  "caseStudies": [
+    {
+      "category": "HOSPITALITY",
+      "title": "Global Hotel Chain Digital Platform",
+      "imageSrc": "/images/design-mode/Dormakaba.png",
+      "imageAlt": "Hotel Digital Platform Case Study",
+      "modalData": {
+        "title": "GLOBAL HOTEL CHAIN",
+        "category": "HOSPITALITY TECHNOLOGY",
+        "imageSrc": "/images/design-mode/Dormakaba.png",
+        "imageAlt": "Global Hotel Chain Platform",
+        "sections": [
+          {
+            "title": "THE CHALLENGE",
+            "paragraphs": [
+              "A leading international hotel chain needed to unify their fragmented technology stack across 150+ properties. Guests experienced inconsistent digital touchpoints, while operations teams struggled with disconnected systems that hindered efficiency."
+            ]
+          },
+          {
+            "title": "THE SOLUTION",
+            "paragraphs": [
+              "We developed a comprehensive platform integrating mobile check-in, digital room keys, personalized recommendations, and centralized operations management. The solution scaled seamlessly across all properties while respecting brand-specific requirements."
+            ]
+          }
+        ],
+        "insights": [
+          { "value": "150+", "label": "PROPERTIES UNIFIED" },
+          { "value": "45%", "label": "FASTER CHECK-IN" },
+          { "value": "92%", "label": "GUEST SATISFACTION" }
+        ],
+        "quotes": [
+          {
+            "text": "This platform transformed how we serve our guests and manage operations. The unified experience has significantly improved satisfaction scores while reducing operational costs.",
+            "author": "CTO, GLOBAL HOTEL CHAIN"
+          }
+        ]
+      }
+    },
+    {
+      "category": "ECOMMERCE",
+      "title": "VRAI Luxury Jewelry",
+      "imageSrc": "/images/design-mode/VRAI(1).jpeg",
+      "imageAlt": "VRAI Case Study",
+      "modalData": {
+        "title": "VRAI",
+        "category": "LUXURY E-COMMERCE",
+        "imageSrc": "/images/design-mode/VRAI(1).jpeg",
+        "imageAlt": "VRAI Platform",
+        "sections": [
+          {
+            "title": "THE CHALLENGE",
+            "paragraphs": [
+              "VRAI needed an e-commerce platform that matched their luxury positioning with sophisticated product customization, 3D visualization, and seamless checkout experiences."
+            ]
+          },
+          {
+            "title": "THE SOLUTION",
+            "paragraphs": [
+              "We built a premium Shopify Plus solution with advanced 3D configurators, real-time inventory integration, and personalized recommendation engines that elevated the luxury shopping experience."
+            ]
+          }
+        ],
+        "insights": [{ "value": "150%", "label": "SALES INCREASE" }, { "value": "4.8/5", "label": "CUSTOMER RATING" }],
+        "quotes": [
+          {
+            "text": "The platform perfectly captures our brand's elegance while delivering exceptional functionality. Our customers love the experience.",
+            "author": "HEAD OF E-COMMERCE, VRAI"
+          }
+        ]
+      }
+    },
+    {
+      "category": "SOFTWARE",
+      "title": "dormakaba Global Platform",
+      "imageSrc": "/images/design-mode/Cargill.png",
+      "imageAlt": "dormakaba Case Study",
+      "modalData": {
+        "title": "DORMAKABA",
+        "category": "GLOBAL SOFTWARE PLATFORM",
+        "imageSrc": "/images/design-mode/Cargill.png",
+        "imageAlt": "dormakaba Platform",
+        "sections": [
+          {
+            "title": "THE CHALLENGE",
+            "paragraphs": [
+              "dormakaba needed to transition from a monolithic CMS to a flexible, scalable architecture supporting 40 countries and 35 languages while maintaining operational continuity."
+            ]
+          },
+          {
+            "title": "THE SOLUTION",
+            "paragraphs": [
+              "We delivered a headless CMS architecture with localization support, advanced workflows, and seamless migration from their legacy system—all without disrupting global operations."
+            ]
+          }
+        ],
+        "insights": [{ "value": "40+", "label": "COUNTRIES" }, { "value": "35", "label": "LANGUAGES" }],
+        "quotes": [
+          {
+            "text": "Tailor Hub's team adapted exceptionally well to our complex requirements. Their professionalism and flexibility were key to our success.",
+            "author": "GLOBAL DIGITAL SOLUTIONS LEAD, DORMAKABA"
+          }
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "How long will the complete platform implementation take?",
+      "answer": "The full project timeline is approximately 49 weeks (just under 12 months) from contract signing to final deployment across all properties. This includes 6 weeks of discovery, 7 weeks of design, 12 weeks of core development, 8 weeks of AI features, 6 weeks of pilot rollout, and 10 weeks for full deployment. We can adjust this timeline based on your priorities and resource availability."
+    },
+    {
+      "question": "How will this integrate with our existing property management system?",
+      "answer": "We have extensive experience integrating with major PMS platforms including Opera, Mews, Protel, and others. Our integration layer uses standard APIs and webhooks to ensure real-time synchronization of reservations, guest data, and operational information. We'll conduct a detailed technical assessment during discovery to map all integration requirements."
+    },
+    {
+      "question": "What happens during the pilot phase?",
+      "answer": "The pilot phase deploys the platform to 3 carefully selected properties representing different hotel types (urban, resort, boutique). This allows us to validate functionality in real-world conditions, gather feedback from actual guests and staff, and refine the platform before wider rollout. Pilot properties receive intensive support and training."
+    },
+    {
+      "question": "How do you ensure data security and regulatory compliance?",
+      "answer": "Security and compliance are foundational to our approach. We implement enterprise-grade encryption, role-based access control, and regular security audits. The platform is designed to comply with GDPR, PCI-DSS (for payments), and hospitality-specific regulations. Tailor Hub is ISO 27001 certified, demonstrating our commitment to information security management."
+    },
+    {
+      "question": "Can the platform support our multiple hotel brands?",
+      "answer": "Absolutely. The architecture is designed for multi-brand operations. Each property can have brand-specific configurations, design elements, and workflows while sharing the underlying platform infrastructure. This provides consistency where needed and flexibility where desired."
+    },
+    {
+      "question": "What kind of ongoing support do you provide after launch?",
+      "answer": "Our managed services include 24/7 monitoring, security updates, bug fixes, performance optimization, and help desk support. We also provide quarterly business reviews to discuss platform performance and strategic enhancements. The managed services package is detailed in the Infrastructure & Support section."
+    },
+    {
+      "question": "How do we handle training for staff across all properties?",
+      "answer": "We provide comprehensive training programs including train-the-trainer sessions, video tutorials, interactive documentation, and on-site support during rollout. Training is tailored to different roles (front desk, management, IT, etc.) and available in multiple languages. We also offer ongoing training for new staff as needed."
+    },
+    {
+      "question": "What if we need to add new features after launch?",
+      "answer": "Minor enhancements and adjustments are included in the monthly managed services package. Larger new features (complex integrations, new modules) are scoped and quoted separately as projects. We maintain a product roadmap and can prioritize features based on business needs and guest feedback."
+    }
+  ],
+  "partners": {
+    "concepts": ["TECHNOLOGY", "PARTNERS"],
+    "items": ["AWS", "STRIPE", "OPERA PMS", "MEWS", "BOOKING.COM", "EXPEDIA"]
+  },
+  "isoCertification": {
+    "overheader": "ISO 27001",
+    "header": "Enterprise-Grade Security Certification",
+    "bodyText": "Tailor Hub is ISO 27001 certified, the international standard for information security management. This certification validates our rigorous processes for protecting sensitive data throughout the development lifecycle. For hospitality platforms handling guest information and payment data, this represents our unwavering commitment to security, confidentiality, and compliance with the highest industry standards.",
+    "imageSrc": "/images/design-mode/ISO(2).png",
+    "imageAlt": "ISO 27001 Certification",
+    "certificationBadgeSrc": "/images/design-mode/Modo_de_aislamiento.webp",
+    "certificationBadgeAlt": "ISO 27001 Certification Badge"
+  }
+}
