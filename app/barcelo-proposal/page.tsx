@@ -182,7 +182,7 @@ export default function BarceloProposalPage() {
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  gap: "var(--spacing-l)",
+                  gap: "var(--spacing-9xl)",
                   marginBottom: "var(--spacing-xl)",
                 }}
               >
@@ -205,45 +205,6 @@ export default function BarceloProposalPage() {
                     />
                   )
                 })}
-              </div>
-
-              <div
-                style={{
-                  marginTop: "var(--spacing-xl)",
-                  padding: "var(--spacing-m)",
-                  backgroundColor: "var(--color-neutral-100)",
-                  borderRadius: "var(--radius-s)",
-                }}
-              >
-                <p
-                  style={{
-                    fontFamily: "var(--font-default)",
-                    fontSize: "var(--text-size-large)",
-                    lineHeight: "var(--text-line-large)",
-                    fontWeight: 500,
-                    color: "var(--color-text-primary)",
-                    margin: 0,
-                    marginBottom: "var(--spacing-xs)",
-                  }}
-                >
-                  {proposalConfig.infrastructure?.monthlyCost}
-                </p>
-                <ul
-                  style={{
-                    margin: 0,
-                    paddingLeft: "var(--spacing-m)",
-                    fontFamily: "var(--font-default)",
-                    fontSize: "var(--text-size-xsmall)",
-                    lineHeight: "var(--text-line-xsmall)",
-                    color: "var(--color-text-secondary)",
-                  }}
-                >
-                  {proposalConfig.infrastructure?.monthlyCostNotes?.map((note, i) => (
-                    <li key={i} style={{ marginBottom: "var(--spacing-xs)" }}>
-                      {note}
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
           </div>
