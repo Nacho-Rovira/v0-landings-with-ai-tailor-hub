@@ -19,10 +19,11 @@ Before creating the configuration, collect:
 
 ## Step 2: Create Configuration File
 
-1. Copy `config/proposals/clikalia-config.json` to `config/proposals/[client-name]-config.json`
-2. Replace all Clikalia-specific content with your client's information
-3. Update the `slug` field to match your URL structure
-4. Adjust the number of phases, team members, and budget items as needed
+1. Copy `config/proposals/tailor-hub-proposal.json` to `config/proposals/[client-name]-proposal.json`
+2. Replace all template content with your client's information
+3. Update the `slug` field to match your URL structure (e.g., "acme-proposal")
+4. Update the `clientName` field with the client's name
+5. Adjust the number of phases, team members, and budget items as needed
 
 ## Step 3: Select Images
 
@@ -171,9 +172,9 @@ Cover common concerns:
 Create `app/[client-name]-proposal/page.tsx`:
 
 \`\`\`tsx
-import proposalConfig from "@/config/proposals/[client-name]-config.json"
+import proposalConfig from "@/config/proposals/[client-name]-proposal.json"
 // Import and use components based on your config structure
-// Reference clikalia-proposal/page.tsx as a complete example
+// Reference tailor-hub-proposal/page.tsx as a complete example
 \`\`\`
 
 ## Step 6: Review & Refine
@@ -203,7 +204,7 @@ Options:
 - Smaller team (4-6 people)
 - Include security/performance focus
 
-**New Software Development** (like Clikalia):
+**New Software Development** (like Tailor Hub):
 - Full product development lifecycle
 - 5-7 phases: Discovery → Design → Core Dev → Advanced Features → Launch
 - Larger team (8-12 people)

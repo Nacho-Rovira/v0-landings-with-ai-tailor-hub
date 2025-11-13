@@ -8,8 +8,8 @@ This system provides a flexible, type-safe way to create new client proposals us
 
 To create a new proposal:
 
-1. **Create a JSON configuration file** in `config/proposals/[client-name]-config.json`
-2. **Copy the template structure** from `clikalia-config.json` or `vrai-config.json`
+1. **Create a JSON configuration file** in `config/proposals/[client-name]-proposal.json`
+2. **Copy the template structure** from `tailor-hub-proposal.json` as a base reference
 3. **Fill in your client-specific content**
 4. **Create a new page** at `app/[client-name]-proposal/page.tsx` that imports and uses the config
 5. **Preview** at `/[client-name]-proposal`
@@ -105,7 +105,7 @@ All components use semantic design tokens from `/tokens/tokens.css`:
 ## Example Workflow
 
 1. Sales team wins a new client (e.g., "Acme Corp")
-2. Create `config/proposals/acme-config.json`
+2. Create `config/proposals/acme-proposal.json`
 3. Fill in client details, project scope, phases, budget
 4. Select relevant case studies and team members
 5. Create `app/acme-proposal/page.tsx` importing the config
@@ -117,5 +117,6 @@ All components use semantic design tokens from `/tokens/tokens.css`:
 
 For questions or assistance with the proposal system:
 - Review existing proposals: `clikalia-proposal`, `vrai-proposal`, `proposal-template`
+- Reference the base template: `tailor-hub-proposal.json`
 - Check component documentation in `/components/*/README.md`
 - Reference design tokens in `/tokens/tokens.css`
