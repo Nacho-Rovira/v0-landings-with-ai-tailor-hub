@@ -174,8 +174,9 @@
 
 .box-section--compact .box-section__image {
   /* Compact: smaller image size */
-  width: 200px;
-  height: 200px;
+  /* Increased compact image width from 200px to 250px */
+  width: 250px;
+  height: 250px;
   border-radius: var(--radius-s, 16px);
   overflow: hidden;
   flex-shrink: 0;
