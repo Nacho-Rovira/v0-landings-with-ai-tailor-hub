@@ -18,11 +18,7 @@
     { "href": "#context", "number": 1, "label": "CONTEXT / OPPORTUNITY" },
     { "href": "#capabilities", "number": 2, "label": "OUR CAPABILITIES" },
     { "href": "#approach", "number": 3, "label": "HOW WE WORK" },
-    { "href": "#technology", "number": 4, "label": "TECHNOLOGY & ARCHITECTURE" },
-    { "href": "#services", "number": 5, "label": "SERVICES" },
-    { "href": "#team", "number": 6, "label": "TEAM" },
-    { "href": "#case-studies", "number": 7, "label": "CASE STUDIES" },
-    { "href": "#next-steps", "number": 8, "label": "NEXT STEPS" }
+    { "href": "#technology", "number": 4, "label": "TECHNOLOGY & ARCHITECTURE" }
   ],
   "bodySections": [
     {
