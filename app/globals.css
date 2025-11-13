@@ -126,6 +126,11 @@
     @apply bg-background text-foreground;
   }
 
+  /* Setting strong tags to use font-weight 500 instead of default bold */
+  strong {
+    font-weight: 500;
+  }
+
   /* Custom scrollbar styling for horizontal scroll containers */
   *::-webkit-scrollbar {
     height: 8px;
