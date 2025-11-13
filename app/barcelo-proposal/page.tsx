@@ -63,7 +63,24 @@ export default function BarceloProposalPage() {
 
           {/* Body Content */}
           <div style={{ flex: 1, maxWidth: "702px" }}>
-            <BodyText sections={proposalConfig.bodySections} />
+            {/* Challenge Section */}
+            <div id="challenge" style={{ marginTop: "var(--spacing-4xl)" }}>
+              <h3
+                style={{
+                  fontFamily: "var(--font-default)",
+                  fontSize: "var(--text-size-large)",
+                  lineHeight: "var(--text-line-large)",
+                  fontWeight: 400,
+                  color: "var(--color-text-primary)",
+                  textTransform: "uppercase",
+                  margin: 0,
+                  marginBottom: "var(--spacing-m)",
+                }}
+              >
+                CHALLENGE
+              </h3>
+              <BodyText sections={proposalConfig.bodySections} />
+            </div>
 
             {/* Technology Section */}
             <div id="technology" style={{ marginTop: "var(--spacing-4xl)" }}>
@@ -150,7 +167,7 @@ export default function BarceloProposalPage() {
             </div>
 
             {/* Infrastructure & Support Section */}
-            <div id="infra" style={{ marginTop: "var(--spacing-4xl)" }}>
+            <div id="infrastructure" style={{ marginTop: "var(--spacing-4xl)" }}>
               <h3
                 style={{
                   fontFamily: "var(--font-default)",

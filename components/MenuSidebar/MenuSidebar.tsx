@@ -86,30 +86,33 @@ export const MenuSidebar = React.forwardRef<HTMLElement, MenuSidebarProps>(
       if (!autoDetectActive) return
 
       const handleScroll = () => {
-        // Get all section IDs from menu items
-        const sections = Array.from(
-          document.querySelectorAll(
-            '[id^="challenge"], [id^="objectives"], [id^="approach"], [id^="services"], [id^="technology"], [id^="roadmap"], [id^="budget"]',
-          ),
-        )
+        const menuItems = Array.from(document.querySelectorAll(".menu-sidebar__item"))
+        const sectionIds = menuItems.map((item) => item.getAttribute("href")?.replace("#", "")).filter(Boolean)
 
-        // Find which section is currently in view
-        const scrollPosition = window.scrollY + 200 // Offset for header
+        const sections = sectionIds.map((id) => document.getElementById(id as string)).filter(Boolean) as HTMLElement[]
+
+        if (sections.length === 0) return
+
+        const scrollPosition = window.scrollY + 180
 
         for (let i = sections.length - 1; i >= 0; i--) {
-          const section = sections[i] as HTMLElement
+          const section = sections[i]
           if (section.offsetTop <= scrollPosition) {
             setActiveSection(section.id)
-            break
+            return
           }
+        }
+
+        if (sections[0]) {
+          setActiveSection(sections[0].id)
         }
       }
 
-      window.addEventListener("scroll", handleScroll)
-      handleScroll() // Initial check
+      handleScroll()
 
+      window.addEventListener("scroll", handleScroll)
       return () => window.removeEventListener("scroll", handleScroll)
-    }, [autoDetectActive])
+    }, [autoDetectActive, children])
 
     const enhancedChildren = autoDetectActive
       ? React.Children.map(children, (child) => {
