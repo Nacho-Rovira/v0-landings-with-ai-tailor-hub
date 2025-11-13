@@ -178,40 +178,18 @@ export default function BarceloProposalPage() {
                 {proposalConfig.infrastructure?.description}
               </p>
 
-              {proposalConfig.infrastructure?.serviceCategories?.map((category, index) => (
-                <div key={index} style={{ marginBottom: "var(--spacing-l)" }}>
-                  <h4
-                    style={{
-                      fontFamily: "var(--font-mono)",
-                      fontSize: "var(--text-size-xsmall)",
-                      lineHeight: "var(--text-line-xsmall)",
-                      fontWeight: 400,
-                      color: "var(--color-text-primary)",
-                      textTransform: "uppercase",
-                      margin: 0,
-                      marginBottom: "var(--spacing-s)",
-                    }}
-                  >
-                    {category.title}
-                  </h4>
-                  <ul
-                    style={{
-                      margin: 0,
-                      paddingLeft: "var(--spacing-m)",
-                      fontFamily: "var(--font-default)",
-                      fontSize: "var(--text-size-small)",
-                      lineHeight: "var(--text-line-small)",
-                      color: "var(--color-text-primary)",
-                    }}
-                  >
-                    {category.items.map((item, i) => (
-                      <li key={i} style={{ marginBottom: "var(--spacing-xs)" }}>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "var(--spacing-m)",
+                  marginBottom: "var(--spacing-xl)",
+                }}
+              >
+                {proposalConfig.infrastructure?.serviceCategories?.map((category, index) => (
+                  <TechBox key={index} title={category.title} technologies={category.items} />
+                ))}
+              </div>
 
               <div
                 style={{
