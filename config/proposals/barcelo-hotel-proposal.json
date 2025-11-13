@@ -16,10 +16,12 @@
   },
   "menuItems": [
     { "href": "#challenge", "number": 1, "label": "CHALLENGE / CONTEXT" },
-    { "href": "#technology", "number": 2, "label": "TECHNOLOGY & ARCHITECTURE" },
-    { "href": "#roadmap", "number": 3, "label": "ROADMAP & PHASES" },
-    { "href": "#budget", "number": 4, "label": "BUDGET & CONDITIONS" },
-    { "href": "#infrastructure", "number": 5, "label": "INFRASTRUCTURE & SUPPORT" }
+    { "href": "#objectives", "number": 2, "label": "OBJECTIVES" },
+    { "href": "#approach", "number": 3, "label": "OUR APPROACH" },
+    { "href": "#technology", "number": 4, "label": "TECHNOLOGY & ARCHITECTURE" },
+    { "href": "#roadmap", "number": 5, "label": "ROADMAP & PHASES" },
+    { "href": "#budget", "number": 6, "label": "BUDGET & CONDITIONS" },
+    { "href": "#infra", "number": 7, "label": "INFRASTRUCTURE & SUPPORT" }
   ],
   "bodySections": [
     {
@@ -32,39 +34,27 @@
       ]
     },
     {
-      "id": "technology",
-      "title": "TECHNOLOGY & ARCHITECTURE",
+      "id": "objectives",
+      "title": "OBJECTIVES",
       "paragraphs": [
-        "Barceló Hotel Group operates a diverse portfolio of premium hotels worldwide, serving millions of guests annually. The current digital ecosystem faces critical challenges: fragmented property management systems, disconnected guest touchpoints, and limited real-time visibility across operations. These limitations create friction in the guest experience and operational inefficiencies that impact both service quality and profitability.",
-        "The hospitality industry is experiencing a profound digital shift. Modern travelers expect seamless, personalized experiences across all touchpoints—from initial booking through post-stay engagement. They demand mobile-first interactions, contactless services, and intelligent recommendations. Meanwhile, hotel operations teams need unified tools that streamline workflows, enhance decision-making, and enable data-driven optimization across all properties.",
-        "Barceló requires a comprehensive digital transformation that unifies its technology stack, elevates guest experiences, and provides operational teams with powerful tools for managing multi-property operations at scale. The solution must respect the unique character of each hotel brand while enabling centralized management and insights."
+        "Build a unified digital platform that transforms how Barceló operates and serves guests across its entire portfolio:",
+        "<strong>1. Unified Guest Experience Platform:</strong> Create a seamless, omnichannel experience that connects booking, check-in, in-stay services, and loyalty programs. Guests should enjoy consistent, personalized interactions whether they're using mobile apps, web portals, or in-property touchpoints.",
+        "<strong>2. Intelligent Operations Management:</strong> Develop centralized tools that provide real-time visibility into property operations, revenue management, housekeeping, maintenance, and staff coordination. Enable data-driven decision-making with predictive analytics and automated workflows.",
+        "<strong>3. AI-Powered Personalization:</strong> Implement machine learning systems that understand guest preferences, predict needs, and deliver tailored recommendations for services, amenities, and experiences. Drive revenue through intelligent upselling and cross-property engagement.",
+        "<strong>4. Multi-Property Scalability:</strong> Design a flexible architecture that scales effortlessly across Barceló's portfolio while accommodating the unique requirements of different hotel brands, property types, and geographic markets.",
+        "<strong>5. Enhanced Revenue Optimization:</strong> Build dynamic pricing engines, demand forecasting tools, and channel management systems that maximize revenue per available room while maintaining competitive positioning across all booking channels."
       ]
     },
     {
-      "id": "roadmap",
-      "title": "ROADMAP & PHASES",
+      "id": "approach",
+      "title": "OUR APPROACH",
       "paragraphs": [
-        "Barceló Hotel Group operates a diverse portfolio of premium hotels worldwide, serving millions of guests annually. The current digital ecosystem faces critical challenges: fragmented property management systems, disconnected guest touchpoints, and limited real-time visibility across operations. These limitations create friction in the guest experience and operational inefficiencies that impact both service quality and profitability.",
-        "The hospitality industry is experiencing a profound digital shift. Modern travelers expect seamless, personalized experiences across all touchpoints—from initial booking through post-stay engagement. They demand mobile-first interactions, contactless services, and intelligent recommendations. Meanwhile, hotel operations teams need unified tools that streamline workflows, enhance decision-making, and enable data-driven optimization across all properties.",
-        "Barceló requires a comprehensive digital transformation that unifies its technology stack, elevates guest experiences, and provides operational teams with powerful tools for managing multi-property operations at scale. The solution must respect the unique character of each hotel brand while enabling centralized management and insights."
-      ]
-    },
-    {
-      "id": "budget",
-      "title": "BUDGET & CONDITIONS",
-      "paragraphs": [
-        "Barceló Hotel Group operates a diverse portfolio of premium hotels worldwide, serving millions of guests annually. The current digital ecosystem faces critical challenges: fragmented property management systems, disconnected guest touchpoints, and limited real-time visibility across operations. These limitations create friction in the guest experience and operational inefficiencies that impact both service quality and profitability.",
-        "The hospitality industry is experiencing a profound digital shift. Modern travelers expect seamless, personalized experiences across all touchpoints—from initial booking through post-stay engagement. They demand mobile-first interactions, contactless services, and intelligent recommendations. Meanwhile, hotel operations teams need unified tools that streamline workflows, enhance decision-making, and enable data-driven optimization across all properties.",
-        "Barceló requires a comprehensive digital transformation that unifies its technology stack, elevates guest experiences, and provides operational teams with powerful tools for managing multi-property operations at scale. The solution must respect the unique character of each hotel brand while enabling centralized management and insights."
-      ]
-    },
-    {
-      "id": "infrastructure",
-      "title": "INFRASTRUCTURE & SUPPORT",
-      "paragraphs": [
-        "Barceló Hotel Group operates a diverse portfolio of premium hotels worldwide, serving millions of guests annually. The current digital ecosystem faces critical challenges: fragmented property management systems, disconnected guest touchpoints, and limited real-time visibility across operations. These limitations create friction in the guest experience and operational inefficiencies that impact both service quality and profitability.",
-        "The hospitality industry is experiencing a profound digital shift. Modern travelers expect seamless, personalized experiences across all touchpoints—from initial booking through post-stay engagement. They demand mobile-first interactions, contactless services, and intelligent recommendations. Meanwhile, hotel operations teams need unified tools that streamline workflows, enhance decision-making, and enable data-driven optimization across all properties.",
-        "Barceló requires a comprehensive digital transformation that unifies its technology stack, elevates guest experiences, and provides operational teams with powerful tools for managing multi-property operations at scale. The solution must respect the unique character of each hotel brand while enabling centralized management and insights."
+        "Tailor Hub brings deep expertise in hospitality technology and enterprise-scale digital transformation. Our approach combines strategic thinking with technical excellence to deliver transformative results:",
+        "<strong>Discovery & Stakeholder Alignment:</strong> We begin with comprehensive discovery across all stakeholder groups—from C-suite executives to front-line staff. We map existing systems, identify pain points, and establish clear success criteria aligned with Barceló's business strategy.",
+        "<strong>Guest-Centric Design:</strong> Our UX methodology starts with extensive guest research and journey mapping. We design intuitive interfaces that delight users while reducing friction at every touchpoint. Every design decision is validated through user testing with real guests and staff.",
+        "<strong>Phased, Risk-Mitigated Rollout:</strong> We implement a carefully orchestrated rollout strategy that minimizes disruption to ongoing operations. Pilot programs in selected properties validate solutions before wider deployment, ensuring each phase delivers measurable value.",
+        "<strong>Integration Excellence:</strong> Seamless integration with existing systems (PMS, POS, CRS, channel managers) is critical. We architect robust APIs and middleware that connect legacy systems while enabling modern functionality.",
+        "<strong>Training & Change Management:</strong> Technology transformation requires organizational change. We provide comprehensive training programs, documentation, and ongoing support to ensure staff adoption and maximize platform value."
       ]
     }
   ],
@@ -264,7 +254,7 @@
       "Includes all maintenance, support, and infrastructure management",
       "Infrastructure costs (AWS) estimated at €12,000/month (scales with usage)",
       "12-month minimum commitment, annual contracts receive 10% discount",
-      "Additional features development quoted separately as projects",
+      "New feature development quoted separately as projects",
       "On-call support available 24/7 for critical incidents"
     ]
   },

@@ -1,0 +1,403 @@
+{
+  "slug": "santander-proposal",
+  "clientName": "Banco Santander",
+  "highlight": {
+    "concepts": ["DIGITAL <span> BANKING", "EMPLOYEE <span> PLATFORMS", "CUSTOMER <span> INNOVATION"],
+    "header": "Transforming financial services through secure, scalable technology"
+  },
+  "headerBox": {
+    "overheader": "AN INTRODUCTION FOR BANCO SANTANDER",
+    "header": "Partner with Tailor Hub to build next-generation digital banking platforms, internal tools, and customer experiences that set new standards in financial services",
+    "buttonLabel": "EXPLORE PARTNERSHIP"
+  },
+  "heroImage": {
+    "src": "/images/design-mode/HERO.png",
+    "alt": "Santander Digital Transformation"
+  },
+  "menuItems": [
+    { "href": "#context", "number": 1, "label": "CONTEXT / OPPORTUNITY" },
+    { "href": "#capabilities", "number": 2, "label": "OUR CAPABILITIES" },
+    { "href": "#approach", "number": 3, "label": "HOW WE WORK" },
+    { "href": "#technology", "number": 4, "label": "TECHNOLOGY EXPERTISE" },
+    { "href": "#services", "number": 5, "label": "SERVICES" },
+    { "href": "#team", "number": 6, "label": "TEAM" },
+    { "href": "#case-studies", "number": 7, "label": "CASE STUDIES" },
+    { "href": "#next-steps", "number": 8, "label": "NEXT STEPS" }
+  ],
+  "bodySections": [
+    {
+      "id": "context",
+      "title": "CONTEXT / OPPORTUNITY",
+      "paragraphs": [
+        "The financial services industry is experiencing profound digital transformation. Banks like Santander face unique challenges: balancing regulatory compliance with innovation velocity, modernizing legacy systems while maintaining operational continuity, and delivering exceptional digital experiences that meet rising customer expectations.",
+        "Meanwhile, internal operations teams require modern tools that streamline workflows, enhance productivity, and provide real-time insights across global operations. The gap between what existing systems provide and what teams need continues to widen, creating friction that impacts both employee satisfaction and operational efficiency.",
+        "<strong>Tailor Hub specializes in solving these exact challenges.</strong> We build secure, scalable platforms specifically designed for the financial services sector—from customer-facing digital banking applications to internal employee platforms and data-driven operational tools. Our expertise bridges technology innovation with financial services requirements, ensuring solutions that are both cutting-edge and compliant."
+      ]
+    },
+    {
+      "id": "capabilities",
+      "title": "OUR CAPABILITIES",
+      "paragraphs": [
+        "Tailor Hub delivers comprehensive digital solutions tailored to the unique needs of financial institutions:",
+        "<strong>Digital Banking Platforms:</strong> We design and build modern banking applications that deliver seamless customer experiences across web and mobile. From account management to investment platforms, our solutions prioritize security, usability, and performance at scale.",
+        "<strong>Employee Internal Tools:</strong> We create powerful internal platforms that transform how teams work. Whether it's case management systems, workflow automation, collaboration tools, or operational dashboards, we design solutions that enhance productivity and reduce operational friction.",
+        "<strong>Customer Experience Innovation:</strong> Using AI and advanced analytics, we build intelligent systems that personalize customer interactions, predict needs, and deliver proactive service. From chatbots to recommendation engines, our solutions drive engagement and satisfaction.",
+        "<strong>Legacy System Modernization:</strong> We help financial institutions transition from monolithic architectures to modern, microservices-based platforms—incrementally and without disrupting ongoing operations. Our approach minimizes risk while unlocking the benefits of cloud-native infrastructure.",
+        "<strong>Compliance & Security:</strong> ISO 27001 certified, we embed security and compliance into every layer of our solutions. We understand PCI-DSS, GDPR, PSD2, and other financial regulations, ensuring your platforms meet the highest standards from day one."
+      ]
+    },
+    {
+      "id": "approach",
+      "title": "HOW WE WORK",
+      "paragraphs": [
+        "Our methodology combines strategic thinking with agile execution, ensuring we deliver value quickly while building for long-term success:",
+        "<strong>Discovery & Strategic Alignment:</strong> We begin by deeply understanding your business context, user needs, technical constraints, and strategic goals. This foundation ensures every technical decision supports your broader objectives.",
+        "<strong>User-Centered Design:</strong> Whether designing for customers or employees, we start with user research and journey mapping. Our UX team creates intuitive interfaces that reduce friction and delight users, validated through real-world testing.",
+        "<strong>Agile Development with Financial Rigor:</strong> We work in focused sprints, delivering working software incrementally. This allows for rapid feedback cycles while maintaining the documentation, testing, and quality standards required in financial services.",
+        "<strong>Security-First Architecture:</strong> Security isn't an afterthought—it's built into our architecture from day one. We implement defense-in-depth strategies, encryption at rest and in transit, and rigorous access controls.",
+        "<strong>Seamless Integration:</strong> Our platforms integrate cleanly with existing systems through well-designed APIs. We respect your current infrastructure while providing pathways to modernization.",
+        "<strong>Knowledge Transfer & Partnership:</strong> We don't just deliver code—we transfer knowledge to your teams through documentation, training, and collaborative development. Our goal is to empower your organization for long-term success."
+      ]
+    }
+  ],
+  "technology": {
+    "description": "We leverage modern, proven technologies architected specifically for financial services requirements. Our stack balances innovation with enterprise reliability, security, and regulatory compliance:",
+    "categories": [
+      {
+        "title": "Frontend & Mobile",
+        "technologies": ["REACT 18", "NEXT JS 15", "TYPESCRIPT", "TAILWIND CSS", "REACT NATIVE", "PWA"]
+      },
+      {
+        "title": "Backend & APIs",
+        "technologies": ["NODE JS", "NESTJS", "PYTHON", "GRAPHQL", "REST APIs", "MICROSERVICES"]
+      },
+      {
+        "title": "Data & Intelligence",
+        "technologies": ["POSTGRESQL", "MONGODB", "REDIS", "ELASTICSEARCH", "OPENAI GPT-4", "AZURE OPENAI"]
+      },
+      {
+        "title": "Security & Compliance",
+        "technologies": ["AUTH0", "OAUTH 2.0", "JWT", "ENCRYPTION", "PCI-DSS", "GDPR"]
+      },
+      {
+        "title": "Cloud Infrastructure",
+        "technologies": ["AWS", "AZURE", "KUBERNETES", "DOCKER", "TERRAFORM", "CI/CD"]
+      }
+    ]
+  },
+  "services": [
+    {
+      "overheader": "DIGITAL BANKING",
+      "header": "Customer-Facing Platforms",
+      "bodyText": "We build comprehensive digital banking solutions—from mobile apps to web portals—that deliver secure, intuitive experiences. Our platforms handle millions of transactions while maintaining 99.99% uptime and meeting stringent financial regulations.",
+      "imageSrc": "/images/design-mode/desarrollo de software(2).jpeg",
+      "imageAlt": "Digital Banking Platform"
+    },
+    {
+      "overheader": "INTERNAL TOOLS",
+      "header": "Employee Productivity Platforms",
+      "bodyText": "Transform how your teams work with modern internal tools designed for financial operations. From case management to workflow automation, we build systems that eliminate friction, enhance collaboration, and provide real-time operational insights.",
+      "imageSrc": "/images/design-mode/Design systems.png",
+      "imageAlt": "Internal Tools Platform"
+    },
+    {
+      "overheader": "AI & INNOVATION",
+      "header": "Intelligent Customer Experience",
+      "bodyText": "Leverage artificial intelligence to personalize customer interactions, automate support, and predict needs. Our AI solutions integrate seamlessly with existing systems while delivering measurable improvements in satisfaction and efficiency.",
+      "imageSrc": "/images/design-mode/auditoria y formacion(2).jpeg",
+      "imageAlt": "AI Solutions"
+    }
+  ],
+  "team": {
+    "overheader": "TEAM",
+    "members": [
+      {
+        "name": "Giorgio G",
+        "title": "Tech Lead",
+        "imageSrc": "/placeholder.svg?height=400&width=400",
+        "imageAlt": "Giorgio G - Tech Lead",
+        "modalData": {
+          "name": "GIORGIO G",
+          "title": "TECH LEAD",
+          "imageSrc": "/placeholder.svg?height=600&width=600",
+          "imageAlt": "Giorgio G",
+          "bio": [
+            "Con más de ocho años de experiencia en desarrollo de software, Giorgio ha liderado proyectos complejos y de alto impacto para compañías como dormakaba, Iberia o Inditex. Conocido cariñosamente como 'Girgetto', se centra en construir soluciones digitales escalables, de alto rendimiento y alineadas con los objetivos de negocio.",
+            "Desde el diseño de arquitecturas eficientes hasta la implementación de sistemas robustos, combina una sólida base técnica con una visión estratégica. Su enfoque práctico, colaborativo y orientado a resultados, junto con una fuerte vocación por la innovación y las buenas prácticas, lo convierten en un aliado clave para impulsar el éxito a largo plazo."
+          ],
+          "languages": "ITALIAN (NATIVE), SPANISH (ADVANCED), ENGLISH (ADVANCED)",
+          "skills": "REACT JS, NEXT JS, NODE JS, TYPESCRIPT, POSTGRESQL, AWS, KUBERNETES, MICROSERVICES, API DESIGN, SYSTEM ARCHITECTURE"
+        }
+      },
+      {
+        "name": "Elena R",
+        "title": "Fintech Solutions Architect",
+        "imageSrc": "/placeholder.svg?height=400&width=400",
+        "imageAlt": "Elena R - Solutions Architect",
+        "modalData": {
+          "name": "ELENA R",
+          "title": "FINTECH SOLUTIONS ARCHITECT",
+          "imageSrc": "/placeholder.svg?height=600&width=600",
+          "imageAlt": "Elena R",
+          "bio": [
+            "Elena brings 11 years of experience architecting secure, compliant platforms for major financial institutions. She has designed systems processing billions in transactions annually for banks, payment processors, and fintech companies.",
+            "Her deep expertise in financial regulations, security frameworks, and scalable architecture ensures solutions that meet both technical requirements and business objectives. Elena's work consistently balances innovation with the rigor required in financial services."
+          ],
+          "languages": "SPANISH (NATIVE), ENGLISH (FLUENT), PORTUGUESE (ADVANCED)",
+          "skills": "MICROSERVICES, CLOUD ARCHITECTURE, PCI-DSS, SECURITY, API DESIGN, FINANCIAL SYSTEMS, AWS, AZURE"
+        }
+      },
+      {
+        "name": "David M",
+        "title": "UX Lead - Financial Products",
+        "imageSrc": "/placeholder.svg?height=400&width=400",
+        "imageAlt": "David M - UX Lead",
+        "modalData": {
+          "name": "DAVID M",
+          "title": "UX LEAD - FINANCIAL PRODUCTS",
+          "imageSrc": "/placeholder.svg?height=600&width=600",
+          "imageAlt": "David M",
+          "bio": [
+            "David specializes in designing intuitive experiences for complex financial products. With 8 years focused on banking and fintech, he has crafted interfaces used by millions of customers across digital banking, investment platforms, and payment systems.",
+            "His user research methodology uncovers deep insights about customer behavior and pain points, translating these into designs that simplify complexity while maintaining the trust and security customers expect from financial institutions."
+          ],
+          "languages": "ENGLISH (NATIVE), SPANISH (FLUENT), FRENCH (INTERMEDIATE)",
+          "skills": "UX RESEARCH, FINTECH DESIGN, FIGMA, DESIGN SYSTEMS, ACCESSIBILITY, USER TESTING, PROTOTYPING"
+        }
+      },
+      {
+        "name": "Ana L",
+        "title": "AI Engineer",
+        "imageSrc": "/placeholder.svg?height=400&width=400",
+        "imageAlt": "Ana L - AI Engineer",
+        "modalData": {
+          "name": "ANA L",
+          "title": "AI ENGINEER",
+          "imageSrc": "/placeholder.svg?height=600&width=600",
+          "imageAlt": "Ana L",
+          "bio": [
+            "Ana builds AI systems that enhance customer experience and operational efficiency in financial services. Her machine learning models power recommendation engines, fraud detection systems, and intelligent chatbots for major banks.",
+            "With expertise in both traditional ML and modern LLMs, Ana designs solutions that deliver measurable business impact while respecting data privacy and regulatory requirements."
+          ],
+          "languages": "SPANISH (NATIVE), ENGLISH (FLUENT)",
+          "skills": "PYTHON, TENSORFLOW, OPENAI, AZURE AI, NLP, RECOMMENDATION SYSTEMS, FRAUD DETECTION, ML PIPELINES"
+        }
+      },
+      {
+        "name": "Carlos M",
+        "title": "DevOps & Security Lead",
+        "imageSrc": "/placeholder.svg?height=400&width=400",
+        "imageAlt": "Carlos M - DevOps Lead",
+        "modalData": {
+          "name": "CARLOS M",
+          "title": "DEVOPS & SECURITY LEAD",
+          "imageSrc": "/placeholder.svg?height=600&width=600",
+          "imageAlt": "Carlos M",
+          "bio": [
+            "Carlos ensures the infrastructure powering financial platforms is secure, reliable, and performant. With 9 years of experience in banking technology, he has built systems achieving 99.99% uptime while processing millions of daily transactions.",
+            "His expertise in security hardening, compliance automation, and infrastructure as code provides the foundation for platforms that meet the stringent requirements of financial services."
+          ],
+          "languages": "SPANISH (NATIVE), ENGLISH (FLUENT)",
+          "skills": "AWS, AZURE, KUBERNETES, DOCKER, TERRAFORM, SECURITY, COMPLIANCE, MONITORING, CI/CD"
+        }
+      },
+      {
+        "name": "Laura S",
+        "title": "Backend Engineer",
+        "imageSrc": "/placeholder.svg?height=400&width=400",
+        "imageAlt": "Laura S - Backend Engineer",
+        "modalData": {
+          "name": "LAURA S",
+          "title": "BACKEND ENGINEER",
+          "imageSrc": "/placeholder.svg?height=600&width=600",
+          "imageAlt": "Laura S",
+          "bio": [
+            "Laura specializes in building robust, scalable backend systems for financial applications. Her work on transaction processing, account management, and integration layers powers platforms serving millions of users.",
+            "With deep expertise in Node.js, microservices, and database optimization, Laura designs systems that handle high transaction volumes while maintaining data integrity and security."
+          ],
+          "languages": "SPANISH (NATIVE), ENGLISH (ADVANCED)",
+          "skills": "NODE JS, NESTJS, POSTGRESQL, MONGODB, REDIS, MICROSERVICES, API DESIGN, PERFORMANCE OPTIMIZATION"
+        }
+      }
+    ]
+  },
+  "caseStudies": [
+    {
+      "category": "ECOMMERCE",
+      "title": "VRAI Luxury Platform",
+      "imageSrc": "/images/design-mode/VRAI(1).jpeg",
+      "imageAlt": "VRAI Case Study",
+      "modalData": {
+        "title": "VRAI",
+        "category": "LUXURY E-COMMERCE",
+        "imageSrc": "/images/design-mode/VRAI(1).jpeg",
+        "imageAlt": "VRAI Platform",
+        "sections": [
+          {
+            "title": "THE CHALLENGE",
+            "paragraphs": [
+              "VRAI needed a sophisticated e-commerce platform that matched their luxury positioning while handling complex product customization, 3D visualization, secure payment processing, and seamless customer experience."
+            ]
+          },
+          {
+            "title": "THE SOLUTION",
+            "paragraphs": [
+              "We built a premium Shopify Plus platform with advanced configurators, secure payment integration, and personalized recommendation engines. The solution delivers exceptional performance while maintaining the highest security standards."
+            ]
+          }
+        ],
+        "insights": [
+          { "value": "150%", "label": "SALES INCREASE" },
+          { "value": "99.9%", "label": "UPTIME" },
+          { "value": "4.8/5", "label": "CUSTOMER RATING" }
+        ],
+        "quotes": [
+          {
+            "text": "The platform perfectly captures our brand's elegance while delivering exceptional security and performance. Our customers trust the experience.",
+            "author": "HEAD OF E-COMMERCE, VRAI"
+          }
+        ]
+      }
+    },
+    {
+      "category": "GLOBAL PLATFORM",
+      "title": "dormakaba Enterprise CMS",
+      "imageSrc": "/images/design-mode/Dormakaba.png",
+      "imageAlt": "dormakaba Case Study",
+      "modalData": {
+        "title": "DORMAKABA",
+        "category": "GLOBAL ENTERPRISE PLATFORM",
+        "imageSrc": "/images/design-mode/Dormakaba.png",
+        "imageAlt": "dormakaba Platform",
+        "sections": [
+          {
+            "title": "THE CHALLENGE",
+            "paragraphs": [
+              "dormakaba needed to transition from a legacy monolithic CMS to a modern, scalable architecture supporting 40 countries and 35 languages, while maintaining security, compliance, and operational continuity across global operations."
+            ]
+          },
+          {
+            "title": "THE SOLUTION",
+            "paragraphs": [
+              "We delivered a secure, headless CMS architecture with comprehensive localization support, advanced workflows, role-based access control, and seamless migration from legacy systems—all without disrupting global operations."
+            ]
+          }
+        ],
+        "insights": [
+          { "value": "40+", "label": "COUNTRIES" },
+          { "value": "35", "label": "LANGUAGES" },
+          { "value": "ZERO", "label": "DOWNTIME" }
+        ],
+        "quotes": [
+          {
+            "text": "Tailor Hub's expertise in enterprise architecture and security ensured a smooth transition. Their professionalism exceeded our expectations.",
+            "author": "GLOBAL DIGITAL SOLUTIONS LEAD, DORMAKABA"
+          }
+        ]
+      }
+    },
+    {
+      "category": "REAL ESTATE PLATFORM",
+      "title": "Clikalia Technology Platform",
+      "imageSrc": "/images/design-mode/Cargill.png",
+      "imageAlt": "Clikalia Case Study",
+      "modalData": {
+        "title": "CLIKALIA",
+        "category": "REAL ESTATE TECHNOLOGY",
+        "imageSrc": "/images/design-mode/Cargill.png",
+        "imageAlt": "Clikalia Platform",
+        "sections": [
+          {
+            "title": "THE CHALLENGE",
+            "paragraphs": [
+              "Clikalia required a comprehensive platform to manage property listings, customer relationships, transaction workflows, and agent tools—all while maintaining data security and providing real-time insights."
+            ]
+          },
+          {
+            "title": "THE SOLUTION",
+            "paragraphs": [
+              "We built a full-stack platform with advanced search, CRM integration, workflow automation, and analytics dashboards. The system scales to handle thousands of properties while delivering exceptional user experience."
+            ]
+          }
+        ],
+        "insights": [
+          { "value": "50K+", "label": "PROPERTIES" },
+          { "value": "200+", "label": "AGENTS" },
+          { "value": "99.9%", "label": "UPTIME" }
+        ],
+        "quotes": [
+          {
+            "text": "The platform transformed how we operate. Tailor Hub delivered a solution that scales with our business and exceeds our expectations.",
+            "author": "CTO, CLIKALIA"
+          }
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "What makes Tailor Hub qualified to work with financial institutions?",
+      "answer": "Tailor Hub is ISO 27001 certified, demonstrating our commitment to information security management—critical for financial services. We have deep expertise in financial regulations including PCI-DSS, GDPR, and PSD2. Our team has built platforms for fintech companies and institutions that process billions in transactions annually. We understand both the technical requirements and business context of financial services."
+    },
+    {
+      "question": "How do you approach security and compliance?",
+      "answer": "Security is embedded in every layer of our solutions from day one. We implement defense-in-depth strategies, encryption at rest and in transit, role-based access control, and comprehensive audit logging. Our development process includes security reviews, penetration testing, and compliance validation. We design with regulations like PCI-DSS and GDPR in mind from the architecture phase, not as afterthoughts."
+    },
+    {
+      "question": "Can you integrate with our existing banking systems?",
+      "answer": "Yes, seamless integration is a core strength. We have extensive experience connecting to core banking systems, payment processors, CRM platforms, and other financial services infrastructure. Our approach uses well-designed APIs and middleware that respect your existing architecture while enabling modern functionality. We document all integrations thoroughly and ensure proper error handling and monitoring."
+    },
+    {
+      "question": "What is your development methodology?",
+      "answer": "We use an agile methodology tailored for financial services. This means focused sprints with regular deliverables, continuous stakeholder engagement, and iterative refinement based on feedback. However, we maintain the rigor required in financial services—comprehensive documentation, thorough testing, security reviews, and controlled deployment processes. We balance agility with the governance financial institutions require."
+    },
+    {
+      "question": "How do you handle knowledge transfer to our teams?",
+      "answer": "Knowledge transfer is a priority throughout our engagement. We provide comprehensive technical documentation, architecture diagrams, and runbooks. We conduct training sessions for different audiences (technical teams, operations staff, end users). We also offer pair programming and collaborative development sessions where your developers work alongside ours. Our goal is to empower your organization for long-term success, not create dependency."
+    },
+    {
+      "question": "What kind of ongoing support do you provide?",
+      "answer": "We offer flexible support options ranging from dedicated managed services to on-demand support. This can include 24/7 monitoring, security updates, performance optimization, bug fixes, and feature enhancements. We also provide quarterly business reviews to discuss platform performance and strategic improvements. Support plans are customized to your specific needs and service level requirements."
+    },
+    {
+      "question": "How do you ensure projects stay on schedule and budget?",
+      "answer": "We use transparent project management with regular status updates, risk assessments, and stakeholder communication. Our fixed-price project estimates are based on detailed discovery and scope definition. For larger initiatives, we often recommend phased approaches where each phase delivers concrete value—this allows for budget management and course correction based on learnings. We're committed to delivering on commitments and communicating proactively if challenges arise."
+    },
+    {
+      "question": "What sets Tailor Hub apart from other development partners?",
+      "answer": "Three key differentiators: (1) Deep financial services expertise combined with modern technology skills—we understand your business context, not just code. (2) User-centered design that creates intuitive experiences from complex requirements—we don't just build features, we solve user problems. (3) Partnership approach focused on long-term success—we transfer knowledge, empower your teams, and align our success with yours."
+    }
+  ],
+  "partners": {
+    "concepts": ["OFFICIAL", "PARTNERS"],
+    "items": ["AWS", "MICROSOFT AZURE", "CONTENTFUL", "STRIPE", "OPENAI", "NETLIFY"]
+  },
+  "isoCertification": {
+    "overheader": "ISO 27001",
+    "header": "Enterprise-Grade Security Certification",
+    "bodyText": "Tailor Hub is ISO 27001 certified, the international standard for information security management systems. This certification validates our rigorous processes for protecting sensitive data throughout the entire development lifecycle. For financial institutions handling customer data, transactions, and confidential information, this represents our unwavering commitment to security, confidentiality, and compliance with the highest industry standards.",
+    "imageSrc": "/images/design-mode/ISO(2).png",
+    "imageAlt": "ISO 27001 Certification",
+    "certificationBadgeSrc": "/images/design-mode/Modo_de_aislamiento.webp",
+    "certificationBadgeAlt": "ISO 27001 Certification Badge"
+  },
+  "nextSteps": {
+    "title": "NEXT STEPS",
+    "description": "We would be honored to explore how Tailor Hub can support Banco Santander's digital transformation initiatives. Here's how we can begin:",
+    "steps": [
+      {
+        "title": "Discovery Conversation",
+        "description": "A 60-minute call to understand your priorities, challenges, and strategic objectives. We'll discuss specific areas where Tailor Hub can add value—whether digital banking, internal tools, or customer experience innovation."
+      },
+      {
+        "title": "Technical Deep Dive",
+        "description": "For areas of mutual interest, we can arrange technical sessions with relevant stakeholders. We'll discuss architecture approaches, integration requirements, security considerations, and implementation timelines."
+      },
+      {
+        "title": "Pilot Project Proposal",
+        "description": "Based on our conversations, we'll propose a focused pilot project that demonstrates our capabilities while delivering tangible value. This allows us to build trust through results before expanding the partnership."
+      }
+    ],
+    "callToAction": "We're excited about the possibility of partnering with Banco Santander. Please reach out to discuss how Tailor Hub can support your digital transformation journey."
+  }
+}
