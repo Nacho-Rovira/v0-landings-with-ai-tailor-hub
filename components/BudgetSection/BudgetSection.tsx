@@ -46,13 +46,13 @@ export const BudgetSection = React.forwardRef<HTMLDivElement, BudgetSectionProps
 
         {/* Optional Notes */}
         {notes && notes.length > 0 && (
-          <div className="budget-section__notes">
+          <ul className="budget-section__notes">
             {notes.map((note, index) => (
-              <div key={index} className="budget-section__note">
+              <li key={index} className="budget-section__note">
                 {note}
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         )}
       </div>
     )

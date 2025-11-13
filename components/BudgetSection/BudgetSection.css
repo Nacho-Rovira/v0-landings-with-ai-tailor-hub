@@ -88,14 +88,17 @@
   flex-direction: column;
   gap: var(--spacing-xs, 8px);
   padding: var(--spacing-m, 16px);
+  padding-left: var(--spacing-xl, 32px);
   background-color: var(--color-neutral-100, #f5f5f5);
   border-radius: var(--radius-s, 16px);
+  list-style-type: disc;
+  list-style-position: outside;
 }
 
 .budget-section__note {
   font-family: var(--font-default, "PP Mori", sans-serif);
-  font-size: var(--text-size-small, 14px);
-  line-height: var(--text-line-small, 20px);
+  font-size: var(--text-size-xsmall, 12px);
+  line-height: var(--text-line-xsmall, 16px);
   color: var(--color-text-secondary);
-  /* Removed arrow indicator from notes */
+  padding-left: var(--spacing-xs, 8px);
 }
