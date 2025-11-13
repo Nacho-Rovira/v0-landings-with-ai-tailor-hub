@@ -9,6 +9,11 @@
   gap: var(--spacing-m);
 }
 
+/* Added full-width variant for single column layouts */
+.tech-box--full-width {
+  width: 100%;
+}
+
 .tech-box__title {
   font-family: var(--font-default);
   font-size: var(--text-size-small);
