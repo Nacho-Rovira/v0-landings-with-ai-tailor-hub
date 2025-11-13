@@ -49,7 +49,7 @@ export default function ClikaliaProposalPage() {
           }}
         >
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dormakaba.png-BL23wcJL31B0CAp4LCnI5yUkA8STg7.jpeg"
+            src="/images/design-mode/Dormakaba.png.jpeg"
             alt="Clikalia - Real estate platform visualization"
             width={1432}
             height={800}

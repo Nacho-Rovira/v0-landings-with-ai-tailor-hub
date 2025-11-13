@@ -47,7 +47,7 @@ export default function VRAIProposalPage() {
           }}
         >
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VRAI-rtQZ9X0qUMRrgQLGlhPug0u3y9JEGo.jpeg"
+            src="/images/design-mode/VRAI(2).jpeg"
             alt="VRAI - Luxury lab-grown diamond jewelry"
             width={1432}
             height={800}
