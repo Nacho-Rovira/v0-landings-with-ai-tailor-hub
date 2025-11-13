@@ -186,16 +186,25 @@ export default function BarceloProposalPage() {
                   marginBottom: "var(--spacing-xl)",
                 }}
               >
-                {proposalConfig.infrastructure?.serviceCategories?.map((category, index) => (
-                  <BoxSection
-                    key={index}
-                    variant="compact"
-                    header={category.title}
-                    bodyText={category.items.join(", ")}
-                    imageSrc="/images/design-mode/desarrollo de software(2).jpeg"
-                    imageAlt={`${category.title} services`}
-                  />
-                ))}
+                {proposalConfig.infrastructure?.serviceCategories?.map((category, index) => {
+                  // Array of placeholder images to use
+                  const placeholderImages = [
+                    "/images/design-mode/desarrollo de software(2).jpeg",
+                    "/images/design-mode/Design systems.png",
+                    "/images/design-mode/auditoria y formacion(2).jpeg",
+                  ]
+
+                  return (
+                    <BoxSection
+                      key={index}
+                      variant="compact"
+                      header={category.title}
+                      bodyText={category.items.join(", ")}
+                      imageSrc={placeholderImages[index % placeholderImages.length]}
+                      imageAlt={`${category.title} services`}
+                    />
+                  )
+                })}
               </div>
 
               <div

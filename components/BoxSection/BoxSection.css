@@ -206,6 +206,8 @@
 
 .box-section--compact .box-section__header {
   /* Compact: smaller header */
+  /* Using monospace font for compact variant headers */
+  font-family: var(--font-mono, "PP Neue Montreal Mono", monospace);
   font-size: var(--text-size-small, 16px);
   line-height: var(--text-line-small, 22px);
   font-weight: 500;
