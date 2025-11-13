@@ -56,7 +56,7 @@ export const BoxSection = React.forwardRef<HTMLDivElement, BoxSectionProps>(
       <div ref={ref} className={classes} {...props}>
         {/* Image */}
         <div className="box-section__image">
-          {imageSrc && <img src={imageSrc || "/placeholder.svg"} alt={imageAlt} />}
+          <img src={imageSrc || "/images/design-mode/HERO.png"} alt={imageAlt} />
         </div>
 
         {/* Content */}
