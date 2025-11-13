@@ -15,7 +15,6 @@ import { FAQ } from "@/components/FAQ/FAQ"
 import { TeamSection } from "@/components/TeamSection/TeamSection"
 import { TechBox } from "@/components/TechBox/TechBox"
 import { Highlight2Section } from "@/components/Highlight2Section/Highlight2Section"
-import { Footer } from "@/components/Footer/Footer"
 
 export default function ClikaliaProposalPage() {
   return (
@@ -812,8 +811,6 @@ export default function ClikaliaProposalPage() {
           />
         </div>
       </section>
-
-      <Footer />
     </LandingLayout>
   )
 }

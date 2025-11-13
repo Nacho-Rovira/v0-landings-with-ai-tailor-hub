@@ -117,7 +117,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
               </div>
               <div className="footer__link-group footer__link-group--mobile">
                 {socialLinks.map((link, index) => (
-                  <a key={index} href={link.href} className="footer__link">
+                  <a key={index} href={link.href} target="_blank" rel="noopener noreferrer" className="footer__link">
                     {link.label}
                   </a>
                 ))}
@@ -132,7 +132,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
               </div>
               <div className="footer__link-group footer__link-group--mobile">
                 {legalLinks.map((link, index) => (
-                  <a key={index} href={link.href} className="footer__link">
+                  <a key={index} href={link.href} target="_blank" rel="noopener noreferrer" className="footer__link">
                     {link.label}
                   </a>
                 ))}
@@ -194,7 +194,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
             </div>
             <div className="footer__link-group">
               {socialLinks.map((link, index) => (
-                <a key={index} href={link.href} className="footer__link">
+                <a key={index} href={link.href} target="_blank" rel="noopener noreferrer" className="footer__link">
                   {link.label}
                 </a>
               ))}
@@ -209,7 +209,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
             </div>
             <div className="footer__link-group">
               {legalLinks.map((link, index) => (
-                <a key={index} href={link.href} className="footer__link">
+                <a key={index} href={link.href} target="_blank" rel="noopener noreferrer" className="footer__link">
                   {link.label}
                 </a>
               ))}
