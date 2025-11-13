@@ -96,68 +96,21 @@ export default function SantanderProposalPage() {
 
             {/* Technology Section */}
             <section id="technology" style={{ marginBottom: "var(--spacing-9xl)" }}>
-              <TitleSection overheader="TECHNOLOGY & ARCHITECTURE" title="Technology Expertise" />
-
-              <p
-                style={{
-                  fontFamily: "var(--font-default)",
-                  fontSize: "var(--text-size-small)",
-                  lineHeight: "var(--text-line-small)",
-                  color: "var(--color-text-primary)",
-                  marginTop: "var(--spacing-xl)",
-                  marginBottom: "var(--spacing-xl)",
-                }}
-              >
-                {proposalConfig.technology.description}
-              </p>
-
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(3, 1fr)",
-                  gap: "var(--spacing-l)",
-                }}
-              >
-                {proposalConfig.technology.categories?.map((category, index) => (
-                  <div
-                    key={index}
-                    style={{
-                      backgroundColor: "var(--color-neutral-100)",
-                      padding: "var(--spacing-l)",
-                      borderRadius: "var(--radius-card)",
-                    }}
-                  >
-                    <h4
-                      style={{
-                        fontFamily: "var(--font-mono)",
-                        fontSize: "var(--text-size-xsmall)",
-                        lineHeight: "var(--text-line-xsmall)",
-                        color: "var(--color-text-primary)",
-                        marginBottom: "var(--spacing-m)",
-                        textTransform: "uppercase",
-                      }}
-                    >
-                      {category.title}
-                    </h4>
-                    <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                      {category.technologies.map((tech, techIndex) => (
-                        <li
-                          key={techIndex}
-                          style={{
-                            fontFamily: "var(--font-mono)",
-                            fontSize: "var(--text-size-xsmall)",
-                            lineHeight: "var(--text-line-xsmall)",
-                            color: "var(--color-text-secondary)",
-                            marginBottom: "var(--spacing-xs)",
-                          }}
-                        >
-                          {tech}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
+              <BodyText
+                sections={[
+                  {
+                    title: "TECHNOLOGY & ARCHITECTURE",
+                    paragraphs: [
+                      "Technology Expertise",
+                      proposalConfig.technology.description,
+                      ...(proposalConfig.technology.categories || []).flatMap((category) => [
+                        category.title,
+                        ...category.technologies.map((tech) => tech),
+                      ]),
+                    ],
+                  },
+                ]}
+              />
             </section>
           </div>
         </div>

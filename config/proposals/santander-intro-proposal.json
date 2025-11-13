@@ -18,7 +18,7 @@
     { "href": "#context", "number": 1, "label": "CONTEXT / OPPORTUNITY" },
     { "href": "#capabilities", "number": 2, "label": "OUR CAPABILITIES" },
     { "href": "#approach", "number": 3, "label": "HOW WE WORK" },
-    { "href": "#technology", "number": 4, "label": "TECHNOLOGY EXPERTISE" },
+    { "href": "#technology", "number": 4, "label": "TECHNOLOGY & ARCHITECTURE" },
     { "href": "#services", "number": 5, "label": "SERVICES" },
     { "href": "#team", "number": 6, "label": "TEAM" },
     { "href": "#case-studies", "number": 7, "label": "CASE STUDIES" },
@@ -58,33 +58,21 @@
         "<strong>Seamless Integration:</strong> Our platforms integrate cleanly with existing systems through well-designed APIs. We respect your current infrastructure while providing pathways to modernization.",
         "<strong>Knowledge Transfer & Partnership:</strong> We don't just deliver code—we transfer knowledge to your teams through documentation, training, and collaborative development. Our goal is to empower your organization for long-term success."
       ]
+    },
+    {
+      "id": "technology",
+      "title": "TECHNOLOGY & ARCHITECTURE",
+      "paragraphs": [
+        "We leverage modern, proven technologies architected specifically for financial services requirements. Our stack balances innovation with enterprise reliability, security, and regulatory compliance:",
+        "<strong>Frontend & Mobile:</strong> React 18, Next.js 15, TypeScript, Tailwind CSS, React Native, and Progressive Web Apps deliver fast, responsive experiences across all devices while maintaining accessibility and performance standards.",
+        "<strong>Backend & APIs:</strong> Node.js, NestJS, Python, GraphQL, and REST APIs provide scalable, maintainable server architectures. Our microservices approach enables independent scaling and deployment while maintaining system integrity.",
+        "<strong>Data & Intelligence:</strong> PostgreSQL, MongoDB, Redis, and Elasticsearch handle transactional and analytical workloads at scale. We integrate OpenAI GPT-4 and Azure OpenAI for intelligent features that enhance user experience.",
+        "<strong>Security & Compliance:</strong> Auth0, OAuth 2.0, JWT, and encryption protocols ensure robust authentication and authorization. We design with PCI-DSS, GDPR, and PSD2 compliance requirements embedded from the architecture phase.",
+        "<strong>Cloud Infrastructure:</strong> AWS, Azure, Kubernetes, Docker, Terraform, and comprehensive CI/CD pipelines provide reliable, scalable infrastructure with automated security scanning, testing, and deployment processes.",
+        "This technology foundation enables us to build platforms that meet financial services requirements for security, compliance, performance, and scalability while remaining maintainable and evolvable over time."
+      ]
     }
   ],
-  "technology": {
-    "description": "We leverage modern, proven technologies architected specifically for financial services requirements. Our stack balances innovation with enterprise reliability, security, and regulatory compliance:",
-    "categories": [
-      {
-        "title": "Frontend & Mobile",
-        "technologies": ["REACT 18", "NEXT JS 15", "TYPESCRIPT", "TAILWIND CSS", "REACT NATIVE", "PWA"]
-      },
-      {
-        "title": "Backend & APIs",
-        "technologies": ["NODE JS", "NESTJS", "PYTHON", "GRAPHQL", "REST APIs", "MICROSERVICES"]
-      },
-      {
-        "title": "Data & Intelligence",
-        "technologies": ["POSTGRESQL", "MONGODB", "REDIS", "ELASTICSEARCH", "OPENAI GPT-4", "AZURE OPENAI"]
-      },
-      {
-        "title": "Security & Compliance",
-        "technologies": ["AUTH0", "OAUTH 2.0", "JWT", "ENCRYPTION", "PCI-DSS", "GDPR"]
-      },
-      {
-        "title": "Cloud Infrastructure",
-        "technologies": ["AWS", "AZURE", "KUBERNETES", "DOCKER", "TERRAFORM", "CI/CD"]
-      }
-    ]
-  },
   "services": [
     {
       "overheader": "DIGITAL BANKING",
