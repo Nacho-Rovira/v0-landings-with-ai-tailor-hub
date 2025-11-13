@@ -31,32 +31,41 @@ const defaultContactInfo = {
   phone: "+34 682 270 526",
   address: {
     line1: "CALLE HERMANOS ÁLVAREZ QUINTERO, 2,",
-    line2: "SEMISÓTANO A, 28004 MADRID"
-  }
+    line2: "SEMISÓTANO A, 28004 MADRID",
+  },
 }
 
 const defaultSocialLinks = [
-  { label: "LINKEDIN", href: "https://linkedin.com/company/tailor-hub" },
-  { label: "SPOTIFY", href: "https://spotify.com" },
-  { label: "INSTAGRAM", href: "https://instagram.com/tailor_hub" }
+  { label: "LINKEDIN", href: "https://www.linkedin.com/company/tailor-hub/" },
+  {
+    label: "SPOTIFY",
+    href: "https://open.spotify.com/playlist/1xn6XdgU32WLQCUf4Tu4zC?si=d752bf75ebae4948&nd=1&dlsi=43028c33199b43f6",
+  },
+  { label: "INSTAGRAM", href: "https://www.instagram.com/tailor_hub/" },
 ]
 
 const defaultLegalLinks = [
-  { label: "POLICY & LEGAL", href: "/legal" },
-  { label: "COLLABORATION LINES", href: "/collaboration" }
+  { label: "POLICY & LEGAL", href: "https://www.tailor-hub.com/policy" },
+  {
+    label: "COLLABORATION LINES",
+    href: "https://modulor.notion.site/Colaboration-lines-1f1b7f79b9ae800dadafd822bea16fb0",
+  },
 ]
 
 export const Footer = React.forwardRef<HTMLElement, FooterProps>(
-  ({ 
-    variant = "default", 
-    contactInfo = defaultContactInfo,
-    socialLinks = defaultSocialLinks,
-    legalLinks = defaultLegalLinks,
-    className = "", 
-    ...props 
-  }, ref) => {
+  (
+    {
+      variant = "default",
+      contactInfo = defaultContactInfo,
+      socialLinks = defaultSocialLinks,
+      legalLinks = defaultLegalLinks,
+      className = "",
+      ...props
+    },
+    ref,
+  ) => {
     const isMobile = variant === "mobile"
-    
+
     if (isMobile) {
       return (
         <footer ref={ref} className={`footer footer--mobile ${className}`} {...props}>
@@ -76,15 +85,15 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 <span>GROUP</span>
               </div>
             </div>
-            
+
             <div className="footer__contact footer__contact--mobile">
               <div className="footer__contact-line footer__contact-line--mobile">
                 <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
                 <a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
               </div>
-              <a 
-                href="https://www.google.com/maps?q=Calle%20Hermanos%20%C3%81lvarez%20Quintero%2C%202%2C%20Semis%C3%B3tano%20A%2C%2028004%20Madrid" 
-                target="_blank" 
+              <a
+                href="https://www.google.com/maps?q=Calle%20Hermanos%20%C3%81lvarez%20Quintero%2C%202%2C%20Semis%C3%B3tano%20A%2C%2028004%20Madrid"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="footer__address"
               >
@@ -152,15 +161,15 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
               <span>GROUP</span>
             </div>
           </div>
-          
+
           <div className="footer__contact">
             <div className="footer__contact-line">
               <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
               <a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
             </div>
-            <a 
-              href="https://www.google.com/maps?q=Calle%20Hermanos%20%C3%81lvarez%20Quintero%2C%202%2C%20Semis%C3%B3tano%20A%2C%2028004%20Madrid" 
-              target="_blank" 
+            <a
+              href="https://www.google.com/maps?q=Calle%20Hermanos%20%C3%81lvarez%20Quintero%2C%202%2C%20Semis%C3%B3tano%20A%2C%2028004%20Madrid"
+              target="_blank"
               rel="noopener noreferrer"
               className="footer__address"
             >
@@ -209,7 +218,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
         </div>
       </footer>
     )
-  }
+  },
 )
 
 Footer.displayName = "Footer"
