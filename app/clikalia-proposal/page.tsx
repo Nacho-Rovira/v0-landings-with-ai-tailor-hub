@@ -15,6 +15,7 @@ import { FAQ } from "@/components/FAQ/FAQ"
 import { TeamSection } from "@/components/TeamSection/TeamSection"
 import { TechBox } from "@/components/TechBox/TechBox"
 import { Highlight2Section } from "@/components/Highlight2Section/Highlight2Section"
+import { Footer } from "@/components/Footer/Footer"
 
 export default function ClikaliaProposalPage() {
   return (
@@ -588,14 +589,12 @@ export default function ClikaliaProposalPage() {
               {
                 category: "SOFTWARE",
                 title: "CLIKALIA",
-                imageSrc:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dormakaba.png-BL23wcJL31B0CAp4LCnI5yUkA8STg7.jpeg",
+                imageSrc: "/images/dormakaba.jpeg",
                 imageAlt: "Clikalia real estate platform",
                 modalData: {
                   title: "CLIKALIA",
                   category: "SOFTWARE",
-                  imageSrc:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dormakaba.png-BL23wcJL31B0CAp4LCnI5yUkA8STg7.jpeg",
+                  imageSrc: "/images/dormakaba.jpeg",
                   imageAlt: "Clikalia real estate platform",
                   sections: [
                     {
@@ -627,14 +626,12 @@ export default function ClikaliaProposalPage() {
               {
                 category: "SOFTWARE",
                 title: "DORMAKABA",
-                imageSrc:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HERO-7QyVasLSj8cjn2jGivuMQ2gC7PCZiA.png",
+                imageSrc: "/images/hero.png",
                 imageAlt: "Dormakaba smart access solutions",
                 modalData: {
                   title: "DORMAKABA",
                   category: "SOFTWARE",
-                  imageSrc:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HERO-7QyVasLSj8cjn2jGivuMQ2gC7PCZiA.png",
+                  imageSrc: "/images/hero.png",
                   imageAlt: "Dormakaba smart access solutions",
                   sections: [
                     {
@@ -665,14 +662,12 @@ export default function ClikaliaProposalPage() {
               {
                 category: "ECOMMERCE",
                 title: "VRAI",
-                imageSrc:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VRAI-rtQZ9X0qUMRrgQLGlhPug0u3y9JEGo.jpeg",
+                imageSrc: "/images/vrai.jpeg",
                 imageAlt: "VRAI jewelry e-commerce",
                 modalData: {
                   title: "VRAI",
                   category: "ECOMMERCE",
-                  imageSrc:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VRAI-rtQZ9X0qUMRrgQLGlhPug0u3y9JEGo.jpeg",
+                  imageSrc: "/images/vrai.jpeg",
                   imageAlt: "VRAI jewelry e-commerce",
                   sections: [
                     {
@@ -703,14 +698,12 @@ export default function ClikaliaProposalPage() {
               {
                 category: "SOFTWARE",
                 title: "ON RUNNING + STRAVA",
-                imageSrc:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-95ak8iqiC08KKCRJGEh5qSIvJz92o0.jpeg",
+                imageSrc: "/images/1.jpeg",
                 imageAlt: "ON Running and Strava integration",
                 modalData: {
                   title: "ON RUNNING + STRAVA",
                   category: "SOFTWARE",
-                  imageSrc:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-95ak8iqiC08KKCRJGEh5qSIvJz92o0.jpeg",
+                  imageSrc: "/images/1.jpeg",
                   imageAlt: "ON Running and Strava integration",
                   sections: [
                     {
@@ -819,6 +812,8 @@ export default function ClikaliaProposalPage() {
           />
         </div>
       </section>
+
+      <Footer />
     </LandingLayout>
   )
 }
