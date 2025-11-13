@@ -93,25 +93,6 @@ export default function SantanderProposalPage() {
                 />
               </section>
             ))}
-
-            {/* Technology Section */}
-            <section id="technology" style={{ marginBottom: "var(--spacing-9xl)" }}>
-              <BodyText
-                sections={[
-                  {
-                    title: "TECHNOLOGY & ARCHITECTURE",
-                    paragraphs: [
-                      "Technology Expertise",
-                      proposalConfig.technology.description,
-                      ...(proposalConfig.technology.categories || []).flatMap((category) => [
-                        category.title,
-                        ...category.technologies.map((tech) => tech),
-                      ]),
-                    ],
-                  },
-                ]}
-              />
-            </section>
           </div>
         </div>
       </section>
