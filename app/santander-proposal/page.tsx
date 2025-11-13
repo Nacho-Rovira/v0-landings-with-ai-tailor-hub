@@ -13,6 +13,7 @@ import { CaseStudiesSection } from "@/components/CaseStudiesSection/CaseStudiesS
 import { Highlight2Section } from "@/components/Highlight2Section/Highlight2Section"
 import { FAQ } from "@/components/FAQ/FAQ"
 import proposalConfig from "@/config/proposals/santander-intro-proposal.json"
+import Image from "next/image"
 
 export default function SantanderProposalPage() {
   const [activeSection, setActiveSection] = useState<string>("#context")
@@ -44,6 +45,20 @@ export default function SantanderProposalPage() {
         />
       </section>
 
+      {/* Hero Image Section */}
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <div style={{ width: "100%", borderRadius: "var(--radius-s)", overflow: "hidden" }}>
+          <Image
+            src={proposalConfig.heroImage.src || "/placeholder.svg"}
+            alt={proposalConfig.heroImage.alt}
+            width={1432}
+            height={800}
+            style={{ width: "100%", height: "auto", display: "block" }}
+            priority
+          />
+        </div>
+      </section>
+
       {/* Proposal Content with Sidebar */}
       <section id="proposal-content" style={{ marginBottom: "var(--spacing-9xl)" }}>
         <div
@@ -58,13 +73,9 @@ export default function SantanderProposalPage() {
           {/* Sidebar Menu */}
           <MenuSidebar activeSection={activeSection} autoDetectActive>
             {proposalConfig.menuItems.map((item) => (
-              <MenuSidebarItem
-                key={item.href}
-                href={item.href}
-                number={item.number}
-                label={item.label}
-                isActive={activeSection === item.href}
-              />
+              <MenuSidebarItem key={item.number} href={item.href} number={item.number}>
+                {item.label}
+              </MenuSidebarItem>
             ))}
           </MenuSidebar>
 
