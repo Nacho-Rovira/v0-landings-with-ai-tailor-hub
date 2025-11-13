@@ -6,7 +6,7 @@ import "./BoxSection.css"
 
 export interface BoxSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Box section variant */
-  variant?: "default" | "mobile"
+  variant?: "default" | "mobile" | "compact"
   /** Overheader text (e.g., "S/ 01") */
   overheader?: string
   /** Header/title text */

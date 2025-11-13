@@ -163,6 +163,67 @@
   max-width: 100%;
 }
 
+/* Compact variant - smaller image for inline services */
+.box-section--compact {
+  /* Adding compact variant with smaller image */
+  display: flex;
+  gap: var(--spacing-xl, 32px);
+  align-items: flex-start;
+  width: 100%;
+}
+
+.box-section--compact .box-section__image {
+  /* Compact: smaller image size */
+  width: 200px;
+  height: 200px;
+  border-radius: var(--radius-s, 16px);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.box-section--compact .box-section__content {
+  /* Compact: adjust content height */
+  min-height: auto;
+  justify-content: flex-start;
+}
+
+.box-section--compact .box-section__header-body {
+  /* Compact: smaller gap between sections */
+  gap: var(--spacing-m, 16px);
+}
+
+.box-section--compact .box-section__title {
+  /* Compact: full width title */
+  max-width: 100%;
+  gap: var(--spacing-xs, 8px);
+}
+
+.box-section--compact .box-section__overheader {
+  /* Compact: keep same size */
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: var(--text-line-xsmall, 17px);
+}
+
+.box-section--compact .box-section__header {
+  /* Compact: smaller header */
+  font-size: var(--text-size-small, 16px);
+  line-height: var(--text-line-small, 22px);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.box-section--compact .box-section__body {
+  /* Compact: full width body */
+  max-width: 100%;
+  font-size: var(--text-size-small, 16px);
+  line-height: var(--text-line-small, 22px);
+}
+
+.box-section--compact .box-section__bottom {
+  /* Compact: full width bottom */
+  max-width: 100%;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .box-section:not(.box-section--mobile) {

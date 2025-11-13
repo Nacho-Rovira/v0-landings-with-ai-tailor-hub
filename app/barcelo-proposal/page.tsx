@@ -182,12 +182,19 @@ export default function BarceloProposalPage() {
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  gap: "var(--spacing-m)",
+                  gap: "var(--spacing-l)",
                   marginBottom: "var(--spacing-xl)",
                 }}
               >
                 {proposalConfig.infrastructure?.serviceCategories?.map((category, index) => (
-                  <TechBox key={index} title={category.title} technologies={category.items} />
+                  <BoxSection
+                    key={index}
+                    variant="compact"
+                    header={category.title}
+                    bodyText={category.items.join(", ")}
+                    imageSrc="/images/design-mode/desarrollo de software(2).jpeg"
+                    imageAlt={`${category.title} services`}
+                  />
                 ))}
               </div>
 
