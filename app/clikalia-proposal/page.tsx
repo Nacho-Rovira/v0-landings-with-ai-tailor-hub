@@ -64,7 +64,7 @@ export default function ClikaliaProposalPage() {
       </section>
 
       {/* Proposal Details Section */}
-      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
+      <section style={{ marginBottom: "var(--spacing-9xl)" }} id="proposal-content">
         <div
           style={{
             display: "flex",
@@ -140,6 +140,36 @@ export default function ClikaliaProposalPage() {
                   },
                 ]}
               />
+            </div>
+
+            {/* Services Section */}
+            <div id="services" style={{ marginTop: "var(--spacing-4xl)" }}>
+              <h3
+                style={{
+                  fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
+                  fontSize: "var(--text-size-large, 40px)",
+                  lineHeight: "var(--text-line-large, 48px)",
+                  fontWeight: 400,
+                  color: "var(--color-text-primary)",
+                  textTransform: "uppercase",
+                  margin: 0,
+                  marginBottom: "var(--spacing-m, 16px)",
+                }}
+              >
+                SERVICES
+              </h3>
+              <p
+                style={{
+                  fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
+                  fontSize: "var(--text-size-small, 16px)",
+                  lineHeight: "var(--text-line-small, 22px)",
+                  color: "var(--color-text-primary)",
+                  margin: 0,
+                  marginBottom: "var(--spacing-xl)",
+                }}
+              >
+                We provide comprehensive services across the full development lifecycle, from initial architecture design to ongoing support and optimization.
+              </p>
             </div>
 
             {/* Technology & Architecture Section */}
@@ -360,7 +390,7 @@ export default function ClikaliaProposalPage() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section (moved up to be with other proposal details) */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="SERVICES" />
 

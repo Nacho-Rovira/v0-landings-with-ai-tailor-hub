@@ -63,7 +63,17 @@ export default function BarceloProposalPage() {
 
           {/* Body Content */}
           <div style={{ flex: 1, maxWidth: "702px" }}>
-            <BodyText sections={proposalConfig.bodySections} />
+            {proposalConfig.bodySections.map((section, sectionIndex) => (
+              <div 
+                key={sectionIndex} 
+                id={proposalConfig.menuItems[sectionIndex]?.href.replace('#', '')}
+                style={{ marginBottom: sectionIndex < proposalConfig.bodySections.length - 1 ? "var(--spacing-4xl)" : 0 }}
+              >
+                <BodyText
+                  sections={[section]}
+                />
+              </div>
+            ))}
 
             {/* Technology Section */}
             <div id="technology" style={{ marginTop: "var(--spacing-4xl)" }}>

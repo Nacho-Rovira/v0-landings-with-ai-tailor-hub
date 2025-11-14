@@ -17,8 +17,6 @@ import proposalConfig from "@/config/proposals/santander-intro-proposal.json"
 import Image from "next/image"
 
 export default function SantanderProposalPage() {
-  const [activeSection, setActiveSection] = useState<string>("#context")
-
   const handleScrollToProposal = () => {
     const element = document.querySelector("#proposal-content")
     if (element) {
@@ -72,7 +70,7 @@ export default function SantanderProposalPage() {
           }}
         >
           {/* Sidebar Menu */}
-          <MenuSidebar activeSection={activeSection} autoDetectActive>
+          <MenuSidebar autoDetectActive>
             {proposalConfig.menuItems.map((item) => (
               <MenuSidebarItem key={item.number} href={item.href} number={item.number}>
                 {item.label}
