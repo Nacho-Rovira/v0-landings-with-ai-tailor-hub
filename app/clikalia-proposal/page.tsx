@@ -423,6 +423,163 @@ export default function ClikaliaProposalPage() {
         </div>
       </section>
 
+      {/* Case Studies Section */}
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <TitleSection overheader="CASE STUDIES" />
+
+        <div style={{ marginTop: "var(--gap-header-1)" }}>
+          <CaseStudiesSection
+            caseStudies={[
+              {
+                category: "SOFTWARE",
+                title: "CLIKALIA",
+                imageSrc: "/images/dormakaba.jpeg",
+                imageAlt: "Clikalia real estate platform",
+                modalData: {
+                  title: "CLIKALIA",
+                  category: "SOFTWARE",
+                  imageSrc: "/images/dormakaba.jpeg",
+                  imageAlt: "Clikalia real estate platform",
+                  sections: [
+                    {
+                      title: "THE CHALLENGE",
+                      paragraphs: [
+                        "Clikalia, a leading real estate platform, needed to modernize their property management system to handle thousands of listings with advanced search capabilities, virtual tours, and real-time availability updates.",
+                        "The existing infrastructure couldn't scale to meet growing demand, and the user experience needed a complete overhaul to compete in the digital-first real estate market.",
+                      ],
+                    },
+                    {
+                      title: "THE SOLUTION",
+                      paragraphs: [
+                        "We built a scalable, cloud-native platform with advanced search algorithms, 3D virtual tour integration, and AI-powered property recommendations. The new system handles 10x more concurrent users while reducing load times by 70%.",
+                      ],
+                    },
+                  ],
+                  insights: [
+                    { value: "50K+", label: "PROPERTIES LISTED" },
+                    { value: "70%", label: "FASTER LOAD TIMES" },
+                  ],
+                  quotes: [
+                    {
+                      text: "Tailor Hub transformed our platform into a market-leading solution. The new system is fast, reliable, and our users love the enhanced search and virtual tour features.",
+                      author: "MIGUEL RODRIGUEZ - CTO AT CLIKALIA",
+                    },
+                  ],
+                },
+              },
+              {
+                category: "SOFTWARE",
+                title: "DORMAKABA",
+                imageSrc: "/images/hero.png",
+                imageAlt: "Dormakaba smart access solutions",
+                modalData: {
+                  title: "DORMAKABA",
+                  category: "SOFTWARE",
+                  imageSrc: "/images/hero.png",
+                  imageAlt: "Dormakaba smart access solutions",
+                  sections: [
+                    {
+                      title: "THE CHALLENGE",
+                      paragraphs: [
+                        "When dormakaba approached Tailor Hub, they faced a multi-faceted challenge. Their monolithic CMS, Coremedia, had become an operational bottleneck, limiting flexibility for content editors across 40 countries and 35 languages.",
+                      ],
+                    },
+                    {
+                      title: "THE SOLUTION",
+                      paragraphs: [
+                        "We delivered a comprehensive digital transformation, migrating from Coremedia to a modern, flexible CMS architecture that empowers content editors globally while maintaining enterprise-grade security and performance standards.",
+                      ],
+                    },
+                  ],
+                  insights: [
+                    { value: "40+", label: "COUNTRIES SUPPORTED" },
+                    { value: "35", label: "LANGUAGES" },
+                  ],
+                  quotes: [
+                    {
+                      text: "I am very pleased with the Tailor team. They adapt exceptionally well to our needs, demonstrating great flexibility and responsiveness. They always meet established deadlines.",
+                      author: "PABLO GONZALEZ CELA - GLOBAL DIGITAL SOLUTIONS LEAD AT DORMAKABA",
+                    },
+                  ],
+                },
+              },
+              {
+                category: "ECOMMERCE",
+                title: "VRAI",
+                imageSrc: "/images/vrai.jpeg",
+                imageAlt: "VRAI jewelry e-commerce",
+                modalData: {
+                  title: "VRAI",
+                  category: "ECOMMERCE",
+                  imageSrc: "/images/vrai.jpeg",
+                  imageAlt: "VRAI jewelry e-commerce",
+                  sections: [
+                    {
+                      title: "THE CHALLENGE",
+                      paragraphs: [
+                        "VRAI, a luxury lab-grown diamond jewelry brand, needed an e-commerce platform that matched the elegance and sophistication of their products with advanced product customization, 3D visualization, and seamless checkout.",
+                      ],
+                    },
+                    {
+                      title: "THE SOLUTION",
+                      paragraphs: [
+                        "We developed a custom Shopify Plus solution with advanced 3D product visualization, real-time customization tools, and a streamlined checkout process integrated with inventory management.",
+                      ],
+                    },
+                  ],
+                  insights: [
+                    { value: "150%", label: "SALES INCREASE" },
+                    { value: "4.8/5", label: "CUSTOMER RATING" },
+                  ],
+                  quotes: [
+                    {
+                      text: "The Tailor Hub team created a stunning e-commerce experience that perfectly captures our brand's luxury positioning. Sales have increased significantly since launch.",
+                      author: "VANESSA STOFENMACHER - HEAD OF E-COMMERCE AT VRAI",
+                    },
+                  ],
+                },
+              },
+              {
+                category: "SOFTWARE",
+                title: "ON RUNNING + STRAVA",
+                imageSrc: "/images/1.jpeg",
+                imageAlt: "ON Running and Strava integration",
+                modalData: {
+                  title: "ON RUNNING + STRAVA",
+                  category: "SOFTWARE",
+                  imageSrc: "/images/1.jpeg",
+                  imageAlt: "ON Running and Strava integration",
+                  sections: [
+                    {
+                      title: "THE CHALLENGE",
+                      paragraphs: [
+                        "ON Running needed to integrate their premium running experience with Strava's social fitness platform. The challenge was creating a seamless connection that would enhance the user experience.",
+                      ],
+                    },
+                    {
+                      title: "THE SOLUTION",
+                      paragraphs: [
+                        "We developed a comprehensive integration platform that connects ON Running's proprietary tracking technology with Strava's social features, including automatic activity syncing and performance analytics.",
+                      ],
+                    },
+                  ],
+                  insights: [
+                    { value: "2.5M+", label: "ACTIVE USERS" },
+                    { value: "98%", label: "SYNC SUCCESS RATE" },
+                  ],
+                  quotes: [
+                    {
+                      text: "The Tailor Hub team delivered an exceptional integration that exceeded our expectations. The seamless connection has significantly improved user engagement and retention.",
+                      author: "SARAH CHEN - HEAD OF DIGITAL PRODUCTS AT ON RUNNING",
+                    },
+                  ],
+                },
+              },
+            ]}
+          />
+        </div>
+      </section>
+
       {/* Team Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="TEAM" />
@@ -617,163 +774,6 @@ export default function ClikaliaProposalPage() {
                   languages: "ENGLISH (NATIVE), SPANISH (FLUENT), RUSSIAN (NATIVE)",
                   skills:
                     "PYTHON, SQL, ELASTICSEARCH, POSTGRESQL, DATA PIPELINES, ETL, BUSINESS INTELLIGENCE, ANALYTICS",
-                },
-              },
-            ]}
-          />
-        </div>
-      </section>
-
-      {/* Case Studies Section */}
-      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="CASE STUDIES" title="RELEVANT EXPERIENCE" />
-
-        <div style={{ marginTop: "var(--gap-header-1)" }}>
-          <CaseStudiesSection
-            caseStudies={[
-              {
-                category: "SOFTWARE",
-                title: "CLIKALIA",
-                imageSrc: "/images/dormakaba.jpeg",
-                imageAlt: "Clikalia real estate platform",
-                modalData: {
-                  title: "CLIKALIA",
-                  category: "SOFTWARE",
-                  imageSrc: "/images/dormakaba.jpeg",
-                  imageAlt: "Clikalia real estate platform",
-                  sections: [
-                    {
-                      title: "THE CHALLENGE",
-                      paragraphs: [
-                        "Clikalia, a leading real estate platform, needed to modernize their property management system to handle thousands of listings with advanced search capabilities, virtual tours, and real-time availability updates.",
-                        "The existing infrastructure couldn't scale to meet growing demand, and the user experience needed a complete overhaul to compete in the digital-first real estate market.",
-                      ],
-                    },
-                    {
-                      title: "THE SOLUTION",
-                      paragraphs: [
-                        "We built a scalable, cloud-native platform with advanced search algorithms, 3D virtual tour integration, and AI-powered property recommendations. The new system handles 10x more concurrent users while reducing load times by 70%.",
-                      ],
-                    },
-                  ],
-                  insights: [
-                    { value: "50K+", label: "PROPERTIES LISTED" },
-                    { value: "70%", label: "FASTER LOAD TIMES" },
-                  ],
-                  quotes: [
-                    {
-                      text: "Tailor Hub transformed our platform into a market-leading solution. The new system is fast, reliable, and our users love the enhanced search and virtual tour features.",
-                      author: "MIGUEL RODRIGUEZ - CTO AT CLIKALIA",
-                    },
-                  ],
-                },
-              },
-              {
-                category: "SOFTWARE",
-                title: "DORMAKABA",
-                imageSrc: "/images/hero.png",
-                imageAlt: "Dormakaba smart access solutions",
-                modalData: {
-                  title: "DORMAKABA",
-                  category: "SOFTWARE",
-                  imageSrc: "/images/hero.png",
-                  imageAlt: "Dormakaba smart access solutions",
-                  sections: [
-                    {
-                      title: "THE CHALLENGE",
-                      paragraphs: [
-                        "When dormakaba approached Tailor Hub, they faced a multi-faceted challenge. Their monolithic CMS, Coremedia, had become an operational bottleneck, limiting flexibility for content editors across 40 countries and 35 languages.",
-                      ],
-                    },
-                    {
-                      title: "THE SOLUTION",
-                      paragraphs: [
-                        "We delivered a comprehensive digital transformation, migrating from Coremedia to a modern, flexible CMS architecture that empowers content editors globally while maintaining enterprise-grade security and performance standards.",
-                      ],
-                    },
-                  ],
-                  insights: [
-                    { value: "40+", label: "COUNTRIES SUPPORTED" },
-                    { value: "35", label: "LANGUAGES" },
-                  ],
-                  quotes: [
-                    {
-                      text: "I am very pleased with the Tailor team. They adapt exceptionally well to our needs, demonstrating great flexibility and responsiveness. They always meet established deadlines.",
-                      author: "PABLO GONZALEZ CELA - GLOBAL DIGITAL SOLUTIONS LEAD AT DORMAKABA",
-                    },
-                  ],
-                },
-              },
-              {
-                category: "ECOMMERCE",
-                title: "VRAI",
-                imageSrc: "/images/vrai.jpeg",
-                imageAlt: "VRAI jewelry e-commerce",
-                modalData: {
-                  title: "VRAI",
-                  category: "ECOMMERCE",
-                  imageSrc: "/images/vrai.jpeg",
-                  imageAlt: "VRAI jewelry e-commerce",
-                  sections: [
-                    {
-                      title: "THE CHALLENGE",
-                      paragraphs: [
-                        "VRAI, a luxury lab-grown diamond jewelry brand, needed an e-commerce platform that matched the elegance and sophistication of their products with advanced product customization, 3D visualization, and seamless checkout.",
-                      ],
-                    },
-                    {
-                      title: "THE SOLUTION",
-                      paragraphs: [
-                        "We developed a custom Shopify Plus solution with advanced 3D product visualization, real-time customization tools, and a streamlined checkout process integrated with inventory management.",
-                      ],
-                    },
-                  ],
-                  insights: [
-                    { value: "150%", label: "SALES INCREASE" },
-                    { value: "4.8/5", label: "CUSTOMER RATING" },
-                  ],
-                  quotes: [
-                    {
-                      text: "The Tailor Hub team created a stunning e-commerce experience that perfectly captures our brand's luxury positioning. Sales have increased significantly since launch.",
-                      author: "VANESSA STOFENMACHER - HEAD OF E-COMMERCE AT VRAI",
-                    },
-                  ],
-                },
-              },
-              {
-                category: "SOFTWARE",
-                title: "ON RUNNING + STRAVA",
-                imageSrc: "/images/1.jpeg",
-                imageAlt: "ON Running and Strava integration",
-                modalData: {
-                  title: "ON RUNNING + STRAVA",
-                  category: "SOFTWARE",
-                  imageSrc: "/images/1.jpeg",
-                  imageAlt: "ON Running and Strava integration",
-                  sections: [
-                    {
-                      title: "THE CHALLENGE",
-                      paragraphs: [
-                        "ON Running needed to integrate their premium running experience with Strava's social fitness platform. The challenge was creating a seamless connection that would enhance the user experience.",
-                      ],
-                    },
-                    {
-                      title: "THE SOLUTION",
-                      paragraphs: [
-                        "We developed a comprehensive integration platform that connects ON Running's proprietary tracking technology with Strava's social features, including automatic activity syncing and performance analytics.",
-                      ],
-                    },
-                  ],
-                  insights: [
-                    { value: "2.5M+", label: "ACTIVE USERS" },
-                    { value: "98%", label: "SYNC SUCCESS RATE" },
-                  ],
-                  quotes: [
-                    {
-                      text: "The Tailor Hub team delivered an exceptional integration that exceeded our expectations. The seamless connection has significantly improved user engagement and retention.",
-                      author: "SARAH CHEN - HEAD OF DIGITAL PRODUCTS AT ON RUNNING",
-                    },
-                  ],
                 },
               },
             ]}

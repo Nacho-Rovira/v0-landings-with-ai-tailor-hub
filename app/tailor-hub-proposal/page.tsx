@@ -143,7 +143,7 @@ export default function TailorHubProposal() {
 
         {/* Case Studies Section */}
         <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-          <TitleSection overheader="CASE STUDIES" title="Our Work" />
+          <TitleSection overheader="CASE STUDIES" />
           <div style={{ marginTop: "var(--spacing-xl)" }}>
             <CaseStudiesSection projects={proposalConfig.caseStudies} />
           </div>

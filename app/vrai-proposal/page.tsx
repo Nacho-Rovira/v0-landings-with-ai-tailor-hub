@@ -533,7 +533,7 @@ export default function VRAIProposalPage() {
 
       {/* Case Studies Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="CASE STUDIES" title="RELEVANT EXPERIENCE" />
+        <TitleSection overheader="CASE STUDIES" />
 
         <div style={{ marginTop: "var(--gap-header-1)" }}>
           <CaseStudiesSection
