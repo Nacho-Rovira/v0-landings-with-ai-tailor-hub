@@ -169,23 +169,19 @@ export default function SantanderProposalPage() {
       <section id="next-steps" style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="NEXT STEPS" title="Let's Start a Conversation" />
 
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
-          
-
+        <div style={{ marginTop: "var(--spacing-9xl)" }}>
           <StepsFlow steps={proposalConfig.nextSteps.steps} />
-
-          
         </div>
+      </section>
 
-        {/* CTA */}
-        <div style={{ marginTop: "var(--spacing-3xl)" }}>
-          <HeaderBox
-            overheader="GET IN TOUCH"
-            header="Ready to explore how Tailor Hub can transform your digital banking, internal tools, and customer experiences?"
-            buttonLabel="CONTACT US"
-            onButtonClick={() => (window.location.href = "mailto:info@tailor-hub.com")}
-          />
-        </div>
+      {/* Get in Touch Section */}
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <HeaderBox
+          overheader="GET IN TOUCH"
+          header="Ready to explore how Tailor Hub can transform your digital banking, internal tools, and customer experiences?"
+          buttonLabel="CONTACT US"
+          onButtonClick={() => (window.location.href = "mailto:info@tailor-hub.com")}
+        />
       </section>
     </LandingLayout>
   )
