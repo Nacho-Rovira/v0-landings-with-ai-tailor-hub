@@ -19,6 +19,7 @@ export const TitleSection = React.forwardRef<HTMLDivElement, TitleSectionProps>(
     return (
       <div ref={ref} className={classes} {...props}>
         {overheader && <p className="title-section__overheader">{overheader}</p>}
+        {title && <h2 className="title-section__title">{title}</h2>}
         {paragraph && <p className="title-section__paragraph">{paragraph}</p>}
       </div>
     )
