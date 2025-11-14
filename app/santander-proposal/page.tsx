@@ -100,7 +100,7 @@ export default function SantanderProposalPage() {
 
       {/* Services Section */}
       <section id="services" style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="SERVICES" title="What We Do" />
+        <TitleSection overheader="SERVICES" />
 
         <div style={{ marginTop: "var(--gap-header-1)" }}>
           {proposalConfig.services.map((service, index) => (
@@ -122,7 +122,7 @@ export default function SantanderProposalPage() {
 
       {/* Team Section */}
       <section id="team" style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader={proposalConfig.team.overheader} title="Our Team" />
+        <TitleSection overheader={proposalConfig.team.overheader} />
 
         <div style={{ marginTop: "var(--gap-header-1)" }}>
           <TeamSection members={proposalConfig.team.members} />
@@ -131,7 +131,7 @@ export default function SantanderProposalPage() {
 
       {/* Case Studies */}
       <section id="case-studies" style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="CASE STUDIES" title="Proven Track Record" />
+        <TitleSection overheader="CASE STUDIES" />
 
         <div style={{ marginTop: "var(--gap-header-1)" }}>
           <CaseStudiesSection caseStudies={proposalConfig.caseStudies} />
@@ -145,7 +145,7 @@ export default function SantanderProposalPage() {
 
       {/* Next Steps Section */}
       <section id="next-steps" style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="NEXT STEPS" title="Let's Start a Conversation" />
+        <TitleSection overheader="NEXT STEPS" />
 
         <div style={{ marginTop: "var(--gap-header-1)" }}>
           <StepsFlow steps={proposalConfig.nextSteps.steps} />
@@ -177,7 +177,7 @@ export default function SantanderProposalPage() {
 
       {/* FAQ Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="FREQUENTLY ASKED QUESTIONS" title="FAQ" />
+        <TitleSection overheader="FREQUENTLY ASKED QUESTIONS" />
 
         <div style={{ marginTop: "var(--gap-header-1)" }}>
           <FAQ items={proposalConfig.faq} />
