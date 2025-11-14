@@ -123,18 +123,12 @@ export default function SantanderProposalPage() {
 
       {/* FAQ Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="FREQUENTLY ASKED QUESTIONS" title="FAQ" />
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
-          <FAQ items={proposalConfig.faq} />
-        </div>
+        <FAQ items={proposalConfig.faq} />
       </section>
 
       {/* Next Steps Section */}
       <section id="next-steps" style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="NEXT STEPS" title="Let's Start a Conversation" />
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
-          <StepsFlow steps={proposalConfig.nextSteps.steps} />
-        </div>
+        <StepsFlow steps={proposalConfig.nextSteps.steps} />
         <div style={{ marginTop: "var(--spacing-xl)" }}>
           <HeaderBox
             header="Ready to discuss your digital transformation?"
