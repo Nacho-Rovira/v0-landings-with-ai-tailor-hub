@@ -10,7 +10,8 @@
   gap: var(--spacing-l);
   padding: var(--spacing-xl);
   background-color: var(--color-neutral-50);
-  border-radius: var(--radius-card);
+  /* Using --radius-s token consistent with other card components in the design system */
+  border-radius: var(--radius-s, 16px);
   border: 1px solid var(--color-neutral-100);
   transition: all 0.2s ease;
 }
