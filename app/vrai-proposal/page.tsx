@@ -100,32 +100,50 @@ export default function VRAIProposalPage() {
 
           {/* Body Content */}
           <div style={{ flex: 1, maxWidth: "702px" }}>
-            {/* Body Text Sections */}
-            <BodyText
-              sections={[
-                {
-                  title: "CHALLENGE / CONTEXT",
-                  paragraphs: [
-                    "VRAI is redefining luxury jewelry through lab-grown diamonds that combine ethical sourcing with uncompromising quality. As your brand scales globally, the digital experience must match the sophistication of your products.",
-                    "The challenge lies in creating a next-generation e-commerce platform that showcases exquisite jewelry through immersive 3D visualization, intuitive customization tools, and a frictionless purchase journey—all while delivering the performance, security, and elegance expected by discerning luxury consumers.",
-                  ],
-                },
-                {
-                  title: "OBJECTIVES",
-                  paragraphs: [
-                    "Our primary objective is to design and develop a world-class e-commerce platform that elevates VRAI's digital presence and drives measurable business growth. The platform will feature cutting-edge product visualization, personalized shopping experiences, and conversion-optimized checkout flows.",
-                    "We aim to create a scalable, secure, high-performance solution that supports global expansion while providing rich analytics for data-driven decision making. The platform will embody VRAI's brand values: transparency, innovation, and luxury craftsmanship.",
-                  ],
-                },
-                {
-                  title: "OUR APPROACH",
-                  paragraphs: [
-                    "Tailor Hub brings deep expertise in luxury e-commerce, combining technical excellence with an understanding of high-end consumer behavior. Our multidisciplinary team collaborates closely with stakeholders throughout the project lifecycle.",
-                    "We follow an agile methodology with regular sprints, continuous feedback loops, and iterative refinement. Each phase includes thorough testing, optimization, and user validation to ensure the platform exceeds expectations while balancing speed to market with long-term scalability and maintainability.",
-                  ],
-                },
-              ]}
-            />
+            {/* Challenge Section */}
+            <div id="challenge">
+              <BodyText
+                sections={[
+                  {
+                    title: "CHALLENGE / CONTEXT",
+                    paragraphs: [
+                      "VRAI is redefining luxury jewelry through lab-grown diamonds that combine ethical sourcing with uncompromising quality. As your brand scales globally, the digital experience must match the sophistication of your products.",
+                      "The challenge lies in creating a next-generation e-commerce platform that showcases exquisite jewelry through immersive 3D visualization, intuitive customization tools, and a frictionless purchase journey—all while delivering the performance, security, and elegance expected by discerning luxury consumers.",
+                    ],
+                  },
+                ]}
+              />
+            </div>
+
+            {/* Objectives Section */}
+            <div id="objectives" style={{ marginTop: "var(--spacing-4xl)" }}>
+              <BodyText
+                sections={[
+                  {
+                    title: "OBJECTIVES",
+                    paragraphs: [
+                      "Our primary objective is to design and develop a world-class e-commerce platform that elevates VRAI's digital presence and drives measurable business growth. The platform will feature cutting-edge product visualization, personalized shopping experiences, and conversion-optimized checkout flows.",
+                      "We aim to create a scalable, secure, high-performance solution that supports global expansion while providing rich analytics for data-driven decision making. The platform will embody VRAI's brand values: transparency, innovation, and luxury craftsmanship.",
+                    ],
+                  },
+                ]}
+              />
+            </div>
+
+            {/* Approach Section */}
+            <div id="approach" style={{ marginTop: "var(--spacing-4xl)" }}>
+              <BodyText
+                sections={[
+                  {
+                    title: "OUR APPROACH",
+                    paragraphs: [
+                      "Tailor Hub brings deep expertise in luxury e-commerce, combining technical excellence with an understanding of high-end consumer behavior. Our multidisciplinary team collaborates closely with stakeholders throughout the project lifecycle.",
+                      "We follow an agile methodology with regular sprints, continuous feedback loops, and iterative refinement. Each phase includes thorough testing, optimization, and user validation to ensure the platform exceeds expectations while balancing speed to market with long-term scalability and maintainability.",
+                    ],
+                  },
+                ]}
+              />
+            </div>
 
             {/* Technology Section */}
             <div id="technology" style={{ marginTop: "var(--spacing-4xl)" }}>
