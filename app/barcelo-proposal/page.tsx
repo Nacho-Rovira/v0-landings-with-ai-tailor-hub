@@ -216,7 +216,7 @@ export default function BarceloProposalPage() {
         <TitleSection overheader="SERVICES" />
 
         <div
-          style={{ marginTop: "var(--spacing-xl)", display: "flex", flexDirection: "column", gap: "var(--spacing-xl)" }}
+          style={{ marginTop: "var(--gap-header-1)", display: "flex", flexDirection: "column", gap: "var(--spacing-xl)" }}
         >
           {proposalConfig.services.map((service, index) => (
             <BoxSection
@@ -234,7 +234,7 @@ export default function BarceloProposalPage() {
       {/* Team Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader={proposalConfig.team.overheader} />
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
+        <div style={{ marginTop: "var(--gap-header-1)" }}>
           <TeamSection members={proposalConfig.team.members} />
         </div>
       </section>
@@ -242,7 +242,7 @@ export default function BarceloProposalPage() {
       {/* Case Studies Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="CASE STUDIES" />
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
+        <div style={{ marginTop: "var(--gap-header-1)" }}>
           <CaseStudiesSection caseStudies={proposalConfig.caseStudies} />
         </div>
       </section>
@@ -255,7 +255,7 @@ export default function BarceloProposalPage() {
       {/* ISO Certification Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader={proposalConfig.isoCertification.overheader} />
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
+        <div style={{ marginTop: "var(--gap-header-1)" }}>
           <BoxSection
             header={proposalConfig.isoCertification.header}
             bodyText={proposalConfig.isoCertification.bodyText}
@@ -270,7 +270,7 @@ export default function BarceloProposalPage() {
       {/* FAQ Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="FREQUENTLY ASKED QUESTIONS" title="FAQ" />
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
+        <div style={{ marginTop: "var(--gap-header-1)" }}>
           <FAQ items={proposalConfig.faq} />
         </div>
       </section>

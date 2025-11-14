@@ -365,7 +365,7 @@ export default function ClikaliaProposalPage() {
         <TitleSection overheader="SERVICES" title="TAILOR HUB SERVICES" />
 
         <div
-          style={{ marginTop: "var(--spacing-xl)", display: "flex", flexDirection: "column", gap: "var(--spacing-xl)" }}
+          style={{ marginTop: "var(--gap-header-1)", display: "flex", flexDirection: "column", gap: "var(--spacing-xl)" }}
         >
           <BoxSection
             overheader="DEVELOPMENT LABS"
@@ -397,7 +397,7 @@ export default function ClikaliaProposalPage() {
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="TEAM" title="YOUR DEVELOPMENT TEAM" />
 
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
+        <div style={{ marginTop: "var(--gap-header-1)" }}>
           <TeamSection
             members={[
               {
@@ -598,7 +598,7 @@ export default function ClikaliaProposalPage() {
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="CASE STUDIES" title="RELEVANT EXPERIENCE" />
 
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
+        <div style={{ marginTop: "var(--gap-header-1)" }}>
           <CaseStudiesSection
             caseStudies={[
               {
@@ -755,7 +755,7 @@ export default function ClikaliaProposalPage() {
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="FREQUENTLY ASKED QUESTIONS" title="FAQ" />
 
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
+        <div style={{ marginTop: "var(--gap-header-1)" }}>
           <FAQ
             items={[
               {
@@ -815,7 +815,7 @@ export default function ClikaliaProposalPage() {
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="SECURITY ISO" title="TECH WITH THE HIGHEST STANDARDS OF SECURITY" />
 
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
+        <div style={{ marginTop: "var(--gap-header-1)" }}>
           <BoxSection
             overheader="SECURITY CERTIFICATION"
             header="ISO 27001"
