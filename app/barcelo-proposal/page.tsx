@@ -269,7 +269,7 @@ export default function BarceloProposalPage() {
 
       {/* FAQ Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="FREQUENTLY ASKED QUESTIONS" title="FAQ" />
+        <TitleSection overheader="FREQUENTLY ASKED QUESTIONS" />
         <div style={{ marginTop: "var(--gap-header-1)" }}>
           <FAQ items={proposalConfig.faq} />
         </div>

@@ -362,7 +362,7 @@ export default function ClikaliaProposalPage() {
 
       {/* Services Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="SERVICES" title="TAILOR HUB SERVICES" />
+        <TitleSection overheader="SERVICES" />
 
         <div
           style={{ marginTop: "var(--gap-header-1)", display: "flex", flexDirection: "column", gap: "var(--spacing-xl)" }}
@@ -395,7 +395,7 @@ export default function ClikaliaProposalPage() {
 
       {/* Team Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="TEAM" title="YOUR DEVELOPMENT TEAM" />
+        <TitleSection overheader="TEAM" />
 
         <div style={{ marginTop: "var(--gap-header-1)" }}>
           <TeamSection
@@ -753,7 +753,7 @@ export default function ClikaliaProposalPage() {
 
       {/* FAQ Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="FREQUENTLY ASKED QUESTIONS" title="FAQ" />
+        <TitleSection overheader="FREQUENTLY ASKED QUESTIONS" />
 
         <div style={{ marginTop: "var(--gap-header-1)" }}>
           <FAQ
@@ -813,7 +813,7 @@ export default function ClikaliaProposalPage() {
 
       {/* ISO Certification Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="SECURITY ISO" title="TECH WITH THE HIGHEST STANDARDS OF SECURITY" />
+        <TitleSection overheader="SECURITY ISO" />
 
         <div style={{ marginTop: "var(--gap-header-1)" }}>
           <BoxSection

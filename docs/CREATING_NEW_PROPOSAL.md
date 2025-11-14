@@ -50,6 +50,19 @@ Choose appropriate placeholder images from `/images/design-mode/`:
 
 ## Step 4: Write Content
 
+### Section Display Rules
+
+**IMPORTANT:** The following sections should **only display overheader** (no title prop in TitleSection):
+
+- **FAQ Section**: `<TitleSection overheader="FREQUENTLY ASKED QUESTIONS" />` (no title prop)
+- **Team Section**: `<TitleSection overheader="TEAM" />` (no title prop)
+- **ISO Certification Section**: `<TitleSection overheader="SECURITY ISO" />` (no title prop)
+- **Services Section**: `<TitleSection overheader="SERVICES" />` (no title prop)
+
+These sections should have visual consistency with a single overheader line, followed by `var(--gap-header-1)` spacing before content.
+
+All other sections (Case Studies, Next Steps, Partners, etc.) may optionally include both overheader and title based on content needs.
+
 ### Hero Section
 - **Concepts**: 3-5 key technology/business concepts (e.g., "AI-POWERED", "CLOUD-NATIVE")
 - **Header**: One-line project description (50-80 characters)

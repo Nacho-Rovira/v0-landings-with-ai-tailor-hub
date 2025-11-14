@@ -109,7 +109,7 @@ export default function TailorHubProposal() {
         {/* Services Section */}
         {proposalConfig.services && (
           <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-            <TitleSection overheader="SERVICES" title="What We Offer" />
+            <TitleSection overheader="SERVICES" />
             <div
               style={{
                 marginTop: "var(--spacing-xl)",
@@ -135,7 +135,7 @@ export default function TailorHubProposal() {
 
         {/* Team Section */}
         <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-          <TitleSection overheader={proposalConfig.team.overheader} title="" />
+          <TitleSection overheader={proposalConfig.team.overheader} />
           <div style={{ marginTop: "var(--spacing-xl)" }}>
             <TeamSection members={proposalConfig.team.members} />
           </div>
@@ -159,6 +159,7 @@ export default function TailorHubProposal() {
         {/* ISO Certification Section */}
         {proposalConfig.isoCertification && (
           <section style={{ marginBottom: "var(--spacing-9xl)" }}>
+            <TitleSection overheader={proposalConfig.isoCertification.overheader} />
             <BoxSection
               overheader={proposalConfig.isoCertification.overheader}
               header={proposalConfig.isoCertification.header}
@@ -172,7 +173,7 @@ export default function TailorHubProposal() {
 
         {/* FAQ Section */}
         <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-          <TitleSection overheader="FREQUENTLY ASKED QUESTIONS" title="FAQ" />
+          <TitleSection overheader="FREQUENTLY ASKED QUESTIONS" />
           <div style={{ marginTop: "var(--spacing-xl)" }}>
             <FAQ items={proposalConfig.faq} />
           </div>

@@ -444,7 +444,7 @@ export default function VRAIProposalPage() {
 
       {/* Team Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="TEAM" title="YOUR AUDIT TEAM" />
+        <TitleSection overheader="TEAM" />
 
         <div style={{ marginTop: "var(--spacing-xl)" }}>
           <TeamSection
@@ -701,7 +701,7 @@ export default function VRAIProposalPage() {
 
       {/* FAQ Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="FREQUENTLY ASKED QUESTIONS" title="FAQ" />
+        <TitleSection overheader="FREQUENTLY ASKED QUESTIONS" />
 
         <div style={{ marginTop: "var(--spacing-xl)" }}>
           <FAQ
