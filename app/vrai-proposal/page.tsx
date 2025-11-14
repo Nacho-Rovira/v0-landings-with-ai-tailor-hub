@@ -20,8 +20,8 @@ export default function VRAIProposalPage() {
       {/* Highlight Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <HighlightSection
-          concepts={["E-COMMERCE <span> AUDIT", "PERFORMANCE <span> OPTIMIZATION", "LUXURY <span> EXPERIENCE"]}
-          header="COMPREHENSIVE E-COMMERCE AUDIT & OPTIMIZATION FOR VRAI'S LUXURY JEWELRY PLATFORM"
+          concepts={["E-COMMERCE <span> PLATFORM", "LUXURY <span> EXPERIENCE", "DIGITAL <span> TRANSFORMATION"]}
+          header="COMPREHENSIVE E-COMMERCE PLATFORM IMPLEMENTATION FOR VRAI'S LUXURY JEWELRY BRAND"
         />
       </section>
 
@@ -29,7 +29,7 @@ export default function VRAIProposalPage() {
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <HeaderBox
           overheader="A PROPOSAL FOR VRAI"
-          header="Expert audit and optimization of your luxury e-commerce platform to enhance performance, security, and customer experience"
+          header="Full-stack development and implementation of your next-generation luxury e-commerce platform"
           buttonLabel="VIEW PROPOSAL"
           onButtonClick={() => {
             document.querySelector("#content")?.scrollIntoView({ behavior: "smooth" })
@@ -83,7 +83,7 @@ export default function VRAIProposalPage() {
               OUR APPROACH
             </MenuSidebarItem>
             <MenuSidebarItem href="#technology" number={4}>
-              AUDIT SCOPE
+              TECHNOLOGY STACK
             </MenuSidebarItem>
             <MenuSidebarItem href="#roadmap" number={5}>
               ROADMAP & PHASES
@@ -103,28 +103,28 @@ export default function VRAIProposalPage() {
                 {
                   title: "CHALLENGE / CONTEXT",
                   paragraphs: [
-                    "VRAI has established itself as a leader in the luxury lab-grown diamond jewelry market with a sophisticated Shopify Plus e-commerce platform. Since the initial launch, the platform has achieved impressive results with a 150% sales increase and a 4.8/5 customer satisfaction rating.",
-                    "However, as the business continues to grow and evolve, it's crucial to conduct a comprehensive audit to ensure the platform maintains peak performance, security, and user experience. This audit will identify optimization opportunities, address technical debt, and provide a roadmap for future enhancements that align with VRAI's luxury brand positioning and business objectives.",
+                    "VRAI is redefining the luxury jewelry market with lab-grown diamonds, combining ethical sourcing with uncompromising quality. As your brand continues to scale globally, you need a digital platform that matches the sophistication and innovation of your products.",
+                    "The challenge is to create a next-generation e-commerce experience that showcases your exquisite jewelry through advanced 3D visualization, personalized customization tools, and a seamless purchase journey—all while maintaining the performance, security, and elegance expected by discerning luxury consumers.",
                   ],
                 },
                 {
                   title: "OBJECTIVES",
                   paragraphs: [
-                    "The primary objective of this audit is to conduct a thorough evaluation of VRAI's e-commerce platform across four key dimensions: technical performance, security compliance, user experience, and business intelligence capabilities.",
-                    "We aim to identify areas for improvement, provide actionable recommendations, and create a prioritized roadmap for optimization. The audit will ensure the platform continues to deliver exceptional performance while maintaining the highest standards of security and providing an unparalleled luxury shopping experience that drives conversion and customer loyalty.",
+                    "Our primary objective is to design and develop a world-class e-commerce platform that elevates VRAI's digital presence and drives measurable business growth. The platform will feature cutting-edge product visualization, intuitive customization interfaces, and a frictionless checkout experience optimized for conversion.",
+                    "We aim to create a scalable, secure, and high-performance solution that supports your global expansion while providing rich analytics for data-driven decision making. The platform will embody VRAI's brand values of transparency, innovation, and luxury craftsmanship.",
                   ],
                 },
                 {
                   title: "OUR APPROACH",
                   paragraphs: [
-                    "Tailor Hub's audit methodology combines automated analysis tools with expert manual review to provide comprehensive insights. Our team of e-commerce specialists, security experts, and UX professionals will work collaboratively to examine every aspect of your platform.",
-                    "We follow a structured approach that includes stakeholder interviews, data analysis, technical testing, and competitive benchmarking. Throughout the audit, we maintain open communication with your team, providing regular updates and preliminary findings. Our deliverables include detailed reports, prioritized recommendations, and a practical implementation roadmap tailored to your business goals and technical constraints.",
+                    "Tailor Hub brings deep expertise in luxury e-commerce, combining technical excellence with an understanding of high-end consumer behavior. Our multidisciplinary team will work in close collaboration with VRAI stakeholders throughout the project lifecycle.",
+                    "We follow an agile methodology with regular sprints, continuous feedback loops, and iterative refinement. Each phase includes thorough testing, optimization, and user validation to ensure the platform exceeds expectations. Our approach balances speed to market with long-term scalability and maintainability.",
                   ],
                 },
               ]}
             />
 
-            {/* Audit Scope Section */}
+            {/* Technology Stack Section */}
             <div id="technology" style={{ marginTop: "var(--spacing-4xl)" }}>
               <h3
                 style={{
@@ -138,7 +138,7 @@ export default function VRAIProposalPage() {
                   marginBottom: "var(--spacing-m, 16px)",
                 }}
               >
-                AUDIT SCOPE
+                TECHNOLOGY STACK
               </h3>
               <p
                 style={{
@@ -150,7 +150,7 @@ export default function VRAIProposalPage() {
                   marginBottom: "var(--spacing-xl)",
                 }}
               >
-                Our comprehensive audit will cover the following key areas of your e-commerce platform:
+                We will leverage modern, proven technologies to build a robust and scalable platform:
               </p>
 
               <div
@@ -162,19 +162,19 @@ export default function VRAIProposalPage() {
                 }}
               >
                 {[
-                  "Performance Analysis",
-                  "Security Assessment",
-                  "UX/UI Review",
-                  "Conversion Optimization",
-                  "Mobile Experience",
-                  "Checkout Flow",
-                  "Product Customization",
-                  "3D Visualization",
-                  "Inventory Management",
-                  "Analytics & Tracking",
-                  "SEO Audit",
-                  "Accessibility Compliance",
-                ].map((area, index) => (
+                  "Shopify Plus",
+                  "React & Next.js",
+                  "TypeScript",
+                  "Tailwind CSS",
+                  "Three.js (3D)",
+                  "Node.js",
+                  "GraphQL API",
+                  "PostgreSQL",
+                  "AWS Cloud",
+                  "Docker & Kubernetes",
+                  "Stripe Payments",
+                  "Algolia Search",
+                ].map((tech, index) => (
                   <div
                     key={index}
                     style={{
@@ -191,7 +191,7 @@ export default function VRAIProposalPage() {
                       flexShrink: 0,
                     }}
                   >
-                    {area}
+                    {tech}
                   </div>
                 ))}
               </div>
@@ -217,54 +217,66 @@ export default function VRAIProposalPage() {
                 phases={[
                   {
                     number: "01",
-                    title: "PLATFORM AUDIT & ANALYSIS",
+                    title: "DISCOVERY & DESIGN",
                     description:
-                      "Comprehensive technical audit of your Shopify Plus platform, including performance benchmarking, code review, and infrastructure analysis. We'll examine your current architecture, identify bottlenecks, and assess scalability for future growth.",
-                    duration: "2 WEEKS",
+                      "Comprehensive discovery workshops with stakeholders to define requirements, user journeys, and success metrics. We'll create detailed wireframes, high-fidelity mockups, and interactive prototypes for the complete platform. This phase includes UX research, brand alignment, and technical architecture planning.",
+                    duration: "4 WEEKS",
                     deliverables: [
-                      "Technical audit report with findings and severity ratings",
-                      "Performance benchmarks and load testing results",
-                      "Code quality assessment and technical debt analysis",
-                      "Infrastructure and hosting optimization recommendations",
+                      "User research and persona development",
+                      "Information architecture and user flow diagrams",
+                      "High-fidelity UI designs for all key pages",
+                      "Interactive prototypes for user testing",
+                      "Technical architecture documentation",
+                      "Project roadmap and milestone definitions",
                     ],
                   },
                   {
                     number: "02",
-                    title: "PERFORMANCE & SECURITY REVIEW",
+                    title: "CORE DEVELOPMENT",
                     description:
-                      "In-depth security assessment and performance optimization analysis. We'll conduct penetration testing, review security protocols, analyze page load times, and evaluate your platform's compliance with industry standards and best practices.",
-                    duration: "2 WEEKS",
+                      "Development of the platform's foundational architecture and core features. This includes Shopify Plus setup, custom theme development, product catalog implementation, responsive design, and basic 3D product visualization. We'll establish CI/CD pipelines, testing frameworks, and development workflows.",
+                    duration: "8 WEEKS",
                     deliverables: [
-                      "Security audit report with vulnerability assessment",
-                      "PCI DSS compliance review and recommendations",
-                      "Performance optimization strategy with quick wins",
-                      "Mobile performance analysis and improvement plan",
+                      "Shopify Plus store configuration and customization",
+                      "Responsive frontend with Next.js and Tailwind CSS",
+                      "Product catalog with advanced filtering and search",
+                      "Basic 3D product viewer implementation",
+                      "Shopping cart and checkout flow (phase 1)",
+                      "Content management system integration",
+                      "CI/CD pipeline and staging environment",
                     ],
                   },
                   {
                     number: "03",
-                    title: "UX/UI ASSESSMENT & RECOMMENDATIONS",
+                    title: "ADVANCED FEATURES & CUSTOMIZATION",
                     description:
-                      "Comprehensive user experience evaluation including customer journey mapping, conversion funnel analysis, and usability testing. We'll assess your 3D visualization tools, product customization features, and checkout flow to identify friction points and opportunities for enhancement.",
-                    duration: "2 WEEKS",
+                      "Implementation of advanced features that differentiate VRAI's platform. This includes sophisticated 3D product customization tools, real-time inventory management, personalization engine, advanced analytics integration, and optimized checkout experience. We'll also implement customer accounts, wishlist functionality, and order tracking.",
+                    duration: "6 WEEKS",
                     deliverables: [
-                      "UX audit report with heatmaps and user behavior analysis",
-                      "Conversion rate optimization recommendations",
-                      "Accessibility audit (WCAG 2.1 compliance)",
-                      "Mobile UX improvement strategy",
+                      "Advanced 3D customization interface with real-time rendering",
+                      "Personalization engine and recommendation system",
+                      "Customer account portal with order history",
+                      "Wishlist and favorites functionality",
+                      "Real-time inventory management integration",
+                      "Analytics and conversion tracking implementation",
+                      "Email automation and customer communication flows",
                     ],
                   },
                   {
                     number: "04",
-                    title: "IMPLEMENTATION ROADMAP & SUPPORT",
+                    title: "TESTING, OPTIMIZATION & LAUNCH",
                     description:
-                      "Creation of a prioritized implementation roadmap based on audit findings, with clear timelines, resource requirements, and expected impact. We'll provide ongoing support during the initial implementation phase to ensure successful execution of critical improvements.",
-                    duration: "1 WEEK + ONGOING",
+                      "Comprehensive quality assurance, performance optimization, and security hardening. This phase includes cross-browser and device testing, load testing, accessibility compliance verification, SEO optimization, and final content migration. We'll conduct user acceptance testing and provide training for the VRAI team before the successful launch.",
+                    duration: "4 WEEKS",
                     deliverables: [
-                      "Prioritized implementation roadmap with timelines",
-                      "Cost-benefit analysis for recommended improvements",
-                      "Quick wins implementation guide",
-                      "30 days of post-audit support and consultation",
+                      "Comprehensive QA testing across devices and browsers",
+                      "Performance optimization and load testing",
+                      "Security audit and PCI DSS compliance verification",
+                      "Accessibility testing (WCAG 2.1 AA compliance)",
+                      "SEO optimization and search console setup",
+                      "Team training and documentation",
+                      "Smooth production launch with monitoring setup",
+                      "30-day post-launch support and optimization",
                     ],
                   },
                 ]}
@@ -290,32 +302,33 @@ export default function VRAIProposalPage() {
               <BudgetSection
                 items={[
                   {
-                    category: "PLATFORM AUDIT & ANALYSIS",
-                    description: "Technical audit, performance benchmarking, and code review",
-                    amount: "€8,000",
+                    category: "PHASE 01: DISCOVERY & DESIGN",
+                    description: "User research, UX/UI design, prototyping, and technical planning",
+                    amount: "€12,000",
                   },
                   {
-                    category: "PERFORMANCE & SECURITY REVIEW",
-                    description: "Security assessment, penetration testing, and performance optimization",
-                    amount: "€9,500",
+                    category: "PHASE 02: CORE DEVELOPMENT",
+                    description: "Platform setup, core features, and foundational architecture",
+                    amount: "€18,000",
                   },
                   {
-                    category: "UX/UI ASSESSMENT & RECOMMENDATIONS",
-                    description: "User experience evaluation, conversion analysis, and accessibility audit",
-                    amount: "€7,500",
+                    category: "PHASE 03: ADVANCED FEATURES & CUSTOMIZATION",
+                    description: "3D customization, personalization, analytics, and advanced functionality",
+                    amount: "€14,000",
                   },
                   {
-                    category: "IMPLEMENTATION ROADMAP & SUPPORT",
-                    description: "Prioritized roadmap creation and 30 days of post-audit support",
-                    amount: "€5,000",
+                    category: "PHASE 04: TESTING, OPTIMIZATION & LAUNCH",
+                    description: "QA testing, performance optimization, security audit, and launch support",
+                    amount: "€6,000",
                   },
                 ]}
-                total="€30,000"
+                total="€50,000"
                 notes={[
-                  "Payment terms: 50% upfront, 50% upon completion of audit",
+                  "Payment terms: 30% upfront, 40% at Phase 2 completion, 30% upon final launch",
                   "All prices exclude VAT",
-                  "Implementation of recommendations can be quoted separately based on priorities",
-                  "Extended support packages available after initial 30-day period",
+                  "Project timeline: 22 weeks from kickoff to launch",
+                  "Includes 30 days of post-launch support and bug fixes",
+                  "Additional features and enhancements can be quoted separately",
                 ]}
               />
             </div>
@@ -346,9 +359,9 @@ export default function VRAIProposalPage() {
                   marginBottom: "var(--spacing-xl)",
                 }}
               >
-                Following the audit, we offer ongoing support services to help you implement recommendations and
-                maintain optimal platform performance. Our support packages are designed to provide continuous value and
-                ensure your e-commerce platform remains at peak performance.
+                Following the successful launch, we offer ongoing support and maintenance services to ensure your
+                platform continues to perform optimally and evolve with your business needs. Our support packages
+                include proactive monitoring, regular updates, feature enhancements, and dedicated technical assistance.
               </p>
 
               <div style={{ marginTop: "var(--spacing-xl)" }}>
@@ -359,9 +372,10 @@ export default function VRAIProposalPage() {
                       label: "Essential Support",
                       content: (
                         <ul>
-                          <li>Monthly performance monitoring and reporting</li>
+                          <li>24/7 platform monitoring and uptime alerts</li>
                           <li>Security updates and patches</li>
                           <li>Bug fixes and minor adjustments</li>
+                          <li>Monthly performance reports</li>
                           <li>Email support (48-hour response time)</li>
                         </ul>
                       ),
@@ -369,14 +383,15 @@ export default function VRAIProposalPage() {
                     {
                       label: "Premium Support",
                       tooltip:
-                        "Includes all Essential Support features plus priority access and dedicated account management.",
+                        "Includes all Essential Support features plus priority access, dedicated account management, and development hours for enhancements.",
                       content: (
                         <ul>
                           <li>All Essential Support features</li>
                           <li>Priority support (24-hour response time)</li>
-                          <li>Quarterly optimization reviews</li>
-                          <li>Dedicated account manager</li>
-                          <li>Implementation of audit recommendations (up to 20 hours/month)</li>
+                          <li>Dedicated account manager and technical lead</li>
+                          <li>Quarterly strategic reviews and optimization recommendations</li>
+                          <li>Up to 20 hours/month of development for new features and enhancements</li>
+                          <li>A/B testing and conversion optimization support</li>
                         </ul>
                       ),
                     },
@@ -394,9 +409,8 @@ export default function VRAIProposalPage() {
                   marginTop: "var(--spacing-l, 24px)",
                 }}
               >
-                Our support services are designed to provide VRAI with peace of mind and continuous improvement,
-                allowing you to focus on growing your luxury jewelry business while we ensure your platform delivers
-                exceptional performance and customer experience.
+                Our support services ensure VRAI can focus on growing your luxury jewelry business while we handle the
+                technical aspects, keeping your platform secure, fast, and continuously improving.
               </p>
 
               {/* Monthly Support Budget */}
@@ -419,13 +433,13 @@ export default function VRAIProposalPage() {
                   items={[
                     {
                       category: "ESSENTIAL SUPPORT",
-                      description: "Monthly monitoring, security updates, and email support",
+                      description: "24/7 monitoring, security updates, bug fixes, and email support",
                       amount: "€2,500/month",
                     },
                     {
                       category: "PREMIUM SUPPORT",
                       description:
-                        "All Essential features plus priority support, quarterly reviews, and implementation hours",
+                        "All Essential features plus priority support, quarterly reviews, and 20 dev hours/month",
                       amount: "€5,500/month",
                     },
                   ]}
@@ -433,7 +447,8 @@ export default function VRAIProposalPage() {
                   notes={[
                     "Minimum 3-month commitment for support packages",
                     "Custom enterprise support packages available upon request",
-                    "Implementation hours can be rolled over to the following month",
+                    "Development hours can be rolled over to the following month (max 2 months)",
+                    "Support packages can begin immediately after launch",
                   ]}
                 />
               </div>
@@ -482,7 +497,7 @@ export default function VRAIProposalPage() {
                   bio: [
                     "Maria is a passionate frontend developer with over 6 years of experience creating beautiful, accessible, and performant user interfaces. She specializes in React, Next.js, and modern CSS frameworks, with particular expertise in e-commerce platforms.",
                     "Her attention to detail and commitment to user experience has helped numerous luxury brands achieve their digital goals. Maria is also an advocate for web accessibility and inclusive design practices, ensuring that every user can enjoy a premium shopping experience.",
-                    "For the VRAI audit, Maria will lead the UX/UI assessment, analyzing the customer journey, conversion funnels, and identifying opportunities to enhance the luxury shopping experience.",
+                    "For the VRAI project, Maria will lead frontend development, implementing the UI designs with pixel-perfect precision and ensuring optimal performance across all devices.",
                   ],
                   languages: "SPANISH (NATIVE), ENGLISH (FLUENT), FRENCH (INTERMEDIATE)",
                   skills:
@@ -501,8 +516,8 @@ export default function VRAIProposalPage() {
                   imageAlt: "Carlos M - DevOps & Security Engineer",
                   bio: [
                     "Carlos is a DevOps and security expert with 7 years of experience in cloud infrastructure, automation, and cybersecurity. He specializes in building robust CI/CD pipelines and maintaining highly available, secure e-commerce systems.",
-                    "His expertise includes penetration testing, security audits, and compliance assessments for PCI DSS and other industry standards. Carlos has helped numerous e-commerce platforms achieve optimal performance while maintaining the highest security standards.",
-                    "For the VRAI audit, Carlos will conduct the comprehensive security assessment, performance benchmarking, and infrastructure review to ensure your platform is secure, fast, and scalable.",
+                    "His expertise includes infrastructure-as-code, container orchestration, and implementing security best practices throughout the development lifecycle. Carlos has helped numerous e-commerce platforms achieve optimal performance while maintaining the highest security standards.",
+                    "For the VRAI project, Carlos will architect and manage the cloud infrastructure, implement security measures, and ensure the platform is scalable, secure, and performs flawlessly under high traffic.",
                   ],
                   languages: "SPANISH (NATIVE), ENGLISH (FLUENT)",
                   skills:
@@ -521,8 +536,8 @@ export default function VRAIProposalPage() {
                   imageAlt: "Sofia R - UX/UI Designer & Researcher",
                   bio: [
                     "Sofia is a creative designer and user researcher with a keen eye for aesthetics and user-centered design. She has 7 years of experience crafting intuitive interfaces and conducting comprehensive UX research for luxury e-commerce brands.",
-                    "Her work focuses on creating cohesive visual languages that enhance user experience while maintaining brand consistency. Sofia specializes in conversion rate optimization, A/B testing, and creating data-driven design recommendations.",
-                    "For the VRAI audit, Sofia will lead the user research, conduct usability testing, analyze customer behavior patterns, and provide actionable recommendations to enhance the luxury shopping experience and increase conversions.",
+                    "Her work focuses on creating cohesive visual languages that enhance user experience while maintaining brand consistency. Sofia specializes in conversion rate optimization, user journey mapping, and creating data-driven design solutions.",
+                    "For the VRAI project, Sofia will lead the design phase, creating high-fidelity mockups, conducting user testing, and ensuring every interaction delights customers while driving conversions.",
                   ],
                   languages: "SPANISH (NATIVE), ENGLISH (FLUENT), PORTUGUESE (INTERMEDIATE)",
                   skills:
@@ -707,44 +722,44 @@ export default function VRAIProposalPage() {
           <FAQ
             items={[
               {
-                question: "What is included in the e-commerce audit?",
+                question: "What is included in the €50,000 project scope?",
                 answer:
-                  "Our comprehensive audit covers technical performance, security assessment, UX/UI evaluation, conversion optimization, mobile experience, checkout flow analysis, product customization review, 3D visualization assessment, inventory management, analytics tracking, SEO audit, and accessibility compliance. Each area is thoroughly examined with detailed findings and actionable recommendations.",
+                  "The complete project includes discovery and design, full platform development on Shopify Plus, advanced 3D product customization, personalization features, comprehensive testing, security implementation, performance optimization, team training, and 30 days of post-launch support. All deliverables across the four phases are included in this fixed price.",
               },
               {
-                question: "How long does the audit process take?",
+                question: "How long will the complete project take?",
                 answer:
-                  "The complete audit process takes approximately 7 weeks, divided into four phases: Platform Audit & Analysis (2 weeks), Performance & Security Review (2 weeks), UX/UI Assessment & Recommendations (2 weeks), and Implementation Roadmap & Support (1 week plus 30 days of ongoing consultation).",
+                  "The complete project timeline is 22 weeks (approximately 5.5 months) from kickoff to launch. This is divided into: Discovery & Design (4 weeks), Core Development (8 weeks), Advanced Features (6 weeks), and Testing & Launch (4 weeks). We can adjust the timeline based on your specific launch requirements.",
               },
               {
-                question: "Will the audit disrupt our current operations?",
+                question: "What happens if the project requirements change during development?",
                 answer:
-                  "No, our audit process is designed to be non-intrusive. We conduct most of our analysis using read-only access and testing environments. Any testing that requires interaction with the live platform is carefully scheduled during low-traffic periods and coordinated with your team to minimize any potential impact.",
+                  "We follow an agile methodology that allows for flexibility. Minor adjustments can typically be accommodated within the existing scope. For significant scope changes, we'll provide a change request with timeline and cost implications. Our goal is to balance flexibility with project predictability.",
               },
               {
-                question: "What happens after the audit is complete?",
+                question: "Will the platform be mobile-responsive?",
                 answer:
-                  "Upon completion, you'll receive comprehensive reports for each audit phase, a prioritized implementation roadmap with timelines and cost estimates, and 30 days of post-audit support. We can also provide ongoing support packages or implementation services to help you execute the recommended improvements.",
+                  "Absolutely. The platform will be fully responsive and optimized for all devices including smartphones, tablets, and desktops. We follow a mobile-first design approach to ensure the luxury shopping experience is exceptional on every screen size. This includes optimized 3D visualization and customization tools for mobile devices.",
               },
               {
-                question: "Can you help implement the audit recommendations?",
+                question: "How do you ensure the platform is secure and compliant?",
                 answer:
-                  "Yes, absolutely. After the audit, we can provide detailed quotes for implementing any or all of the recommended improvements. We offer flexible engagement models including dedicated development teams, sprint-based projects, or ongoing support packages to fit your needs and timeline.",
+                  "Security is built into every phase of development. We implement PCI DSS compliance for payment processing, use industry-standard encryption, conduct security audits, implement secure authentication, and follow OWASP security guidelines. The platform will also undergo penetration testing before launch.",
               },
               {
-                question: "How do you prioritize the audit findings?",
+                question: "Can we see progress during development?",
                 answer:
-                  "We use a comprehensive prioritization framework that considers impact on business goals, technical complexity, implementation cost, and urgency. Each finding is categorized as Critical, High, Medium, or Low priority, with clear justification and expected ROI. This helps you make informed decisions about which improvements to tackle first.",
+                  "Yes! We provide access to a staging environment where you can review progress throughout development. We conduct bi-weekly demo sessions to showcase completed features, gather feedback, and ensure alignment with your vision. You'll have full visibility into the development process.",
               },
               {
-                question: "What makes Tailor Hub qualified to audit VRAI's platform?",
+                question: "What training and documentation will be provided?",
                 answer:
-                  "Tailor Hub has extensive experience with luxury e-commerce platforms, including our previous successful work with VRAI that resulted in a 150% sales increase. Our team includes specialists in Shopify Plus, e-commerce UX, security compliance, and performance optimization. We're also ISO 27001 certified, ensuring the highest standards of information security.",
+                  "We provide comprehensive training for your team on platform administration, content management, product uploads, order processing, and analytics. This includes live training sessions, video tutorials, and detailed documentation. We ensure your team feels confident managing the platform independently.",
               },
               {
-                question: "Do you provide ongoing support after the audit?",
+                question: "What support is available after launch?",
                 answer:
-                  "Yes, we offer two levels of ongoing support: Essential Support (€2,500/month) includes monthly monitoring, security updates, and email support; Premium Support (€5,500/month) adds priority support, quarterly reviews, dedicated account management, and up to 20 hours/month of implementation work. Both require a minimum 3-month commitment.",
+                  "The project includes 30 days of post-launch support for bug fixes and adjustments. After that, we offer two ongoing support packages: Essential Support (€2,500/month) with monitoring and maintenance, or Premium Support (€5,500/month) which includes dedicated account management and 20 hours/month of development for new features and enhancements.",
               },
             ]}
           />
