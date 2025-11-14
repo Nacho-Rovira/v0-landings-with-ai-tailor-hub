@@ -143,6 +143,25 @@ export default function SantanderProposalPage() {
         <Highlight2Section concepts={proposalConfig.partners.concepts} items={proposalConfig.partners.items} />
       </section>
 
+      {/* Next Steps Section */}
+      <section id="next-steps" style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <TitleSection overheader="NEXT STEPS" title="Let's Start a Conversation" />
+
+        <div style={{ marginTop: "var(--spacing-9xl)" }}>
+          <StepsFlow steps={proposalConfig.nextSteps.steps} />
+        </div>
+      </section>
+
+      {/* Get in Touch Section */}
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <HeaderBox
+          overheader="GET IN TOUCH"
+          header="Ready to explore how Tailor Hub can transform your digital banking, internal tools, and customer experiences?"
+          buttonLabel="CONTACT US"
+          onButtonClick={() => (window.location.href = "mailto:info@tailor-hub.com")}
+        />
+      </section>
+
       {/* ISO Certification */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <BoxSection
@@ -163,25 +182,6 @@ export default function SantanderProposalPage() {
         <div style={{ marginTop: "var(--spacing-xl)" }}>
           <FAQ items={proposalConfig.faq} />
         </div>
-      </section>
-
-      {/* Next Steps Section */}
-      <section id="next-steps" style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="NEXT STEPS" title="Let's Start a Conversation" />
-
-        <div style={{ marginTop: "var(--spacing-9xl)" }}>
-          <StepsFlow steps={proposalConfig.nextSteps.steps} />
-        </div>
-      </section>
-
-      {/* Get in Touch Section */}
-      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <HeaderBox
-          overheader="GET IN TOUCH"
-          header="Ready to explore how Tailor Hub can transform your digital banking, internal tools, and customer experiences?"
-          buttonLabel="CONTACT US"
-          onButtonClick={() => (window.location.href = "mailto:info@tailor-hub.com")}
-        />
       </section>
     </LandingLayout>
   )
