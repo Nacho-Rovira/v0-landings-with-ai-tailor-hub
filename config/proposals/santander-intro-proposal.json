@@ -74,21 +74,21 @@
       "overheader": "DIGITAL BANKING",
       "header": "Customer-Facing Platforms",
       "bodyText": "We build comprehensive digital banking solutions—from mobile apps to web portals—that deliver secure, intuitive experiences. Our platforms handle millions of transactions while maintaining 99.99% uptime and meeting stringent financial regulations.",
-      "imageSrc": "/images/design-mode/desarrollo de software(2).jpeg",
+      "imageSrc": "/placeholder.svg?height=600&width=800",
       "imageAlt": "Digital Banking Platform"
     },
     {
       "overheader": "INTERNAL TOOLS",
       "header": "Employee Productivity Platforms",
       "bodyText": "Transform how your teams work with modern internal tools designed for financial operations. From case management to workflow automation, we build systems that eliminate friction, enhance collaboration, and provide real-time operational insights.",
-      "imageSrc": "/images/design-mode/Design systems.png",
+      "imageSrc": "/placeholder.svg?height=600&width=800",
       "imageAlt": "Internal Tools Platform"
     },
     {
       "overheader": "AI & INNOVATION",
       "header": "Intelligent Customer Experience",
       "bodyText": "Leverage artificial intelligence to personalize customer interactions, automate support, and predict needs. Our AI solutions integrate seamlessly with existing systems while delivering measurable improvements in satisfaction and efficiency.",
-      "imageSrc": "/images/design-mode/auditoria y formacion(2).jpeg",
+      "imageSrc": "/placeholder.svg?height=600&width=800",
       "imageAlt": "AI Solutions"
     }
   ],
