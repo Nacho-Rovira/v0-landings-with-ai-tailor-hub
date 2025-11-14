@@ -1,169 +1,165 @@
-"use client";
+"use client"
 
-import React from "react";
-import { LandingLayout } from "@/components/LandingLayout/LandingLayout";
-import { HighlightSection } from "@/components/HighlightSection/HighlightSection";
-import { HeaderBox } from "@/components/HeaderBox/HeaderBox";
-import { MenuSidebar } from "@/components/MenuSidebar/MenuSidebar";
-import { MenuItem } from "@/components/MenuItem/MenuItem";
-import { BodyText } from "@/components/BodyText/BodyText";
-import { BoxSection } from "@/components/BoxSection/BoxSection";
-import { TeamCard } from "@/components/TeamCard/TeamCard";
-import { ProjectCard } from "@/components/ProjectCard/ProjectCard";
-import { Highlight2Section } from "@/components/Highlight2Section/Highlight2Section";
-import { FAQ } from "@/components/FAQ/FAQ";
-import { StepsFlow } from "@/components/StepsFlow/StepsFlow";
-import { TitleSection } from "@/components/TitleSection/TitleSection";
-
-import proposalConfig from "@/config/proposals/santander-intro-proposal.json";
+import { useState } from "react"
+import { LandingLayout } from "@/components/LandingLayout/LandingLayout"
+import { HighlightSection } from "@/components/HighlightSection/HighlightSection"
+import { HeaderBox } from "@/components/HeaderBox/HeaderBox"
+import { TitleSection } from "@/components/TitleSection/TitleSection"
+import { BodyText } from "@/components/BodyText/BodyText"
+import { MenuSidebar, MenuSidebarItem } from "@/components/MenuSidebar/MenuSidebar"
+import { BoxSection } from "@/components/BoxSection/BoxSection"
+import { TeamSection } from "@/components/TeamSection/TeamSection"
+import { CaseStudiesSection } from "@/components/CaseStudiesSection/CaseStudiesSection"
+import { Highlight2Section } from "@/components/Highlight2Section/Highlight2Section"
+import { FAQ } from "@/components/FAQ/FAQ"
+import { StepsFlow } from "@/components/StepsFlow/StepsFlow"
+import proposalConfig from "@/config/proposals/santander-intro-proposal.json"
+import Image from "next/image"
 
 export default function SantanderProposalPage() {
+  const [activeSection, setActiveSection] = useState<string>("#context")
+
   const handleScrollToProposal = () => {
-    const element = document.getElementById("proposal-content");
+    const element = document.querySelector("#proposal-content")
     if (element) {
-      const offset = 180;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      const offset = 180
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - offset
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" })
     }
-  };
+  }
 
   return (
     <LandingLayout>
       {/* Hero Section */}
-      <HighlightSection concepts={proposalConfig.highlight.concepts} header={proposalConfig.highlight.header} />
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <HighlightSection concepts={proposalConfig.highlight.concepts} header={proposalConfig.highlight.header} />
+      </section>
 
       {/* Header Box */}
-      <HeaderBox
-        overheader={proposalConfig.headerBox.overheader}
-        header={proposalConfig.headerBox.header}
-        buttonLabel={proposalConfig.headerBox.buttonLabel}
-        onButtonClick={handleScrollToProposal}
-      />
-
-      {/* Hero Image */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <img
-          src={proposalConfig.heroImage.src || "/placeholder.svg"}
-          alt={proposalConfig.heroImage.alt}
-          style={{ width: "100%", height: "auto", display: "block" }}
+        <HeaderBox
+          overheader={proposalConfig.headerBox.overheader}
+          header={proposalConfig.headerBox.header}
+          buttonLabel={proposalConfig.headerBox.buttonLabel}
+          onButtonClick={handleScrollToProposal}
         />
+      </section>
+
+      {/* Hero Image Section */}
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <div style={{ width: "100%", borderRadius: "var(--radius-s)", overflow: "hidden" }}>
+          <Image
+            src={proposalConfig.heroImage.src || "/placeholder.svg"}
+            alt={proposalConfig.heroImage.alt}
+            width={1432}
+            height={800}
+            style={{ width: "100%", height: "auto", display: "block" }}
+            priority
+          />
+        </div>
       </section>
 
       {/* Proposal Content with Sidebar */}
       <section id="proposal-content" style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <div style={{ display: "flex", gap: "var(--spacing-xl)", position: "relative" }}>
-          {/* Menu Sidebar */}
-          <MenuSidebar autoDetectActive={true}>
-            {proposalConfig.menuItems.map((item, index) => (
-              <MenuItem key={index} href={item.href} number={item.number}>
+        <div
+          style={{
+            display: "flex",
+            gap: "var(--spacing-3xl)",
+            maxWidth: "var(--layout-content-max)",
+            margin: "0 auto",
+            padding: "0 var(--spacing-page-x)",
+          }}
+        >
+          {/* Sidebar Menu */}
+          <MenuSidebar activeSection={activeSection} autoDetectActive>
+            {proposalConfig.menuItems.map((item) => (
+              <MenuSidebarItem key={item.number} href={item.href} number={item.number}>
                 {item.label}
-              </MenuItem>
+              </MenuSidebarItem>
             ))}
           </MenuSidebar>
 
           {/* Main Content */}
-          <div style={{ flex: 1 }}>
+          <div style={{ flex: 1, minWidth: 0 }}>
             {proposalConfig.bodySections.map((section, index) => (
-              <div key={index} id={section.id} style={{ marginBottom: index < proposalConfig.bodySections.length - 1 ? "var(--spacing-9xl)" : 0 }}>
-                <TitleSection overheader={section.title} />
-                <div style={{ marginTop: "var(--gap-header-1)" }}>
-                  <BodyText sections={[{ paragraphs: section.paragraphs }]} />
-                </div>
-              </div>
+              <section key={section.id} id={section.id} style={{ marginBottom: "var(--spacing-9xl)" }}>
+                <BodyText
+                  sections={[
+                    {
+                      title: section.title,
+                      paragraphs: section.paragraphs,
+                    },
+                  ]}
+                />
+              </section>
             ))}
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="SERVICES" />
-        <div style={{ marginTop: "var(--gap-header-1)", display: "flex", flexDirection: "column", gap: "var(--spacing-9xl)" }}>
+      <section id="services" style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <TitleSection overheader="SERVICES" title="What We Do" />
+
+        <div style={{ marginTop: "var(--gap-header-1)" }}>
           {proposalConfig.services.map((service, index) => (
-            <BoxSection
+            <div
               key={index}
-              overheader={service.overheader}
-              header={service.header}
-              bodyText={service.bodyText}
-              imageSrc={service.imageSrc}
-              imageAlt={service.imageAlt}
-            />
+              style={{ marginBottom: index < proposalConfig.services.length - 1 ? "var(--spacing-9xl)" : 0 }}
+            >
+              <BoxSection
+                overheader={service.overheader}
+                header={service.header}
+                bodyText={service.bodyText}
+                imageSrc={service.imageSrc}
+                imageAlt={service.imageAlt}
+              />
+            </div>
           ))}
         </div>
       </section>
 
       {/* Team Section */}
-      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader={proposalConfig.team.overheader} />
-        <div
-          style={{
-            marginTop: "var(--gap-header-1)",
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "var(--spacing-xl)"
-          }}
-        >
-          {proposalConfig.team.members.map((member, index) => (
-            <TeamCard
-              key={index}
-              name={member.name}
-              title={member.title}
-              imageSrc={member.imageSrc}
-              imageAlt={member.imageAlt}
-              modalData={member.modalData}
-            />
-          ))}
+      <section id="team" style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <TitleSection overheader={proposalConfig.team.overheader} title="Our Team" />
+
+        <div style={{ marginTop: "var(--gap-header-1)" }}>
+          <TeamSection members={proposalConfig.team.members} />
         </div>
       </section>
 
       {/* Case Studies */}
-      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="CASE STUDIES" />
-        <div
-          style={{
-            marginTop: "var(--gap-header-1)",
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "var(--spacing-xl)"
-          }}
-        >
-          {proposalConfig.caseStudies.map((caseStudy, index) => (
-            <ProjectCard
-              key={index}
-              category={caseStudy.category}
-              title={caseStudy.title}
-              imageSrc={caseStudy.imageSrc}
-              imageAlt={caseStudy.imageAlt}
-              modalData={caseStudy.modalData}
-            />
-          ))}
-        </div>
-      </section>
+      <section id="case-studies" style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <TitleSection overheader="CASE STUDIES" title="Proven Track Record" />
 
-      {/* Next Steps Section */}
-      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader={proposalConfig.nextSteps.overheader} title={proposalConfig.nextSteps.title} />
         <div style={{ marginTop: "var(--gap-header-1)" }}>
-          <StepsFlow steps={proposalConfig.nextSteps.steps} direction="horizontal" />
+          <CaseStudiesSection caseStudies={proposalConfig.caseStudies} />
         </div>
-      </section>
-
-      {/* Get in Touch CTA */}
-      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <HeaderBox
-          overheader={proposalConfig.contactBox.overheader}
-          header={proposalConfig.contactBox.header}
-          buttonLabel={proposalConfig.contactBox.buttonLabel}
-          onButtonClick={() => {
-            window.open(proposalConfig.contactBox.buttonHref, "_blank");
-          }}
-        />
       </section>
 
       {/* Partners Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <Highlight2Section concepts={proposalConfig.partners.concepts} items={proposalConfig.partners.items} />
+      </section>
+
+      {/* Next Steps Section */}
+      <section id="next-steps" style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <TitleSection overheader="NEXT STEPS" title="Let's Start a Conversation" />
+
+        <div style={{ marginTop: "var(--gap-header-1)" }}>
+          <StepsFlow steps={proposalConfig.nextSteps.steps} />
+        </div>
+      </section>
+
+      {/* Get in Touch Section */}
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <HeaderBox
+          overheader="GET IN TOUCH"
+          header="Ready to explore how Tailor Hub can transform your digital banking, internal tools, and customer experiences?"
+          buttonLabel="CONTACT US"
+          onButtonClick={() => (window.location.href = "mailto:info@tailor-hub.com")}
+        />
       </section>
 
       {/* ISO Certification */}
@@ -174,17 +170,19 @@ export default function SantanderProposalPage() {
           bodyText={proposalConfig.isoCertification.bodyText}
           imageSrc={proposalConfig.isoCertification.imageSrc}
           imageAlt={proposalConfig.isoCertification.imageAlt}
-          badge={{
-            src: proposalConfig.isoCertification.certificationBadgeSrc,
-            alt: proposalConfig.isoCertification.certificationBadgeAlt
-          }}
+          certificationBadgeSrc={proposalConfig.isoCertification.certificationBadgeSrc}
+          certificationBadgeAlt={proposalConfig.isoCertification.certificationBadgeAlt}
         />
       </section>
 
       {/* FAQ Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <FAQ items={proposalConfig.faq} />
+        <TitleSection overheader="FREQUENTLY ASKED QUESTIONS" title="FAQ" />
+
+        <div style={{ marginTop: "var(--gap-header-1)" }}>
+          <FAQ items={proposalConfig.faq} />
+        </div>
       </section>
     </LandingLayout>
-  );
+  )
 }
