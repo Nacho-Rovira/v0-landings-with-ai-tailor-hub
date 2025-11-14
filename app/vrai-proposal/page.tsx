@@ -6,22 +6,24 @@ import { HeaderBox } from "@/components/HeaderBox/HeaderBox"
 import { BodyText } from "@/components/BodyText/BodyText"
 import { MenuSidebar, MenuSidebarItem } from "@/components/MenuSidebar/MenuSidebar"
 import { TitleSection } from "@/components/TitleSection/TitleSection"
-import { CaseStudiesSection } from "@/components/CaseStudiesSection/CaseStudiesSection"
+import { TechBox } from "@/components/TechBox/TechBox"
 import { TimelineSection } from "@/components/TimelineSection/TimelineSection"
 import { BudgetSection } from "@/components/BudgetSection/BudgetSection"
-import { Table } from "@/components/Table/Table"
-import Image from "next/image"
-import { FAQ } from "@/components/FAQ/FAQ"
+import { BoxSection } from "@/components/BoxSection/BoxSection"
 import { TeamSection } from "@/components/TeamSection/TeamSection"
+import { CaseStudiesSection } from "@/components/CaseStudiesSection/CaseStudiesSection"
+import { Highlight2Section } from "@/components/Highlight2Section/Highlight2Section"
+import { FAQ } from "@/components/FAQ/FAQ"
+import Image from "next/image"
 
 export default function VRAIProposalPage() {
   return (
     <LandingLayout>
-      {/* Highlight Section */}
+      {/* Hero Highlight Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <HighlightSection
-          concepts={["E-COMMERCE <span> PLATFORM", "LUXURY <span> EXPERIENCE", "DIGITAL <span> TRANSFORMATION"]}
-          header="COMPREHENSIVE E-COMMERCE PLATFORM IMPLEMENTATION FOR VRAI'S LUXURY JEWELRY BRAND"
+          concepts={["LUXURY <span> E-COMMERCE", "LAB-GROWN <span> DIAMONDS", "DIGITAL <span> EXCELLENCE"]}
+          header="CRAFTING THE NEXT GENERATION LUXURY E-COMMERCE PLATFORM FOR VRAI'S LAB-GROWN DIAMOND JEWELRY"
         />
       </section>
 
@@ -29,10 +31,10 @@ export default function VRAIProposalPage() {
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <HeaderBox
           overheader="A PROPOSAL FOR VRAI"
-          header="Full-stack development and implementation of your next-generation luxury e-commerce platform"
+          header="Comprehensive e-commerce platform development with 3D product visualization, personalization engine, and seamless luxury shopping experience"
           buttonLabel="VIEW PROPOSAL"
           onButtonClick={() => {
-            document.querySelector("#content")?.scrollIntoView({ behavior: "smooth" })
+            document.querySelector("#proposal-content")?.scrollIntoView({ behavior: "smooth" })
           }}
         />
       </section>
@@ -48,7 +50,7 @@ export default function VRAIProposalPage() {
         >
           <Image
             src="/images/design-mode/VRAI(2).jpeg"
-            alt="VRAI - Luxury lab-grown diamond jewelry"
+            alt="VRAI luxury lab-grown diamond jewelry showcase"
             width={1432}
             height={800}
             style={{
@@ -61,8 +63,8 @@ export default function VRAIProposalPage() {
         </div>
       </section>
 
-      {/* Proposal Details Section */}
-      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
+      {/* Proposal Content with Sidebar */}
+      <section id="proposal-content" style={{ marginBottom: "var(--spacing-9xl)" }}>
         <div
           style={{
             display: "flex",
@@ -72,8 +74,8 @@ export default function VRAIProposalPage() {
           }}
         >
           {/* Menu Sidebar */}
-          <MenuSidebar>
-            <MenuSidebarItem href="#challenge" number={1} isActive>
+          <MenuSidebar autoDetectActive>
+            <MenuSidebarItem href="#challenge" number={1}>
               CHALLENGE / CONTEXT
             </MenuSidebarItem>
             <MenuSidebarItem href="#objectives" number={2}>
@@ -83,7 +85,7 @@ export default function VRAIProposalPage() {
               OUR APPROACH
             </MenuSidebarItem>
             <MenuSidebarItem href="#technology" number={4}>
-              TECHNOLOGY STACK
+              TECHNOLOGY & ARCHITECTURE
             </MenuSidebarItem>
             <MenuSidebarItem href="#roadmap" number={5}>
               ROADMAP & PHASES
@@ -91,109 +93,96 @@ export default function VRAIProposalPage() {
             <MenuSidebarItem href="#budget" number={6}>
               BUDGET & CONDITIONS
             </MenuSidebarItem>
-            <MenuSidebarItem href="#infra-mantenimiento" number={7}>
+            <MenuSidebarItem href="#support" number={7}>
               ONGOING SUPPORT
             </MenuSidebarItem>
           </MenuSidebar>
 
           {/* Body Content */}
           <div style={{ flex: 1, maxWidth: "702px" }}>
+            {/* Body Text Sections */}
             <BodyText
               sections={[
                 {
                   title: "CHALLENGE / CONTEXT",
                   paragraphs: [
-                    "VRAI is redefining the luxury jewelry market with lab-grown diamonds, combining ethical sourcing with uncompromising quality. As your brand continues to scale globally, you need a digital platform that matches the sophistication and innovation of your products.",
-                    "The challenge is to create a next-generation e-commerce experience that showcases your exquisite jewelry through advanced 3D visualization, personalized customization tools, and a seamless purchase journey—all while maintaining the performance, security, and elegance expected by discerning luxury consumers.",
+                    "VRAI is redefining luxury jewelry through lab-grown diamonds that combine ethical sourcing with uncompromising quality. As your brand scales globally, the digital experience must match the sophistication of your products.",
+                    "The challenge lies in creating a next-generation e-commerce platform that showcases exquisite jewelry through immersive 3D visualization, intuitive customization tools, and a frictionless purchase journey—all while delivering the performance, security, and elegance expected by discerning luxury consumers.",
                   ],
                 },
                 {
                   title: "OBJECTIVES",
                   paragraphs: [
-                    "Our primary objective is to design and develop a world-class e-commerce platform that elevates VRAI's digital presence and drives measurable business growth. The platform will feature cutting-edge product visualization, intuitive customization interfaces, and a frictionless checkout experience optimized for conversion.",
-                    "We aim to create a scalable, secure, and high-performance solution that supports your global expansion while providing rich analytics for data-driven decision making. The platform will embody VRAI's brand values of transparency, innovation, and luxury craftsmanship.",
+                    "Our primary objective is to design and develop a world-class e-commerce platform that elevates VRAI's digital presence and drives measurable business growth. The platform will feature cutting-edge product visualization, personalized shopping experiences, and conversion-optimized checkout flows.",
+                    "We aim to create a scalable, secure, high-performance solution that supports global expansion while providing rich analytics for data-driven decision making. The platform will embody VRAI's brand values: transparency, innovation, and luxury craftsmanship.",
                   ],
                 },
                 {
                   title: "OUR APPROACH",
                   paragraphs: [
-                    "Tailor Hub brings deep expertise in luxury e-commerce, combining technical excellence with an understanding of high-end consumer behavior. Our multidisciplinary team will work in close collaboration with VRAI stakeholders throughout the project lifecycle.",
-                    "We follow an agile methodology with regular sprints, continuous feedback loops, and iterative refinement. Each phase includes thorough testing, optimization, and user validation to ensure the platform exceeds expectations. Our approach balances speed to market with long-term scalability and maintainability.",
+                    "Tailor Hub brings deep expertise in luxury e-commerce, combining technical excellence with an understanding of high-end consumer behavior. Our multidisciplinary team collaborates closely with stakeholders throughout the project lifecycle.",
+                    "We follow an agile methodology with regular sprints, continuous feedback loops, and iterative refinement. Each phase includes thorough testing, optimization, and user validation to ensure the platform exceeds expectations while balancing speed to market with long-term scalability and maintainability.",
                   ],
                 },
               ]}
             />
 
-            {/* Technology Stack Section */}
+            {/* Technology Section */}
             <div id="technology" style={{ marginTop: "var(--spacing-4xl)" }}>
               <h3
                 style={{
-                  fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
-                  fontSize: "var(--text-size-large, 40px)",
-                  lineHeight: "var(--text-line-large, 48px)",
+                  fontFamily: "var(--font-default)",
+                  fontSize: "var(--text-size-large)",
+                  lineHeight: "var(--text-line-large)",
                   fontWeight: 400,
                   color: "var(--color-text-primary)",
                   textTransform: "uppercase",
                   margin: 0,
-                  marginBottom: "var(--spacing-m, 16px)",
+                  marginBottom: "var(--spacing-m)",
                 }}
               >
-                TECHNOLOGY STACK
+                TECHNOLOGY & ARCHITECTURE
               </h3>
               <p
                 style={{
-                  fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
-                  fontSize: "var(--text-size-small, 16px)",
-                  lineHeight: "var(--text-line-small, 22px)",
+                  fontFamily: "var(--font-default)",
+                  fontSize: "var(--text-size-small)",
+                  lineHeight: "var(--text-line-small)",
                   color: "var(--color-text-primary)",
                   margin: 0,
                   marginBottom: "var(--spacing-xl)",
                 }}
               >
-                We will leverage modern, proven technologies to build a robust and scalable platform:
+                We leverage modern, proven technologies to build a robust and scalable luxury e-commerce platform. Our
+                tech stack ensures exceptional performance, security, and user experience across all touchpoints:
               </p>
 
               <div
                 style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: "var(--spacing-s, 12px)",
-                  marginTop: "var(--spacing-m, 16px)",
+                  display: "grid",
+                  gridTemplateColumns: "repeat(3, 1fr)",
+                  gap: "var(--spacing-m)",
                 }}
               >
-                {[
-                  "Shopify Plus",
-                  "React & Next.js",
-                  "TypeScript",
-                  "Tailwind CSS",
-                  "Three.js (3D)",
-                  "Node.js",
-                  "GraphQL API",
-                  "PostgreSQL",
-                  "AWS Cloud",
-                  "Docker & Kubernetes",
-                  "Stripe Payments",
-                  "Algolia Search",
-                ].map((tech, index) => (
-                  <div
-                    key={index}
-                    style={{
-                      padding: "var(--spacing-xs, 8px) var(--spacing-m, 16px)",
-                      backgroundColor: "var(--color-neutral-100, #F5F5F5)",
-                      border: "1px solid var(--color-neutral-200, #E5E5E5)",
-                      borderRadius: "var(--radius-s, 4px)",
-                      fontFamily: "var(--font-mono, 'PP Neue Montreal Mono', monospace)",
-                      fontSize: "var(--text-size-xsmall, 14px)",
-                      lineHeight: "var(--text-line-xsmall, 20px)",
-                      color: "var(--color-text-primary, #000000)",
-                      textTransform: "uppercase",
-                      whiteSpace: "nowrap",
-                      flexShrink: 0,
-                    }}
-                  >
-                    {tech}
-                  </div>
-                ))}
+                <TechBox
+                  title="FRONT-END"
+                  technologies={[
+                    "NEXT JS",
+                    "REACT JS",
+                    "TYPESCRIPT",
+                    "TAILWIND CSS",
+                    "THREE JS",
+                    "FRAMER MOTION",
+                  ]}
+                />
+                <TechBox
+                  title="BACK-END & DATA"
+                  technologies={["NODE", "EXPRESS", "GRAPHQL", "POSTGRESQL", "REDIS", "ELASTIC SEARCH"]}
+                />
+                <TechBox
+                  title="INFRASTRUCTURE"
+                  technologies={["AWS", "DOCKER", "KUBERNETES", "CLOUDFRONT", "S3", "LAMBDA"]}
+                />
               </div>
             </div>
 
@@ -201,14 +190,14 @@ export default function VRAIProposalPage() {
             <div id="roadmap" style={{ marginTop: "var(--spacing-4xl)" }}>
               <h3
                 style={{
-                  fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
-                  fontSize: "var(--text-size-large, 40px)",
-                  lineHeight: "var(--text-line-large, 48px)",
+                  fontFamily: "var(--font-default)",
+                  fontSize: "var(--text-size-large)",
+                  lineHeight: "var(--text-line-large)",
                   fontWeight: 400,
                   color: "var(--color-text-primary)",
                   textTransform: "uppercase",
                   margin: 0,
-                  marginBottom: "var(--spacing-m, 16px)",
+                  marginBottom: "var(--spacing-m)",
                 }}
               >
                 ROADMAP & PHASES
@@ -219,30 +208,32 @@ export default function VRAIProposalPage() {
                     number: "01",
                     title: "DISCOVERY & DESIGN",
                     description:
-                      "Comprehensive discovery workshops with stakeholders to define requirements, user journeys, and success metrics. We'll create detailed wireframes, high-fidelity mockups, and interactive prototypes for the complete platform. This phase includes UX research, brand alignment, and technical architecture planning.",
+                      "Comprehensive discovery workshops with stakeholders to define requirements, user journeys, and success metrics. We'll create detailed wireframes, high-fidelity mockups, and interactive prototypes for the complete platform. This phase includes UX research, brand alignment, technical architecture planning, and establishing the design system foundation.",
                     duration: "4 WEEKS",
                     deliverables: [
-                      "User research and persona development",
-                      "Information architecture and user flow diagrams",
-                      "High-fidelity UI designs for all key pages",
+                      "Stakeholder interviews and requirements documentation",
+                      "User research, personas, and journey mapping",
+                      "Information architecture and user flows",
+                      "Design system and component library",
+                      "High-fidelity UI designs for key pages",
                       "Interactive prototypes for user testing",
                       "Technical architecture documentation",
-                      "Project roadmap and milestone definitions",
                     ],
                   },
                   {
                     number: "02",
-                    title: "CORE DEVELOPMENT",
+                    title: "CORE PLATFORM DEVELOPMENT",
                     description:
-                      "Development of the platform's foundational architecture and core features. This includes Shopify Plus setup, custom theme development, product catalog implementation, responsive design, and basic 3D product visualization. We'll establish CI/CD pipelines, testing frameworks, and development workflows.",
+                      "Development of the platform's foundational architecture and essential e-commerce features. This includes Shopify Plus setup, custom theme development, product catalog implementation, responsive design, and basic 3D product visualization. We'll establish CI/CD pipelines, testing frameworks, and development workflows for efficient delivery.",
                     duration: "8 WEEKS",
                     deliverables: [
-                      "Shopify Plus store configuration and customization",
-                      "Responsive frontend with Next.js and Tailwind CSS",
-                      "Product catalog with advanced filtering and search",
+                      "Shopify Plus configuration and customization",
+                      "Responsive frontend with Next.js",
+                      "Product catalog with advanced filtering",
                       "Basic 3D product viewer implementation",
                       "Shopping cart and checkout flow (phase 1)",
                       "Content management system integration",
+                      "API development and integrations",
                       "CI/CD pipeline and staging environment",
                     ],
                   },
@@ -250,33 +241,34 @@ export default function VRAIProposalPage() {
                     number: "03",
                     title: "ADVANCED FEATURES & CUSTOMIZATION",
                     description:
-                      "Implementation of advanced features that differentiate VRAI's platform. This includes sophisticated 3D product customization tools, real-time inventory management, personalization engine, advanced analytics integration, and optimized checkout experience. We'll also implement customer accounts, wishlist functionality, and order tracking.",
+                      "Implementation of sophisticated features that differentiate VRAI's platform. This includes advanced 3D product customization, real-time inventory management, personalization engine, analytics integration, and optimized checkout experience. We'll implement customer accounts, wishlist functionality, order tracking, and email automation.",
                     duration: "6 WEEKS",
                     deliverables: [
-                      "Advanced 3D customization interface with real-time rendering",
-                      "Personalization engine and recommendation system",
+                      "Advanced 3D customization with real-time rendering",
+                      "AI-powered personalization and recommendations",
                       "Customer account portal with order history",
                       "Wishlist and favorites functionality",
-                      "Real-time inventory management integration",
-                      "Analytics and conversion tracking implementation",
-                      "Email automation and customer communication flows",
+                      "Real-time inventory management",
+                      "Analytics and conversion tracking",
+                      "Email automation and customer communications",
+                      "Gift card and promotional systems",
                     ],
                   },
                   {
                     number: "04",
                     title: "TESTING, OPTIMIZATION & LAUNCH",
                     description:
-                      "Comprehensive quality assurance, performance optimization, and security hardening. This phase includes cross-browser and device testing, load testing, accessibility compliance verification, SEO optimization, and final content migration. We'll conduct user acceptance testing and provide training for the VRAI team before the successful launch.",
+                      "Comprehensive quality assurance, performance optimization, and security hardening. This phase includes cross-browser and device testing, load testing, accessibility compliance verification, SEO optimization, and final content migration. We'll conduct user acceptance testing, provide training for the VRAI team, and ensure a successful launch with monitoring and support.",
                     duration: "4 WEEKS",
                     deliverables: [
-                      "Comprehensive QA testing across devices and browsers",
+                      "Comprehensive QA across devices and browsers",
                       "Performance optimization and load testing",
-                      "Security audit and PCI DSS compliance verification",
-                      "Accessibility testing (WCAG 2.1 AA compliance)",
+                      "Security audit and PCI DSS compliance",
+                      "Accessibility testing (WCAG 2.1 AA)",
                       "SEO optimization and search console setup",
                       "Team training and documentation",
-                      "Smooth production launch with monitoring setup",
-                      "30-day post-launch support and optimization",
+                      "Production launch with monitoring",
+                      "30-day post-launch support included",
                     ],
                   },
                 ]}
@@ -287,14 +279,14 @@ export default function VRAIProposalPage() {
             <div id="budget" style={{ marginTop: "var(--spacing-4xl)" }}>
               <h3
                 style={{
-                  fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
-                  fontSize: "var(--text-size-large, 40px)",
-                  lineHeight: "var(--text-line-large, 48px)",
+                  fontFamily: "var(--font-default)",
+                  fontSize: "var(--text-size-large)",
+                  lineHeight: "var(--text-line-large)",
                   fontWeight: 400,
                   color: "var(--color-text-primary)",
                   textTransform: "uppercase",
                   margin: 0,
-                  marginBottom: "var(--spacing-m, 16px)",
+                  marginBottom: "var(--spacing-m)",
                 }}
               >
                 BUDGET & CONDITIONS
@@ -303,22 +295,22 @@ export default function VRAIProposalPage() {
                 items={[
                   {
                     category: "PHASE 01: DISCOVERY & DESIGN",
-                    description: "User research, UX/UI design, prototyping, and technical planning",
+                    description: "User research, UX/UI design, prototyping, technical planning",
                     amount: "€12,000",
                   },
                   {
-                    category: "PHASE 02: CORE DEVELOPMENT",
-                    description: "Platform setup, core features, and foundational architecture",
+                    category: "PHASE 02: CORE PLATFORM DEVELOPMENT",
+                    description: "Platform setup, core e-commerce features, foundational architecture",
                     amount: "€18,000",
                   },
                   {
                     category: "PHASE 03: ADVANCED FEATURES & CUSTOMIZATION",
-                    description: "3D customization, personalization, analytics, and advanced functionality",
+                    description: "3D customization, personalization, analytics, advanced functionality",
                     amount: "€14,000",
                   },
                   {
                     category: "PHASE 04: TESTING, OPTIMIZATION & LAUNCH",
-                    description: "QA testing, performance optimization, security audit, and launch support",
+                    description: "QA testing, performance optimization, security audit, launch support",
                     amount: "€6,000",
                   },
                 ]}
@@ -328,132 +320,104 @@ export default function VRAIProposalPage() {
                   "All prices exclude VAT",
                   "Project timeline: 22 weeks from kickoff to launch",
                   "Includes 30 days of post-launch support and bug fixes",
-                  "Additional features and enhancements can be quoted separately",
+                  "Additional features and enhancements quoted separately",
+                  "Shopify Plus subscription and third-party service costs not included",
                 ]}
               />
             </div>
 
             {/* Ongoing Support Section */}
-            <div id="infra-mantenimiento" style={{ marginTop: "var(--spacing-4xl)" }}>
+            <div id="support" style={{ marginTop: "var(--spacing-4xl)" }}>
               <h3
                 style={{
-                  fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
-                  fontSize: "var(--text-size-large, 40px)",
-                  lineHeight: "var(--text-line-large, 48px)",
+                  fontFamily: "var(--font-default)",
+                  fontSize: "var(--text-size-large)",
+                  lineHeight: "var(--text-line-large)",
                   fontWeight: 400,
                   color: "var(--color-text-primary)",
                   textTransform: "uppercase",
                   margin: 0,
-                  marginBottom: "var(--spacing-m, 16px)",
+                  marginBottom: "var(--spacing-m)",
                 }}
               >
                 ONGOING SUPPORT
               </h3>
               <p
                 style={{
-                  fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
-                  fontSize: "var(--text-size-small, 16px)",
-                  lineHeight: "var(--text-line-small, 22px)",
+                  fontFamily: "var(--font-default)",
+                  fontSize: "var(--text-size-small)",
+                  lineHeight: "var(--text-line-small)",
                   color: "var(--color-text-primary)",
                   margin: 0,
                   marginBottom: "var(--spacing-xl)",
                 }}
               >
                 Following the successful launch, we offer ongoing support and maintenance services to ensure your
-                platform continues to perform optimally and evolve with your business needs. Our support packages
-                include proactive monitoring, regular updates, feature enhancements, and dedicated technical assistance.
+                platform continues to perform optimally and evolve with your business needs. Our support packages include
+                proactive monitoring, regular updates, feature enhancements, and dedicated technical assistance.
               </p>
 
-              <div style={{ marginTop: "var(--spacing-xl)" }}>
-                <Table
-                  columns={["Service Level", "What's Included"]}
-                  rows={[
-                    {
-                      label: "Essential Support",
-                      content: (
-                        <ul>
-                          <li>24/7 platform monitoring and uptime alerts</li>
-                          <li>Security updates and patches</li>
-                          <li>Bug fixes and minor adjustments</li>
-                          <li>Monthly performance reports</li>
-                          <li>Email support (48-hour response time)</li>
-                        </ul>
-                      ),
-                    },
-                    {
-                      label: "Premium Support",
-                      tooltip:
-                        "Includes all Essential Support features plus priority access, dedicated account management, and development hours for enhancements.",
-                      content: (
-                        <ul>
-                          <li>All Essential Support features</li>
-                          <li>Priority support (24-hour response time)</li>
-                          <li>Dedicated account manager and technical lead</li>
-                          <li>Quarterly strategic reviews and optimization recommendations</li>
-                          <li>Up to 20 hours/month of development for new features and enhancements</li>
-                          <li>A/B testing and conversion optimization support</li>
-                        </ul>
-                      ),
-                    },
-                  ]}
-                />
-              </div>
-
-              <p
-                style={{
-                  fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
-                  fontSize: "var(--text-size-small, 16px)",
-                  lineHeight: "var(--text-line-small, 22px)",
-                  color: "var(--color-text-primary)",
-                  margin: 0,
-                  marginTop: "var(--spacing-l, 24px)",
-                }}
-              >
-                Our support services ensure VRAI can focus on growing your luxury jewelry business while we handle the
-                technical aspects, keeping your platform secure, fast, and continuously improving.
-              </p>
-
-              {/* Monthly Support Budget */}
-              <div style={{ marginTop: "var(--spacing-xl)" }}>
-                <h4
-                  style={{
-                    fontFamily: "var(--font-default, 'PP Mori', sans-serif)",
-                    fontSize: "var(--text-size-small, 16px)",
-                    lineHeight: "var(--text-line-small, 22px)",
-                    fontWeight: 600,
-                    color: "var(--color-text-primary)",
-                    textTransform: "uppercase",
-                    margin: 0,
-                    marginBottom: "var(--spacing-m, 16px)",
-                  }}
-                >
-                  Monthly Support Pricing
-                </h4>
-                <BudgetSection
-                  items={[
-                    {
-                      category: "ESSENTIAL SUPPORT",
-                      description: "24/7 monitoring, security updates, bug fixes, and email support",
-                      amount: "€2,500/month",
-                    },
-                    {
-                      category: "PREMIUM SUPPORT",
-                      description:
-                        "All Essential features plus priority support, quarterly reviews, and 20 dev hours/month",
-                      amount: "€5,500/month",
-                    },
-                  ]}
-                  total=""
-                  notes={[
-                    "Minimum 3-month commitment for support packages",
-                    "Custom enterprise support packages available upon request",
-                    "Development hours can be rolled over to the following month (max 2 months)",
-                    "Support packages can begin immediately after launch",
-                  ]}
-                />
-              </div>
+              <BudgetSection
+                items={[
+                  {
+                    category: "ESSENTIAL SUPPORT",
+                    description: "24/7 monitoring, security updates, bug fixes, email support",
+                    amount: "€2,500/month",
+                  },
+                  {
+                    category: "PREMIUM SUPPORT",
+                    description: "All Essential + priority support, quarterly reviews, 20 dev hours/month",
+                    amount: "€5,500/month",
+                  },
+                ]}
+                total=""
+                notes={[
+                  "Minimum 3-month commitment for support packages",
+                  "Custom enterprise packages available upon request",
+                  "Development hours rollover to next month (max 2 months)",
+                  "Support packages can begin immediately after launch",
+                ]}
+              />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <TitleSection overheader="SERVICES" />
+
+        <div
+          style={{
+            marginTop: "var(--gap-header-1)",
+            display: "flex",
+            flexDirection: "column",
+            gap: "var(--spacing-xl)",
+          }}
+        >
+          <BoxSection
+            overheader="S/ 01"
+            header="E-COMMERCE DEVELOPMENT"
+            bodyText="End-to-end development of sophisticated e-commerce platforms built for scale, performance, and conversion. We specialize in luxury retail experiences that combine aesthetic excellence with technical precision."
+            imageSrc="/images/design-mode/desarrollo de software(2).jpeg"
+            imageAlt="E-commerce development services"
+          />
+
+          <BoxSection
+            overheader="S/ 02"
+            header="3D VISUALIZATION & AR"
+            bodyText="Cutting-edge 3D product visualization and augmented reality experiences that allow customers to interact with products in immersive detail. From real-time rendering to virtual try-on capabilities."
+            imageSrc="/images/design-mode/Design systems.png"
+            imageAlt="3D visualization and AR services"
+          />
+
+          <BoxSection
+            overheader="S/ 03"
+            header="AI-POWERED PERSONALIZATION"
+            bodyText="Intelligent recommendation engines and personalization systems that analyze user behavior, preferences, and purchase patterns to deliver tailored shopping experiences that drive conversion and loyalty."
+            imageSrc="/images/design-mode/auditoria y formacion(2).jpeg"
+            imageAlt="AI personalization services"
+          />
         </div>
       </section>
 
@@ -461,7 +425,7 @@ export default function VRAIProposalPage() {
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="TEAM" />
 
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
+        <div style={{ marginTop: "var(--gap-header-1)" }}>
           <TeamSection
             members={[
               {
@@ -472,16 +436,16 @@ export default function VRAIProposalPage() {
                 modalData: {
                   name: "GIORGIO G",
                   title: "TECH LEAD",
-                  imageSrc: "/professional-tech-lead.png",
+                  imageSrc: "/professional-tech-lead-portrait-full.jpg",
                   imageAlt: "Giorgio G - Tech Lead",
                   bio: [
-                    'Con más de ocho años de experiencia en desarrollo de software, Giorgio ha liderado proyectos complejos y de alto impacto para compañías como dormakaba, Iberia o Inditex. Conocido cariñosamente como "Girgetto", se centra en construir soluciones digitales escalables, de alto rendimiento y alineadas con los objetivos de negocio.',
-                    "Desde el diseño de arquitecturas eficientes hasta la implementación de sistemas robustos, combina una sólida base técnica con una visión estratégica. Destaca por su capacidad para alinear equipos de desarrollo en torno a metas comunes, garantizando coherencia, claridad y entregas de calidad en cada fase del proyecto.",
-                    "Su enfoque práctico, colaborativo y orientado a resultados, junto con una fuerte vocación por la innovación y las buenas prácticas, lo convierten en un aliado clave para impulsar el éxito a largo plazo.",
+                    "With over 8 years of experience in software development, Giorgio has led complex projects for companies like dormakaba, Iberia, and Inditex. Known as 'Girgetto', he focuses on building scalable digital solutions that align with business objectives.",
+                    "From efficient architecture design to implementing robust systems, Giorgio combines solid technical expertise with strategic vision. He excels at aligning development teams around common goals, ensuring coherence, clarity, and quality deliveries in every project phase.",
+                    "His practical, collaborative, results-oriented approach, combined with a strong passion for innovation and best practices, makes him a key ally for driving long-term success.",
                   ],
                   languages: "ITALIAN (NATIVE), SPANISH (ADVANCED), ENGLISH (ADVANCED)",
                   skills:
-                    "REACT JS, NEXT JS, VUE JS, ANGULAR, TAILWINDCSS, TYPESCRIPT, REACT NATIVE, EXPO, NODE, EXPRESS, TYPESCRIPT, MONGO DB, SQL, POSTGRESQL, PYTHON, LANG CHAIN, OPENAI, GPT-40, AZURE OPENAI, KUBERNETES, DOCKER, AWS, AZURE",
+                    "REACT JS, NEXT JS, VUE JS, ANGULAR, TAILWINDCSS, TYPESCRIPT, REACT NATIVE, EXPO, NODE, EXPRESS, MONGODB, SQL, POSTGRESQL, PYTHON, LANGCHAIN, OPENAI, GPT-40, AZURE OPENAI, KUBERNETES, DOCKER, AWS, AZURE",
                 },
               },
               {
@@ -492,12 +456,12 @@ export default function VRAIProposalPage() {
                 modalData: {
                   name: "MARIA S",
                   title: "SENIOR FRONTEND DEVELOPER",
-                  imageSrc: "/frontend-developer-portrait.png",
+                  imageSrc: "/professional-frontend-developer-portrait-full.jpg",
                   imageAlt: "Maria S - Senior Frontend Developer",
                   bio: [
-                    "Maria is a passionate frontend developer with over 6 years of experience creating beautiful, accessible, and performant user interfaces. She specializes in React, Next.js, and modern CSS frameworks, with particular expertise in e-commerce platforms.",
-                    "Her attention to detail and commitment to user experience has helped numerous luxury brands achieve their digital goals. Maria is also an advocate for web accessibility and inclusive design practices, ensuring that every user can enjoy a premium shopping experience.",
-                    "For the VRAI project, Maria will lead frontend development, implementing the UI designs with pixel-perfect precision and ensuring optimal performance across all devices.",
+                    "Maria is a passionate frontend developer with over 6 years of experience creating beautiful, accessible, and performant user interfaces. She specializes in React, Next.js, and modern CSS frameworks, with particular expertise in luxury e-commerce platforms.",
+                    "Her attention to detail and commitment to user experience has helped numerous luxury brands achieve their digital goals. Maria is also an advocate for web accessibility and inclusive design practices.",
+                    "For the VRAI project, Maria will lead frontend development, implementing UI designs with pixel-perfect precision and ensuring optimal performance across all devices.",
                   ],
                   languages: "SPANISH (NATIVE), ENGLISH (FLUENT), FRENCH (INTERMEDIATE)",
                   skills:
@@ -512,12 +476,12 @@ export default function VRAIProposalPage() {
                 modalData: {
                   name: "CARLOS M",
                   title: "DEVOPS & SECURITY ENGINEER",
-                  imageSrc: "/professional-devops-engineer-portrait.jpg",
+                  imageSrc: "/professional-devops-engineer-portrait-full.jpg",
                   imageAlt: "Carlos M - DevOps & Security Engineer",
                   bio: [
                     "Carlos is a DevOps and security expert with 7 years of experience in cloud infrastructure, automation, and cybersecurity. He specializes in building robust CI/CD pipelines and maintaining highly available, secure e-commerce systems.",
-                    "His expertise includes infrastructure-as-code, container orchestration, and implementing security best practices throughout the development lifecycle. Carlos has helped numerous e-commerce platforms achieve optimal performance while maintaining the highest security standards.",
-                    "For the VRAI project, Carlos will architect and manage the cloud infrastructure, implement security measures, and ensure the platform is scalable, secure, and performs flawlessly under high traffic.",
+                    "His expertise includes infrastructure-as-code, container orchestration, and implementing security best practices throughout the development lifecycle.",
+                    "For VRAI, Carlos will architect and manage cloud infrastructure, implement security measures, and ensure the platform is scalable, secure, and performs flawlessly under high traffic.",
                   ],
                   languages: "SPANISH (NATIVE), ENGLISH (FLUENT)",
                   skills:
@@ -532,12 +496,12 @@ export default function VRAIProposalPage() {
                 modalData: {
                   name: "SOFIA R",
                   title: "UX/UI DESIGNER & RESEARCHER",
-                  imageSrc: "/professional-ux-designer-portrait.jpg",
+                  imageSrc: "/professional-ux-designer-portrait-full.jpg",
                   imageAlt: "Sofia R - UX/UI Designer & Researcher",
                   bio: [
                     "Sofia is a creative designer and user researcher with a keen eye for aesthetics and user-centered design. She has 7 years of experience crafting intuitive interfaces and conducting comprehensive UX research for luxury e-commerce brands.",
-                    "Her work focuses on creating cohesive visual languages that enhance user experience while maintaining brand consistency. Sofia specializes in conversion rate optimization, user journey mapping, and creating data-driven design solutions.",
-                    "For the VRAI project, Sofia will lead the design phase, creating high-fidelity mockups, conducting user testing, and ensuring every interaction delights customers while driving conversions.",
+                    "Her work focuses on creating cohesive visual languages that enhance user experience while maintaining brand consistency. Sofia specializes in conversion rate optimization and data-driven design solutions.",
+                    "For VRAI, Sofia will lead the design phase, creating high-fidelity mockups, conducting user testing, and ensuring every interaction delights customers while driving conversions.",
                   ],
                   languages: "SPANISH (NATIVE), ENGLISH (FLUENT), PORTUGUESE (INTERMEDIATE)",
                   skills:
@@ -553,65 +517,26 @@ export default function VRAIProposalPage() {
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="CASE STUDIES" title="RELEVANT EXPERIENCE" />
 
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
+        <div style={{ marginTop: "var(--gap-header-1)" }}>
           <CaseStudiesSection
             caseStudies={[
               {
                 category: "ECOMMERCE",
-                title: "VRAI",
-                imageSrc:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VRAI-rtQZ9X0qUMRrgQLGlhPug0u3y9JEGo.jpeg",
-                imageAlt: "VRAI jewelry e-commerce - Model wearing elegant diamond earrings",
-                modalData: {
-                  title: "VRAI",
-                  category: "ECOMMERCE",
-                  imageSrc:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VRAI-rtQZ9X0qUMRrgQLGlhPug0u3y9JEGo.jpeg",
-                  imageAlt: "VRAI jewelry e-commerce",
-                  sections: [
-                    {
-                      title: "THE CHALLENGE",
-                      paragraphs: [
-                        "VRAI, a luxury lab-grown diamond jewelry brand, needed an e-commerce platform that matched the elegance and sophistication of their products. The challenge was creating a high-end shopping experience with advanced product customization, 3D visualization, and seamless checkout.",
-                        "The platform needed to handle complex product configurations, real-time inventory management, and provide a premium user experience across all devices.",
-                      ],
-                    },
-                    {
-                      title: "THE SOLUTION",
-                      paragraphs: [
-                        "We developed a custom Shopify Plus solution with advanced 3D product visualization, real-time customization tools, and a streamlined checkout process. The platform integrates with VRAI's inventory management system and provides detailed analytics for business intelligence.",
-                      ],
-                    },
-                  ],
-                  insights: [
-                    { value: "150%", label: "SALES INCREASE" },
-                    { value: "4.8/5", label: "CUSTOMER RATING" },
-                  ],
-                  quotes: [
-                    {
-                      text: "The Tailor Hub team created a stunning e-commerce experience that perfectly captures our brand's luxury positioning. Sales have increased significantly since launch.",
-                      author: "VANESSA STOFENMACHER - HEAD OF E-COMMERCE AT VRAI",
-                    },
-                  ],
-                },
-              },
-              {
-                category: "SOFTWARE",
                 title: "DORMAKABA",
                 imageSrc:
                   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HERO-7QyVasLSj8cjn2jGivuMQ2gC7PCZiA.png",
-                imageAlt: "Dormakaba smart access solutions - Hand holding blank access card",
+                imageAlt: "Dormakaba smart access solutions platform",
                 modalData: {
                   title: "DORMAKABA",
                   category: "SOFTWARE",
                   imageSrc:
                     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HERO-7QyVasLSj8cjn2jGivuMQ2gC7PCZiA.png",
-                  imageAlt: "Dormakaba smart access solutions",
+                  imageAlt: "Dormakaba platform",
                   sections: [
                     {
                       title: "THE CHALLENGE",
                       paragraphs: [
-                        "When dormakaba approached Tailor Hub, they faced a multi-faceted challenge. Their monolithic CMS, Coremedia, had become an operational bottleneck, limiting flexibility for content editors across 40 countries and 35 languages. Additionally, dormakaba needed to execute a seamless transition between technical providers while simultaneously launching their newly restructured digital architecture.",
+                        "When dormakaba approached Tailor Hub, they faced a monolithic CMS that limited flexibility for content editors across 40 countries and 35 languages. They needed a seamless transition between technical providers while launching their newly restructured digital architecture.",
                       ],
                     },
                     {
@@ -627,35 +552,35 @@ export default function VRAIProposalPage() {
                   ],
                   quotes: [
                     {
-                      text: "I am very pleased with the Tailor team. They adapt exceptionally well to our needs, demonstrating great flexibility and responsiveness. Additionally, they always meet the established deadlines.",
+                      text: "I am very pleased with the Tailor team. They adapt exceptionally well to our needs, demonstrating great flexibility and responsiveness.",
                       author: "PABLO GONZALEZ CELA - GLOBAL DIGITAL SOLUTIONS LEAD AT DORMAKABA",
                     },
                   ],
                 },
               },
               {
-                category: "SOFTWARE",
+                category: "REAL ESTATE",
                 title: "CLIKALIA",
                 imageSrc:
                   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dormakaba.png-BL23wcJL31B0CAp4LCnI5yUkA8STg7.jpeg",
-                imageAlt: "Clikalia real estate platform - Hand interacting with geometric blocks",
+                imageAlt: "Clikalia real estate platform",
                 modalData: {
                   title: "CLIKALIA",
                   category: "SOFTWARE",
                   imageSrc:
                     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dormakaba.png-BL23wcJL31B0CAp4LCnI5yUkA8STg7.jpeg",
-                  imageAlt: "Clikalia real estate platform",
+                  imageAlt: "Clikalia platform",
                   sections: [
                     {
                       title: "THE CHALLENGE",
                       paragraphs: [
-                        "Clikalia, a leading real estate platform, needed to modernize their property management system to handle thousands of listings with advanced search capabilities, virtual tours, and real-time availability updates.",
+                        "Clikalia needed to modernize their property management system to handle thousands of listings with advanced search capabilities, virtual tours, and real-time availability updates.",
                       ],
                     },
                     {
                       title: "THE SOLUTION",
                       paragraphs: [
-                        "We built a scalable, cloud-native platform with advanced search algorithms, 3D virtual tour integration, and AI-powered property recommendations. The new system handles 10x more concurrent users while reducing load times by 70%.",
+                        "We built a scalable, cloud-native platform with advanced search algorithms, 3D virtual tour integration, and AI-powered property recommendations. The system handles 10x more concurrent users while reducing load times by 70%.",
                       ],
                     },
                   ],
@@ -665,35 +590,35 @@ export default function VRAIProposalPage() {
                   ],
                   quotes: [
                     {
-                      text: "Tailor Hub transformed our platform into a market-leading solution. The new system is fast, reliable, and our users love the enhanced search and virtual tour features.",
+                      text: "Tailor Hub transformed our platform into a market-leading solution. Users love the enhanced search and virtual tour features.",
                       author: "MIGUEL RODRIGUEZ - CTO AT CLIKALIA",
                     },
                   ],
                 },
               },
               {
-                category: "SOFTWARE",
+                category: "FITNESS TECH",
                 title: "ON RUNNING + STRAVA",
                 imageSrc:
                   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-95ak8iqiC08KKCRJGEh5qSIvJz92o0.jpeg",
-                imageAlt: "ON Running and Strava integration - Smart jacket with glowing technology pocket",
+                imageAlt: "ON Running and Strava integration",
                 modalData: {
                   title: "ON RUNNING + STRAVA",
                   category: "SOFTWARE",
                   imageSrc:
                     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-95ak8iqiC08KKCRJGEh5qSIvJz92o0.jpeg",
-                  imageAlt: "ON Running and Strava integration",
+                  imageAlt: "ON Running Strava integration",
                   sections: [
                     {
                       title: "THE CHALLENGE",
                       paragraphs: [
-                        "ON Running needed to integrate their premium running experience with Strava's social fitness platform. The challenge was creating a seamless connection that would enhance the user experience while maintaining the integrity of both platforms.",
+                        "ON Running needed to integrate their premium running experience with Strava's social fitness platform, creating a seamless connection that enhances user experience while maintaining platform integrity.",
                       ],
                     },
                     {
                       title: "THE SOLUTION",
                       paragraphs: [
-                        "We developed a comprehensive integration platform that connects ON Running's proprietary tracking technology with Strava's social features. The solution includes automatic activity syncing, performance analytics, and community engagement tools.",
+                        "We developed a comprehensive integration platform connecting ON Running's proprietary tracking technology with Strava's social features, including automatic activity syncing, performance analytics, and community engagement tools.",
                       ],
                     },
                   ],
@@ -703,7 +628,7 @@ export default function VRAIProposalPage() {
                   ],
                   quotes: [
                     {
-                      text: "The Tailor Hub team delivered an exceptional integration that exceeded our expectations. The seamless connection between our platforms has significantly improved user engagement and retention.",
+                      text: "The Tailor Hub team delivered an exceptional integration that exceeded our expectations. User engagement and retention have significantly improved.",
                       author: "SARAH CHEN - HEAD OF DIGITAL PRODUCTS AT ON RUNNING",
                     },
                   ],
@@ -714,11 +639,35 @@ export default function VRAIProposalPage() {
         </div>
       </section>
 
+      {/* Partners Section */}
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <Highlight2Section
+          concepts={["OFFICIAL", "PARTNERS"]}
+          items={["SHOPIFY PLUS", "AWS", "CONTENTFUL", "STRIPE", "ALGOLIA"]}
+        />
+      </section>
+
+      {/* ISO Certification Section */}
+      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <TitleSection overheader="ISO 27001" />
+
+        <div style={{ marginTop: "var(--gap-header-1)" }}>
+          <BoxSection
+            header="CERTIFIED INFORMATION SECURITY"
+            bodyText="Tailor Hub is ISO 27001 certified, demonstrating our commitment to the highest standards of information security management. This certification ensures rigorous processes to protect your data and maintain confidentiality, integrity, and availability of information systems throughout the development lifecycle."
+            imageSrc="/images/design-mode/ISO(2).png"
+            imageAlt="ISO 27001 Certification"
+            certificationBadgeSrc="/images/design-mode/Modo_de_aislamiento.webp"
+            certificationBadgeAlt="ISO 27001 Badge"
+          />
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="FREQUENTLY ASKED QUESTIONS" />
 
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
+        <div style={{ marginTop: "var(--gap-header-1)" }}>
           <FAQ
             items={[
               {
@@ -732,19 +681,19 @@ export default function VRAIProposalPage() {
                   "The complete project timeline is 22 weeks (approximately 5.5 months) from kickoff to launch. This is divided into: Discovery & Design (4 weeks), Core Development (8 weeks), Advanced Features (6 weeks), and Testing & Launch (4 weeks). We can adjust the timeline based on your specific launch requirements.",
               },
               {
-                question: "What happens if the project requirements change during development?",
+                question: "What happens if project requirements change during development?",
                 answer:
                   "We follow an agile methodology that allows for flexibility. Minor adjustments can typically be accommodated within the existing scope. For significant scope changes, we'll provide a change request with timeline and cost implications. Our goal is to balance flexibility with project predictability.",
               },
               {
                 question: "Will the platform be mobile-responsive?",
                 answer:
-                  "Absolutely. The platform will be fully responsive and optimized for all devices including smartphones, tablets, and desktops. We follow a mobile-first design approach to ensure the luxury shopping experience is exceptional on every screen size. This includes optimized 3D visualization and customization tools for mobile devices.",
+                  "Absolutely. The platform will be fully responsive and optimized for all devices including smartphones, tablets, and desktops. We follow a mobile-first design approach to ensure the luxury shopping experience is exceptional on every screen size, including optimized 3D visualization for mobile devices.",
               },
               {
                 question: "How do you ensure the platform is secure and compliant?",
                 answer:
-                  "Security is built into every phase of development. We implement PCI DSS compliance for payment processing, use industry-standard encryption, conduct security audits, implement secure authentication, and follow OWASP security guidelines. The platform will also undergo penetration testing before launch.",
+                  "Security is built into every phase of development. We implement PCI DSS compliance for payment processing, use industry-standard encryption, conduct security audits, implement secure authentication, and follow OWASP security guidelines. The platform undergoes penetration testing before launch.",
               },
               {
                 question: "Can we see progress during development?",
@@ -754,12 +703,12 @@ export default function VRAIProposalPage() {
               {
                 question: "What training and documentation will be provided?",
                 answer:
-                  "We provide comprehensive training for your team on platform administration, content management, product uploads, order processing, and analytics. This includes live training sessions, video tutorials, and detailed documentation. We ensure your team feels confident managing the platform independently.",
+                  "We provide comprehensive training for your team on platform administration, content management, product uploads, order processing, and analytics. This includes live training sessions, video tutorials, and detailed documentation to ensure your team feels confident managing the platform independently.",
               },
               {
                 question: "What support is available after launch?",
                 answer:
-                  "The project includes 30 days of post-launch support for bug fixes and adjustments. After that, we offer two ongoing support packages: Essential Support (€2,500/month) with monitoring and maintenance, or Premium Support (€5,500/month) which includes dedicated account management and 20 hours/month of development for new features and enhancements.",
+                  "The project includes 30 days of post-launch support for bug fixes and adjustments. After that, we offer two ongoing support packages: Essential Support (€2,500/month) with monitoring and maintenance, or Premium Support (€5,500/month) which includes dedicated account management and 20 hours/month of development.",
               },
             ]}
           />
