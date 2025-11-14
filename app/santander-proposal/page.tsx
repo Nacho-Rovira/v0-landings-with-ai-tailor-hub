@@ -1,19 +1,34 @@
+"use client"
+
+import { useState } from "react"
 import { LandingLayout } from "@/components/LandingLayout/LandingLayout"
 import { HighlightSection } from "@/components/HighlightSection/HighlightSection"
 import { HeaderBox } from "@/components/HeaderBox/HeaderBox"
+import { TitleSection } from "@/components/TitleSection/TitleSection"
 import { BodyText } from "@/components/BodyText/BodyText"
 import { MenuSidebar, MenuSidebarItem } from "@/components/MenuSidebar/MenuSidebar"
-import { TitleSection } from "@/components/TitleSection/TitleSection"
 import { BoxSection } from "@/components/BoxSection/BoxSection"
 import { TeamSection } from "@/components/TeamSection/TeamSection"
 import { CaseStudiesSection } from "@/components/CaseStudiesSection/CaseStudiesSection"
 import { Highlight2Section } from "@/components/Highlight2Section/Highlight2Section"
 import { FAQ } from "@/components/FAQ/FAQ"
 import { StepsFlow } from "@/components/StepsFlow/StepsFlow"
-import Image from "next/image"
 import proposalConfig from "@/config/proposals/santander-intro-proposal.json"
+import Image from "next/image"
 
 export default function SantanderProposalPage() {
+  const [activeSection, setActiveSection] = useState<string>("#context")
+
+  const handleScrollToProposal = () => {
+    const element = document.querySelector("#proposal-content")
+    if (element) {
+      const offset = 180
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - offset
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" })
+    }
+  }
+
   return (
     <LandingLayout>
       {/* Hero Section */}
@@ -27,13 +42,11 @@ export default function SantanderProposalPage() {
           overheader={proposalConfig.headerBox.overheader}
           header={proposalConfig.headerBox.header}
           buttonLabel={proposalConfig.headerBox.buttonLabel}
-          onButtonClick={() => {
-            document.querySelector("#proposal-content")?.scrollIntoView({ behavior: "smooth" })
-          }}
+          onButtonClick={handleScrollToProposal}
         />
       </section>
 
-      {/* Hero Image */}
+      {/* Hero Image Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <div style={{ width: "100%", borderRadius: "var(--radius-s)", overflow: "hidden" }}>
           <Image
@@ -49,9 +62,17 @@ export default function SantanderProposalPage() {
 
       {/* Proposal Content with Sidebar */}
       <section id="proposal-content" style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <div style={{ display: "flex", alignItems: "flex-start", gap: "var(--spacing-xxl)", width: "100%" }}>
-          {/* Menu Sidebar */}
-          <MenuSidebar autoDetectActive>
+        <div
+          style={{
+            display: "flex",
+            gap: "var(--spacing-3xl)",
+            maxWidth: "var(--layout-content-max)",
+            margin: "0 auto",
+            padding: "0 var(--spacing-page-x)",
+          }}
+        >
+          {/* Sidebar Menu */}
+          <MenuSidebar activeSection={activeSection} autoDetectActive>
             {proposalConfig.menuItems.map((item) => (
               <MenuSidebarItem key={item.number} href={item.href} number={item.number}>
                 {item.label}
@@ -59,44 +80,60 @@ export default function SantanderProposalPage() {
             ))}
           </MenuSidebar>
 
-          {/* Body Content */}
-          <div style={{ flex: 1, maxWidth: "702px" }}>
-            <BodyText sections={proposalConfig.bodySections} />
+          {/* Main Content */}
+          <div style={{ flex: 1, minWidth: 0 }}>
+            {proposalConfig.bodySections.map((section, index) => (
+              <section key={section.id} id={section.id} style={{ marginBottom: "var(--spacing-9xl)" }}>
+                <BodyText
+                  sections={[
+                    {
+                      title: section.title,
+                      paragraphs: section.paragraphs,
+                    },
+                  ]}
+                />
+              </section>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="SERVICES" />
-        <div
-          style={{ marginTop: "var(--spacing-xl)", display: "flex", flexDirection: "column", gap: "var(--spacing-xl)" }}
-        >
+      <section id="services" style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <TitleSection overheader="SERVICES" title="What We Do" />
+
+        <div style={{ marginTop: "var(--spacing-9xl)" }}>
           {proposalConfig.services.map((service, index) => (
-            <BoxSection
+            <div
               key={index}
-              overheader={service.overheader}
-              header={service.header}
-              bodyText={service.bodyText}
-              imageSrc={service.imageSrc}
-              imageAlt={service.imageAlt}
-            />
+              style={{ marginBottom: index < proposalConfig.services.length - 1 ? "var(--spacing-9xl)" : 0 }}
+            >
+              <BoxSection
+                overheader={service.overheader}
+                header={service.header}
+                bodyText={service.bodyText}
+                imageSrc={service.imageSrc}
+                imageAlt={service.imageAlt}
+              />
+            </div>
           ))}
         </div>
       </section>
 
       {/* Team Section */}
-      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader={proposalConfig.team.overheader} />
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
+      <section id="team" style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <TitleSection overheader={proposalConfig.team.overheader} title="Our Team" />
+
+        <div style={{ marginTop: "var(--spacing-9xl)" }}>
           <TeamSection members={proposalConfig.team.members} />
         </div>
       </section>
 
-      {/* Case Studies Section */}
-      <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader="CASE STUDIES" />
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
+      {/* Case Studies */}
+      <section id="case-studies" style={{ marginBottom: "var(--spacing-9xl)" }}>
+        <TitleSection overheader="CASE STUDIES" title="Proven Track Record" />
+
+        <div style={{ marginTop: "var(--spacing-9xl)" }}>
           <CaseStudiesSection caseStudies={proposalConfig.caseStudies} />
         </div>
       </section>
@@ -106,36 +143,47 @@ export default function SantanderProposalPage() {
         <Highlight2Section concepts={proposalConfig.partners.concepts} items={proposalConfig.partners.items} />
       </section>
 
-      {/* ISO Certification Section */}
+      {/* ISO Certification */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <TitleSection overheader={proposalConfig.isoCertification.overheader} />
-        <div style={{ marginTop: "var(--spacing-xl)" }}>
-          <BoxSection
-            header={proposalConfig.isoCertification.header}
-            bodyText={proposalConfig.isoCertification.bodyText}
-            imageSrc={proposalConfig.isoCertification.imageSrc}
-            imageAlt={proposalConfig.isoCertification.imageAlt}
-            certificationBadgeSrc={proposalConfig.isoCertification.certificationBadgeSrc}
-            certificationBadgeAlt={proposalConfig.isoCertification.certificationBadgeAlt}
-          />
-        </div>
+        <BoxSection
+          overheader={proposalConfig.isoCertification.overheader}
+          header={proposalConfig.isoCertification.header}
+          bodyText={proposalConfig.isoCertification.bodyText}
+          imageSrc={proposalConfig.isoCertification.imageSrc}
+          imageAlt={proposalConfig.isoCertification.imageAlt}
+          certificationBadgeSrc={proposalConfig.isoCertification.certificationBadgeSrc}
+          certificationBadgeAlt={proposalConfig.isoCertification.certificationBadgeAlt}
+        />
       </section>
 
       {/* FAQ Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <FAQ items={proposalConfig.faq} />
+        <TitleSection overheader="FREQUENTLY ASKED QUESTIONS" title="FAQ" />
+
+        <div style={{ marginTop: "var(--spacing-xl)" }}>
+          <FAQ items={proposalConfig.faq} />
+        </div>
       </section>
 
       {/* Next Steps Section */}
       <section id="next-steps" style={{ marginBottom: "var(--spacing-9xl)" }}>
-        <StepsFlow steps={proposalConfig.nextSteps.steps} />
+        <TitleSection overheader="NEXT STEPS" title="Let's Start a Conversation" />
+
         <div style={{ marginTop: "var(--spacing-xl)" }}>
+          
+
+          <StepsFlow steps={proposalConfig.nextSteps.steps} />
+
+          
+        </div>
+
+        {/* CTA */}
+        <div style={{ marginTop: "var(--spacing-3xl)" }}>
           <HeaderBox
-            header="Ready to discuss your digital transformation?"
-            buttonLabel="SCHEDULE A CALL"
-            onButtonClick={() => {
-              window.location.href = "mailto:contact@tailor-hub.com"
-            }}
+            overheader="GET IN TOUCH"
+            header="Ready to explore how Tailor Hub can transform your digital banking, internal tools, and customer experiences?"
+            buttonLabel="CONTACT US"
+            onButtonClick={() => (window.location.href = "mailto:info@tailor-hub.com")}
           />
         </div>
       </section>
