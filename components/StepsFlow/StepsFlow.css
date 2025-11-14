@@ -1,19 +1,32 @@
 .steps-flow {
   display: flex;
-  flex-direction: column;
   gap: var(--spacing-xl);
   width: 100%;
 }
 
+/* Added horizontal layout as default */
+.steps-flow--horizontal {
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+/* Added vertical layout option */
+.steps-flow--vertical {
+  flex-direction: column;
+}
+
 .steps-flow__step {
   display: flex;
-  gap: var(--spacing-l);
+  flex-direction: column;
+  gap: var(--spacing-m);
   padding: var(--spacing-xl);
   background-color: var(--color-neutral-50);
-  /* Using --radius-s token consistent with other card components in the design system */
   border-radius: var(--radius-s, 16px);
   border: 1px solid var(--color-neutral-100);
   transition: all 0.2s ease;
+  /* Added flex properties for horizontal layout */
+  flex: 1;
+  min-width: 280px;
 }
 
 .steps-flow__step:hover {
@@ -28,8 +41,8 @@
   color: var(--color-text-primary);
   font-weight: 500;
   flex-shrink: 0;
-  min-width: 48px;
-  text-align: center;
+  /* Adjusted for horizontal layout */
+  text-align: left;
 }
 
 .steps-flow__content {
@@ -60,13 +73,13 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .steps-flow__step {
+  /* On mobile, horizontal layout stacks vertically */
+  .steps-flow--horizontal {
     flex-direction: column;
-    gap: var(--spacing-m);
-    padding: var(--spacing-l);
+    overflow-x: visible;
   }
 
-  .steps-flow__number {
-    text-align: left;
+  .steps-flow__step {
+    min-width: auto;
   }
 }

@@ -13,11 +13,17 @@ export interface Step {
 export interface StepsFlowProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Array of steps */
   steps: Step[]
+  /** Layout direction: horizontal or vertical */
+  direction?: "horizontal" | "vertical"
 }
 
 export const StepsFlow = React.forwardRef<HTMLDivElement, StepsFlowProps>(
-  ({ steps, className = "", ...props }, ref) => {
-    const classes = ["steps-flow", className].filter(Boolean).join(" ")
+  ({ steps, direction = "horizontal", className = "", ...props }, ref) => {
+    const classes = [
+      "steps-flow", 
+      `steps-flow--${direction}`,
+      className
+    ].filter(Boolean).join(" ")
 
     return (
       <div ref={ref} className={classes} {...props}>
