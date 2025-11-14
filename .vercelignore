@@ -1,0 +1,16 @@
+# Example proposals - reference only, do not deploy
+app/barcelo-proposal/
+app/clikalia-proposal/
+app/santander-proposal/
+app/vrai-proposal/
+app/tailor-hub-proposal/
+app/fintech-proposal/
+app/proposal/
+app/proposal-template/
+app/tailor-hub-overview/
+
+# Keep design system and infrastructure
+!components/
+!tokens/
+!config/
+!docs/

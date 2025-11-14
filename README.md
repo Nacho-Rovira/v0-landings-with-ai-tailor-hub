@@ -1,131 +1,108 @@
-# v0 landings with AI tailor hub
+# Tailor Hub Proposal Generator
 
-Repository to host the V0 landing pages and integration with the AI Tailor Hub, including a comprehensive design system with tokens and reusable components.
+This workspace is designed to create professional, on-brand proposals for Tailor Hub clients.
 
-## Project Structure
+## 🚀 Quick Start
 
+1. **Duplicate this chat** to start fresh
+2. **Use a prompt** to create your proposal (see examples on home page)
+3. **Publish** only your new proposal to production
+
+## 📝 Creating Your Proposal
+
+Visit the home page to see example prompts for:
+- Full development proposals with budget
+- Introduction proposals without budget  
+- Custom hospitality, banking, or e-commerce proposals
+
+## 📚 Documentation
+
+- **[HOW_TO_CREATE_PROPOSALS.md](docs/HOW_TO_CREATE_PROPOSALS.md)** - Prompt examples and best practices
+- **[CREATING_NEW_PROPOSAL.md](docs/CREATING_NEW_PROPOSAL.md)** - Step-by-step creation guide  
+- **[PROPOSAL_TEMPLATE_GUIDE.md](docs/PROPOSAL_TEMPLATE_GUIDE.md)** - Component reference
+
+## 🎨 Design System
+
+The workspace includes:
+- **Components** - Pre-built React components (`/components`)
+- **Tokens** - Semantic design tokens (`/tokens`)
+- **Layouts** - Proposal layouts and structures
+- **Examples** - Reference proposals (barcelo, clikalia, santander, vrai)
+
+## 📁 What's Included
+
+### Active Files (Publish These)
+- Your new proposal: `/app/[client-name]-proposal/`
+- Config: `/config/proposals/[client-name]-proposal.json`
+
+### Reference Only (Do Not Publish)
+- `/app/barcelo-proposal/` - Hospitality example
+- `/app/clikalia-proposal/` - Real estate example
+- `/app/santander-proposal/` - Banking example
+- `/app/vrai-proposal/` - Luxury e-commerce example
+
+### Design System (Keep)
+- `/components/` - Reusable React components
+- `/tokens/` - Design tokens (colors, spacing, typography)
+- `/docs/` - Complete documentation
+
+## 🎯 Workflow
+
+1. **Create** - Use a prompt to generate your proposal
+2. **Review** - Check spacing, sections, content
+3. **Refine** - Make adjustments with follow-up prompts
+4. **Publish** - Deploy only your new proposal route
+
+## 🔧 Tech Stack
+
+- **Next.js 16** - App Router with Server Components
+- **TypeScript** - Type-safe development
+- **Design Tokens** - Semantic CSS variables
+- **Components** - Modular, reusable React components
+
+## 📦 Deployment
+
+When publishing, only deploy:
+- Your new proposal page
+- Design system components
+- Shared layouts and utilities
+
+Example proposals are for reference and should not be published to production.
+
+## Section Display Rules
+
+All proposals follow these TitleSection rules:
+- **FAQ Section** - Display overheader only, no title
+- **Team Section** - Display overheader only, no title
+- **ISO Section** - Display overheader only, no title
+- **Services Section** - Display overheader only, no title
+
+## Spacing Guidelines
+
+- Section gaps: `var(--spacing-9xl)` (124px)
+- Content after TitleSection: `var(--gap-header-1)` (56px)
+- This ensures consistent spacing whether TitleSection has both overheader + title or just overheader
+
+---
+
+**Tailor Hub** - Part of Modulor Group  
+Minimal. Precise. Elegant. Editorial.
 \`\`\`
-v0-landings-with-ai-tailor-hub/
-├── tokens/              # Design tokens
-│   ├── primitives.json  # Base values (colors, spacing, typography)
-│   ├── semantics.json   # Semantic mappings
-│   ├── components.json  # Component-specific tokens
-│   └── tokens.css       # CSS custom properties
-├── components/          # Reusable UI components
-│   ├── Button/          # Button component
-│   └── README.md        # Components documentation
-├── examples/            # Demo files and examples
-│   └── button-demo.html # Button component demo
-├── package.json         # Project dependencies
-└── tsconfig.json        # TypeScript configuration
-\`\`\`
 
-## Design System
+```plaintext file=".vercelignore"
+# Example proposals - reference only, do not deploy
+app/barcelo-proposal/
+app/clikalia-proposal/
+app/santander-proposal/
+app/vrai-proposal/
+app/tailor-hub-proposal/
+app/fintech-proposal/
+app/proposal/
+app/proposal-template/
+app/tailor-hub-overview/
 
-### Design Tokens
-
-The design system uses a three-tier token structure:
-
-1. **Primitives** (`tokens/primitives.json`) - Base values
-   - Colors (neutral palette, blue accent)
-   - Typography (sizes, line heights, font families)
-   - Spacing scale (xxs to 8xl)
-   - Border radius
-
-2. **Semantics** (`tokens/semantics.json`) - Semantic mappings
-   - Background colors (default, surface, hover)
-   - Text colors (primary, secondary, accent)
-   - Typography styles (headers, body, overheader)
-   - Layout tokens (gaps, padding)
-
-3. **Components** (`tokens/components.json`) - Component-specific tokens
-   - Button styles
-   - Tab styles
-   - Menu styles
-   - Logo styles
-
-### Components
-
-All components are built using React + TypeScript and reference the design tokens.
-
-#### Available Components
-
-- **Button** - Primary button with hover states and variants
-  - [View Documentation](./components/Button/README.md)
-  - [View Demo](./examples/button-demo.html)
-
-- **Menu** - Responsive navigation menu with starter and scrolling variants
-  - [View Documentation](./components/Menu/README.md)
-  - [View Demo](./examples/menu-demo.html)
-
-- **MenuItem** - Navigation menu items with multiple states
-  - [View Documentation](./components/MenuItem/README.md)
-  - [View Demo](./examples/menu-demo.html)
-
-- **Header** - Comprehensive header with logo, menu, and company info
-  - [View Documentation](./components/Header/README.md)
-  - [View Demo](./examples/header-demo.html)
-
-## Getting Started
-
-### Installation
-
-\`\`\`bash
-npm install
-\`\`\`
-
-### Using Components
-
-\`\`\`tsx
-import { Button } from './components';
-import './tokens/tokens.css'; // Import design tokens
-
-function App() {
-  return (
-    <Button variant="primary" onClick={() => console.log('clicked')}>
-      Click me
-    </Button>
-  );
-}
-\`\`\`
-
-### Viewing Examples
-
-Open `examples/button-demo.html` in your browser to see the button component in action.
-
-## Quickstart
-
-1. This repository uses a branch named Main as the default branch.
-2. Create feature branches from Main (example: Link/V0).
-3. Open a PR to merge Link/V0 into Main when ready.
-
-## Goals
-
-- Integrate V0 landing pages
-- Build a comprehensive design system with tokens
-- Create reusable, accessible components
-- Provide CI and deployment workflow
-- Keep repository structure minimal and well documented
-
-## Development
-
-### Adding New Components
-
-1. Create a new folder under `/components`
-2. Use design tokens from the token files
-3. Follow the existing component structure (tsx, css, stories, README)
-4. Export the component in `/components/index.ts`
-5. Add documentation and examples
-
-### Modifying Tokens
-
-1. Update the appropriate token file in `/tokens`
-2. Regenerate CSS variables in `tokens/tokens.css` if needed
-3. Document any breaking changes
-
-## Tech Stack
-
-- **React** 18+ for components
-- **TypeScript** for type safety
-- **CSS Custom Properties** for token management
-- **Design Tokens** following W3C DTCG format
+# Keep design system and infrastructure
+!components/
+!tokens/
+!config/
+!docs/

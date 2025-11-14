@@ -143,6 +143,38 @@ export default function CoverPage() {
               "Create a proposal for Marriott Hotels. They need a guest experience platform with mobile check-in and loyalty integration. Timeline: 8 months, 5 phases. Budget: €420K. Include detailed roadmap, team of 6, hospitality case studies, infrastructure & support section, and FAQ."
             </p>
           </div>
+
+          {/* New Example 4 */}
+          <div
+            style={{
+              padding: "var(--spacing-l)",
+              backgroundColor: "var(--color-neutral-50)",
+              borderRadius: "var(--radius-s, 16px)",
+              border: "1px solid var(--color-neutral-200)",
+            }}
+          >
+            <p
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "var(--text-size-xsmall)",
+                color: "var(--color-text-secondary)",
+                marginBottom: "var(--spacing-xs)",
+                textTransform: "uppercase",
+              }}
+            >
+              Technology Consulting Proposal
+            </p>
+            <p
+              style={{
+                fontFamily: "var(--font-default)",
+                fontSize: "var(--text-size-small)",
+                color: "var(--color-text-primary)",
+                lineHeight: "var(--text-line-s)",
+              }}
+            >
+              "Create a proposal for IBM. They need a technology consulting service to optimize their cloud infrastructure. Timeline: 3 months, 3 phases. Budget: €200K. Include: current infrastructure analysis, recommended improvements, detailed roadmap, team of 4, case studies, and FAQ."
+            </p>
+          </div>
         </div>
 
         {/* Documentation link */}
