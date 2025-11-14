@@ -89,7 +89,7 @@ All proposals follow these TitleSection rules:
 Minimal. Precise. Elegant. Editorial.
 \`\`\`
 
-```plaintext file=".vercelignore"
+\`\`\`plaintext file=".vercelignore"
 # Example proposals - reference only, do not deploy
 app/barcelo-proposal/
 app/clikalia-proposal/
