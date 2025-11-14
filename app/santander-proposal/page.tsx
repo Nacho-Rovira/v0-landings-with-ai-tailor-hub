@@ -12,6 +12,7 @@ import { TeamSection } from "@/components/TeamSection/TeamSection"
 import { CaseStudiesSection } from "@/components/CaseStudiesSection/CaseStudiesSection"
 import { Highlight2Section } from "@/components/Highlight2Section/Highlight2Section"
 import { FAQ } from "@/components/FAQ/FAQ"
+import { StepsFlow } from "@/components/StepsFlow/StepsFlow"
 import proposalConfig from "@/config/proposals/santander-intro-proposal.json"
 import Image from "next/image"
 
@@ -169,20 +170,31 @@ export default function SantanderProposalPage() {
         <TitleSection overheader="NEXT STEPS" title="Let's Start a Conversation" />
 
         <div style={{ marginTop: "var(--spacing-xl)" }}>
-          <BodyText
-            sections={[
-              {
-                title: "",
-                paragraphs: [
-                  proposalConfig.nextSteps.description,
-                  ...proposalConfig.nextSteps.steps.map(
-                    (step) => `<strong>${step.title}:</strong> ${step.description}`,
-                  ),
-                  proposalConfig.nextSteps.callToAction,
-                ],
-              },
-            ]}
-          />
+          <p
+            style={{
+              fontFamily: "var(--font-default)",
+              fontSize: "var(--text-size-small)",
+              lineHeight: "var(--text-line-small)",
+              color: "var(--color-text-primary)",
+              marginBottom: "var(--spacing-xl)",
+            }}
+          >
+            {proposalConfig.nextSteps.description}
+          </p>
+
+          <StepsFlow steps={proposalConfig.nextSteps.steps} />
+
+          <p
+            style={{
+              fontFamily: "var(--font-default)",
+              fontSize: "var(--text-size-small)",
+              lineHeight: "var(--text-line-small)",
+              color: "var(--color-text-primary)",
+              marginTop: "var(--spacing-xl)",
+            }}
+          >
+            {proposalConfig.nextSteps.callToAction}
+          </p>
         </div>
 
         {/* CTA */}
