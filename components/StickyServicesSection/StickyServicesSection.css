@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  /* Gap is now set via inline style to match original spacing */
 }
 
 .sticky-services__item {
@@ -13,6 +14,8 @@
   background-color: var(--color-background-default, #ffffff);
   /* Add subtle shadow for depth when cards stack */
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+  /* Smooth opacity transition */
+  transition: opacity 0.1s ease-out;
 }
 
 /* First card has no top shadow */
