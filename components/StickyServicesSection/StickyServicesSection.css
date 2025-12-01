@@ -1,0 +1,21 @@
+.sticky-services {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sticky-services__item {
+  position: sticky;
+  width: 100%;
+}
+
+.sticky-services__card {
+  background-color: var(--color-background-default, #ffffff);
+  /* Add subtle shadow for depth when cards stack */
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* First card has no top shadow */
+.sticky-services__item:first-child .sticky-services__card {
+  box-shadow: none;
+}
