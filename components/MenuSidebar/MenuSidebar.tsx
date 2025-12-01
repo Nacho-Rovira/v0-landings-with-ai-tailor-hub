@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useMemo } from "react"
 import "./MenuSidebar.css"
 
 export interface MenuSidebarItemProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -82,30 +82,35 @@ export const MenuSidebar = React.forwardRef<HTMLElement, MenuSidebarProps>(
     const classes = ["menu-sidebar", className].filter(Boolean).join(" ")
     const [activeSection, setActiveSection] = useState<string>("")
 
+    const sectionIds = useMemo(() => {
+      const ids: string[] = []
+      React.Children.forEach(children, (child) => {
+        if (React.isValidElement(child) && child.type === MenuSidebarItem) {
+          const href = child.props.href?.replace("#", "")
+          if (href) ids.push(href)
+        }
+      })
+      return ids
+    }, [children])
+
     useEffect(() => {
-      if (!autoDetectActive) return
+      if (!autoDetectActive || sectionIds.length === 0) return
 
       const handleScroll = () => {
-        // Get all section IDs from menu items
-        const sections = Array.from(
-          document.querySelectorAll(
-            '[id^="challenge"], [id^="objectives"], [id^="approach"], [id^="services"], [id^="technology"], [id^="roadmap"], [id^="budget"], [id^="support"]',
-          ),
-        )
-
         // Use a small offset from the top of the viewport
         const topThreshold = 150
 
         let currentSection = ""
 
-        for (let i = 0; i < sections.length; i++) {
-          const section = sections[i] as HTMLElement
+        for (const id of sectionIds) {
+          const section = document.getElementById(id)
+          if (!section) continue
+
           const rect = section.getBoundingClientRect()
 
           // If this section's top is above or at the threshold, it's the current section
-          // Keep checking until we find a section that's below the threshold
           if (rect.top <= topThreshold) {
-            currentSection = section.id
+            currentSection = id
           } else {
             // This section hasn't reached the top yet, so previous section is still active
             break
@@ -113,8 +118,8 @@ export const MenuSidebar = React.forwardRef<HTMLElement, MenuSidebarProps>(
         }
 
         // If no section found (at very top), default to first section
-        if (!currentSection && sections.length > 0) {
-          currentSection = sections[0].id
+        if (!currentSection && sectionIds.length > 0) {
+          currentSection = sectionIds[0]
         }
 
         setActiveSection(currentSection)
@@ -124,7 +129,7 @@ export const MenuSidebar = React.forwardRef<HTMLElement, MenuSidebarProps>(
       handleScroll() // Initial check
 
       return () => window.removeEventListener("scroll", handleScroll)
-    }, [autoDetectActive])
+    }, [autoDetectActive, sectionIds])
 
     const enhancedChildren = autoDetectActive
       ? React.Children.map(children, (child) => {
