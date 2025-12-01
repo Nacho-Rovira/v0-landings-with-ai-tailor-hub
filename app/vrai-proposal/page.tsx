@@ -184,14 +184,7 @@ export default function VRAIProposalPage() {
               >
                 <TechBox
                   title="FRONT-END"
-                  technologies={[
-                    "NEXT JS",
-                    "REACT JS",
-                    "TYPESCRIPT",
-                    "TAILWIND CSS",
-                    "THREE JS",
-                    "FRAMER MOTION",
-                  ]}
+                  technologies={["NEXT JS", "REACT JS", "TYPESCRIPT", "TAILWIND CSS", "THREE JS", "FRAMER MOTION"]}
                 />
                 <TechBox
                   title="BACK-END & DATA"
@@ -371,8 +364,8 @@ export default function VRAIProposalPage() {
                 }}
               >
                 Following the successful launch, we offer ongoing support and maintenance services to ensure your
-                platform continues to perform optimally and evolve with your business needs. Our support packages include
-                proactive monitoring, regular updates, feature enhancements, and dedicated technical assistance.
+                platform continues to perform optimally and evolve with your business needs. Our support packages
+                include proactive monitoring, regular updates, feature enhancements, and dedicated technical assistance.
               </p>
 
               <BudgetSection
@@ -425,7 +418,7 @@ export default function VRAIProposalPage() {
             overheader="S/ 02"
             header="3D VISUALIZATION & AR"
             bodyText="Cutting-edge 3D product visualization and augmented reality experiences that allow customers to interact with products in immersive detail. From real-time rendering to virtual try-on capabilities."
-            imageSrc="/images/design-mode/Design systems.png"
+            imageSrc="/images/design-mode/VRAI(1).jpeg"
             imageAlt="3D visualization and AR services"
           />
 
@@ -541,14 +534,12 @@ export default function VRAIProposalPage() {
               {
                 category: "ECOMMERCE",
                 title: "DORMAKABA",
-                imageSrc:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HERO-7QyVasLSj8cjn2jGivuMQ2gC7PCZiA.png",
+                imageSrc: "/images/hero.png",
                 imageAlt: "Dormakaba smart access solutions platform",
                 modalData: {
                   title: "DORMAKABA",
                   category: "SOFTWARE",
-                  imageSrc:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HERO-7QyVasLSj8cjn2jGivuMQ2gC7PCZiA.png",
+                  imageSrc: "/images/hero.png",
                   imageAlt: "Dormakaba platform",
                   sections: [
                     {
@@ -579,14 +570,12 @@ export default function VRAIProposalPage() {
               {
                 category: "REAL ESTATE",
                 title: "CLIKALIA",
-                imageSrc:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dormakaba.png-BL23wcJL31B0CAp4LCnI5yUkA8STg7.jpeg",
+                imageSrc: "/images/dormakaba.jpeg",
                 imageAlt: "Clikalia real estate platform",
                 modalData: {
                   title: "CLIKALIA",
                   category: "SOFTWARE",
-                  imageSrc:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dormakaba.png-BL23wcJL31B0CAp4LCnI5yUkA8STg7.jpeg",
+                  imageSrc: "/images/dormakaba.jpeg",
                   imageAlt: "Clikalia platform",
                   sections: [
                     {
@@ -617,14 +606,12 @@ export default function VRAIProposalPage() {
               {
                 category: "FITNESS TECH",
                 title: "ON RUNNING + STRAVA",
-                imageSrc:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-95ak8iqiC08KKCRJGEh5qSIvJz92o0.jpeg",
+                imageSrc: "/images/1.jpeg",
                 imageAlt: "ON Running and Strava integration",
                 modalData: {
                   title: "ON RUNNING + STRAVA",
                   category: "SOFTWARE",
-                  imageSrc:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-95ak8iqiC08KKCRJGEh5qSIvJz92o0.jpeg",
+                  imageSrc: "/images/1.jpeg",
                   imageAlt: "ON Running Strava integration",
                   sections: [
                     {
