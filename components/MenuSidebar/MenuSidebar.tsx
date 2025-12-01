@@ -89,20 +89,35 @@ export const MenuSidebar = React.forwardRef<HTMLElement, MenuSidebarProps>(
         // Get all section IDs from menu items
         const sections = Array.from(
           document.querySelectorAll(
-            '[id^="challenge"], [id^="objectives"], [id^="approach"], [id^="services"], [id^="technology"], [id^="roadmap"], [id^="budget"]',
+            '[id^="challenge"], [id^="objectives"], [id^="approach"], [id^="services"], [id^="technology"], [id^="roadmap"], [id^="budget"], [id^="support"]',
           ),
         )
 
-        // Find which section is currently in view
-        const scrollPosition = window.scrollY + 200 // Offset for header
+        // Use a small offset from the top of the viewport
+        const topThreshold = 150
 
-        for (let i = sections.length - 1; i >= 0; i--) {
+        let currentSection = ""
+
+        for (let i = 0; i < sections.length; i++) {
           const section = sections[i] as HTMLElement
-          if (section.offsetTop <= scrollPosition) {
-            setActiveSection(section.id)
+          const rect = section.getBoundingClientRect()
+
+          // If this section's top is above or at the threshold, it's the current section
+          // Keep checking until we find a section that's below the threshold
+          if (rect.top <= topThreshold) {
+            currentSection = section.id
+          } else {
+            // This section hasn't reached the top yet, so previous section is still active
             break
           }
         }
+
+        // If no section found (at very top), default to first section
+        if (!currentSection && sections.length > 0) {
+          currentSection = sections[0].id
+        }
+
+        setActiveSection(currentSection)
       }
 
       window.addEventListener("scroll", handleScroll)
