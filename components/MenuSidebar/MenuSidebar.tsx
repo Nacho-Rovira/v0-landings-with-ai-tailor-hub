@@ -85,60 +85,73 @@ export const MenuSidebar = React.forwardRef<HTMLElement, MenuSidebarProps>(
     const sectionIds = useMemo(() => {
       const ids: string[] = []
       React.Children.forEach(children, (child) => {
-        if (React.isValidElement(child) && child.type === MenuSidebarItem) {
-          const href = child.props.href?.replace("#", "")
-          if (href) ids.push(href)
+        if (React.isValidElement(child)) {
+          // Check for MenuSidebarItem by displayName or props.href existence
+          const childType = child.type as { displayName?: string }
+          if (childType.displayName === "MenuSidebarItem" || child.props.href) {
+            const href = child.props.href?.replace("#", "")
+            if (href) ids.push(href)
+          }
         }
       })
+      console.log("[v0] MenuSidebar sectionIds extracted:", ids)
       return ids
     }, [children])
 
     useEffect(() => {
-      if (!autoDetectActive || sectionIds.length === 0) return
+      if (!autoDetectActive || sectionIds.length === 0) {
+        console.log("[v0] autoDetectActive disabled or no sections found")
+        return
+      }
 
       const handleScroll = () => {
-        // Use a small offset from the top of the viewport
         const topThreshold = 150
-
         let currentSection = ""
 
         for (const id of sectionIds) {
           const section = document.getElementById(id)
-          if (!section) continue
+          if (!section) {
+            console.log("[v0] Section not found:", id)
+            continue
+          }
 
           const rect = section.getBoundingClientRect()
 
-          // If this section's top is above or at the threshold, it's the current section
           if (rect.top <= topThreshold) {
             currentSection = id
           } else {
-            // This section hasn't reached the top yet, so previous section is still active
             break
           }
         }
 
-        // If no section found (at very top), default to first section
         if (!currentSection && sectionIds.length > 0) {
           currentSection = sectionIds[0]
         }
 
+        if (activeSection !== currentSection) {
+          console.log("[v0] Active section changed to:", currentSection)
+        }
         setActiveSection(currentSection)
       }
 
       window.addEventListener("scroll", handleScroll)
-      handleScroll() // Initial check
+      handleScroll()
 
       return () => window.removeEventListener("scroll", handleScroll)
-    }, [autoDetectActive, sectionIds])
+    }, [autoDetectActive, sectionIds, activeSection])
 
     const enhancedChildren = autoDetectActive
       ? React.Children.map(children, (child) => {
-          if (React.isValidElement(child) && child.type === MenuSidebarItem) {
-            const href = child.props.href?.replace("#", "")
-            return React.cloneElement(child, {
-              ...child.props,
-              isActive: href === activeSection || child.props.isActive,
-            } as MenuSidebarItemProps)
+          if (React.isValidElement(child)) {
+            const childType = child.type as { displayName?: string }
+            if (childType.displayName === "MenuSidebarItem" || child.props.href) {
+              const href = child.props.href?.replace("#", "")
+              const isActive = href === activeSection || child.props.isActive
+              return React.cloneElement(child, {
+                ...child.props,
+                isActive,
+              } as MenuSidebarItemProps)
+            }
           }
           return child
         })
