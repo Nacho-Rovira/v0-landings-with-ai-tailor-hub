@@ -13,7 +13,7 @@
 }
 
 .sticky-services__card {
-  background-color: var(--color-background-default, #ffffff);
+  /* Removed white background so rounded corners show content beneath */
   /* Smooth opacity transition */
   transition: opacity 0.15s ease-out;
 }
