@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   /* Gap is now set via inline style to match original spacing */
+  /* Ensure proper stacking context */
+  isolation: isolate;
 }
 
 .sticky-services__item {
@@ -12,7 +14,6 @@
 
 .sticky-services__card {
   background-color: var(--color-background-default, #ffffff);
-  /* Removed box-shadow for clean flat design */
   /* Smooth opacity transition */
-  transition: opacity 0.1s ease-out;
+  transition: opacity 0.15s ease-out;
 }

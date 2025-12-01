@@ -38,15 +38,15 @@ export const StickyServicesSection: React.FC<StickyServicesSectionProps> = ({
         // Calculate sticky top position for this item
         const stickyTop = 80 + index * 20
 
-        // When the next card starts overlapping, fade out current card
-        // Start fading when next card is 100px away from current card's bottom
-        const overlapStart = stickyTop + currentRect.height - 100
-        const overlapEnd = stickyTop + 20 // Next card's sticky position
+        // Start fading when next card touches the bottom of current card's visible area
+        const overlapStart = stickyTop + currentRect.height
+        const overlapEnd = stickyTop // When next card reaches current card's sticky position
 
         if (nextRect.top <= overlapStart && nextRect.top > overlapEnd) {
-          // Calculate opacity based on how much overlap
+          // Calculate progress from 0 (just touching) to 1 (fully overlapped)
           const progress = (overlapStart - nextRect.top) / (overlapStart - overlapEnd)
-          return Math.max(0, 1 - progress)
+          // Start at 0.5 (50%) and fade to 0
+          return Math.max(0, 0.5 * (1 - progress))
         } else if (nextRect.top <= overlapEnd) {
           return 0
         }
@@ -64,7 +64,11 @@ export const StickyServicesSection: React.FC<StickyServicesSectionProps> = ({
   }, [childArray.length])
 
   return (
-    <div ref={containerRef} className={`sticky-services ${className}`} style={{ gap: `${gap}px` }}>
+    <div
+      ref={containerRef}
+      className={`sticky-services ${className}`}
+      style={{ gap: `${gap}px`, position: "relative", zIndex: 1 }}
+    >
       {childArray.map((child, index) => (
         <div
           key={index}
