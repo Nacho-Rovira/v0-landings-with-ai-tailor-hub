@@ -14,6 +14,7 @@ import { TeamSection } from "@/components/TeamSection/TeamSection"
 import { CaseStudiesSection } from "@/components/CaseStudiesSection/CaseStudiesSection"
 import { Highlight2Section } from "@/components/Highlight2Section/Highlight2Section"
 import { FAQ } from "@/components/FAQ/FAQ"
+import { StickyServicesSection } from "@/components/StickyServicesSection/StickyServicesSection"
 import Image from "next/image"
 
 export default function VRAIProposalPage() {
@@ -398,37 +399,32 @@ export default function VRAIProposalPage() {
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <TitleSection overheader="SERVICES" />
 
-        <div
-          style={{
-            marginTop: "var(--gap-header-1)",
-            display: "flex",
-            flexDirection: "column",
-            gap: "var(--spacing-xl)",
-          }}
-        >
-          <BoxSection
-            overheader="S/ 01"
-            header="E-COMMERCE DEVELOPMENT"
-            bodyText="End-to-end development of sophisticated e-commerce platforms built for scale, performance, and conversion. We specialize in luxury retail experiences that combine aesthetic excellence with technical precision."
-            imageSrc="/images/design-mode/desarrollo de software(2).jpeg"
-            imageAlt="E-commerce development services"
-          />
+        <div style={{ marginTop: "var(--gap-header-1)" }}>
+          <StickyServicesSection>
+            <BoxSection
+              overheader="S/ 01"
+              header="E-COMMERCE DEVELOPMENT"
+              bodyText="End-to-end development of sophisticated e-commerce platforms built for scale, performance, and conversion. We specialize in luxury retail experiences that combine aesthetic excellence with technical precision."
+              imageSrc="/images/design-mode/desarrollo de software(2).jpeg"
+              imageAlt="E-commerce development services"
+            />
 
-          <BoxSection
-            overheader="S/ 02"
-            header="3D VISUALIZATION & AR"
-            bodyText="Cutting-edge 3D product visualization and augmented reality experiences that allow customers to interact with products in immersive detail. From real-time rendering to virtual try-on capabilities."
-            imageSrc="/images/design-mode/VRAI(1).jpeg"
-            imageAlt="3D visualization and AR services"
-          />
+            <BoxSection
+              overheader="S/ 02"
+              header="3D VISUALIZATION & AR"
+              bodyText="Cutting-edge 3D product visualization and augmented reality experiences that allow customers to interact with products in immersive detail. From real-time rendering to virtual try-on capabilities."
+              imageSrc="/images/design-mode/VRAI(1).jpeg"
+              imageAlt="3D visualization and AR services"
+            />
 
-          <BoxSection
-            overheader="S/ 03"
-            header="AI-POWERED PERSONALIZATION"
-            bodyText="Intelligent recommendation engines and personalization systems that analyze user behavior, preferences, and purchase patterns to deliver tailored shopping experiences that drive conversion and loyalty."
-            imageSrc="/images/design-mode/auditoria y formacion(2).jpeg"
-            imageAlt="AI personalization services"
-          />
+            <BoxSection
+              overheader="S/ 03"
+              header="AI-POWERED PERSONALIZATION"
+              bodyText="Intelligent recommendation engines and personalization systems that analyze user behavior, preferences, and purchase patterns to deliver tailored shopping experiences that drive conversion and loyalty."
+              imageSrc="/images/design-mode/auditoria y formacion(2).jpeg"
+              imageAlt="AI personalization services"
+            />
+          </StickyServicesSection>
         </div>
       </section>
 
