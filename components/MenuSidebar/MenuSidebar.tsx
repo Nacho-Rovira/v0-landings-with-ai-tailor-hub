@@ -84,16 +84,23 @@ export const MenuSidebar = React.forwardRef<HTMLElement, MenuSidebarProps>(
 
     const sectionIds = useMemo(() => {
       const ids: string[] = []
-      React.Children.forEach(children, (child) => {
-        if (React.isValidElement(child)) {
-          // Check for MenuSidebarItem by displayName or props.href existence
-          const childType = child.type as { displayName?: string }
-          if (childType.displayName === "MenuSidebarItem" || child.props.href) {
-            const href = child.props.href?.replace("#", "")
-            if (href) ids.push(href)
+      const extractIds = (childrenToProcess: React.ReactNode) => {
+        React.Children.forEach(childrenToProcess, (child) => {
+          if (React.isValidElement(child)) {
+            // Check if child has href prop (works regardless of component type detection)
+            const childProps = child.props as { href?: string; children?: React.ReactNode }
+            if (childProps.href && childProps.href.startsWith("#")) {
+              const href = childProps.href.replace("#", "")
+              if (href) ids.push(href)
+            }
+            // Also check nested children
+            if (childProps.children) {
+              extractIds(childProps.children)
+            }
           }
-        }
-      })
+        })
+      }
+      extractIds(children)
       console.log("[v0] MenuSidebar sectionIds extracted:", ids)
       return ids
     }, [children])
@@ -143,10 +150,10 @@ export const MenuSidebar = React.forwardRef<HTMLElement, MenuSidebarProps>(
     const enhancedChildren = autoDetectActive
       ? React.Children.map(children, (child) => {
           if (React.isValidElement(child)) {
-            const childType = child.type as { displayName?: string }
-            if (childType.displayName === "MenuSidebarItem" || child.props.href) {
-              const href = child.props.href?.replace("#", "")
-              const isActive = href === activeSection || child.props.isActive
+            const childProps = child.props as { href?: string; isActive?: boolean }
+            if (childProps.href && childProps.href.startsWith("#")) {
+              const href = childProps.href.replace("#", "")
+              const isActive = href === activeSection || childProps.isActive
               return React.cloneElement(child, {
                 ...child.props,
                 isActive,
