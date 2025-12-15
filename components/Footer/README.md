@@ -4,7 +4,7 @@ A comprehensive footer component featuring contact information, social links, le
 
 ## Usage
 
-\`\`\`tsx
+```tsx
 import { Footer } from './components/Footer';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     <Footer />
   );
 }
-\`\`\`
+```
 
 ## Props
 
@@ -25,7 +25,7 @@ function App() {
 
 ### ContactInfo Type
 
-\`\`\`tsx
+```tsx
 {
   email?: string;
   phone?: string;
@@ -34,16 +34,16 @@ function App() {
     line2: string;
   };
 }
-\`\`\`
+```
 
 ### SocialLink & LegalLink Type
 
-\`\`\`tsx
+```tsx
 {
   label: string;
   href: string;
 }
-\`\`\`
+```
 
 ## Default Values
 
@@ -117,17 +117,17 @@ The footer is organized into three main sections:
 ## Examples
 
 ### Basic Footer
-\`\`\`tsx
+```tsx
 <Footer />
-\`\`\`
+```
 
 ### Mobile Variant
-\`\`\`tsx
+```tsx
 <Footer variant="mobile" />
-\`\`\`
+```
 
 ### Custom Contact Information
-\`\`\`tsx
+```tsx
 <Footer 
   contactInfo={{
     email: "HELLO@EXAMPLE.COM",
@@ -138,10 +138,10 @@ The footer is organized into three main sections:
     }
   }}
 />
-\`\`\`
+```
 
 ### Custom Social Links
-\`\`\`tsx
+```tsx
 <Footer 
   socialLinks={[
     { label: "TWITTER", href: "https://twitter.com/example" },
@@ -149,10 +149,10 @@ The footer is organized into three main sections:
     { label: "DRIBBBLE", href: "https://dribbble.com/example" }
   ]}
 />
-\`\`\`
+```
 
 ### Custom Legal Links
-\`\`\`tsx
+```tsx
 <Footer 
   legalLinks={[
     { label: "TERMS OF SERVICE", href: "/terms" },
@@ -160,7 +160,7 @@ The footer is organized into three main sections:
     { label: "COOKIE POLICY", href: "/cookies" }
   ]}
 />
-\`\`\`
+```
 
 ## Responsive Behavior
 

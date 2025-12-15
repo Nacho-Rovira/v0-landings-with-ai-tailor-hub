@@ -21,7 +21,7 @@ The proposal system uses a modular component architecture with:
 Hero CTA section with title, description, and action button.
 
 **Props:**
-\`\`\`typescript
+```typescript
 {
   overheader: string;          // Small uppercase text (e.g., "A PROPOSAL FOR")
   header: string;              // Main headline
@@ -29,10 +29,10 @@ Hero CTA section with title, description, and action button.
   buttonLabel: string;         // CTA button text
   onButtonClick?: () => void;  // Button click handler
 }
-\`\`\`
+```
 
 **Usage:**
-\`\`\`tsx
+```tsx
 <HeaderBox
   overheader="A PROPOSAL FOR SANTANDER"
   header="Transforming Banking Operations"
@@ -44,7 +44,7 @@ Hero CTA section with title, description, and action button.
     });
   }}
 />
-\`\`\`
+```
 
 **Styling:**
 - Uses PP Neue Montreal Mono for overheader
@@ -59,22 +59,22 @@ Hero CTA section with title, description, and action button.
 Hero image display with optional concept labels.
 
 **Props:**
-\`\`\`typescript
+```typescript
 {
   concepts: string[];     // Label text (e.g., ["DIGITAL", "TRANSFORMATION"])
   imageSrc: string;       // Image path
   imageAlt: string;       // Alt text for accessibility
 }
-\`\`\`
+```
 
 **Usage:**
-\`\`\`tsx
+```tsx
 <HighlightSection
   concepts={["BANKING", "PLATFORM"]}
   imageSrc="/images/design-mode/HERO.png"
   imageAlt="Banking platform interface"
 />
-\`\`\`
+```
 
 ---
 
@@ -83,16 +83,16 @@ Hero image display with optional concept labels.
 Section header with optional overheader, title, and paragraph.
 
 **Props:**
-\`\`\`typescript
+```typescript
 {
   overheader?: string;    // Small uppercase label
   title?: string;         // Section title
   paragraph?: string;     // Optional description
 }
-\`\`\`
+```
 
 **Usage:**
-\`\`\`tsx
+```tsx
 // With overheader only (FAQ, Team, Services, ISO)
 <TitleSection overheader="FAQ" />
 
@@ -108,7 +108,7 @@ Section header with optional overheader, title, and paragraph.
   title="The Digital Banking Challenge"
   paragraph="Understanding the current landscape"
 />
-\`\`\`
+```
 
 **Display Rules:**
 - **FAQ** - overheader only
@@ -128,16 +128,16 @@ Section header with optional overheader, title, and paragraph.
 Sticky navigation menu with scroll detection.
 
 **Props:**
-\`\`\`typescript
+```typescript
 {
   autoDetectActive?: boolean;  // Enable scroll-based active detection
   style?: React.CSSProperties; // Custom styles
   children: React.ReactNode;   // MenuSidebarItem components
 }
-\`\`\`
+```
 
 **Usage:**
-\`\`\`tsx
+```tsx
 <MenuSidebar autoDetectActive style={{ paddingTop: "var(--spacing-9xl)" }}>
   <MenuSidebarItem href="#context" number={1}>
     CONTEXT / OPPORTUNITY
@@ -149,7 +149,7 @@ Sticky navigation menu with scroll detection.
     TECHNOLOGY & ARCHITECTURE
   </MenuSidebarItem>
 </MenuSidebar>
-\`\`\`
+```
 
 **Features:**
 - Automatically highlights active section on scroll
@@ -164,17 +164,17 @@ Sticky navigation menu with scroll detection.
 Multi-section text content component.
 
 **Props:**
-\`\`\`typescript
+```typescript
 {
   sections: Array<{
     title?: string;           // Section heading
     paragraphs: string[];     // Array of paragraph text
   }>;
 }
-\`\`\`
+```
 
 **Usage:**
-\`\`\`tsx
+```tsx
 <BodyText
   sections={[
     {
@@ -192,7 +192,7 @@ Multi-section text content component.
     }
   ]}
 />
-\`\`\`
+```
 
 **Typography:**
 - Section titles: Medium size, semibold
@@ -206,16 +206,16 @@ Multi-section text content component.
 Technology category display box.
 
 **Props:**
-\`\`\`typescript
+```typescript
 {
   title: string;              // Category name
   technologies: string[];     // List of technologies
   fullWidth?: boolean;        // Fill container width
 }
-\`\`\`
+```
 
 **Usage:**
-\`\`\`tsx
+```tsx
 // Grid layout (3 columns)
 <div style={{ 
   display: "grid", 
@@ -244,7 +244,7 @@ Technology category display box.
     technologies={["Authentication", "API Gateway", "Monitoring"]}
   />
 </div>
-\`\`\`
+```
 
 **Styling:**
 - Default width: 260px
@@ -260,7 +260,7 @@ Technology category display box.
 Project phases and roadmap display.
 
 **Props:**
-\`\`\`typescript
+```typescript
 {
   phases: Array<{
     number: string;           // Phase number (e.g., "01")
@@ -270,10 +270,10 @@ Project phases and roadmap display.
     deliverables: string[];   // List of deliverables
   }>;
 }
-\`\`\`
+```
 
 **Usage:**
-\`\`\`tsx
+```tsx
 <TimelineSection
   phases={[
     {
@@ -300,7 +300,7 @@ Project phases and roadmap display.
     }
   ]}
 />
-\`\`\`
+```
 
 **Visual Design:**
 - Vertical timeline with connecting lines
@@ -315,7 +315,7 @@ Project phases and roadmap display.
 Pricing breakdown and payment terms.
 
 **Props:**
-\`\`\`typescript
+```typescript
 {
   items: Array<{
     category: string;         // Budget category name
@@ -325,10 +325,10 @@ Pricing breakdown and payment terms.
   total: string;             // Total amount
   notes: string[];           // Payment terms and conditions
 }
-\`\`\`
+```
 
 **Usage:**
-\`\`\`tsx
+```tsx
 <BudgetSection
   items={[
     {
@@ -354,7 +354,7 @@ Pricing breakdown and payment terms.
     "Additional features can be added via change requests"
   ]}
 />
-\`\`\`
+```
 
 **Styling:**
 - Table layout with clean separators
@@ -370,7 +370,7 @@ Pricing breakdown and payment terms.
 Content section with image and text.
 
 **Props:**
-\`\`\`typescript
+```typescript
 {
   variant?: "default" | "compact";  // Size variant
   overheader: string;               // Section label
@@ -379,10 +379,10 @@ Content section with image and text.
   imageSrc?: string;                // Image path (optional)
   imageAlt: string;                 // Alt text
 }
-\`\`\`
+```
 
 **Usage:**
-\`\`\`tsx
+```tsx
 // Default variant (Services, ISO)
 <BoxSection
   overheader="SOFTWARE DEVELOPMENT"
@@ -401,7 +401,7 @@ Content section with image and text.
   imageSrc="/images/design-mode/HERO.png"
   imageAlt="Monitoring Dashboard"
 />
-\`\`\`
+```
 
 **Variants:**
 - **Default**: 468x532px image, full layout
@@ -414,7 +414,7 @@ Content section with image and text.
 Team member card with click-to-view-bio.
 
 **Props:**
-\`\`\`typescript
+```typescript
 {
   name: string;              // Member name
   title: string;             // Job title
@@ -422,10 +422,10 @@ Team member card with click-to-view-bio.
   imageAlt: string;          // Alt text
   onClick?: () => void;      // Click handler for modal
 }
-\`\`\`
+```
 
 **Usage:**
-\`\`\`tsx
+```tsx
 const [selectedMember, setSelectedMember] = useState(null);
 
 <div style={{ display: "flex", gap: "var(--spacing-l)", flexWrap: "wrap" }}>
@@ -444,7 +444,7 @@ const [selectedMember, setSelectedMember] = useState(null);
     onClick={() => setSelectedMember(1)}
   />
 </div>
-\`\`\`
+```
 
 ---
 
@@ -453,7 +453,7 @@ const [selectedMember, setSelectedMember] = useState(null);
 Full bio modal for team members.
 
 **Props:**
-\`\`\`typescript
+```typescript
 {
   isOpen: boolean;           // Modal visibility
   onClose: () => void;       // Close handler
@@ -465,10 +465,10 @@ Full bio modal for team members.
   languages: string;         // Language skills
   skills: string;            // Technical skills
 }
-\`\`\`
+```
 
 **Usage:**
-\`\`\`tsx
+```tsx
 <TeamMemberModal
   isOpen={selectedMember === 0}
   onClose={() => setSelectedMember(null)}
@@ -483,7 +483,7 @@ Full bio modal for team members.
   languages="ITALIAN (NATIVE), SPANISH (ADVANCED), ENGLISH (FLUENT)"
   skills="React, Node.js, AWS, System Architecture, Team Leadership"
 />
-\`\`\`
+```
 
 ---
 
@@ -492,7 +492,7 @@ Full bio modal for team members.
 Case study card with click-to-view-details.
 
 **Props:**
-\`\`\`typescript
+```typescript
 {
   category: string;          // Project category
   title: string;             // Project name
@@ -500,10 +500,10 @@ Case study card with click-to-view-details.
   imageAlt: string;          // Alt text
   onClick?: () => void;      // Click handler for modal
 }
-\`\`\`
+```
 
 **Usage:**
-\`\`\`tsx
+```tsx
 <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "var(--spacing-l)" }}>
   <ProjectCard
     category="BANKING"
@@ -513,7 +513,7 @@ Case study card with click-to-view-details.
     onClick={() => setSelectedProject(0)}
   />
 </div>
-\`\`\`
+```
 
 ---
 
@@ -522,7 +522,7 @@ Case study card with click-to-view-details.
 Case study details modal.
 
 **Props:**
-\`\`\`typescript
+```typescript
 {
   isOpen: boolean;                    // Modal visibility
   onClose: () => void;                // Close handler
@@ -543,10 +543,10 @@ Case study details modal.
     author: string;
   }>;
 }
-\`\`\`
+```
 
 **Usage:**
-\`\`\`tsx
+```tsx
 <ProjectModal
   isOpen={selectedProject === 0}
   onClose={() => setSelectedProject(null)}
@@ -581,7 +581,7 @@ Case study details modal.
     }
   ]}
 />
-\`\`\`
+```
 
 ---
 
@@ -590,20 +590,20 @@ Case study details modal.
 Partners or client logos section.
 
 **Props:**
-\`\`\`typescript
+```typescript
 {
   concepts: string[];        // Section labels
   items: string[];           // Partner/client names
 }
-\`\`\`
+```
 
 **Usage:**
-\`\`\`tsx
+```tsx
 <Highlight2Section
   concepts={["OFFICIAL", "PARTNERS"]}
   items={["Contentful", "AWS", "Shopify", "Microsoft AI", "Netlify"]}
 />
-\`\`\`
+```
 
 ---
 
@@ -612,7 +612,7 @@ Partners or client logos section.
 Sequential steps display (horizontal or vertical).
 
 **Props:**
-\`\`\`typescript
+```typescript
 {
   direction?: "horizontal" | "vertical";  // Layout direction
   steps: Array<{
@@ -620,10 +620,10 @@ Sequential steps display (horizontal or vertical).
     description: string;     // Step details
   }>;
 }
-\`\`\`
+```
 
 **Usage:**
-\`\`\`tsx
+```tsx
 <StepsFlow
   direction="horizontal"
   steps={[
@@ -641,7 +641,7 @@ Sequential steps display (horizontal or vertical).
     }
   ]}
 />
-\`\`\`
+```
 
 **Behavior:**
 - **Horizontal**: Steps flow left-to-right in cards
@@ -656,17 +656,17 @@ Sequential steps display (horizontal or vertical).
 Accordion component for frequently asked questions.
 
 **Props:**
-\`\`\`typescript
+```typescript
 {
   items: Array<{
     question: string;        // Question text
     answer: string;          // Answer text
   }>;
 }
-\`\`\`
+```
 
 **Usage:**
-\`\`\`tsx
+```tsx
 <FAQ
   items={[
     {
@@ -683,7 +683,7 @@ Accordion component for frequently asked questions.
     }
   ]}
 />
-\`\`\`
+```
 
 **Styling:**
 - Clean accordion with expand/collapse
@@ -700,14 +700,14 @@ Accordion component for frequently asked questions.
 Page wrapper that includes header and footer.
 
 **Props:**
-\`\`\`typescript
+```typescript
 {
   children: React.ReactNode;   // Page content
 }
-\`\`\`
+```
 
 **Usage:**
-\`\`\`tsx
+```tsx
 export default function ProposalPage() {
   return (
     <LandingLayout>
@@ -715,7 +715,7 @@ export default function ProposalPage() {
     </LandingLayout>
   );
 }
-\`\`\`
+```
 
 **Includes:**
 - Automatic footer with Tailor Hub links
@@ -728,7 +728,7 @@ export default function ProposalPage() {
 
 ### Spacing Tokens
 
-\`\`\`css
+```css
 /* Section Spacing */
 --spacing-9xl: 124px;        /* Between major sections */
 --gap-header-1: 56px;        /* Content after TitleSection */
@@ -739,11 +739,11 @@ export default function ProposalPage() {
 --spacing-m: 24px;
 --spacing-s: 16px;
 --spacing-xs: 8px;
-\`\`\`
+```
 
 ### Typography Tokens
 
-\`\`\`css
+```css
 /* Font Families */
 --font-default: 'PP Mori';
 --font-mono: 'PP Neue Montreal Mono';
@@ -758,11 +758,11 @@ export default function ProposalPage() {
 --text-line-tight: 1.2;
 --text-line-normal: 1.5;
 --text-line-relaxed: 1.6;
-\`\`\`
+```
 
 ### Color Tokens
 
-\`\`\`css
+```css
 /* Text Colors */
 --color-text-primary: #000;
 --color-text-secondary: #666;
@@ -772,22 +772,22 @@ export default function ProposalPage() {
 --color-bg-primary: #fff;
 --color-neutral-100: #f5f5f5;
 --color-neutral-200: #e5e5e5;
-\`\`\`
+```
 
 ### Layout Tokens
 
-\`\`\`css
+```css
 --layout-content-max: 1432px;
 --spacing-page-x: 40px;
 --spacing-page-y: 40px;
-\`\`\`
+```
 
 ### Border Radius Tokens
 
-\`\`\`css
+```css
 --radius-s: 16px;
 --radius-card: 16px;
-\`\`\`
+```
 
 ---
 
@@ -795,7 +795,7 @@ export default function ProposalPage() {
 
 ### Pattern 1: Proposal Content with Sidebar
 
-\`\`\`tsx
+```tsx
 <div style={{ 
   display: "flex", 
   gap: "var(--spacing-xl)", 
@@ -809,22 +809,22 @@ export default function ProposalPage() {
     {/* Content sections */}
   </div>
 </div>
-\`\`\`
+```
 
 ### Pattern 2: Section with Title
 
-\`\`\`tsx
+```tsx
 <section id="technology" style={{ marginBottom: "var(--spacing-9xl)" }}>
   <TitleSection overheader="TECHNOLOGY" title="Our Tech Stack" />
   <div style={{ marginTop: "var(--gap-header-1)" }}>
     {/* Section content */}
   </div>
 </section>
-\`\`\`
+```
 
 ### Pattern 3: Grid of Cards
 
-\`\`\`tsx
+```tsx
 <div style={{ 
   display: "grid", 
   gridTemplateColumns: "repeat(3, 1fr)", 
@@ -834,7 +834,7 @@ export default function ProposalPage() {
     <Card key={index} {...item} />
   ))}
 </div>
-\`\`\`
+```
 
 ---
 

@@ -64,13 +64,13 @@ These sections **always** use TitleSection with overheader only:
 - ✅ **ISO Certification**
 - ✅ **Services**
 
-\`\`\`tsx
+```tsx
 // Correct - Overheader only
 <TitleSection overheader="FAQ" />
 
 // Incorrect - Don't add title
 <TitleSection overheader="FAQ" title="Common Questions" />
-\`\`\`
+```
 
 ### Sections with Overheader + Title
 
@@ -91,7 +91,7 @@ Other sections can use both when needed:
 
 Use `--spacing-9xl` (124px) between major sections:
 
-\`\`\`tsx
+```tsx
 <section style={{ marginBottom: "var(--spacing-9xl)" }}>
   <TitleSection overheader="SERVICES" />
   {/* Section content */}
@@ -101,18 +101,18 @@ Use `--spacing-9xl` (124px) between major sections:
   <TitleSection overheader="TEAM" />
   {/* Section content */}
 </section>
-\`\`\`
+```
 
 ### Content After TitleSection
 
 Use `--gap-header-1` (56px) for content immediately after TitleSection:
 
-\`\`\`tsx
+```tsx
 <TitleSection overheader="FAQ" />
 <div style={{ marginTop: "var(--gap-header-1)" }}>
   <FAQ items={faqItems} />
 </div>
-\`\`\`
+```
 
 This matches the internal gap between overheader and title in TitleSection.
 
@@ -120,11 +120,11 @@ This matches the internal gap between overheader and title in TitleSection.
 
 Sticky sidebar should have `--spacing-9xl` top padding:
 
-\`\`\`tsx
+```tsx
 <MenuSidebar style={{ paddingTop: "var(--spacing-9xl)" }}>
   {/* Menu items */}
 </MenuSidebar>
-\`\`\`
+```
 
 ---
 
@@ -134,7 +134,7 @@ Sticky sidebar should have `--spacing-9xl` top padding:
 
 Hero section with CTA button:
 
-\`\`\`tsx
+```tsx
 <HeaderBox
   overheader="A PROPOSAL FOR SANTANDER"
   header="Transforming Banking Operations Through Modern Technology"
@@ -147,25 +147,25 @@ Hero section with CTA button:
     });
   }}
 />
-\`\`\`
+```
 
 ### HighlightSection
 
 Hero image display:
 
-\`\`\`tsx
+```tsx
 <HighlightSection
   concepts={["DIGITAL", "TRANSFORMATION"]}
   imageSrc="/images/design-mode/HERO.png"
   imageAlt="Santander Banking Platform"
 />
-\`\`\`
+```
 
 ### MenuSidebar with Items
 
 Sticky navigation with auto-scroll detection:
 
-\`\`\`tsx
+```tsx
 <MenuSidebar autoDetectActive style={{ paddingTop: "var(--spacing-9xl)" }}>
   <MenuSidebarItem href="#context" number={1}>
     CONTEXT / OPPORTUNITY
@@ -177,13 +177,13 @@ Sticky navigation with auto-scroll detection:
     TECHNOLOGY & ARCHITECTURE
   </MenuSidebarItem>
 </MenuSidebar>
-\`\`\`
+```
 
 ### BodyText
 
 Text content with sections:
 
-\`\`\`tsx
+```tsx
 <BodyText
   sections={[
     {
@@ -195,13 +195,13 @@ Text content with sections:
     }
   ]}
 />
-\`\`\`
+```
 
 ### TechBox (Grid Layout)
 
 Technology categories in grid:
 
-\`\`\`tsx
+```tsx
 <div style={{ 
   display: "grid", 
   gridTemplateColumns: "repeat(3, 1fr)", 
@@ -216,13 +216,13 @@ Technology categories in grid:
     technologies={["Node.js", "Express", "PostgreSQL"]}
   />
 </div>
-\`\`\`
+```
 
 ### TimelineSection
 
 Project phases/roadmap:
 
-\`\`\`tsx
+```tsx
 <TimelineSection
   phases={[
     {
@@ -234,13 +234,13 @@ Project phases/roadmap:
     }
   ]}
 />
-\`\`\`
+```
 
 ### BudgetSection
 
 Pricing breakdown:
 
-\`\`\`tsx
+```tsx
 <BudgetSection
   items={[
     {
@@ -255,13 +255,13 @@ Pricing breakdown:
     "Includes 3 months post-launch support"
   ]}
 />
-\`\`\`
+```
 
 ### BoxSection (Services, ISO)
 
 Content with image:
 
-\`\`\`tsx
+```tsx
 <BoxSection
   overheader="SOFTWARE DEVELOPMENT"
   header="Custom Software Solutions"
@@ -279,13 +279,13 @@ Content with image:
   imageSrc="/images/design-mode/HERO.png"
   imageAlt="Monitoring"
 />
-\`\`\`
+```
 
 ### TeamCard + TeamMemberModal
 
 Team presentation:
 
-\`\`\`tsx
+```tsx
 <div style={{ display: "flex", gap: "var(--spacing-l)" }}>
   <TeamCard
     name="Giorgio G"
@@ -307,13 +307,13 @@ Team presentation:
   languages="ITALIAN (NATIVE), SPANISH (ADVANCED)"
   skills="React, Node.js, AWS, System Architecture"
 />
-\`\`\`
+```
 
 ### ProjectCard + ProjectModal
 
 Case studies:
 
-\`\`\`tsx
+```tsx
 <ProjectCard
   category="BANKING"
   title="Digital Banking Platform"
@@ -340,13 +340,13 @@ Case studies:
     { value: "99.9%", label: "UPTIME" }
   ]}
 />
-\`\`\`
+```
 
 ### StepsFlow (Next Steps)
 
 Horizontal step flow:
 
-\`\`\`tsx
+```tsx
 <StepsFlow
   direction="horizontal"
   steps={[
@@ -364,13 +364,13 @@ Horizontal step flow:
     }
   ]}
 />
-\`\`\`
+```
 
 ### FAQ
 
 Accordion for questions:
 
-\`\`\`tsx
+```tsx
 <FAQ
   items={[
     {
@@ -379,7 +379,7 @@ Accordion for questions:
     }
   ]}
 />
-\`\`\`
+```
 
 ---
 
@@ -387,7 +387,7 @@ Accordion for questions:
 
 ### Typography
 
-\`\`\`css
+```css
 /* Fonts */
 --font-default: 'PP Mori';
 --font-mono: 'PP Neue Montreal Mono';
@@ -397,11 +397,11 @@ Accordion for questions:
 --text-size-medium: 24px;
 --text-size-small: 16px;
 --text-size-xsmall: 14px;
-\`\`\`
+```
 
 ### Spacing
 
-\`\`\`css
+```css
 /* Section Gaps */
 --spacing-9xl: 124px;  /* Between sections */
 --gap-header-1: 56px;  /* Content after TitleSection */
@@ -412,32 +412,32 @@ Accordion for questions:
 --spacing-m: 24px;
 --spacing-s: 16px;
 --spacing-xs: 8px;
-\`\`\`
+```
 
 ### Layout
 
-\`\`\`css
+```css
 --layout-content-max: 1432px;  /* Max content width */
 --spacing-page-x: 40px;        /* Horizontal padding */
 --spacing-page-y: 40px;        /* Vertical padding */
-\`\`\`
+```
 
 ### Colors
 
-\`\`\`css
+```css
 --color-text-primary: #000;
 --color-text-secondary: #666;
 --color-bg-primary: #fff;
 --color-neutral-100: #f5f5f5;
 --color-neutral-200: #e5e5e5;
-\`\`\`
+```
 
 ### Border Radius
 
-\`\`\`css
+```css
 --radius-s: 16px;      /* Cards, boxes */
 --radius-card: 16px;   /* Alternative */
-\`\`\`
+```
 
 ---
 

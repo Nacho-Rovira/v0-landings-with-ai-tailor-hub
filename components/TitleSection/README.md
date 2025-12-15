@@ -4,7 +4,7 @@ A section component for displaying a title with optional overheader and paragrap
 
 ## Usage
 
-\`\`\`tsx
+```tsx
 import { TitleSection } from './components/TitleSection';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
     />
   );
 }
-\`\`\`
+```
 
 ## Props
 
@@ -45,28 +45,28 @@ The title section consists of:
 ## Examples
 
 ### Complete Title Section
-\`\`\`tsx
+```tsx
 <TitleSection 
   overheader="SERVICES"
   title="WE BUILD INTELLIGENT SYSTEMS"
   paragraph="Our team works with you to create custom AI solutions that drive real business value."
 />
-\`\`\`
+```
 
 ### Title with Paragraph Only
-\`\`\`tsx
+```tsx
 <TitleSection 
   title="SIMPLE TITLE"
   paragraph="Just a title and description, no overheader needed."
 />
-\`\`\`
+```
 
 ### Title Only
-\`\`\`tsx
+```tsx
 <TitleSection 
   title="STANDALONE TITLE"
 />
-\`\`\`
+```
 
 ## Design Tokens Used
 

@@ -4,7 +4,7 @@ A call-to-action section component with overheader, large header text, and a but
 
 ## Usage
 
-\`\`\`tsx
+```tsx
 import { HeaderBox } from './components/HeaderBox';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
     />
   );
 }
-\`\`\`
+```
 
 ## Props
 
@@ -46,32 +46,32 @@ The header box consists of:
 ## Examples
 
 ### Default Header Box
-\`\`\`tsx
+```tsx
 <HeaderBox 
   overheader="WORK WITH TAILOR"
   header="We are a Madrid-based global company. We believe giving our teams the autonomy to work wherever they want delivers the best outcomes."
   buttonLabel="SEND YOUR CV"
 />
-\`\`\`
+```
 
 ### Custom CTA
-\`\`\`tsx
+```tsx
 <HeaderBox 
   overheader="GET IN TOUCH"
   header="Ready to transform your business with cutting-edge AI and software solutions?"
   buttonLabel="CONTACT US"
   onButtonClick={() => navigate('/contact')}
 />
-\`\`\`
+```
 
 ### Join Team CTA
-\`\`\`tsx
+```tsx
 <HeaderBox 
   overheader="JOIN OUR TEAM"
   header="We are always looking for talented engineers, designers, and data scientists."
   buttonLabel="VIEW OPPORTUNITIES"
 />
-\`\`\`
+```
 
 ## Design Tokens Used
 

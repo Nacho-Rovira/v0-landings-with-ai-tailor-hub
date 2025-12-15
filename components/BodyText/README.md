@@ -4,7 +4,7 @@ A content component for displaying structured body text with titles, paragraphs,
 
 ## Usage
 
-\`\`\`tsx
+```tsx
 import { BodyText } from './components/BodyText';
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
     />
   );
 }
-\`\`\`
+```
 
 ## Props
 
@@ -36,7 +36,7 @@ function App() {
 
 ### BodyTextSection Type
 
-\`\`\`tsx
+```tsx
 interface BodyTextSection {
   title: string           // Section title
   paragraphs: string[]    // Array of paragraph texts
@@ -45,7 +45,7 @@ interface BodyTextSection {
     author: string
   }
 }
-\`\`\`
+```
 
 ## Structure
 
@@ -70,7 +70,7 @@ Each section consists of:
 ## Examples
 
 ### Single Section
-\`\`\`tsx
+```tsx
 <BodyText 
   sections={[
     {
@@ -82,10 +82,10 @@ Each section consists of:
     }
   ]}
 />
-\`\`\`
+```
 
 ### Section with Quote
-\`\`\`tsx
+```tsx
 <BodyText 
   sections={[
     {
@@ -101,10 +101,10 @@ Each section consists of:
     }
   ]}
 />
-\`\`\`
+```
 
 ### Multiple Sections
-\`\`\`tsx
+```tsx
 <BodyText 
   sections={[
     {
@@ -121,7 +121,7 @@ Each section consists of:
     }
   ]}
 />
-\`\`\`
+```
 
 ## Design Tokens Used
 

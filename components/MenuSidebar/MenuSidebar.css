@@ -25,7 +25,8 @@
 /* Menu Item */
 .menu-sidebar__item {
   display: flex;
-  align-items: center;
+  /* Changed from center to flex-start so number aligns with first line of text */
+  align-items: flex-start;
   gap: var(--spacing-xs);
   /* Typography */
   font-family: var(--font-tech);

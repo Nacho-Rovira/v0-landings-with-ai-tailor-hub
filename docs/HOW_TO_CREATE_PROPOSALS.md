@@ -54,7 +54,7 @@ Specify which sections you need:
 
 ### Example 1: Full Development Proposal
 
-\`\`\`
+```
 Create a new proposal for Zara (fashion retail e-commerce).
 
 Project: Omnichannel e-commerce platform with inventory management 
@@ -72,11 +72,11 @@ Include:
 - Partners section
 - ISO certification
 - FAQ with 5-6 questions
-\`\`\`
+```
 
 ### Example 2: Introduction Proposal (No Budget)
 
-\`\`\`
+```
 Create an introduction proposal for BBVA Bank.
 
 Focus: Internal tools and employee platforms for their operations team.
@@ -95,11 +95,11 @@ Include:
 - FAQ
 
 Emphasize: ISO 27001 certification, security, and banking expertise.
-\`\`\`
+```
 
 ### Example 3: Hospitality Industry
 
-\`\`\`
+```
 Create a proposal for Marriott Hotels.
 
 Project: Guest experience platform with mobile check-in, 
@@ -120,11 +120,11 @@ Include:
 - Partners
 - ISO
 - FAQ
-\`\`\`
+```
 
 ### Example 4: AI/ML Project
 
-\`\`\`
+```
 Create a proposal for Carrefour (retail).
 
 Project: AI-powered inventory optimization and demand forecasting 
@@ -143,7 +143,7 @@ Include:
 - FAQ
 
 Emphasize: AI SDK, machine learning expertise, and data security.
-\`\`\`
+```
 
 ---
 
@@ -230,38 +230,38 @@ Other sections can have both overheader and title based on content needs.
 After the initial proposal is generated, you can refine it with follow-up prompts:
 
 ### Content Changes
-\`\`\`
+```
 "Add a sustainability section after Technology"
 "Update the challenge section to emphasize data privacy concerns"
 "Add 2 more team members (1 QA engineer, 1 UX designer)"
-\`\`\`
+```
 
 ### Structure Changes
-\`\`\`
+```
 "Change the roadmap from 5 phases to 4 phases"
 "Split the Technology section to show Frontend and Backend separately"
 "Move the Partners section before the Team section"
-\`\`\`
+```
 
 ### Budget Adjustments
-\`\`\`
+```
 "Increase the total budget to €400,000"
 "Add a monthly support budget of €15,000"
 "Break down the budget by functional area instead of by phase"
-\`\`\`
+```
 
 ### Case Studies
-\`\`\`
+```
 "Replace one case study with a banking project example"
 "Add a case study about a scalability challenge we solved"
-\`\`\`
+```
 
 ### Spacing/Design Tweaks
-\`\`\`
+```
 "Increase the gap between sections"
 "Make the hero image taller"
 "Use compact BoxSection variant for services"
-\`\`\`
+```
 
 ---
 
@@ -277,11 +277,11 @@ After the initial proposal is generated, you can refine it with follow-up prompt
 - Regulatory reporting
 
 **Example prompt:**
-\`\`\`
+```
 Create a proposal for [Bank Name]. Focus on security, 
 compliance, and scalability. Include ISO certification 
 section prominently. Team should have fintech experience.
-\`\`\`
+```
 
 ### Scenario 2: E-commerce/Retail
 **Key points to emphasize:**
@@ -293,11 +293,11 @@ section prominently. Team should have fintech experience.
 - Analytics and reporting
 
 **Example prompt:**
-\`\`\`
+```
 Create a proposal for [Retail Brand]. Emphasize 
 mobile-first design, payment integrations (Stripe), 
 and scalability for Black Friday traffic spikes.
-\`\`\`
+```
 
 ### Scenario 3: Hospitality/Travel
 **Key points to emphasize:**
@@ -309,11 +309,11 @@ and scalability for Black Friday traffic spikes.
 - Real-time inventory
 
 **Example prompt:**
-\`\`\`
+```
 Create a proposal for [Hotel Chain]. Focus on guest 
 experience platforms, PMS integration, and mobile apps 
 for contactless check-in/checkout.
-\`\`\`
+```
 
 ### Scenario 4: Healthcare/MedTech
 **Key points to emphasize:**
@@ -325,11 +325,11 @@ for contactless check-in/checkout.
 - ISO 27001 certification
 
 **Example prompt:**
-\`\`\`
+```
 Create a proposal for [Healthcare Provider]. Emphasize 
 HIPAA compliance, patient data security, and EHR integration. 
 Team should mention healthcare experience.
-\`\`\`
+```
 
 ---
 

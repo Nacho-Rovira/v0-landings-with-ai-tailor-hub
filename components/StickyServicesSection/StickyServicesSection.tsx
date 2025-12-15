@@ -12,8 +12,6 @@ export interface StickyServicesSectionProps {
   gap?: number
   /** Starting top position for sticky items - defaults to 124px (--spacing-9xl) */
   stickyTopStart?: number
-  /** Offset between stacked items - defaults to 40px (--spacing-xxl) */
-  stickyOffset?: number
 }
 
 export const StickyServicesSection: React.FC<StickyServicesSectionProps> = ({
@@ -21,7 +19,6 @@ export const StickyServicesSection: React.FC<StickyServicesSectionProps> = ({
   className = "",
   gap = 120,
   stickyTopStart = 124, // --spacing-9xl
-  stickyOffset = 40, // --spacing-xxl
 }) => {
   const childArray = React.Children.toArray(children)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -41,7 +38,7 @@ export const StickyServicesSection: React.FC<StickyServicesSectionProps> = ({
         const currentRect = itemRef.getBoundingClientRect()
         const nextRect = nextItemRef.getBoundingClientRect()
 
-        const stickyTop = stickyTopStart + index * stickyOffset
+        const stickyTop = stickyTopStart
 
         // Start fading when next card touches the bottom of current card's visible area
         const overlapStart = stickyTop + currentRect.height
@@ -66,7 +63,7 @@ export const StickyServicesSection: React.FC<StickyServicesSectionProps> = ({
     handleScroll() // Initial calculation
 
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [childArray.length, stickyTopStart, stickyOffset])
+  }, [childArray.length, stickyTopStart])
 
   return (
     <div
@@ -82,7 +79,7 @@ export const StickyServicesSection: React.FC<StickyServicesSectionProps> = ({
           }}
           className="sticky-services__item"
           style={{
-            top: `${stickyTopStart + index * stickyOffset}px`,
+            top: `${stickyTopStart}px`,
             zIndex: index + 1,
           }}
         >

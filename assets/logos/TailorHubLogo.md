@@ -4,7 +4,7 @@ The official Tailor Hub logo component for use across the design system.
 
 ## Usage
 
-\`\`\`tsx
+```tsx
 import { TailorHubLogo } from '@/assets/logos';
 
 // Default usage (large size - 201px)
@@ -30,7 +30,7 @@ import { TailorHubLogo } from '@/assets/logos';
   className="hover:opacity-80 transition-opacity"
   aria-label="Tailor Hub"
 />
-\`\`\`
+```
 
 ## Props
 
@@ -60,36 +60,36 @@ The logo sizes are defined in the design system tokens:
 
 Always include an `aria-label` when the logo is used as a standalone element:
 
-\`\`\`tsx
+```tsx
 <TailorHubLogo aria-label="Tailor Hub" />
-\`\`\`
+```
 
 ## Examples
 
 ### Navigation Header
-\`\`\`tsx
+```tsx
 <header className="flex items-center gap-4">
   <TailorHubLogo size="small" />
   <span className="text-xl font-semibold">Tailor Hub</span>
 </header>
-\`\`\`
+```
 
 ### Footer
-\`\`\`tsx
+```tsx
 <footer className="text-gray-600">
   <TailorHubLogo size="small" />
 </footer>
-\`\`\`
+```
 
 ### Hero Section
-\`\`\`tsx
+```tsx
 <div className="text-center">
   <TailorHubLogo size="large" />
 </div>
-\`\`\`
+```
 
 ### Dark Mode
-\`\`\`tsx
+```tsx
 <div className="dark:text-white">
   <TailorHubLogo size="large" />
 </div>

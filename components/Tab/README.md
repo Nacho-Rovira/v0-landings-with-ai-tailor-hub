@@ -4,7 +4,7 @@ A tab component for navigation and content organization. Features three states (
 
 ## Usage
 
-\`\`\`tsx
+```tsx
 import { Tab } from './components/Tab';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
     </div>
   );
 }
-\`\`\`
+```
 
 ## Props
 
@@ -46,26 +46,26 @@ function App() {
 ## Examples
 
 ### Basic Usage
-\`\`\`tsx
+```tsx
 <Tab label="OVERVIEW" />
 <Tab label="DETAILS" state="selected" />
 <Tab label="SETTINGS" />
-\`\`\`
+```
 
 ### With Click Handler
-\`\`\`tsx
+```tsx
 <Tab 
   label="CLICK ME" 
   onClick={() => console.log('Tab clicked!')} 
 />
-\`\`\`
+```
 
 ### Different States
-\`\`\`tsx
+```tsx
 <Tab label="DEFAULT" state="default" />
 <Tab label="HOVER" state="hover" />
 <Tab label="SELECTED" state="selected" />
-\`\`\`
+```
 
 ## Design Tokens Used
 

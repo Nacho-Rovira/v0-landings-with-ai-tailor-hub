@@ -4,7 +4,7 @@ A section component that displays two overheaders with content arranged in a 3-c
 
 ## Usage
 
-\`\`\`tsx
+```tsx
 import { Highlight2Section } from '@/components/Highlight2Section'
 
 export default function Page() {
@@ -23,7 +23,7 @@ export default function Page() {
     />
   )
 }
-\`\`\`
+```
 
 ## Props
 
@@ -66,12 +66,12 @@ This component uses the following semantic tokens:
 ## Examples
 
 ### Default Partners Layout
-\`\`\`tsx
+```tsx
 <Highlight2Section />
-\`\`\`
+```
 
 ### Custom Technology Stack
-\`\`\`tsx
+```tsx
 <Highlight2Section
   overheaderLeft="FRONTEND"
   overheaderRight="BACKEND"
@@ -84,10 +84,10 @@ This component uses the following semantic tokens:
     'POSTGRESQL'
   ]}
 />
-\`\`\`
+```
 
 ### With Empty Cells
-\`\`\`tsx
+```tsx
 <Highlight2Section
   overheaderLeft="CATEGORY A"
   overheaderRight="CATEGORY B"
@@ -100,7 +100,7 @@ This component uses the following semantic tokens:
     '' // Empty cell
   ]}
 />
-\`\`\`
+```
 
 ## Accessibility
 

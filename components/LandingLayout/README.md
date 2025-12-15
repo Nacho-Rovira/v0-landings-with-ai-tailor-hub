@@ -12,7 +12,7 @@ A reusable layout component that provides consistent structure for all Tailor Hu
 
 ## Usage
 
-\`\`\`tsx
+```tsx
 import { LandingLayout } from "@/components/LandingLayout"
 
 export default function MyLandingPage() {
@@ -25,7 +25,7 @@ export default function MyLandingPage() {
     </LandingLayout>
   )
 }
-\`\`\`
+```
 
 ## Structure
 

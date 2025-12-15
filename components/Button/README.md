@@ -4,7 +4,7 @@ A button component built using the Tailor Hub design system tokens.
 
 ## Usage
 
-\`\`\`tsx
+```tsx
 import { Button } from './components/Button';
 
 function MyComponent() {
@@ -14,7 +14,7 @@ function MyComponent() {
     </Button>
   );
 }
-\`\`\`
+```
 
 ## Props
 
@@ -70,20 +70,20 @@ The button uses the following design tokens from the system:
 ## Examples
 
 ### Primary Button
-\`\`\`tsx
+```tsx
 <Button variant="primary">BUTTON</Button>
-\`\`\`
+```
 
 ### Disabled Button
-\`\`\`tsx
+```tsx
 <Button variant="primary" disabled>
   BUTTON
 </Button>
-\`\`\`
+```
 
 ### Interactive Button
-\`\`\`tsx
+```tsx
 <Button variant="primary" onClick={() => console.log('clicked')}>
   CLICK ME
 </Button>
-\`\`\`
+```

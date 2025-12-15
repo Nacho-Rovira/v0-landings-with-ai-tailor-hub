@@ -4,7 +4,7 @@ A menu item component for navigation with support for default, hover, and select
 
 ## Usage
 
-\`\`\`tsx
+```tsx
 import { MenuItem } from './components/MenuItem';
 
 function Navigation() {
@@ -16,7 +16,7 @@ function Navigation() {
     </div>
   );
 }
-\`\`\`
+```
 
 ## Props
 
@@ -61,17 +61,17 @@ The menu item uses the following design tokens from the system:
 ## Examples
 
 ### Default Menu Item
-\`\`\`tsx
+```tsx
 <MenuItem href="#services">SERVICES</MenuItem>
-\`\`\`
+```
 
 ### Selected Menu Item
-\`\`\`tsx
+```tsx
 <MenuItem href="#about" isSelected>ABOUT</MenuItem>
-\`\`\`
+```
 
 ### With Click Handler
-\`\`\`tsx
+```tsx
 <MenuItem 
   href="#contact" 
   onClick={(e) => {
@@ -81,7 +81,7 @@ The menu item uses the following design tokens from the system:
 >
   CONTACT
 </MenuItem>
-\`\`\`
+```
 
 ## Accessibility
 

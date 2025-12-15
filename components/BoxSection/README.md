@@ -4,7 +4,7 @@ A content section component with image, overheader, header, body text, secondary
 
 ## Usage
 
-\`\`\`tsx
+```tsx
 import { BoxSection } from './components/BoxSection';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
     />
   );
 }
-\`\`\`
+```
 
 ## Props
 
@@ -57,7 +57,7 @@ The box section consists of:
 ## Examples
 
 ### Default Box Section
-\`\`\`tsx
+```tsx
 <BoxSection 
   overheader="S/ 01"
   header="DATA INTELLIGENCE"
@@ -66,10 +66,10 @@ The box section consists of:
   buttonLabel="LEARN MORE"
   imageSrc="https://example.com/image.jpg"
 />
-\`\`\`
+```
 
 ### Mobile Variant
-\`\`\`tsx
+```tsx
 <BoxSection 
   variant="mobile"
   overheader="S/ 02"
@@ -79,10 +79,10 @@ The box section consists of:
   buttonLabel="GET STARTED"
   imageSrc="https://example.com/image.jpg"
 />
-\`\`\`
+```
 
 ### With Button Handler
-\`\`\`tsx
+```tsx
 <BoxSection 
   overheader="S/ 03"
   header="CONSULTING"
@@ -92,7 +92,7 @@ The box section consists of:
   imageSrc="https://example.com/image.jpg"
   onButtonClick={() => window.location.href = '/contact'}
 />
-\`\`\`
+```
 
 ## Design Tokens Used
 

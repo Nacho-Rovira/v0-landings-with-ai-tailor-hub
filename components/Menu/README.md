@@ -4,7 +4,7 @@ A responsive navigation menu component with support for starter (transparent) an
 
 ## Usage
 
-\`\`\`tsx
+```tsx
 import { Menu } from './components/Menu';
 import { MenuItem } from './components/MenuItem';
 
@@ -18,7 +18,7 @@ function Navigation() {
     </Menu>
   );
 }
-\`\`\`
+```
 
 ## Props
 
@@ -62,27 +62,27 @@ The menu uses the following design tokens from the system:
 ## Examples
 
 ### Basic Menu with Starter Variant
-\`\`\`tsx
+```tsx
 <Menu variant="starter">
   <MenuItem href="#services">SERVICES</MenuItem>
   <MenuItem href="#projects">PROJECTS</MenuItem>
   <MenuItem href="#about">ABOUT</MenuItem>
   <MenuItem href="#contact">CONTACT</MenuItem>
 </Menu>
-\`\`\`
+```
 
 ### Menu with Scrolling Variant
-\`\`\`tsx
+```tsx
 <Menu variant="scrolling">
   <MenuItem href="#services">SERVICES</MenuItem>
   <MenuItem href="#projects">PROJECTS</MenuItem>
   <MenuItem href="#about">ABOUT</MenuItem>
   <MenuItem href="#contact">CONTACT</MenuItem>
 </Menu>
-\`\`\`
+```
 
 ### Interactive Menu with Scroll Detection
-\`\`\`tsx
+```tsx
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -104,7 +104,7 @@ function Header() {
     </Menu>
   );
 }
-\`\`\`
+```
 
 ## Responsive Behavior
 
