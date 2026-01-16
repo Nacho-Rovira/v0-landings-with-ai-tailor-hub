@@ -63,26 +63,22 @@
     gap: var(--spacing-xl, 32px);
   }
 
-  /* Concepts displayed as 3 equal columns in a row */
+  /* Concepts displayed as CSS Grid with 3 equal columns for stable layout */
   .home-header-description {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-l, 24px);
     padding-left: 0;
     width: 100%;
   }
 
-  /* Each concept takes equal space, text wraps within */
+  /* Each concept column with normal word wrapping (no character breaking) */
   .home-header-description span {
-    flex: 1 1 0;
-    min-width: 0;
     text-align: left;
     white-space: normal;
-    word-break: break-word;
-    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: none;
   }
 
   .highlight-section__header {
