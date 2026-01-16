@@ -58,25 +58,28 @@
 
 @media (max-width: 768px) {
   .highlight-section {
-    /* Mobile: add container padding */
+    /* Mobile: add container padding, prevent overflow */
     max-width: 100%;
     padding: 0 var(--spacing-m, 16px);
+    overflow: hidden;
   }
 
-  /* Keep concepts horizontal on mobile, never wrap to vertical */
+  /* Concepts horizontal, allow shrinking, centered distribution */
   .home-header-description {
-    justify-content: flex-end;
+    justify-content: space-between;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: var(--spacing-l, 24px);
+    gap: var(--spacing-m, 16px);
     padding-left: 0;
+    width: 100%;
   }
 
   .home-header-description span {
-    /* Mobile: auto width, prevent text breaking */
+    /* Allow shrinking to fit screen */
     width: auto;
     white-space: nowrap;
-    flex-shrink: 0;
+    flex-shrink: 1;
+    min-width: 0;
   }
 
   .highlight-section__header {
@@ -87,10 +90,10 @@
 }
 
 @media (max-width: 480px) {
-  /* Smaller gap and font for very small screens, still horizontal */
+  /* Smaller gap and font for very small screens */
   .home-header-description {
-    gap: var(--spacing-m, 16px);
-    font-size: 12px;
+    gap: var(--spacing-s, 12px);
+    font-size: 10px;
   }
 
   .highlight-section__header {

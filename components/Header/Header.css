@@ -181,6 +181,8 @@
     padding-top: var(--spacing-l, 24px);
     padding-left: var(--spacing-l, 24px);
     padding-right: var(--spacing-l, 24px);
+    /* Prevent horizontal overflow */
+    overflow: hidden;
   }
 
   .header__menu {
@@ -191,12 +193,13 @@
   }
 
   .header__content {
-    /* Allow wrapping so logo can be on line 1 and concepts on line 2 */
+    /* Logo and concepts in one row, space-between for auto gap, centered */
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--spacing-l, 24px);
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-m, 16px);
+    width: 100%;
   }
 
   .header__logo {
@@ -216,21 +219,34 @@
   }
 
   .header__info {
-    /* Keep concepts horizontal, allow wrapping to next line below logo */
+    /* Concepts stay horizontal, allow shrinking to fit */
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: var(--spacing-l, 24px);
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex: 1;
+    gap: var(--spacing-m, 16px);
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 1 auto;
     max-width: none;
     min-width: 0;
   }
 
   .header__info-item {
-    /* Prevent text from breaking into multiple lines */
+    /* Allow shrinking and text scaling to fit container */
     width: auto;
     white-space: nowrap;
-    flex-shrink: 0;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+}
+
+/* Added smaller screen breakpoint for tighter spacing */
+@media (max-width: 480px) {
+  .header__content {
+    gap: var(--spacing-s, 12px);
+  }
+
+  .header__info {
+    gap: var(--spacing-s, 12px);
+    font-size: 10px;
   }
 }
