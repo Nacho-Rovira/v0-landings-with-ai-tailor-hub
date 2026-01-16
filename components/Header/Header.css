@@ -175,10 +175,10 @@
   }
 }
 
+/* Updated mobile breakpoint: logo small and aligned right instead of centered and large */
 @media (max-width: 768px) {
   .header {
-    padding-top: var(--spacing-8xl, 80px);
-    /* Reduced padding to 24px on mobile for better space usage */
+    padding-top: var(--spacing-l, 24px);
     padding-left: var(--spacing-l, 24px);
     padding-right: var(--spacing-l, 24px);
   }
@@ -191,9 +191,24 @@
   }
 
   .header__content {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
-    gap: var(--spacing-xl, 32px);
+    justify-content: flex-end;
+    gap: var(--spacing-l, 24px);
+  }
+
+  .header__logo {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+
+  /* Force small logo size on mobile */
+  .header__logo svg,
+  .header__logo img {
+    width: var(--logo-size-small, 49px) !important;
+    height: var(--logo-size-small, 49px) !important;
   }
 
   .header__info {
@@ -201,23 +216,9 @@
     gap: var(--spacing-l, 24px);
     align-items: flex-start;
     justify-content: flex-start;
-    /* Removed padding-right */
   }
 
   .header__info-item {
     width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .header {
-    padding-top: var(--spacing-6xl, 64px);
-  }
-
-  .header__logo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: var(--spacing-l, 24px);
   }
 }
