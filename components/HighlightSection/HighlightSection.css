@@ -22,17 +22,16 @@
 /* Added responsive left padding: 361px default, 308px for medium screens, 0px for mobile */
 .home-header-description {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   padding-left: 361px;
 }
 
-/* Removed fixed width to allow flexible spacing */
+/* Fixed: each span is a flex item with equal distribution */
 .home-header-description span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  text-align: left;
 }
 
 .highlight-section__header {
@@ -56,51 +55,44 @@
   }
 }
 
+/* Simplified mobile styles - horizontal row with equal columns */
 @media (max-width: 768px) {
   .highlight-section {
-    /* Mobile: add container padding, prevent overflow */
     max-width: 100%;
     padding: 0 var(--spacing-m, 16px);
     overflow: hidden;
   }
 
-  /* Concepts in horizontal row with equal widths, allow text wrapping */
+  /* Concepts: horizontal row, equal-width columns */
   .home-header-description {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-l, 24px);
     padding-left: 0;
     width: 100%;
   }
 
-  /* Each concept takes equal width, text wraps within column */
+  /* Text wraps naturally within each column */
   .home-header-description span {
-    flex: 1 1 0;
-    min-width: 0;
-    white-space: normal;
-    word-wrap: break-word;
+    display: block;
     text-align: left;
-    justify-content: flex-start;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .highlight-section__header {
-    /* Mobile: smaller header */
     font-size: 40px;
     line-height: 48px;
   }
 }
 
 @media (max-width: 480px) {
-  /* Smaller gap and font for very small screens */
   .home-header-description {
     gap: var(--spacing-m, 16px);
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .highlight-section__header {
-    /* Very small screens: even smaller header */
     font-size: 28px;
     line-height: 29px;
   }
