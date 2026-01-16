@@ -80,17 +80,15 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 <span>PROUDLY </span>
                 <span>PART </span>
                 <span>OF </span>
-                <span>MODULOS </span>
-                <span>STUDIO </span>
+                <span>MODULOR </span>
+                <span>STUDIOS </span>
                 <span>GROUP</span>
               </div>
             </div>
 
             <div className="footer__contact footer__contact--mobile">
-              <div className="footer__contact-line footer__contact-line--mobile">
-                <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
-                <a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
-              </div>
+              <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+              <a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
               <a
                 href="https://www.google.com/maps?q=Calle%20Hermanos%20%C3%81lvarez%20Quintero%2C%202%2C%20Semis%C3%B3tano%20A%2C%2028004%20Madrid"
                 target="_blank"
@@ -156,17 +154,15 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
               <span>PROUDLY </span>
               <span>PART </span>
               <span>OF </span>
-              <span>MODULOS </span>
-              <span>STUDIO </span>
+              <span>MODULOR </span>
+              <span>STUDIOS </span>
               <span>GROUP</span>
             </div>
           </div>
 
           <div className="footer__contact">
-            <div className="footer__contact-line">
-              <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
-              <a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
-            </div>
+            <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+            <a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
             <a
               href="https://www.google.com/maps?q=Calle%20Hermanos%20%C3%81lvarez%20Quintero%2C%202%2C%20Semis%C3%B3tano%20A%2C%2028004%20Madrid"
               target="_blank"
