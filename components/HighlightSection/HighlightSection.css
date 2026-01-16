@@ -64,22 +64,25 @@
     overflow: hidden;
   }
 
-  /* Concepts horizontal, allow shrinking, centered distribution */
+  /* Concepts in horizontal row with equal widths, allow text wrapping */
   .home-header-description {
-    justify-content: space-between;
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: var(--spacing-m, 16px);
+    justify-content: flex-start;
+    gap: var(--spacing-l, 24px);
     padding-left: 0;
     width: 100%;
   }
 
+  /* Each concept takes equal width, text wraps within column */
   .home-header-description span {
-    /* Allow shrinking to fit screen */
-    width: auto;
-    white-space: nowrap;
-    flex-shrink: 1;
+    flex: 1 1 0;
     min-width: 0;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: left;
+    justify-content: flex-start;
   }
 
   .highlight-section__header {
@@ -92,7 +95,7 @@
 @media (max-width: 480px) {
   /* Smaller gap and font for very small screens */
   .home-header-description {
-    gap: var(--spacing-s, 12px);
+    gap: var(--spacing-m, 16px);
     font-size: 10px;
   }
 

@@ -181,7 +181,6 @@
     padding-top: var(--spacing-l, 24px);
     padding-left: var(--spacing-l, 24px);
     padding-right: var(--spacing-l, 24px);
-    /* Prevent horizontal overflow */
     overflow: hidden;
   }
 
@@ -192,18 +191,15 @@
     justify-content: center;
   }
 
+  /* Logo on first line, concepts on second line below */
   .header__content {
-    /* Logo and concepts in one row, space-between for auto gap, centered */
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--spacing-m, 16px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-l, 24px);
     width: 100%;
   }
 
   .header__logo {
-    /* Logo stays on the left */
     width: auto;
     display: flex;
     justify-content: flex-start;
@@ -218,35 +214,35 @@
     height: var(--logo-size-small, 49px) !important;
   }
 
+  /* Concepts in horizontal row with equal widths, text wraps within columns */
   .header__info {
-    /* Concepts stay horizontal, allow shrinking to fit */
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: var(--spacing-m, 16px);
-    align-items: center;
-    justify-content: flex-end;
-    flex: 0 1 auto;
+    gap: var(--spacing-l, 24px);
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
     max-width: none;
-    min-width: 0;
   }
 
+  /* Each concept takes equal width (1/3), text wraps naturally */
   .header__info-item {
-    /* Allow shrinking and text scaling to fit container */
-    width: auto;
-    white-space: nowrap;
-    flex-shrink: 1;
+    flex: 1 1 0;
     min-width: 0;
+    white-space: normal;
+    word-wrap: break-word;
   }
 }
 
 /* Added smaller screen breakpoint for tighter spacing */
 @media (max-width: 480px) {
   .header__content {
-    gap: var(--spacing-s, 12px);
+    gap: var(--spacing-m, 16px);
   }
 
   .header__info {
-    gap: var(--spacing-s, 12px);
+    gap: var(--spacing-m, 16px);
     font-size: 10px;
   }
 }
