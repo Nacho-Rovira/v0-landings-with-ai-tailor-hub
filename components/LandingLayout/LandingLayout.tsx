@@ -7,8 +7,18 @@ import "./LandingLayout.css"
 
 interface LandingLayoutProps {
   children: ReactNode
-  /** Concept items to display in header on mobile */
+  /** Concept items to display below fixed header on mobile (scrolls with content) */
   concepts?: string[]
+}
+
+const renderConcept = (concept: string) => {
+  const parts = concept.split("<span>")
+  return parts.map((part, i) => (
+    <span key={i}>
+      {part}
+      {i < parts.length - 1 && <br />}
+    </span>
+  ))
 }
 
 export function LandingLayout({ children, concepts }: LandingLayoutProps) {
@@ -43,9 +53,7 @@ export function LandingLayout({ children, concepts }: LandingLayoutProps) {
 
   const getPaddingTop = () => {
     if (headerVariant === "mobile") {
-      // Mobile header height: logo bar (~97px) + concepts row (~60px) + extra spacing
-      const hasConceptsOnMobile = concepts && concepts.length > 0
-      return hasConceptsOnMobile ? "180px" : "120px"
+      return "120px"
     }
     if (headerVariant === "starter") {
       return "201px"
@@ -57,7 +65,7 @@ export function LandingLayout({ children, concepts }: LandingLayoutProps) {
     <div className="landing-layout">
       {/* Fixed Header */}
       <div className="landing-layout__header">
-        <Header variant={headerVariant} concepts={concepts} />
+        <Header variant={headerVariant} />
       </div>
 
       {/* Main Content Container */}
@@ -67,6 +75,15 @@ export function LandingLayout({ children, concepts }: LandingLayoutProps) {
           paddingTop: getPaddingTop(),
         }}
       >
+        {isMobile && concepts && concepts.length > 0 && (
+          <div className="landing-layout__mobile-concepts">
+            {concepts.map((concept, index) => (
+              <span key={index} className="landing-layout__concept-item">
+                {renderConcept(concept)}
+              </span>
+            ))}
+          </div>
+        )}
         <div className="landing-layout__container">{children}</div>
       </main>
 

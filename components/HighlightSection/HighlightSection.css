@@ -65,7 +65,7 @@
 
   /* Hide concepts in HighlightSection on mobile - they're in Header */
   .home-header-description {
-    display: none;
+    display: none !important;
   }
 
   .highlight-section__header {

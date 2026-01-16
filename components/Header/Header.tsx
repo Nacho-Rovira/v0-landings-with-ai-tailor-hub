@@ -15,8 +15,6 @@ export interface HeaderProps extends React.HTMLAttributes<HTMLElement> {
     href: string
     isSelected?: boolean
   }>
-  /** Concept items to display alongside logo on mobile */
-  concepts?: string[]
 }
 
 const defaultMenuItems = [
@@ -27,7 +25,7 @@ const defaultMenuItems = [
 ]
 
 export const Header = React.forwardRef<HTMLElement, HeaderProps>(
-  ({ variant = "starter", menuItems = defaultMenuItems, concepts, className = "", ...props }, ref) => {
+  ({ variant = "starter", menuItems = defaultMenuItems, className = "", ...props }, ref) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
     const isScrolling = variant === "scrolling"
     const isMobile = variant === "mobile"
@@ -42,20 +40,10 @@ export const Header = React.forwardRef<HTMLElement, HeaderProps>(
       }
     }
 
-    const renderConcept = (concept: string) => {
-      const parts = concept.split("<span>")
-      return parts.map((part, i) => (
-        <React.Fragment key={i}>
-          {part}
-          {i < parts.length - 1 && <br />}
-        </React.Fragment>
-      ))
-    }
-
     if (isMobile) {
       return (
         <header ref={ref} className={`header header--mobile ${className}`} {...props}>
-          {/* Mobile header bar */}
+          {/* Mobile header bar - only logo and menu toggle */}
           <div className="header__mobile-bar">
             <div className="header__mobile-logo">
               <TailorHubLogo size="small" aria-label="Tailor Hub" />
@@ -68,16 +56,6 @@ export const Header = React.forwardRef<HTMLElement, HeaderProps>(
               {isMobileMenuOpen ? "CLOSE" : "MENU"}
             </button>
           </div>
-
-          {concepts && concepts.length > 0 && (
-            <div className="header__concepts">
-              {concepts.map((concept, index) => (
-                <span key={index} className="header__concept-item">
-                  {renderConcept(concept)}
-                </span>
-              ))}
-            </div>
-          )}
 
           {/* Mobile menu overlay */}
           {isMobileMenuOpen && (

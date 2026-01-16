@@ -33,10 +33,41 @@
   padding-right: var(--spacing-xxl, 40px);
 }
 
+/* Mobile concepts row - scrolls with content, not fixed */
+.landing-layout__mobile-concepts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: var(--spacing-l, 24px);
+  padding: 0 var(--spacing-l, 24px) var(--spacing-xl, 32px);
+  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: normal;
+  color: var(--color-text-primary, #362c2c);
+  text-transform: uppercase;
+  max-width: var(--width-header-max, 1432px);
+  margin: 0 auto;
+}
+
+/* Each concept takes equal width, text wraps within */
+.landing-layout__concept-item {
+  flex: 1 1 0;
+  min-width: 0;
+  text-align: left;
+}
+
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .landing-layout__container {
     padding-left: var(--spacing-l, 24px);
     padding-right: var(--spacing-l, 24px);
+  }
+}
+
+/* Smaller screens: tighter spacing for concepts */
+@media (max-width: 480px) {
+  .landing-layout__mobile-concepts {
+    gap: var(--spacing-m, 16px);
+    font-size: 11px;
   }
 }
