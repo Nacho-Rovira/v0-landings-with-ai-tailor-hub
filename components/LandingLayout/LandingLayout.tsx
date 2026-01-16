@@ -7,24 +7,45 @@ import "./LandingLayout.css"
 
 interface LandingLayoutProps {
   children: ReactNode
+  /** Concept items to display in header on mobile */
+  concepts?: string[]
 }
 
-export function LandingLayout({ children }: LandingLayoutProps) {
-  const [headerVariant, setHeaderVariant] = useState<"starter" | "scrolling">("starter")
+export function LandingLayout({ children, concepts }: LandingLayoutProps) {
+  const [headerVariant, setHeaderVariant] = useState<"starter" | "scrolling" | "mobile">("starter")
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setHeaderVariant(window.scrollY > 100 ? "scrolling" : "starter")
+    const checkMobile = () => {
+      const mobile = window.innerWidth <= 768
+      setIsMobile(mobile)
+      if (mobile) {
+        setHeaderVariant("mobile")
+      } else {
+        setHeaderVariant(window.scrollY > 100 ? "scrolling" : "starter")
+      }
     }
+
+    const handleScroll = () => {
+      if (!isMobile) {
+        setHeaderVariant(window.scrollY > 100 ? "scrolling" : "starter")
+      }
+    }
+
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
     window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    return () => {
+      window.removeEventListener("resize", checkMobile)
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [isMobile])
 
   return (
     <div className="landing-layout">
       {/* Fixed Header */}
       <div className="landing-layout__header">
-        <Header variant={headerVariant} />
+        <Header variant={headerVariant} concepts={concepts} />
       </div>
 
       {/* Main Content Container */}

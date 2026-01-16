@@ -110,6 +110,35 @@
   color: var(--color-text-accent);
 }
 
+/* Mobile concepts row - horizontal layout below logo bar */
+.header__concepts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: var(--spacing-l, 24px);
+  padding: 0 var(--spacing-l, 24px) var(--spacing-l, 24px);
+  font-family: var(--font-tech, "PP Neue Montreal Mono", monospace);
+  font-size: var(--text-size-xsmall, 14px);
+  line-height: normal;
+  color: var(--color-text-primary, #362c2c);
+  text-transform: uppercase;
+}
+
+/* Each concept takes equal width, text wraps within */
+.header__concept-item {
+  flex: 1 1 0;
+  min-width: 0;
+  text-align: left;
+}
+
+/* Smaller screens: tighter spacing */
+@media (max-width: 480px) {
+  .header__concepts {
+    gap: var(--spacing-m, 16px);
+    font-size: 11px;
+  }
+}
+
 .header__menu {
   /* Menu positioned in top-right corner */
   position: absolute;

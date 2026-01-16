@@ -55,7 +55,7 @@
   }
 }
 
-/* Mobile layout: concepts pull up to align with logo row, or wrap to full width below */
+/* Mobile layout: hide concepts here (they are rendered in Header on mobile) */
 @media (max-width: 768px) {
   .highlight-section {
     max-width: 100%;
@@ -63,65 +63,20 @@
     gap: var(--spacing-xl, 32px);
   }
 
-  /* Concepts positioned to create visual row with logo using negative margin */
+  /* Hide concepts in HighlightSection on mobile - they're in Header */
   .home-header-description {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--spacing-l, 24px);
-    padding-left: 0;
-    width: 100%;
-    /* Pull up to align with logo row - logo height (49px) + spacing */
-    margin-top: calc(-49px - var(--spacing-l, 24px));
-    /* Add padding for logo width so concepts don't overlap */
-    padding-left: calc(49px + var(--spacing-xl, 32px));
-  }
-
-  /* Each concept maintains minimum width, wraps to next line if needed */
-  .home-header-description span {
-    flex: 1 1 auto;
-    min-width: 100px;
-    text-align: left;
-    white-space: normal;
+    display: none;
   }
 
   .highlight-section__header {
     font-size: 40px;
     line-height: 42px;
-    /* Reset margin since concepts may have pulled up */
-    margin-top: var(--spacing-xl, 32px);
-  }
-}
-
-/* Smaller screens: concepts wrap to full width below logo */
-@media (max-width: 600px) {
-  .home-header-description {
-    /* Reset negative margin - concepts go on their own line */
-    margin-top: 0;
-    padding-left: 0;
-    /* Full width row with 3 equal columns */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-m, 16px);
-  }
-
-  .home-header-description span {
-    min-width: 0;
-  }
-
-  .highlight-section__header {
-    margin-top: 0;
   }
 }
 
 @media (max-width: 480px) {
   .highlight-section {
     gap: var(--spacing-l, 24px);
-  }
-
-  .home-header-description {
-    gap: var(--spacing-s, 12px);
-    font-size: 11px;
   }
 
   .highlight-section__header {

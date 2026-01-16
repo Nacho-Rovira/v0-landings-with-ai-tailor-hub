@@ -17,13 +17,15 @@ import { FAQ } from "@/components/FAQ/FAQ"
 import { StickyServicesSection } from "@/components/StickyServicesSection/StickyServicesSection"
 import Image from "next/image"
 
+const vraiConcepts = ["LUXURY <span> E-COMMERCE", "LAB-GROWN <span> DIAMONDS", "DIGITAL <span> EXCELLENCE"]
+
 export default function VRAIProposalPage() {
   return (
-    <LandingLayout>
+    <LandingLayout concepts={vraiConcepts}>
       {/* Hero Highlight Section */}
       <section style={{ marginBottom: "var(--spacing-9xl)" }}>
         <HighlightSection
-          concepts={["LUXURY <span> E-COMMERCE", "LAB-GROWN <span> DIAMONDS", "DIGITAL <span> EXCELLENCE"]}
+          concepts={vraiConcepts}
           header="CRAFTING THE NEXT GENERATION LUXURY E-COMMERCE PLATFORM FOR VRAI'S LAB-GROWN DIAMOND JEWELRY"
         />
       </section>
