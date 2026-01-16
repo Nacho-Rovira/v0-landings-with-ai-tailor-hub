@@ -41,6 +41,18 @@ export function LandingLayout({ children, concepts }: LandingLayoutProps) {
     }
   }, [isMobile])
 
+  const getPaddingTop = () => {
+    if (headerVariant === "mobile") {
+      // Mobile header height: logo bar (~97px) + concepts row (~60px) + extra spacing
+      const hasConceptsOnMobile = concepts && concepts.length > 0
+      return hasConceptsOnMobile ? "180px" : "120px"
+    }
+    if (headerVariant === "starter") {
+      return "201px"
+    }
+    return "var(--spacing-xxl)"
+  }
+
   return (
     <div className="landing-layout">
       {/* Fixed Header */}
@@ -52,7 +64,7 @@ export function LandingLayout({ children, concepts }: LandingLayoutProps) {
       <main
         className="landing-layout__main"
         style={{
-          paddingTop: headerVariant === "starter" ? "201px" : "var(--spacing-xxl)",
+          paddingTop: getPaddingTop(),
         }}
       >
         <div className="landing-layout__container">{children}</div>
