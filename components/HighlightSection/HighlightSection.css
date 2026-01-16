@@ -55,38 +55,47 @@
   }
 }
 
-/* Simplified mobile styles - horizontal row with equal columns */
+/* Mobile layout: concepts always in horizontal row with equal-width columns */
 @media (max-width: 768px) {
   .highlight-section {
     max-width: 100%;
-    padding: 0 var(--spacing-m, 16px);
-    overflow: hidden;
+    padding: 0;
+    gap: var(--spacing-xl, 32px);
   }
 
-  /* Concepts: horizontal row, equal-width columns */
+  /* Concepts displayed as 3 equal columns in a row */
   .home-header-description {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: var(--spacing-l, 24px);
     padding-left: 0;
     width: 100%;
   }
 
-  /* Text wraps naturally within each column */
+  /* Each concept takes equal space, text wraps within */
   .home-header-description span {
-    display: block;
+    flex: 1 1 0;
+    min-width: 0;
     text-align: left;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    white-space: normal;
+    word-break: break-word;
+    hyphens: auto;
   }
 
   .highlight-section__header {
     font-size: 40px;
-    line-height: 48px;
+    line-height: 42px;
   }
 }
 
 @media (max-width: 480px) {
+  .highlight-section {
+    gap: var(--spacing-l, 24px);
+  }
+
   .home-header-description {
     gap: var(--spacing-m, 16px);
     font-size: 11px;
