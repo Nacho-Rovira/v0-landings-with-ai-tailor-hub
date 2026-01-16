@@ -48,3 +48,9 @@ export type { InsightProps } from "./Insight/Insight"
 
 export { ProjectModal } from "./ProjectModal/ProjectModal"
 export type { ProjectModalProps, ProjectModalData } from "./ProjectModal/ProjectModal"
+
+export { StickyServicesSection } from "./StickyServicesSection/StickyServicesSection"
+export type { StickyServicesSectionProps } from "./StickyServicesSection/StickyServicesSection"
+
+export { LandingLayout } from "./LandingLayout/LandingLayout"
+export type { LandingLayoutProps } from "./LandingLayout/LandingLayout"

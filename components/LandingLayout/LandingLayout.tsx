@@ -5,7 +5,7 @@ import { Header } from "@/components/Header/Header"
 import { Footer } from "@/components/Footer/Footer"
 import "./LandingLayout.css"
 
-interface LandingLayoutProps {
+export interface LandingLayoutProps {
   children: ReactNode
   /** Concept items to display below fixed header on mobile (scrolls with content) */
   concepts?: string[]

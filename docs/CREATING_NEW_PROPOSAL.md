@@ -42,7 +42,7 @@ Each proposal consists of:
 
 - **Roadmap/Phases** - TimelineSection with project phases
 - **Budget** - BudgetSection with itemized breakdown
-- **Services** - BoxSection showing Tailor Hub services
+- **Services** - BoxSection components with modal bios
 - **Team** - TeamCard components with modal bios
 - **Case Studies** - ProjectCard components with modal details
 - **Partners** - Highlight2Section with partner logos
@@ -281,6 +281,44 @@ Content with image:
 />
 ```
 
+### StickyServicesSection (NEW)
+
+Wrap BoxSection components for sticky stacking effect on scroll:
+
+```tsx
+import { StickyServicesSection } from "@/components/StickyServicesSection/StickyServicesSection"
+
+<StickyServicesSection>
+  <BoxSection
+    overheader="S/ 01"
+    header="CUSTOM SOFTWARE DEVELOPMENT"
+    bodyText="We design and build enterprise applications..."
+    imageSrc="/images/design-mode/desarrollo de software(2).jpeg"
+    imageAlt="Software Development"
+  />
+  <BoxSection
+    overheader="S/ 02"
+    header="AI & DATA"
+    bodyText="Machine learning solutions..."
+    imageSrc="/images/design-mode/auditoria y formacion(2).jpeg"
+    imageAlt="AI & Data"
+  />
+  <BoxSection
+    overheader="S/ 03"
+    header="TECH AUDITS & TRAINING"
+    bodyText="Comprehensive technical audits..."
+    imageSrc="/images/design-mode/Design systems.png"
+    imageAlt="Tech Audits"
+  />
+</StickyServicesSection>
+```
+
+**Behavior:**
+- Each service card sticks at the top of the viewport as you scroll
+- Cards stack on top of each other with smooth opacity transitions
+- Previous cards fade from 50% to 0% opacity when overlapped
+- No shadows between cards for a clean, minimal look
+
 ### TeamCard + TeamMemberModal
 
 Team presentation:
@@ -513,11 +551,41 @@ Sections: Hero → Proposal Content → Our Methodology → Services → Team �
 
 ## Responsive Behavior
 
+### Desktop (>1024px)
 - Max content width: 1432px (centered)
-- MenuSidebar becomes mobile menu on small screens
-- Grid layouts automatically collapse to single column
-- StepsFlow switches from horizontal to vertical on mobile
-- Spacing scales appropriately
+- MenuSidebar visible and sticky on the left
+- Full navigation menu in header
+- Large logo in header
+
+### Tablet & Mobile (≤1024px)
+- **MenuSidebar is hidden** - navigation is simplified for smaller screens
+- Mobile header with small logo (sticky) and hamburger menu
+- Concepts displayed below logo, scrollable with page content
+- Grid layouts collapse:
+  - TechStackSection: 3 columns → 2 columns → 1 column
+  - Service boxes wrap to fit screen
+- StepsFlow switches from horizontal to vertical
+
+### Mobile Concepts Behavior
+On mobile, pass concepts to LandingLayout for proper responsive display:
+
+```tsx
+<LandingLayout
+  variant="starter"
+  concepts={["LUXURY E-COMMERCE", "LAB-GROWN DIAMONDS", "DIGITAL EXCELLENCE"]}
+>
+  <HighlightSection
+    concepts={["LUXURY E-COMMERCE", "LAB-GROWN DIAMONDS", "DIGITAL EXCELLENCE"]}
+    imageSrc="/images/hero.png"
+    imageAlt="Hero image"
+  />
+  {/* rest of content */}
+</LandingLayout>
+```
+
+The same concepts array is passed to both:
+- `LandingLayout` - renders concepts in mobile header (scrollable)
+- `HighlightSection` - renders concepts on desktop (hidden on mobile)
 
 ---
 
@@ -526,7 +594,8 @@ Sections: Hero → Proposal Content → Our Methodology → Services → Team �
 Before finalizing a proposal:
 
 ✅ **Navigation**
-- [ ] MenuSidebar highlights active section on scroll
+- [ ] MenuSidebar highlights active section on scroll (desktop only)
+- [ ] MenuSidebar hidden on tablet/mobile (≤1024px)
 - [ ] All menu items link to correct sections
 - [ ] Smooth scroll behavior works
 
@@ -557,6 +626,13 @@ Before finalizing a proposal:
 - [ ] All links work (LinkedIn, Instagram, etc.)
 - [ ] Links open in new tabs
 
+✅ **Responsive**
+- [ ] Mobile header displays correctly (small logo, hamburger menu)
+- [ ] Concepts display in horizontal row on mobile
+- [ ] No horizontal scrolling on any screen size
+- [ ] TechStackSection boxes wrap properly
+- [ ] StickyServicesSection stacking works on scroll
+
 ---
 
 ## Troubleshooting
@@ -572,6 +648,15 @@ Before finalizing a proposal:
 
 ### Issue: Modal not displaying
 **Solution:** Verify state management for `isOpen` and `onClose` props.
+
+### Issue: Horizontal scrolling on mobile
+**Solution:** Check that TechStackSection grid uses responsive columns (3 → 2 → 1). Ensure concepts in header don't overflow.
+
+### Issue: Duplicate concepts on mobile
+**Solution:** Pass the same concepts array to both `LandingLayout` (for mobile header) and `HighlightSection` (for desktop). HighlightSection auto-hides on mobile.
+
+### Issue: Services not stacking properly
+**Solution:** Wrap BoxSection components in `StickyServicesSection` component for sticky stacking effect.
 
 ---
 
