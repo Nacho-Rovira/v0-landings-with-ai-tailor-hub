@@ -63,18 +63,20 @@
     padding: 0 var(--spacing-m, 16px);
   }
 
-  /* Mobile screens get 0px left padding */
+  /* Keep concepts horizontal on mobile, never wrap to vertical */
   .home-header-description {
-    /* Mobile: align to the left */
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: var(--spacing-m, 16px); /* Restore gap for mobile when wrapping */
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--spacing-l, 24px);
     padding-left: 0;
   }
 
   .home-header-description span {
-    /* Mobile: auto width */
+    /* Mobile: auto width, prevent text breaking */
     width: auto;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .highlight-section__header {
@@ -85,6 +87,12 @@
 }
 
 @media (max-width: 480px) {
+  /* Smaller gap and font for very small screens, still horizontal */
+  .home-header-description {
+    gap: var(--spacing-m, 16px);
+    font-size: 12px;
+  }
+
   .highlight-section__header {
     /* Very small screens: even smaller header */
     font-size: 28px;
