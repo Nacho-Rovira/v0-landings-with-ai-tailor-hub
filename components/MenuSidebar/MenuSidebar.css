@@ -22,6 +22,13 @@
   }
 }
 
+/* Hide sidebar on tablet and mobile - only visible on desktop */
+@media (max-width: 1024px) {
+  .menu-sidebar {
+    display: none;
+  }
+}
+
 /* Menu Item */
 .menu-sidebar__item {
   display: flex;
