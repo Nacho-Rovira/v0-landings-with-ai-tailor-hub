@@ -55,7 +55,7 @@
   }
 }
 
-/* Mobile layout: concepts always in horizontal row with equal-width columns */
+/* Mobile layout: concepts pull up to align with logo row, or wrap to full width below */
 @media (max-width: 768px) {
   .highlight-section {
     max-width: 100%;
@@ -63,27 +63,54 @@
     gap: var(--spacing-xl, 32px);
   }
 
-  /* Concepts displayed as CSS Grid with 3 equal columns for stable layout */
+  /* Concepts positioned to create visual row with logo using negative margin */
   .home-header-description {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: var(--spacing-l, 24px);
     padding-left: 0;
     width: 100%;
+    /* Pull up to align with logo row - logo height (49px) + spacing */
+    margin-top: calc(-49px - var(--spacing-l, 24px));
+    /* Add padding for logo width so concepts don't overlap */
+    padding-left: calc(49px + var(--spacing-xl, 32px));
   }
 
-  /* Each concept column with normal word wrapping (no character breaking) */
+  /* Each concept maintains minimum width, wraps to next line if needed */
   .home-header-description span {
+    flex: 1 1 auto;
+    min-width: 100px;
     text-align: left;
     white-space: normal;
-    overflow-wrap: break-word;
-    word-break: normal;
-    hyphens: none;
   }
 
   .highlight-section__header {
     font-size: 40px;
     line-height: 42px;
+    /* Reset margin since concepts may have pulled up */
+    margin-top: var(--spacing-xl, 32px);
+  }
+}
+
+/* Smaller screens: concepts wrap to full width below logo */
+@media (max-width: 600px) {
+  .home-header-description {
+    /* Reset negative margin - concepts go on their own line */
+    margin-top: 0;
+    padding-left: 0;
+    /* Full width row with 3 equal columns */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-m, 16px);
+  }
+
+  .home-header-description span {
+    min-width: 0;
+  }
+
+  .highlight-section__header {
+    margin-top: 0;
   }
 }
 
@@ -93,7 +120,7 @@
   }
 
   .home-header-description {
-    gap: var(--spacing-m, 16px);
+    gap: var(--spacing-s, 12px);
     font-size: 11px;
   }
 
